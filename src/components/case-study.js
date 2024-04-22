@@ -9,7 +9,7 @@ export default function CaseStudy() {
   return (
     <section>
       <Title title={"Case Studies"} />
-      <div className="flex flex-col gap-16 mt-16 lg:flex-row">
+      <div className="flex flex-col gap-16 mt-16 xl:flex-row">
         <div className="flex flex-col gap-16 md:flex-[1 0 50%]">
           <Card
             title={"Gatherly"}

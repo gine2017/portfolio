@@ -65,7 +65,7 @@ export default function Home() {
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && (
         <main className="w-4/5 mx-auto flex flex-col mt-16 gap-10 md:gap-32 md:mt-36">
-          <header className="flex flex-col gap-8 mb-16 md:gap-32 md:flex-row">
+          <header className="flex flex-col gap-8 mb-16 md:gap-32 xl:flex-row">
             <div className="flex flex-col gap-8 flex-1">
               <div
                 className={`text-purple text-5xl md:text-8xl ${myFont.className}`}

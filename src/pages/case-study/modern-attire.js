@@ -88,10 +88,10 @@ export default function ModernAttire() {
                 Solution
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
-                To tackle the customer retention challenges in the suit shopping
+                {`To tackle the customer retention challenges in the suit shopping
                 experience, we'll optimize key features like enabling guest
                 checkout, enhancing customization tools for gathering
-                measurements and integrating review viewing options.
+                measurements and integrating review viewing options.`}
               </p>
             </div>
           </div>
@@ -163,15 +163,18 @@ export default function ModernAttire() {
               User Surveys
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              To gain insight into the consumer's perspective on the suit buying
+              {`To gain insight into the consumer's perspective on the suit buying
               experience, I conducted a survey with tailored questions focusing
-              on online shopping.
+              on online shopping.`}
             </p>
           </div>
           {width <= 767 ? (
             <MobileSlider sliderData={createImageArray(surveyImages)} />
           ) : (
-            <Slider sliderData={createImageArray(surveyImages)} />
+            <Slider
+              sliderData={createImageArray(surveyImages)}
+              zoomable={false}
+            />
           )}
           <div className="flex flex-col gap-y-8">
             <p className={`text-modern-attire text-4xl ${myFont.className}`}>
@@ -236,8 +239,8 @@ export default function ModernAttire() {
               Persona
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              To better understand my users' needs, desires, and motivations, I
-              developed this persona to empathize with their requirements.
+              {`To better understand my users' needs, desires, and motivations, I
+              developed this persona to empathize with their requirements.`}
             </p>
           </div>
           {width <= 767 ? (
@@ -278,7 +281,11 @@ export default function ModernAttire() {
               how users would navigate through specific processes.
             </p>
           </div>
-          <Image src={userFlow} className="object-contain md:h-[30rem]" />
+          <Image
+            src={userFlow}
+            className="object-contain md:h-[30rem]"
+            alt="image of user flow"
+          />
           <Title title={"Design"} color="text-modern-attire" />
           <div className="flex flex-col gap-y-8">
             <p className={`text-modern-attire text-4xl ${myFont.className}`}>
@@ -343,7 +350,7 @@ export default function ModernAttire() {
           )}
           <div className="flex flex-col gap-y-8">
             <p className={`text-modern-attire text-4xl ${myFont.className}`}>
-              What's Next
+              {`What's Next`}
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               In future iterations of this project, my goal is to introduce new

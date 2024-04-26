@@ -57,18 +57,18 @@ export default function About() {
                 <br />
                 <div>
                   <p>
-                    During college, I particularly enjoyed my UI/UX and mobile
+                    {`During college, I particularly enjoyed my UI/UX and mobile
                     design classes, although I ultimately chose to pursue a path
                     in front-end web development, which allowed me to combine
-                    both my artistic and technical skills.
+                    both my artistic and technical skills.`}
                   </p>
                 </div>
                 <br />
                 <div>
                   <p>
-                    After reflecting on my career path, I've come to realize
+                    {`After reflecting on my career path, I've come to realize
                     that UI/UX design is where my true passion lies. Now, I'm
-                    taking steps to transition into a career in UI/UX .
+                    taking steps to transition into a career in UI/UX .`}
                   </p>
                 </div>
               </div>
@@ -130,11 +130,11 @@ export default function About() {
             <div className="flex flex-col md:flex-row gap-x-24">
               <div className="flex-1">
                 <p>
-                  When I'm not working, you'll often find me testing my
+                  {`When I'm not working, you'll often find me testing my
                   knowledge at trivia night, gearing up for my Muay Thai
                   classes, or immersing myself in video games. Additionally, I'm
                   endeavoring to carve out time once more for my artistic
-                  pursuits like watercolor painting.
+                  pursuits like watercolor painting.`}
                 </p>
               </div>
               <div className="relative flex-1 w-60 mb-8 md:w-96 md:mb-0">

@@ -133,14 +133,14 @@ export default function NaturalU() {
           <div className="flex flex-col gap-y-4">
             <Title title={"Research"} color="text-light-purple" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              Before diving into the brainstorming and design stages, it was
+              {`Before diving into the brainstorming and design stages, it was
               crucial for me to grasp how hair issues impact people beyond my
               own experiences. In my research from the Journal of Clinical and
               Aesthetic Dermatology, I found that many women, especially black
               women, often felt frustrated or embarrassed about their natural
               hair. The study also revealed an interesting fact: a significant
               number of physicians weren't familiar with their patients' hair
-              types when discussing scalp-related problems.
+              types when discussing scalp-related problems.`}
             </p>
           </div>
           <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-0">
@@ -235,13 +235,13 @@ export default function NaturalU() {
           <div className="flex flex-col gap-y-4">
             <Title title={"What's Next"} color="text-light-purple" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              In the next phases of this project, I aim to enhance the designs
+              {`In the next phases of this project, I aim to enhance the designs
               within the hair discovery pages to make them more interactive.
               Additionally, I'm considering incorporating gamification features
               to encourage users to explore and learn about different hair
               types. Overall, I'm proud of the progress I've made so far in
               bringing this app to life. My ultimate goal is to ensure that
-              everyone feels proud of the crowns they wear atop their heads.
+              everyone feels proud of the crowns they wear atop their heads.`}
             </p>
           </div>
           <CaseStudyFooter casestudy="NaturalU" />

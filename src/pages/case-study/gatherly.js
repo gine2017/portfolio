@@ -210,16 +210,16 @@ export default function Gatherly() {
             className={`flex flex-wrap justify-center  gap-y-8 text-gatherly-blue md:gap-x-8 text-xl md:text-2xl ${darkerGrotesqueReg.className} text-center`}
           >
             <p className="w-full">
-              "I still feel anxious after college.. no one gives you a plan you
-              have to build your own path which is hard"
+              {`"I still feel anxious after college.. no one gives you a plan you
+              have to build your own path which is hard"`}
             </p>
             <p className="w-full">
-              "Its bit hard to make friends after college since a lot of the
-              people I work with are older than me"
+              {`"Its bit hard to make friends after college since a lot of the
+              people I work with are older than me"`}
             </p>
             <p className="w-full">
-              "Things in life have become a bit stagnant Im trying to focus on
-              my own personal growth"
+              {`"Things in life have become a bit stagnant Im trying to focus on
+              my own personal growth"`}
             </p>
           </div>
           <div className="flex flex-col gap-y-8">
@@ -236,17 +236,17 @@ export default function Gatherly() {
             className={`flex flex-wrap justify-center  gap-y-8 text-gatherly-blue md:gap-x-8 text-2xl ${darkerGrotesqueReg.className} text-center`}
           >
             <p className="w-full">
-              "Would like if an online group focused on a specific activity to
-              bring people together for in person or online events"
+              {`"Would like if an online group focused on a specific activity to
+              bring people together for in person or online events"`}
             </p>
             <p className="w-full">
-              "Also would love to connect to people who have similar culture
-              background in an online group"
+              {`"Also would love to connect to people who have similar culture
+              background in an online group"`}
             </p>
             <p className="w-full">
-              "Would be more comfortable if the group was smaller and more
+              {` "Would be more comfortable if the group was smaller and more
               familiar to me, especially having something like a small Ukrainian
-              group"
+              group"`}
             </p>
           </div>
           <div className="flex flex-col gap-y-8">
@@ -298,11 +298,11 @@ export default function Gatherly() {
                 Laddering
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
-                As the only UI/UX designer working on this product, I employ
+                {` As the only UI/UX designer working on this product, I employ
                 various techniques to approach the problem from multiple
                 perspectives. Among these methods is laddering technique in
                 order to uncover underlying motivations and values that drive
-                user's behavior and needs
+                user's behavior and needs`}
               </p>
             </div>
             <div className="w-full flex-1">

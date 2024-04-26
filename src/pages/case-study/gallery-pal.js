@@ -165,11 +165,11 @@ export default function GalleryPal() {
                 How Might We
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
-                Following an interview with an expert well-versed in the world
+                {`Following an interview with an expert well-versed in the world
                 of museums and museum guides, I take notes on the insights
                 gained and transform them into "How Might We" statements. This
                 process helps me identify specific areas to focus on when
-                formulating my product
+                formulating my product`}
               </p>
             </div>
             <div className=" w-full relative md:flex-1">
@@ -183,11 +183,11 @@ export default function GalleryPal() {
           <div className="flex flex-col gap-y-8">
             <Title title={"Day Two"} color="text-marron" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              Following the information gathering phase during the mapping stage
+              {`Following the information gathering phase during the mapping stage
               and the formulation of my "How Might We" statements, I moved on to
               sketching the crucial screens of the application. I utilized the
               Crazy-8s method to produce innovative design solutions for the
-              Gallery app.
+              Gallery app.`}
             </p>
           </div>
           <div className="flex flex-col gap-y-8">
@@ -212,15 +212,19 @@ export default function GalleryPal() {
           <Title title={"Day Three"} color="text-marron" />
           <div className="flex flex-col gap-y-8">
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              Before commencing the prototype phase, I gather notes, sketches,
+              {`Before commencing the prototype phase, I gather notes, sketches,
               and my "How Might We" statements to determine a solution. I depict
               this solution through storyboarding, illustrating an initial flow
               and various features like gamification, map functionality, and
-              audio tours.
+              audio tours.`}
             </p>
           </div>
           <div className="w-full flex justify-center relative">
-            <Image src={map} className="object-contain md:h-[30rem]" />
+            <Image
+              src={map}
+              className="object-contain md:h-[30rem]"
+              alt="image of storyboarding"
+            />
           </div>
           <Title title={"Day Four"} color="text-marron" />
           <div className="flex flex-col gap-y-8">
@@ -228,9 +232,9 @@ export default function GalleryPal() {
               High Fidelity Screens
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              As the sprint nears its conclusion, I integrate elements from
+              {`As the sprint nears its conclusion, I integrate elements from
               decision-making, sketching, and research phases to finalize the
-              development of high-fidelity screens.
+              development of high-fidelity screens.`}
             </p>
           </div>
           {width <= 767 ? (

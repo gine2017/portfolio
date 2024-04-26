@@ -24,7 +24,7 @@ export default function Card({
           className="absolute top-1/2 left-1/2 w-40 h-40"
           style={{ transform: "translate(-50%, -50%)" }}
         >
-          <Image src={image} className="object-contain" />
+          <Image src={image} className="object-contain" alt="card image" />
         </div>
       </div>
       <div className="flex flex-col gap-y-10 mt-8">

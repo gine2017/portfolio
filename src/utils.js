@@ -24,10 +24,28 @@ const createImageArray = (images) => {
   });
 };
 
+const zoomImage = (shouldZoom) => {
+  if (shouldZoom) {
+    return {
+      cursor: "zoom-out",
+      transform: "scale(1.8)",
+      transition: "transform 0.25s ease",
+      backgroundColor: "rgba(255, 255, 255, 0.9)",
+      backgroundRepeat: "no-repeat",
+      zIndex: 99,
+      height: "100vh",
+    };
+  }
+  return {
+    cursor: "zoom-in",
+    transition: "transform 0.25s ease",
+  };
+};
 export {
   myFont,
   darkerGrotesque,
   darkerGrotesqueReg,
   darkerGrotesqueBold,
   createImageArray,
+  zoomImage,
 };

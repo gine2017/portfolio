@@ -10,6 +10,7 @@ import MobileSlider from "@/components/mobile-slider";
 import MobileNav from "@/components/mobile-nav";
 import Footer from "@/components/footer";
 import useWindowSize from "@/hooks/useWindowSize";
+import CaseStudyFooter from "@/components/case-study-footer";
 
 //images
 import map from "../../../assets/capstone/gallerypal/map.png";
@@ -126,9 +127,8 @@ export default function GalleryPal() {
               </ul>
             </div>
           </div>
-          <Title title={"Day One"} color="text-marron" />
           <div className="flex flex-col gap-y-8">
-            <p className={`text-marron text-5xl ${myFont.className}`}>Map</p>
+            <Title title={"Day One"} color="text-marron" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               On the initial day of the Sprint, I focus on comprehensively
               grasping the problem to understand how users interact with the
@@ -138,10 +138,7 @@ export default function GalleryPal() {
               identify specific elements to enhance within the product.
             </p>
           </div>
-          <div className="w-full flex justify-center relative">
-            <Image src={storyboard} className="object-contain md:h-[30rem]" />
-          </div>
-          <div className="flex flex-col gap-y-8 justify-evenly md:gap-x-16 md:flex-row">
+          <div className="flex flex-col gap-y-8">
             <div className="flex flex-col gap-y-8 md:flex-1">
               <p className={`text-marron text-5xl ${myFont.className}`}>
                 Expert Interview
@@ -155,10 +152,14 @@ export default function GalleryPal() {
               </p>
             </div>
             <div className="w-full relative md:flex-1">
-              <Image src={interview} className="object-contain md:h-[30rem]" />
+              <Image
+                src={interview}
+                className="object-contain md:h-[30rem]"
+                alt="expert itnerview image"
+              />
             </div>
           </div>
-          <div className="flex flex-col gap-y-8 justify-evenly md:gap-x-16 md:flex-row">
+          <div className="flex flex-col gap-y-8">
             <div className="flex flex-col gap-y-8 md:flex-1">
               <p className={`text-marron text-5xl ${myFont.className}`}>
                 How Might We
@@ -172,12 +173,15 @@ export default function GalleryPal() {
               </p>
             </div>
             <div className=" w-full relative md:flex-1">
-              <Image src={hmw} className="object-contain md:h-[30rem]" />
+              <Image
+                src={hmw}
+                className="object-contain md:h-[30rem]"
+                alt="how might we image"
+              />
             </div>
           </div>
-          <Title title={"Day Two"} color="text-marron" />
           <div className="flex flex-col gap-y-8">
-            <p className={`text-marron text-5xl ${myFont.className}`}>Sketch</p>
+            <Title title={"Day Two"} color="text-marron" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               Following the information gathering phase during the mapping stage
               and the formulation of my "How Might We" statements, I moved on to
@@ -186,7 +190,7 @@ export default function GalleryPal() {
               Gallery app.
             </p>
           </div>
-          <div className="flex flex-col gap-y-8 justify-evenly md:gap-x-16 md:flex-row">
+          <div className="flex flex-col gap-y-8">
             <div className="flex flex-col gap-y-8 md:flex-1">
               <p className={`text-marron text-5xl ${myFont.className}`}>
                 Crazy 8s Method
@@ -198,18 +202,21 @@ export default function GalleryPal() {
               </p>
             </div>
             <div className=" w-ful relative md:flex-1">
-              <Image src={crazyEight} className="object-contain md:h-[30rem]" />
+              <Image
+                src={crazyEight}
+                className="object-contain md:h-[30rem]"
+                alt="image of crazy-8s"
+              />
             </div>
           </div>
           <Title title={"Day Three"} color="text-marron" />
           <div className="flex flex-col gap-y-8">
-            <p className={`text-marron text-5xl ${myFont.className}`}>Decide</p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              Following the information gathering phase during the mapping stage
-              and the formulation of my "How Might We" statements, I moved on to
-              sketching the crucial screens of the application. I utilized the
-              Crazy-8s method to produce innovative design solutions for the
-              Gallery app.
+              Before commencing the prototype phase, I gather notes, sketches,
+              and my "How Might We" statements to determine a solution. I depict
+              this solution through storyboarding, illustrating an initial flow
+              and various features like gamification, map functionality, and
+              audio tours.
             </p>
           </div>
           <div className="w-full flex justify-center relative">
@@ -287,6 +294,7 @@ export default function GalleryPal() {
               invaluable tool for museum enthusiasts of all kinds.
             </p>
           </div>
+          <CaseStudyFooter casestudy="Gallery Pal" />
         </main>
       )}
       {showContent && <Footer />}

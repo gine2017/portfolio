@@ -10,6 +10,7 @@ import MobileNav from "@/components/mobile-nav";
 import Image from "next/image";
 import Footer from "@/components/footer";
 import useWindowSize from "@/hooks/useWindowSize";
+import CaseStudyFooter from "@/components/case-study-footer";
 
 //images
 import naturalUHero from "../../../assets/capstone/naturalu/natural-u-hero-img.svg";
@@ -171,7 +172,11 @@ export default function NaturalU() {
             </p>
           </div>
           <div className="w-full relative">
-            <Image src={sketch} className="object-contain md:h-[30rem]" />
+            <Image
+              src={sketch}
+              className="object-contain md:h-[30rem]"
+              alt="sketches of screens"
+            />
           </div>
           <div className="flex flex-col gap-y-8">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
@@ -184,7 +189,11 @@ export default function NaturalU() {
             </p>
           </div>
           <div className="w-full relative">
-            <Image src={userFlow} className="object-contain md:h-[30rem]" />
+            <Image
+              src={userFlow}
+              className="object-contain md:h-[30rem]"
+              alt="image of user flow"
+            />
           </div>
           <Title title={"Design"} color="text-light-purple" />
           <div className="flex flex-col gap-y-8">
@@ -201,7 +210,11 @@ export default function NaturalU() {
             </p>
           </div>
           <div className="w-full relative">
-            <Image src={styleguide} className="object-contain" />
+            <Image
+              src={styleguide}
+              className="object-contain"
+              alt="image of style guide"
+            />
           </div>
           <div className="flex flex-col gap-y-8">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
@@ -231,6 +244,7 @@ export default function NaturalU() {
               everyone feels proud of the crowns they wear atop their heads.
             </p>
           </div>
+          <CaseStudyFooter casestudy="NaturalU" />
         </main>
       )}
       {showContent && <Footer />}

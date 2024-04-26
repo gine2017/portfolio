@@ -8,6 +8,7 @@ import Slider from "@/components/slider";
 import MobileSlider from "@/components/mobile-slider";
 import Footer from "@/components/footer";
 import Image from "next/image";
+import CaseStudyFooter from "@/components/case-study-footer";
 import { myFont, darkerGrotesque, createImageArray } from "@/utils";
 
 //images
@@ -352,6 +353,7 @@ export default function ModernAttire() {
               reactions and ensure alignment with their needs.
             </p>
           </div>
+          <CaseStudyFooter casestudy="Modern Attire" />
         </main>
       )}
       {showContent && <Footer />}

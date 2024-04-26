@@ -86,7 +86,7 @@ export default function Home() {
               </div>
             </div>
             <div className="relative flex-1 w-60 md:w-96 ">
-              <Image src={selfIllustration} alt="self illustration" />
+              <Image src={selfIllustration} alt="svg illustration of regine" />
             </div>
           </header>
           <CaseStudy />

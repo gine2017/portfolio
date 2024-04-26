@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Image from "next/image";
-import { darkerGrotesque } from "@/utils";
+import { darkerGrotesque, zoomImage } from "@/utils";
 
-export default function Slider({ sliderData = [] }) {
+export default function Slider({ sliderData = [], zoomable = true }) {
   const [sliderIndex, setSliderIndex] = useState(0);
+  const [zoomedIn, setZoomdIn] = useState(false);
 
   const onBack = () => {
     if (sliderIndex == 0) {
@@ -17,6 +18,10 @@ export default function Slider({ sliderData = [] }) {
     setSliderIndex((prevIndex) => (prevIndex + 1) % sliderData.length);
   };
 
+  const handleClick = () => {
+    setZoomdIn((prev) => !prev);
+  };
+
   return (
     <div className="flex flex-row gap-x-6 items-center px-10 ">
       <div className="bg-purple text-white rounded-full" onClick={onBack}>
@@ -25,11 +30,15 @@ export default function Slider({ sliderData = [] }) {
         </p>
       </div>
       <div className="flex-1 flex flex-col gap-y-8">
-        <div className=" w-full relative">
+        <div
+          className=" w-full relative"
+          style={zoomable ? zoomImage(zoomedIn) : {}}
+        >
           <Image
             src={sliderData[sliderIndex]?.image}
-            alt="image gallery"
+            alt="gallery image"
             className="object-contain h-[20rem]"
+            onClick={handleClick}
           />
         </div>
         <p className={`text-center text-xl ${darkerGrotesque.className}`}>

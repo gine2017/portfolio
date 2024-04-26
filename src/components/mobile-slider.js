@@ -14,7 +14,7 @@ export default function MobileSlider({ sliderData = [] }) {
       <div className="w-full relative">
         <Image
           src={sliderData[sliderIndex]?.image}
-          alt="image gallery"
+          alt="gallery image"
           className="object-contain"
         />
       </div>
@@ -41,7 +41,7 @@ export default function MobileSlider({ sliderData = [] }) {
             >
               <Image
                 src={item?.image}
-                alt="image gallery"
+                alt="gallery image"
                 className="object-contain"
               />
             </div>

@@ -14,6 +14,8 @@ import Slider from "@/components/slider";
 import useWindowSize from "@/hooks/useWindowSize";
 import MobileNav from "@/components/mobile-nav";
 import MobileSlider from "@/components/mobile-slider";
+import Footer from "@/components/footer";
+import CaseStudyFooter from "@/components/case-study-footer";
 
 //images
 import heroImg from "../../../assets/capstone/gatherly/hero-bghero_2.svg";
@@ -121,7 +123,11 @@ export default function Gatherly() {
             </p>
           </div>
           <div className="w-full  ">
-            <Image src={appHero} className="object-contain md:h-[30rem]" />
+            <Image
+              src={appHero}
+              className="object-contain md:h-[30rem]"
+              alt="small hero image of app screens"
+            />
           </div>
           <div className="flex flex-col gap-y-4">
             <Title title={"Research"} color="text-gatherly-blue" />
@@ -152,7 +158,10 @@ export default function Gatherly() {
           {width <= 767 ? (
             <MobileSlider sliderData={createImageArray(surveyImages)} />
           ) : (
-            <Slider sliderData={createImageArray(surveyImages)} />
+            <Slider
+              sliderData={createImageArray(surveyImages)}
+              zoomable={false}
+            />
           )}
           <div className="flex flex-col gap-y-8">
             <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
@@ -266,7 +275,11 @@ export default function Gatherly() {
               unfounded unwarranted biases.
             </p>
             <div className="w-full  relative ">
-              <Image src={empathy} className="object-contain md:h-[30rem]" />
+              <Image
+                src={empathy}
+                className="object-contain md:h-[30rem]"
+                alt="image of empathy map"
+              />
             </div>
           </div>
           <div className="flex flex-col gap-y-4">
@@ -279,7 +292,7 @@ export default function Gatherly() {
               before finalizing an idea.
             </p>
           </div>
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col">
             <div className="flex flex-1 gap-y-8 flex-col">
               <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
                 Laddering
@@ -293,7 +306,11 @@ export default function Gatherly() {
               </p>
             </div>
             <div className="w-full flex-1">
-              <Image src={ladder} className="object-contain md:h-[30rem]" />
+              <Image
+                src={ladder}
+                className="object-contain md:h-[30rem]"
+                alt="image of laddering"
+              />
             </div>
           </div>
           <div className="flex flex-col gap-y-8">
@@ -330,7 +347,11 @@ export default function Gatherly() {
               visualize how users would complete certain flows
             </p>
             <div className="w-full relative">
-              <Image src={userflow} className="object-contain md:h-[30rem]" />
+              <Image
+                src={userflow}
+                className="object-contain md:h-[30rem]"
+                alt="image of user flow"
+              />
             </div>
           </div>
           <div className="flex flex-col gap-y-4">
@@ -385,6 +406,7 @@ export default function Gatherly() {
               <Image
                 src={highFidelity}
                 className="object-contain md:h-[30rem]"
+                alt="image of high fidelity screens"
               />
             </div>
           </div>
@@ -416,8 +438,10 @@ export default function Gatherly() {
               comprehensive case study.
             </p>
           </div>
+          <CaseStudyFooter casestudy="Gatherly" />
         </main>
       )}
+      {showContent && <Footer />}
     </div>
   );
 }

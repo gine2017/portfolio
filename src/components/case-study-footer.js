@@ -37,7 +37,7 @@ export default function CaseStudyFooter({ casestudy = "" }) {
           .filter((study) => study.subtitle != casestudy)
           .map((elm) => {
             return (
-              <Link href={elm.link}>
+              <Link href={elm.link} key={elm.subtitle}>
                 <Image
                   src={elm.image}
                   className="w-36 h-36 object-contain"

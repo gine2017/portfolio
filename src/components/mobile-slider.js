@@ -38,6 +38,7 @@ export default function MobileSlider({ sliderData = [] }) {
               onClick={() => {
                 handleClick(idx);
               }}
+              key={idx}
             >
               <Image
                 src={item?.image}

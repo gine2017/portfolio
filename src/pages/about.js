@@ -48,10 +48,10 @@ export default function About() {
               <div className="flex-1">
                 <div>
                   <p>
-                    Hello again! I'm Regine Thimothee, currently employed as an
+                    {`Hello again! I'm Regine Thimothee, currently employed as an
                     associate web developer at ADP. Since childhood and
                     throughout my college years, I've had a deep affinity for
-                    art and design
+                    art and design`}
                   </p>
                 </div>
                 <br />

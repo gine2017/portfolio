@@ -254,9 +254,9 @@ export default function Gatherly() {
               Persona
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              To empathize with my users' requirements, I crafted this persona
+              {`To empathize with my users' requirements, I crafted this persona
               to attain a comprehensive understanding of their needs, desires,
-              and motivations.
+              and motivations.`}
             </p>
           </div>
           {width <= 767 ? (
@@ -269,10 +269,10 @@ export default function Gatherly() {
               Empathy Map
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              To finalize my analysis of user needs, I developed an empathy map
+              {`To finalize my analysis of user needs, I developed an empathy map
               to visually represent a user's attitudes and behaviors. This will
               serve as the cornerstone of truth, guarding the product from any
-              unfounded unwarranted biases.
+              unfounded unwarranted biases.`}
             </p>
             <div className="w-full  relative ">
               <Image
@@ -285,11 +285,11 @@ export default function Gatherly() {
           <div className="flex flex-col gap-y-4">
             <Title title={"Ideate"} color="text-gatherly-blue" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              Following the research phases' conclusion, I transitioned into
-              brainstorming and cultivating a solution for the identified
-              problem. I initiated this process by employing techniques such as
-              laddering and preliminary sketching to visualize various solutions
-              before finalizing an idea.
+              {`  Following the research phases' conclusion, I transitioned into
+                brainstorming and cultivating a solution for the identified
+                problem. I initiated this process by employing techniques such as
+                laddering and preliminary sketching to visualize various solutions
+                before finalizing an idea`}
             </p>
           </div>
           <div className="flex flex-col">

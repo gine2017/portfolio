@@ -73,14 +73,14 @@ export default function ModernAttire() {
                 Problem
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
-                Modern Attire's mobile-web shopping experience for suits
+                {` Modern Attire's mobile-web shopping experience for suits
                 requires improving usability and boosting conversion rates.
                 Analytics reveal that 50% of users view 7 item pages on average
                 but abandon the site before adding items to the cart. Meanwhile,
                 70% of those who add items to the cart fail to complete the
                 purchase, often abandoning the process at the registration page.
                 The objective is to redesign the site to increase the completion
-                rate from browsing suits to checkout.
+                rate from browsing suits to checkout.`}
               </p>
             </div>
             <div className="flex flex-col gap-y-8 flex-1">

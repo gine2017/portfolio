@@ -95,7 +95,7 @@ export default function NaturalU() {
                 Problem
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
-                For a long time, people with curly or coily hair have faced
+                {`For a long time, people with curly or coily hair have faced
                 problems with feeling sure of themselves, knowing how to take
                 care of their hair, and sometimes being treated badly. Nowadays,
                 they have to think a lot about how they look because some people
@@ -103,7 +103,7 @@ export default function NaturalU() {
                 places. Also, schools that teach about hair and beauty should
                 make sure to teach how to care for curly and coily hair. When
                 they don't, it adds to the feeling of not being good enough, and
-                it can make some people feel really bad about themselves.
+                it can make some people feel really bad about themselves.`}
               </p>
             </div>
             <div className="flex flex-col gap-y-8 flex-1">

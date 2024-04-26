@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="w-full bg-purple flex flex-col gap-8 mt-40 px-16 py-5 md:px-36 md:py-10 ">
       <div>
         <p className={`text-white text-2xl md:text-4xl ${myFont.className}`}>
-          Let's Connect
+          {"Let's Connect"}
         </p>
         <p
           className={`text-white  text-xl md:text-2xl ${darkerGrotesqueReg.className}`}

@@ -130,12 +130,12 @@ export default function GalleryPal() {
           <div className="flex flex-col gap-y-8">
             <Title title={"Day One"} color="text-marron" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              On the initial day of the Sprint, I focus on comprehensively
+              {`On the initial day of the Sprint, I focus on comprehensively
               grasping the problem to understand how users interact with the
               Gallery Pal app. Subsequently, I engage in a discussion with an
               industry expert to explore ways to improve the app's map feature.
               Finally, I integrate insights gathered from the interview to
-              identify specific elements to enhance within the product.
+              identify specific elements to enhance within the product.`}
             </p>
           </div>
           <div className="flex flex-col gap-y-8">

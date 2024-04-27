@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "@/components/navbar";
 import Title from "@/components/title";
 import Image from "next/image";
+import Link from "next/link";
 import { darkerGrotesqueReg, darkerGrotesqueBold } from "@/utils";
 import Footer from "@/components/footer";
 import MobileNav from "@/components/mobile-nav";
@@ -119,12 +120,22 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <Title title={"My Brand"} />
-
-            <div className="w-full">
-              <Image src={mybrand} alt="brand colors, font, and logo" />
+            <div className="flex flex-col gap-y-8">
+              <Title title={"My Brand"} />
+              <div className="w-full">
+                <Image src={mybrand} alt="brand colors, font, and logo" />
+              </div>
+              <div className="bg-orange ml-6 w-48 h-14 rounded-3xl text-4xl text-white flex justify-center">
+                <Link
+                  href={
+                    "https://www.figma.com/file/HjWKivBTvFUTIWzx0N0Il5/Portfolio?type=design&node-id=118%3A1698&mode=design&t=iBWJ6z9TOGjaqo3d-1"
+                  }
+                  className="mt-1"
+                >
+                  Figma File
+                </Link>
+              </div>
             </div>
-
             <Title title={"How I Chill"} />
 
             <div className="flex flex-col md:flex-row gap-x-24">

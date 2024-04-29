@@ -24,7 +24,10 @@ export default function Slider({ sliderData = [], zoomable = true }) {
 
   return (
     <div className="flex flex-row gap-x-6 items-center px-10 ">
-      <div className="bg-purple text-white rounded-full" onClick={onBack}>
+      <div
+        className="bg-purple text-white rounded-full hover:cursor-pointer"
+        onClick={onBack}
+      >
         <p className="w-12 h-12 flex justify-center items-center pr-2">
           &#9001;
         </p>
@@ -51,7 +54,10 @@ export default function Slider({ sliderData = [], zoomable = true }) {
           {sliderData[sliderIndex]?.link}
         </a>
       </div>
-      <div className="bg-purple text-white rounded-full" onClick={onNext}>
+      <div
+        className="bg-purple text-white rounded-full hover:cursor-pointer"
+        onClick={onNext}
+      >
         <p className="w-12 h-12 flex justify-center items-center pl-2">
           &#9002;
         </p>

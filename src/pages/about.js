@@ -9,7 +9,7 @@ import MobileNav from "@/components/mobile-nav";
 import useWindowSize from "@/hooks/useWindowSize";
 
 // images
-import myphoto from "../../assets/about/me.png";
+import myphoto from "../../assets/about/me_2.png";
 import mybrand from "../../assets/about/My_Brand.png";
 import watercolor from "../../assets/about/watercolor.png";
 
@@ -138,7 +138,7 @@ export default function About() {
             </div>
             <Title title={"How I Chill"} />
 
-            <div className="flex flex-col md:flex-row gap-x-24">
+            <div className="flex flex-col gap-y-8 md:flex-row gap-x-24">
               <div className="flex-1">
                 <p>
                   {`When I'm not working, you'll often find me testing my

@@ -15,7 +15,7 @@ export default function Navbar() {
         <Image src={logo} alt="logo" fill={true} />
       </Link>
       <ul className="nav-list ml-8 flex flex-row gap-88 text-4xl">
-        <li>
+        <li className="transition-transform hover:-translate-y-1">
           <Link
             href={"/"}
             className={`${
@@ -25,7 +25,7 @@ export default function Navbar() {
             Home
           </Link>
         </li>
-        <li>
+        <li className="transition-transform hover:-translate-y-1">
           <Link
             href={"/about"}
             className={`${
@@ -37,7 +37,7 @@ export default function Navbar() {
             About
           </Link>
         </li>
-        <li>
+        <li className="transition-transform hover:-translate-y-1">
           <Link href={"/files/Regine_Resume.pdf"}>Resume</Link>
         </li>
       </ul>

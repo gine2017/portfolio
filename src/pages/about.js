@@ -125,7 +125,7 @@ export default function About() {
               <div className="w-full">
                 <Image src={mybrand} alt="brand colors, font, and logo" />
               </div>
-              <div className="bg-orange ml-6 w-48 h-14 rounded-3xl text-4xl text-white flex justify-center">
+              <div className="bg-orange hover:bg-[#DA8600] ml-6 w-48 h-14 rounded-3xl text-4xl text-white flex justify-center">
                 <Link
                   href={
                     "https://www.figma.com/file/HjWKivBTvFUTIWzx0N0Il5/Portfolio?type=design&node-id=118%3A1698&mode=design&t=iBWJ6z9TOGjaqo3d-1"

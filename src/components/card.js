@@ -36,8 +36,8 @@ export default function Card({
             {content}
           </div>
         </div>
-        <div className="bg-orange ml-6 w-40 h-14 rounded-3xl text-4xl text-white relative ">
-          <Link href={link} className="absolute top-2 left-10">
+        <div className="bg-orange hover:bg-[#DA8600] ml-6 w-40 h-14 rounded-3xl text-4xl text-white relative ">
+          <Link href={link} className="absolute top-2 left-10 ">
             View
           </Link>
         </div>

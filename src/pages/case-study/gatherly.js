@@ -2,11 +2,13 @@ import { useState } from "react";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import Image from "next/image";
+import Link from "next/link";
 import {
   myFont,
   darkerGrotesque,
   darkerGrotesqueReg,
   createImageArray,
+  darkerGrotesqueBold,
 } from "@/utils";
 import Stats from "@/components/stats";
 import Title from "@/components/title";
@@ -102,15 +104,26 @@ export default function Gatherly() {
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               Navigating adulthood can be exceptionally difficult, particularly
-              for young adults grappling with a rising tide of loneliness,
-              stress, and mental health issues. Challenges like post-graduate
-              stress, post-pandemic repercussions, and various other factors
-              contribute to the struggle in managing stress and forging
-              connections. Enter Gatherly, stepping in to facilitate the
-              formation of communities where individuals can connect through
-              group activities and events. Building such communities not only
-              brings like-minded individuals together but also serves as an
-              initial stride in combating the epidemic of loneliness and stress.
+              for young adults grappling with a{" "}
+              <span
+                className={`text-gatherly-blue  ${darkerGrotesqueBold.className}`}
+              >
+                rising tide of loneliness, stress, and mental health issues
+              </span>
+              . Challenges like post-graduate stress, post-pandemic
+              repercussions, and various other factors contribute to the
+              struggle in managing stress and forging connections. Enter
+              Gatherly, stepping in to facilitate the
+              <span
+                className={`text-gatherly-blue  ${darkerGrotesqueBold.className}`}
+              >
+                {" "}
+                formation of communities where individuals can connect through
+                group activities and events.
+              </span>{" "}
+              Building such communities not only brings like-minded individuals
+              together but also serves as an initial stride in combating the
+              epidemic of loneliness and stress.
             </p>
           </div>
           <div className="flex flex-col gap-y-8">
@@ -135,10 +148,17 @@ export default function Gatherly() {
               Prior to initiating the ideation and design stages, it was
               essential for me to conduct thorough research to grasp the extent
               of the epidemic of loneliness and stress among adults. Through
-              secondary research from Pew Research, I discovered that not only
-              were young individuals experiencing elevated levels of stress, but
-              there was also a significant portion struggling with forming
-              relationships and managing financial stressors.
+              secondary research from{" "}
+              <Link
+                className={` hover:underline text-gatherly-blue ${darkerGrotesqueBold.className} `}
+                href="https://www.pewresearch.org/short-reads/2023/03/02/mental-health-and-the-pandemic-what-u-s-surveys-have-found/"
+              >
+                Pew Research
+              </Link>
+              , I discovered that not only were young individuals experiencing
+              elevated levels of stress, but there was also a significant
+              portion struggling with forming relationships and managing
+              financial stressors.
             </p>
           </div>
           <Stats statsArray={stats} color="text-gatherly-blue" />

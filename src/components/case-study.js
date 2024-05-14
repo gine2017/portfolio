@@ -26,16 +26,16 @@ export default function CaseStudy() {
         </div>
         <div className="flex flex-col gap-16 md:flex-[1 0 50%]">
           <Card
-            title={"Gallery Pal"}
-            content={"Google Venture Design Sprint"}
-            image={galleryPal}
-            link={"/case-study/gallery-pal"}
-          />
-          <Card
             title={"Gatherly"}
             content={"UI/UX Case study for a\ncommunity app"}
             image={friendship_illustration}
             link={"/case-study/gatherly"}
+          />
+          <Card
+            title={"Gallery Pal"}
+            content={"Google Venture Design Sprint"}
+            image={galleryPal}
+            link={"/case-study/gallery-pal"}
           />
         </div>
       </div>

@@ -1,6 +1,11 @@
 import { useState } from "react";
 import Hero from "@/components/hero";
-import { myFont, darkerGrotesque, createImageArray } from "@/utils";
+import {
+  myFont,
+  darkerGrotesque,
+  darkerGrotesqueBold,
+  createImageArray,
+} from "@/utils";
 import Title from "@/components/title";
 import Stats from "@/components/stats";
 import Slider from "@/components/slider";
@@ -33,6 +38,7 @@ import screen10 from "../../../assets/capstone/naturalu/screens/screen10.png";
 import screen11 from "../../../assets/capstone/naturalu/screens/screen11.png";
 import screen12 from "../../../assets/capstone/naturalu/screens/screen12.png";
 import screen13 from "../../../assets/capstone/naturalu/screens/screen13.png";
+import Link from "next/link";
 
 const highFidelityImages = [
   screen1,
@@ -95,15 +101,20 @@ export default function NaturalU() {
                 Problem
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
-                {`For a long time, people with curly or coily hair have faced
-                problems with feeling sure of themselves, knowing how to take
-                care of their hair, and sometimes being treated badly. Nowadays,
-                they have to think a lot about how they look because some people
-                might think their hair doesn't fit in or isn't right for certain
-                places. Also, schools that teach about hair and beauty should
-                make sure to teach how to care for curly and coily hair. When
-                they don't, it adds to the feeling of not being good enough, and
-                it can make some people feel really bad about themselves.`}
+                {`For years, people with curly or coily hair have `}{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  struggled with self-confidence, hair care know-how, and facing
+                  unfair treatment.
+                </span>
+                {`
+                Today, they're constantly mindful of their appearance, fearing
+                their hair might not fit in or be accepted in certain settings.
+                It's crucial that schools teaching about hair and beauty include
+                lessons on caring for curly and coily hair. Without this, it
+                only reinforces feelings of inadequacy, leaving some individuals
+                feeling pretty low`}
               </p>
             </div>
             <div className="flex flex-col gap-y-8 flex-1">
@@ -111,13 +122,18 @@ export default function NaturalU() {
                 Solution
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
-                NaturalU is an application designed to empower users to inquire,
-                educate themselves, and engage in collaborative discussions
-                regarding all aspects of hair care. By fostering an environment
-                that encourages learning, interaction, and awareness of diverse
-                hair types, NaturalU aims to support individuals in feeling
-                confident to embrace their natural hair without fear of
-                discrimination.
+                NaturalU is an application designed to{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  {" "}
+                  empower users to inquire, educate themselves, and engage in
+                  collaborative discussions regarding all aspects of hair care
+                </span>{" "}
+                By fostering an environment that encourages learning,
+                interaction, and awareness of diverse hair types, NaturalU aims
+                to support individuals in feeling confident to embrace their
+                natural hair without fear of discrimination.
               </p>
             </div>
           </div>
@@ -135,8 +151,20 @@ export default function NaturalU() {
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               {`Before diving into the brainstorming and design stages, it was
               crucial for me to grasp how hair issues impact people beyond my
-              own experiences. In my research from the Journal of Clinical and
-              Aesthetic Dermatology, I found that many women, especially black
+              own experiences. In my research from the `}
+              <span>
+                {
+                  <Link
+                    className={` hover:underline text-light-purple ${darkerGrotesqueBold.className} `}
+                    href={
+                      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4174916/"
+                    }
+                  >
+                    Journal of Clinical and Aesthetic Dermatology
+                  </Link>
+                }
+              </span>
+              {` I found that many women, especially black
               women, often felt frustrated or embarrassed about their natural
               hair. The study also revealed an interesting fact: a significant
               number of physicians weren't familiar with their patients' hair

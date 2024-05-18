@@ -111,10 +111,7 @@ export default function NaturalU() {
                 {`
                 Today, they're constantly mindful of their appearance, fearing
                 their hair might not fit in or be accepted in certain settings.
-                It's crucial that schools teaching about hair and beauty include
-                lessons on caring for curly and coily hair. Without this, it
-                only reinforces feelings of inadequacy, leaving some individuals
-                feeling pretty low`}
+                `}
               </p>
             </div>
             <div className="flex flex-col gap-y-8 flex-1">

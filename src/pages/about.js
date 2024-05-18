@@ -49,27 +49,35 @@ export default function About() {
               <div className="flex-1">
                 <div>
                   <p>
-                    {`Hello again! I'm Regine Thimothee, currently employed as an
-                    associate web developer at ADP. Since childhood and
-                    throughout my college years, I've had a deep affinity for
-                    art and design`}
+                    {`Hello again! I'm Regine Thimothee, and I am currently employed as an Associate Application Developer at ADP. 
+                    I graduated from Rochester Institute of Technology with a Bachelor of Science 
+                    in`}{" "}
+                    <span className={`${darkerGrotesqueBold.className}`}>
+                      Web and Mobile Computing
+                    </span>
+                    .{" "}
+                    {`During college, I particularly 
+                    enjoyed my mobile design classes. However, I ultimately chose to pursue 
+                    a path in front-end web development, which allowed me to combine my 
+                    artistic and technical skills.`}
                   </p>
                 </div>
                 <br />
                 <div>
                   <p>
-                    {`During college, I particularly enjoyed my UI/UX and mobile
-                    design classes, although I ultimately chose to pursue a path
-                    in front-end web development, which allowed me to combine
-                    both my artistic and technical skills.`}
-                  </p>
-                </div>
-                <br />
-                <div>
-                  <p>
-                    {`After reflecting on my career path, I've come to realize
-                    that UI/UX design is where my true passion lies. Now, I'm
-                    taking steps to transition into a career in UI/UX .`}
+                    {`After working alongside the design team at ADP, reflecting
+                     on my career path, and refocusing on my passions, I've realized
+                      that `}
+                    <span className={`${darkerGrotesqueBold.className}`}>
+                      UI/UX design is my true passion.
+                    </span>{" "}
+                    Now, I’m taking steps to utilize my knowledge of web
+                    development to{" "}
+                    <span className={`${darkerGrotesqueBold.className}`}>
+                      bridge the communication between designers and developers
+                      to create innovative solutions, user-center designs, and
+                      technically sound designs
+                    </span>
                   </p>
                 </div>
               </div>

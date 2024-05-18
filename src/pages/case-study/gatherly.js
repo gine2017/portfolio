@@ -103,27 +103,24 @@ export default function Gatherly() {
               Problem Statement
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              Navigating adulthood can be exceptionally difficult, particularly
-              for young adults grappling with a{" "}
+              Navigating adulthood is challenging, especially for young adults
+              facing{" "}
               <span
                 className={`text-gatherly-blue  ${darkerGrotesqueBold.className}`}
               >
-                rising tide of loneliness, stress, and mental health issues
+                loneliness, stress, and mental health issues
               </span>
-              . Challenges like post-graduate stress, post-pandemic
-              repercussions, and various other factors contribute to the
-              struggle in managing stress and forging connections. Enter
-              Gatherly, stepping in to facilitate the
+              Post-graduate stress, post-pandemic effects, and other factors add
+              to these struggles. Gatherly helps by creating{" "}
               <span
                 className={`text-gatherly-blue  ${darkerGrotesqueBold.className}`}
               >
                 {" "}
-                formation of communities where individuals can connect through
-                group activities and events.
-              </span>{" "}
-              Building such communities not only brings like-minded individuals
-              together but also serves as an initial stride in combating the
-              epidemic of loneliness and stress.
+                communities through group activities and events
+              </span>
+              , bringing like-minded individuals together to combat loneliness
+              and stress. This project was completed as part of the UI/UX Design
+              learning platform at Springboard.
             </p>
           </div>
           <div className="flex flex-col gap-y-8">

@@ -2,7 +2,12 @@ import { useState } from "react";
 import Navbar from "@/components/navbar";
 import heroImg from "../../../assets/capstone/gallerypal/gallery-pal-hero.svg";
 import Hero from "@/components/hero";
-import { myFont, darkerGrotesque, createImageArray } from "@/utils";
+import {
+  myFont,
+  darkerGrotesque,
+  createImageArray,
+  darkerGrotesqueBold,
+} from "@/utils";
 import Title from "@/components/title";
 import Image from "next/image";
 import Slider from "@/components/slider";
@@ -70,10 +75,20 @@ export default function GalleryPal() {
               <p className={` text-2xl ${darkerGrotesque.className}`}>
                 Art is intended to offer an experience accessible to all
                 individuals. However, full immersion in the art world can be
-                challenging if limited to wall descriptions alone. Many museum
-                visitors may feel overwhelmed or miss crucial connections to the
-                exhibits. Gallery Pal aims to address this challenge by
-                providing a solution.
+                <span
+                  className={`text-marron   ${darkerGrotesqueBold.className}`}
+                >
+                  {" "}
+                  challenging if limited to wall descriptions alone
+                </span>
+                . Many museum visitors may{" "}
+                <span
+                  className={`text-marron  ${darkerGrotesqueBold.className}`}
+                >
+                  feel overwhelmed or miss crucial connections to the exhibits
+                </span>
+                . Gallery Pal aims to address this challenge by providing a
+                solution.
               </p>
             </div>
             <div className="flex flex-col gap-y-8 flex-1">
@@ -81,11 +96,23 @@ export default function GalleryPal() {
                 Solution
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
-                During this 5 day sprint I created Gallery Pal, which is an
-                application dedicated to enhancing the museum experience by
-                prioritizing immersion. Leveraging features like audio tours,
-                map functionalities, and gamification, Gallery Pal aims to
-                enrich the museum visit.
+                During this{" "}
+                <span
+                  className={`text-marron  ${darkerGrotesqueBold.className}`}
+                >
+                  {" "}
+                  5 day sprint
+                </span>{" "}
+                I created Gallery Pal, which is an application{" "}
+                <span
+                  className={`text-marron  ${darkerGrotesqueBold.className}`}
+                >
+                  {" "}
+                  dedicated to enhancing the museum experience by prioritizing
+                  immersion
+                </span>
+                . Leveraging features like audio tours, map functionalities, and
+                gamification, Gallery Pal aims to enrich the museum visit.
               </p>
             </div>
           </div>

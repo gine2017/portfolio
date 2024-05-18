@@ -12,11 +12,12 @@ export default function CaseStudy() {
       <div className="flex flex-col gap-16 mt-16 xl:flex-row">
         <div className="flex flex-col gap-16 md:flex-[1 0 50%]">
           <Card
-            title={"NaturalU"}
-            content={`An educational app to learn\nabout different hair types`}
-            image={naturalU}
-            link={"/case-study/natural-u"}
+            title={"Gatherly"}
+            content={"UI/UX Case study for a\ncommunity app"}
+            image={friendship_illustration}
+            link={"/case-study/gatherly"}
           />
+
           <Card
             title={"Modern Attire"}
             content={`An elegant suit website`}
@@ -26,10 +27,10 @@ export default function CaseStudy() {
         </div>
         <div className="flex flex-col gap-16 md:flex-[1 0 50%]">
           <Card
-            title={"Gatherly"}
-            content={"UI/UX Case study for a\ncommunity app"}
-            image={friendship_illustration}
-            link={"/case-study/gatherly"}
+            title={"NaturalU"}
+            content={`An educational app to learn\nabout different hair types`}
+            image={naturalU}
+            link={"/case-study/natural-u"}
           />
           <Card
             title={"Gallery Pal"}

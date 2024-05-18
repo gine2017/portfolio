@@ -9,7 +9,12 @@ import MobileSlider from "@/components/mobile-slider";
 import Footer from "@/components/footer";
 import Image from "next/image";
 import CaseStudyFooter from "@/components/case-study-footer";
-import { myFont, darkerGrotesque, createImageArray } from "@/utils";
+import {
+  myFont,
+  darkerGrotesque,
+  createImageArray,
+  darkerGrotesqueBold,
+} from "@/utils";
 
 //images
 import heroImg from "../../../assets/capstone/modernattire/modern_attire_hero.svg";
@@ -73,14 +78,35 @@ export default function ModernAttire() {
                 Problem
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
-                {` Modern Attire's mobile-web shopping experience for suits
-                requires improving usability and boosting conversion rates.
-                Analytics reveal that 50% of users view 7 item pages on average
-                but abandon the site before adding items to the cart. Meanwhile,
-                70% of those who add items to the cart fail to complete the
-                purchase, often abandoning the process at the registration page.
-                The objective is to redesign the site to increase the completion
-                rate from browsing suits to checkout.`}
+                {` This project was completed as part of the UI/UX Design learning platform at Springboard.
+                 Modern Attire's mobile-web shopping experience needs better usability
+                 and higher conversion rates. `}{" "}
+                Analytics show that{" "}
+                <span
+                  className={`text-modern-attire  ${darkerGrotesqueBold.className}`}
+                >
+                  50% of users
+                </span>{" "}
+                view 7 item pages but{" "}
+                <span
+                  className={`text-modern-attire  ${darkerGrotesqueBold.className}`}
+                >
+                  leave before adding items to the cart
+                </span>
+                . Additionally,{" "}
+                <span
+                  className={`text-modern-attire  ${darkerGrotesqueBold.className}`}
+                >
+                  70%
+                </span>{" "}
+                of those who add items{" "}
+                <span
+                  className={`text-modern-attire  ${darkerGrotesqueBold.className}`}
+                >
+                  abandon at the registration page.
+                </span>{" "}
+                The goal is to redesign the site to boost the checkout
+                completion rate.
               </p>
             </div>
             <div className="flex flex-col gap-y-8 flex-1">
@@ -89,8 +115,14 @@ export default function ModernAttire() {
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
                 {`To tackle the customer retention challenges in the suit shopping
-                experience, we'll optimize key features like enabling guest
-                checkout, enhancing customization tools for gathering
+                experience, `}{" "}
+                <span
+                  className={`text-modern-attire  ${darkerGrotesqueBold.className}`}
+                >
+                  I focused on optimizing key features
+                </span>{" "}
+                like enabling guest
+                {`checkout, enhancing customization tools for gathering
                 measurements and integrating review viewing options.`}
               </p>
             </div>

@@ -88,7 +88,8 @@ export default function GalleryPal() {
                   feel overwhelmed or miss crucial connections to the exhibits
                 </span>
                 . Gallery Pal aims to address this challenge by providing a
-                solution.
+                solution.This project was completed as part of the UI/UX Design
+                learning platform at Springboard
               </p>
             </div>
             <div className="flex flex-col gap-y-8 flex-1">

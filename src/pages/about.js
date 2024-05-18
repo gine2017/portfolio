@@ -92,17 +92,18 @@ export default function About() {
                   <span className={` ${darkerGrotesqueBold.className}`}>
                     Design and UX Research Skills:
                   </span>
-                   Figma, Wireframing, Persona, User Interviewing, Storytelling,
-                  Prototyping,User Flows,User Research, User Interface
-                  Design,Information Architecture, Problem Solving, Visual
-                  Communication,Critical Thinker, Strong Communication
+                   Figma, Miro,Wireframing, Persona Creation, User Interviewing,
+                  Storytelling, Prototyping,User Flows,User Research, User
+                  Interface Design,Information Architecture, Problem Solving, UX
+                  Writing, Visual Communication,Critical Thinker, Strong
+                  Communication
                 </p>
                 <br />
                 <p>
                   <span className={` ${darkerGrotesqueBold.className}`}>
                     Technical Skills:
                   </span>
-                   HTML5, CSS3, Javascript, Software Design Patterns, Github /
+                  HTML5, CSS3, Javascript, Software Design Patterns, Github /
                   Github Desktop, Storybook, Typescript, Trello, React, Unit
                   Testing
                 </p>
@@ -115,16 +116,19 @@ export default function About() {
                     Experience
                   </span>
                 </p>
-                <p>Associate Developer, Full-time: ADP July 2022 - Present</p>
-                <br />
                 <p>
-                  Front End Developer, Part-time: RDI Diamonds, October 2021 -
-                  May 2022
+                  Associate Application Developer, Full-time: ADP July 2022 -
+                  Present
                 </p>
                 <br />
                 <p>
-                  Front End Engineer Intern: Beacon Biosignals, May 2021- August
-                  2021
+                  Front End Developer, Jewelry Site Design, Part-time: RDI
+                  Diamonds, October 2021 - May 2022
+                </p>
+                <br />
+                <p>
+                  Front End Engineer Intern, Portal Redesign, Intern: Beacon
+                  Biosignals, May 2021- August 2021
                 </p>
               </div>
             </div>

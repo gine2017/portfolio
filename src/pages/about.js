@@ -101,7 +101,7 @@ export default function About() {
                 <br />
                 <p>
                   <span className={` ${darkerGrotesqueBold.className}`}>
-                    Technical Skills:
+                    Technical Skills:{" "}
                   </span>
                   HTML5, CSS3, Javascript, Software Design Patterns, Github /
                   Github Desktop, Storybook, Typescript, Trello, React, Unit
@@ -117,18 +117,24 @@ export default function About() {
                   </span>
                 </p>
                 <p>
-                  Associate Application Developer, Full-time: ADP July 2022 -
-                  Present
+                  <span className={` ${darkerGrotesqueBold.className}`}>
+                    Associate Application Developer,
+                  </span>{" "}
+                  Full-time: ADP July 2022 - Present
                 </p>
                 <br />
                 <p>
-                  Front End Developer, Jewelry Site Design, Part-time: RDI
-                  Diamonds, October 2021 - May 2022
+                  <span className={`${darkerGrotesqueBold.className}`}>
+                    Front End Developer, Jewelry Site Design,
+                  </span>{" "}
+                  Part-time: RDI Diamonds, October 2021 - May 2022
                 </p>
                 <br />
                 <p>
-                  Front End Engineer Intern, Portal Redesign, Intern: Beacon
-                  Biosignals, May 2021- August 2021
+                  <span className={`${darkerGrotesqueBold.className}`}>
+                    Front End Engineer Intern, Portal Redesign,
+                  </span>{" "}
+                  Intern: Beacon Biosignals, May 2021- August 2021
                 </p>
               </div>
             </div>

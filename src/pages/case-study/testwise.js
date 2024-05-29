@@ -88,21 +88,40 @@ export default function TestWise() {
               client capabilities in managing tasks, requiremnts, and issues .
             </p>
           </div>
-          <div className="flex flex-col gap-y-8">
-            <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
-              My Role
-            </p>
-            <p>
-              Test Wise was a collaborative project where my role included :
-            </p>
-            <ul className="list-disc">
-              <li className={` text-2xl ${darkerGrotesque.className}`}>
-                UX Design: High-Fidelity screens, Wireframes
-              </li>
-              <li className={` text-2xl ${darkerGrotesque.className}`}>
-                UX Research: Competitive analysis, User Personas
-              </li>
-            </ul>
+          <div className="flex flex-col gap-y-10 md:flex-row md:gap-x-40">
+            <div className="flex flex-col gap-y-2 md:gap-y-4">
+              <p className={`text-testwise-blue  text-4xl ${myFont.className}`}>
+                My Role
+              </p>
+              <ul className="list-disc">
+                <li className={` text-2xl ${darkerGrotesque.className}`}>
+                  UX Design: High-Fidelity screens, Wireframes
+                </li>
+                <li className={` text-2xl ${darkerGrotesque.className}`}>
+                  UX Research: Competitive analysis, User Personas
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col gap-y-4">
+              <p className={`text-testwise-blue  text-4xl ${myFont.className}`}>
+                Timeline
+              </p>
+              <ul className="list-disc">
+                <li className={` text-2xl ${darkerGrotesque.className}`}>
+                  1 month
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col gap-y-4">
+              <p className={`text-testwise-blue  text-4xl ${myFont.className}`}>
+                Tools
+              </p>
+              <ul className="list-disc">
+                <li className={` text-2xl ${darkerGrotesque.className}`}>
+                  Figma
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="flex flex-col gap-y-8">
             <p className={`text-testwise-blue text-4xl ${myFont.className}`}>

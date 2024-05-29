@@ -31,7 +31,7 @@ export default function Card({
         <div className="ml-6 lg:pr-4">
           <div className={` text-3xl  ${myFont.className}`}>{title}</div>
           <div
-            className={`text-lg  whitespace-pre-wrap ${darkerGrotesque.className}`}
+            className={`text-base  whitespace-pre-wrap ${darkerGrotesque.className}`}
           >
             {content}
           </div>

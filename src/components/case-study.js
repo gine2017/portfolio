@@ -37,7 +37,7 @@ export default function CaseStudy() {
         <div className="flex flex-col gap-8">
           <Card
             title={"TestWise"}
-            content={`A requirements dashboard for KDIT Solutions`}
+            content={`A requirements dashboard\nfor KDIT Solutions`}
             image={kdit}
             link={"/case-study/testwise"}
             className="flex-1"

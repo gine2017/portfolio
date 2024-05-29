@@ -45,6 +45,7 @@ module.exports = {
         marron: "#5B2E48",
         "gatherly-blue": "#0072BB",
         "modern-attire": "#010154",
+        "testwise-blue": "#1F3F70",
       },
       keyframes: {
         fadeInUp: {

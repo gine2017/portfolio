@@ -29,9 +29,9 @@ export default function Card({
       </div>
       <div className="flex flex-col gap-y-10 mt-8">
         <div className="ml-6 lg:pr-4">
-          <div className={` text-4xl  ${myFont.className}`}>{title}</div>
+          <div className={` text-3xl  ${myFont.className}`}>{title}</div>
           <div
-            className={`text-base  whitespace-pre-wrap ${darkerGrotesque.className}`}
+            className={`text-lg  whitespace-pre-wrap ${darkerGrotesque.className}`}
           >
             {content}
           </div>

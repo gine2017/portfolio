@@ -22,7 +22,6 @@ import map from "../../../assets/capstone/gallerypal/map.png";
 import interview from "../../../assets/capstone/gallerypal/interview.png";
 import hmw from "../../../assets/capstone/gallerypal/HMW.png";
 import crazyEight from "../../../assets/capstone/gallerypal/Crazy-8.png";
-import storyboard from "../../../assets/capstone/gallerypal/Crazy-8.png";
 import screen1 from "../../../assets/capstone/gallerypal/screens/screen-1.png";
 import screen2 from "../../../assets/capstone/gallerypal/screens/screen-2.png";
 import screen3 from "../../../assets/capstone/gallerypal/screens/screen-3.png";

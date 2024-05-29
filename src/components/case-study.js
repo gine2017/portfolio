@@ -2,6 +2,7 @@ import galleryPal from "../../assets/gallery-pal-logo.svg";
 import naturalU from "../../assets/natualU_logo.svg";
 import friendship_illustration from "../../assets/friendship_illustration.svg";
 import modernAttire from "../../assets/capstone/modernattire/modern-attire-thumbnail.png";
+import kdit from "../../assets/capstone/testwise/kdit-logo.svg";
 import Card from "@/components/card";
 import Title from "./title";
 
@@ -12,12 +13,17 @@ export default function CaseStudy() {
       <div className="flex flex-col gap-16 mt-16 xl:flex-row">
         <div className="flex flex-col gap-16 md:flex-[1 0 50%]">
           <Card
+            title={"TestWise"}
+            content={`A requirements dashboard for KDIT Solutions`}
+            image={kdit}
+            link={"/case-study/testwise"}
+          />
+          <Card
             title={"Gatherly"}
             content={"UI/UX Case study for a\ncommunity app"}
             image={friendship_illustration}
             link={"/case-study/gatherly"}
           />
-
           <Card
             title={"Modern Attire"}
             content={`An elegant suit website`}

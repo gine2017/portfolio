@@ -3,6 +3,7 @@ import galleryPal from "../../assets/gallery-pal-logo.svg";
 import naturalU from "../../assets/natualU_logo.svg";
 import friendship_illustration from "../../assets/friendship_illustration.svg";
 import modernAttire from "../../assets/capstone/modernattire/modern-attire-thumbnail.png";
+import kdit from "../../assets/capstone/testwise/kdit-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,6 +24,11 @@ export default function CaseStudyFooter({ casestudy = "" }) {
       image: galleryPal,
       subtitle: "Gallery Pal",
       link: "/case-study/gallery-pal",
+    },
+    {
+      image: kdit,
+      subtitle: "Test Wise",
+      link: "/case-study/testwise",
     },
   ];
   return (

@@ -81,8 +81,8 @@ export default function TestWise() {
               <span
                 className={`text-testwise-blue   ${darkerGrotesqueBold.className}`}
               >
-                To protect intellectual property, "Test Wise" is used as a
-                pseudonym
+                {`To protect intellectual property, "Test Wise" is used as a
+                pseudonym`}
               </span>
               . This new requirements module within this product will enhance
               client capabilities in managing tasks, requiremnts, and issues .
@@ -212,11 +212,11 @@ export default function TestWise() {
           <div className="flex flex-col gap-y-4">
             <Title title={"Design"} color="text-testwise-blue" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              After completing the low-fidelity wireframes, our client
+              {`After completing the low-fidelity wireframes, our client
               emphasized having a format similar to the Requirements and Test
               app for Jira. Taking this feedback, our team developed several
               solutions, ultimately creating one that was both innovative and
-              aligned with the client's vision.
+              aligned with the client's vision.`}
             </p>
           </div>
           <div className="flex flex-col gap-y-8">
@@ -261,9 +261,9 @@ export default function TestWise() {
                 of horizontal scroll to view all tasks.
               </li>
               <li className={` text-2xl ${darkerGrotesque.className}`}>
-                Unfortunately, due to time constraints, we were unable to
+                {`Unfortunately, due to time constraints, we were unable to
                 conduct any testing. In the future, it's best to allocate time
-                for testing.
+                for testing.`}
               </li>
               <li className={` text-2xl ${darkerGrotesque.className}`}>
                 Despite the time difference and having a client in Canada, our

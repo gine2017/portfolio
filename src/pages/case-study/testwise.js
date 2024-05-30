@@ -36,6 +36,7 @@ import wireframe_6 from "../../../assets/capstone/testwise/wireframes/wireframe-
 import wireframe_7 from "../../../assets/capstone/testwise/wireframes/wireframe-7.png";
 import wireframe_8 from "../../../assets/capstone/testwise/wireframes/wireframe-8.png";
 import wireframe_9 from "../../../assets/capstone/testwise/wireframes/wireframe-9.png";
+import Link from "next/link";
 
 export default function TestWise() {
   const { width } = useWindowSize();
@@ -246,8 +247,16 @@ export default function TestWise() {
               Our team developed several solutions for the requirements
               dashboard, and our client found one particularly innovative. For
               the high-fidelity prototype, we focused on creating a solution
-              inspired by the RTM app for Jira. In this solution, we introduced
-              features such as:
+              inspired by the{" "}
+              <Link
+                className={` hover:underline text-testwise-blue ${darkerGrotesqueBold.className} `}
+                href={
+                  "https://marketplace.atlassian.com/apps/1220294/requirements-test-management-for-jira?tab=reviews&hosting=cloud&utm_term=rtm%20for%20jira&utm_campaign=%5BSRCH%20%5D%20%20RTM%20for%20Jira%20%20-%20BRAND%2001%2F2024&utm_source=adwords&utm_medium=ppc&hsa_acc=2204732923&hsa_cam=20972739088&hsa_grp=159725255962&hsa_ad=688823089651&hsa_src=g&hsa_tgt=kwd-2272213535230&hsa_kw=rtm%20for%20jira&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=Cj0KCQjw3tCyBhDBARIsAEY0XNm_Aeq7hVm6wjRUh7agn-H_ofQTMqSdqq2ZZhNozwzamIHQjlNXZgEaAtcZEALw_wcB"
+                }
+              >
+                RTM app
+              </Link>{" "}
+              for Jira. In this solution, we introduced features such as:
             </p>
             <ul className="list-disc">
               <li className={` text-2xl ${darkerGrotesque.className}`}>
@@ -264,6 +273,14 @@ export default function TestWise() {
                 Task details page
               </li>
             </ul>
+            <Link
+              className={`text-2xl hover:underline text-testwise-blue ${darkerGrotesqueBold.className} `}
+              href={
+                "https://www.figma.com/design/pODnwNo9vwRSEJSnxqJhdk/requirement-dash-(case-study)?node-id=88-3321&t=3wMJlIncDNZksy4C-1"
+              }
+            >
+              Alternate Solutions
+            </Link>
           </div>
           <iframe
             style={{ border: "1px solid rgba(0, 0, 0, 0.1);" }}

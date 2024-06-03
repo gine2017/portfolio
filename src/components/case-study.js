@@ -11,7 +11,7 @@ export default function CaseStudy() {
     <div>
       <Title title={"Case Studies"} />
       <div className="flex flex-col gap-8 mt-16 xl:flex-row ">
-        <div className="flex flex-col gap-8 xl:flex-1 ">
+        <div className="flex flex-col gap-8 xl:basis-1/2 ">
           <Card
             title={"Gatherly"}
             content={"UI/UX Case study for a\ncommunity app"}
@@ -34,7 +34,7 @@ export default function CaseStudy() {
             className="flex-1"
           />
         </div>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 xl:basis-1/2">
           <Card
             title={"TestWise"}
             content={`A requirements dashboard\nfor KDIT Solutions`}

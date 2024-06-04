@@ -76,7 +76,10 @@ export default function Home() {
                 className={` text-2xl md:text-4xl whitespace-pre-wrap	${darkerGrotesque.className}`}
               >
                 {`I'm a UI/UX designer with a background in web development `}
-                {`, bridging design and development to create thoughtful user experiences.\n`}
+                <span className={`${darkerGrotesqueBold.className}`}>
+                  bridging design and development
+                </span>{" "}
+                {`to create thoughtful user experiences.\n`}
                 <p>
                   Skilled in{" "}
                   <span className={`${darkerGrotesqueBold.className}`}>

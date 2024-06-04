@@ -7,6 +7,12 @@ import Hero from "@/components/hero";
 import Footer from "@/components/footer";
 import Title from "@/components/title";
 import CaseStudyFooter from "@/components/case-study-footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBookBookmark,
+  faLightbulb,
+  faPenToSquare,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   myFont,
   darkerGrotesque,
@@ -19,7 +25,6 @@ import Image from "next/image";
 // images
 import testWiseHero from "../../../assets/capstone/testwise/test-wise-hero.svg";
 import regine from "../../../assets/capstone/testwise/regine.png";
-import jess from "../../../assets/capstone/testwise/jess.png";
 import aran from "../../../assets/capstone/testwise/aran.png";
 import airtable from "../../../assets/capstone/testwise/research/airtable.png";
 import asana from "../../../assets/capstone/testwise/research/asana.png";
@@ -90,7 +95,7 @@ export default function TestWise() {
             </p>
           </div>
           <div className="flex flex-col gap-y-10 md:flex-row md:gap-x-40">
-            <div className="flex flex-col gap-y-2 md:gap-y-4">
+            <div className="flex flex-col gap-y-2 md:gap-y-8">
               <p className={`text-testwise-blue  text-4xl ${myFont.className}`}>
                 My Role
               </p>
@@ -103,7 +108,7 @@ export default function TestWise() {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-y-4">
+            <div className="flex flex-col gap-y-8">
               <p className={`text-testwise-blue  text-4xl ${myFont.className}`}>
                 Timeline
               </p>
@@ -113,7 +118,7 @@ export default function TestWise() {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-y-4">
+            <div className="flex flex-col gap-y-8">
               <p className={`text-testwise-blue  text-4xl ${myFont.className}`}>
                 Tools
               </p>
@@ -126,56 +131,75 @@ export default function TestWise() {
           </div>
           <div className="flex flex-col gap-y-8">
             <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
-              Meet the Team
+              Meeting the Client
             </p>
             <div className="flex flex-col">
-              <div className="flex justify-evenly">
-                <div className="flex flex-col w-1/4 items-center">
-                  <Image src={jess} className="object-contain" />
-                  <p
-                    className={` text-2xl text-testwise-blue mt-4 ${darkerGrotesqueBold.className}`}
-                  >
-                    Jessica Teng
-                  </p>
-                </div>
-                <div className="flex flex-col w-1/4 items-center">
-                  <Image src={aran} className="object-contain" />
-                  <p
-                    className={` text-2xl text-testwise-blue mt-4 ${darkerGrotesqueBold.className}`}
-                  >
-                    Aran Kim
-                  </p>
-                </div>
-                <div className="flex flex-col w-1/4 items-center">
-                  <Image src={regine} className="object-contain" />
-                  <p
-                    className={` text-2xl text-testwise-blue mt-4 ${darkerGrotesqueBold.className}`}
-                  >
-                    Regine Thimothee
-                  </p>
-                </div>
-              </div>
-              <p className={` text-2xl mt-4 ${darkerGrotesque.className}`}>
-                Aran, Jessica, and I began the project by meeting with Pranjal,
-                the president of KDIT Solutions. Pranjal shared his experiences
-                and the difficulties he encountered when creating the
-                requirement dashboard module for the first time. He expressed a
-                desire to restart the design process for the module.
-              </p>
-            </div>
-            <div className="flex flex-col gap-y-8">
-              <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
-                Design Process
-              </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
-                To tackle the project, our team decided to start with research,
-                including competitive analysis and persona development. We then
-                moved on to ideation, creating wireframes, and finally concluded
-                with high-fidelity frames and a small prototype.
+                For this project, I had the opportunity to work with two other
+                designers, Aran Kim and Jessica Teng. At the beginning, our
+                group met with Pranjal, the president of KDIT Solutions. Pranjal
+                shared his experiences and the challenges he faced when
+                initially creating the requirement dashboard module. He
+                expressed a desire to restart the design process for the module.
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-y-4">
+          <div className="flex flex-col gap-y-8">
+            <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
+              Design Process
+            </p>
+            <div className="flex justify-evenly">
+              <div className="flex flex-col items-center">
+                <FontAwesomeIcon
+                  icon={faBookBookmark}
+                  size="4x"
+                  color="#1F3F70"
+                />
+                <div>
+                  <p
+                    className={` text-3xl text-testwise-blue mt-4 text-center  ${darkerGrotesqueBold.className}`}
+                  >
+                    Research
+                  </p>
+                  <p>Competitive Analysis</p>
+                  <p>Persona</p>
+                </div>
+              </div>
+              <div className="flex flex-col  items-center">
+                <FontAwesomeIcon icon={faLightbulb} size="4x" color="#1F3F70" />
+                <div>
+                  <p
+                    className={` text-3xl text-testwise-blue mt-4 text-center  ${darkerGrotesqueBold.className}`}
+                  >
+                    Ideate
+                  </p>
+                  <p>Wireframes</p>
+                </div>
+              </div>
+              <div className="flex flex-col  items-center">
+                <FontAwesomeIcon
+                  icon={faPenToSquare}
+                  size="4x"
+                  color="#1F3F70"
+                />
+                <div>
+                  <p
+                    className={` text-3xl text-testwise-blue mt-4 text-center ${darkerGrotesqueBold.className}`}
+                  >
+                    Design
+                  </p>
+                  <p>High Fidelity Screens</p>
+                </div>
+              </div>
+            </div>
+            <p className={` text-2xl ${darkerGrotesque.className}`}>
+              To tackle the project, our team decided to start with research,
+              including competitive analysis and persona development. We then
+              moved on to ideation, creating wireframes, and finally concluded
+              with high-fidelity frames and a small prototype.
+            </p>
+          </div>
+          <div className="flex flex-col gap-y-8">
             <Title title={"Research"} color="text-testwise-blue" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               Before beginning the ideation process, our team met with Pranjal
@@ -214,7 +238,7 @@ export default function TestWise() {
           ) : (
             <Slider sliderData={createImageArray(persona)} />
           )}
-          <div className="flex flex-col gap-y-4">
+          <div className="flex flex-col gap-y-8">
             <Title title={"Ideate"} color="text-testwise-blue" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               Upon completing the competitive analysis and creating the persona,
@@ -229,7 +253,7 @@ export default function TestWise() {
           ) : (
             <Slider sliderData={createImageArray(wireframes)} />
           )}
-          <div className="flex flex-col gap-y-4">
+          <div className="flex flex-col gap-y-8">
             <Title title={"Design"} color="text-testwise-blue" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               {`After completing the low-fidelity wireframes, our client
@@ -288,7 +312,7 @@ export default function TestWise() {
             src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FpODnwNo9vwRSEJSnxqJhdk%2Frequirement-dash-(case-study)%3Fpage-id%3D0%253A1%26node-id%3D42-1567%26viewport%3D-1206%252C-796%252C0.34%26t%3Di3WmacbvZgTFEXac-1%26scaling%3Dscale-down%26starting-point-node-id%3D42%253A1567"
             allowfullscreen
           ></iframe>
-          <div className="flex flex-col gap-y-4">
+          <div className="flex flex-col gap-y-8">
             <Title title={"Project takeways"} color="text-testwise-blue" />
             <ul className="list-disc">
               <li className={` text-2xl ${darkerGrotesque.className}`}>

@@ -99,7 +99,7 @@ export default function TestWise() {
               <p className={`text-testwise-blue  text-4xl ${myFont.className}`}>
                 My Role
               </p>
-              <ul className="list-disc">
+              <ul className="list-disc list-inside">
                 <li className={` text-2xl ${darkerGrotesque.className}`}>
                   UX Design: High-Fidelity screens, Wireframes
                 </li>
@@ -112,7 +112,7 @@ export default function TestWise() {
               <p className={`text-testwise-blue  text-4xl ${myFont.className}`}>
                 Timeline
               </p>
-              <ul className="list-disc">
+              <ul className="list-disc list-inside">
                 <li className={` text-2xl ${darkerGrotesque.className}`}>
                   1 month
                 </li>
@@ -122,7 +122,7 @@ export default function TestWise() {
               <p className={`text-testwise-blue  text-4xl ${myFont.className}`}>
                 Tools
               </p>
-              <ul className="list-disc">
+              <ul className="list-disc list-inside">
                 <li className={` text-2xl ${darkerGrotesque.className}`}>
                   Figma
                 </li>
@@ -282,7 +282,7 @@ export default function TestWise() {
               </Link>{" "}
               for Jira. In this solution, we introduced features such as:
             </p>
-            <ul className="list-disc">
+            <ul className="list-disc list-inside">
               <li className={` text-2xl ${darkerGrotesque.className}`}>
                 Accordion feature for requirements to horizontally scroll
                 through sub-tasks
@@ -314,7 +314,7 @@ export default function TestWise() {
           ></iframe>
           <div className="flex flex-col gap-y-8">
             <Title title={"Project takeways"} color="text-testwise-blue" />
-            <ul className="list-disc">
+            <ul className="list-disc list-inside">
               <li className={` text-2xl ${darkerGrotesque.className}`}>
                 Our client was pleased with our solution, particularly the
                 dynamic display of tasks for specific requirements and the use

@@ -121,7 +121,7 @@ export default function GalleryPal() {
               <p className={` text-marron text-5xl ${myFont.className}`}>
                 My Role
               </p>
-              <ul className="list-disc">
+              <ul className="list-disc list-inside">
                 <li className={` text-2xl ${darkerGrotesque.className}`}>
                   UX Design
                 </li>
@@ -134,7 +134,7 @@ export default function GalleryPal() {
               <p className={` text-marron text-5xl ${myFont.className}`}>
                 Timeline
               </p>
-              <ul className="list-disc">
+              <ul className="list-disc list-inside">
                 <li className={` text-2xl ${darkerGrotesque.className}`}>
                   1 week
                 </li>
@@ -144,7 +144,7 @@ export default function GalleryPal() {
               <p className={` text-marron text-5xl ${myFont.className}`}>
                 Tools
               </p>
-              <ul className="list-disc">
+              <ul className="list-disc list-inside">
                 <li className={` text-2xl ${darkerGrotesque.className}`}>
                   Pencil and Paper
                 </li>

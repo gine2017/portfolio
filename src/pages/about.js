@@ -36,7 +36,7 @@ export default function About() {
         <main
           className={` ${`text-2xl ${darkerGrotesqueReg.className}`} w-4/5 mx-auto flex flex-col gap-y-8 mt-16 md:gap-32 md:mt-36 `}
         >
-          <div className="flex flex-col gap-8 md:gap-28">
+          <div className="flex flex-col gap-8 md:gap-16">
             <Title title={"About Me"} />
             <div className="flex flex-col gap-x-24 md:flex-row ">
               <div className="relative flex-1 w-60 mb-8 md:w-96 md:mb-0">
@@ -138,6 +138,42 @@ export default function About() {
                 </p>
               </div>
             </div>
+            <div className="flex flex-col">
+              <p className={`text-purple ${darkerGrotesqueBold.className}`}>
+                Transferrable Skills
+              </p>
+              <ul className="list-disc list-inside">
+                <li>
+                  <span className={` ${darkerGrotesqueBold.className}`}>
+                    User-Centric Thinking:{" "}
+                  </span>
+                  Understanding the end user’s needs and creating solutions that
+                  provide a positive user experience is crucial in both fields.
+                </li>
+                <li>
+                  <span className={` ${darkerGrotesqueBold.className}`}>
+                    Collaboration:{" "}
+                  </span>
+                  Working effectively with cross-functional teams, including
+                  developers, designers, and stakeholders, is essential.
+                </li>
+                <li>
+                  <span className={` ${darkerGrotesqueBold.className}`}>
+                    Technical Knowledge:{" "}
+                  </span>
+                  Knowledge of coding and technical constraints can help in
+                  designing feasible solutions and communicating with
+                  development teams.
+                </li>
+                <li>
+                  <span className={` ${darkerGrotesqueBold.className}`}>
+                    Communication Skills:{" "}
+                  </span>
+                  Clearly conveying ideas, requirements, and feedback through
+                  verbal, written, and visual communication.
+                </li>
+              </ul>
+            </div>
             <div className="flex flex-col gap-y-8">
               <Title title={"My Brand"} />
               <div className="w-full">
@@ -154,6 +190,7 @@ export default function About() {
                 </Link>
               </div>
             </div>
+
             <Title title={"How I Chill"} />
 
             <div className="flex flex-col gap-y-8 md:flex-row gap-x-24">

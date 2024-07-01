@@ -72,7 +72,7 @@ export default function Home() {
               <div
                 className={`text-purple text-5xl md:text-8xl ${myFont.className}`}
               >
-                Hi, I'm Regine
+                {`Hi, I'm Regine`}
               </div>
               <div
                 className={`text-2xl md:text-4xl whitespace-pre-wrap ${darkerGrotesque.className}`}

@@ -94,7 +94,7 @@ export default function NaturalU() {
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && <Hero image={naturalUHero} />}
       {showContent && (
-        <main className="w-4/5 mx-auto flex flex-col gap-y-16 mt-16 mb-48">
+        <main className="w-4/5 mx-auto flex flex-col gap-y-20 mt-16 mb-48">
           <div className="flex flex-col gap-y-8 md:flex-row gap-x-16 ">
             <div className="flex flex-col gap-y-8 flex-1">
               <p className={` text-light-purple text-4xl ${myFont.className}`}>
@@ -196,12 +196,8 @@ export default function NaturalU() {
               out ideas and flows for the Natural U app
             </p>
           </div>
-          <div className="w-full relative">
-            <Image
-              src={sketch}
-              className="object-contain md:h-[30rem]"
-              alt="sketches of screens"
-            />
+          <div className="flex justify-center items-center w-full h-screen relative">
+            <Image src={sketch} alt="sketches of screens" objectFit="contain" />
           </div>
           <div className="flex flex-col gap-y-8">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
@@ -213,11 +209,11 @@ export default function NaturalU() {
               visualize how users would navigate through specific processes.{" "}
             </p>
           </div>
-          <div className="w-full relative">
+          <div className="flex justify-center items-center w-full h-screen relative">
             <Image
               src={userFlow}
-              className="object-contain md:h-[30rem]"
               alt="image of user flow"
+              objectFit="contain"
             />
           </div>
           <Title title={"Design"} color="text-light-purple" />
@@ -234,7 +230,7 @@ export default function NaturalU() {
               atop their heads and encourages them to embrace it proudly.{" "}
             </p>
           </div>
-          <div className="w-full relative">
+          <div className="flex justify-center items-center w-full h-screen relative">
             <Image
               src={styleguide}
               className="object-contain"

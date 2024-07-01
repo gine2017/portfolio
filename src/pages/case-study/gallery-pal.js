@@ -65,10 +65,10 @@ export default function GalleryPal() {
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && <Hero image={heroImg} />}
       {showContent && (
-        <main className="mx-auto w-80% flex flex-col gap-y-16 mt-16 mb-48">
+        <main className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48">
           <div className="flex flex-col gap-y-8 md:flex-row md:gap-x-16 ">
             <div className="flex flex-col gap-y-8 flex-1">
-              <p className={` text-marron text-5xl ${myFont.className}`}>
+              <p className={` text-marron text-4xl ${myFont.className}`}>
                 Problem
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -92,7 +92,7 @@ export default function GalleryPal() {
               </p>
             </div>
             <div className="flex flex-col gap-y-8 flex-1">
-              <p className={` text-marron text-5xl ${myFont.className}`}>
+              <p className={` text-marron text-4xl ${myFont.className}`}>
                 Solution
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -118,7 +118,7 @@ export default function GalleryPal() {
           </div>
           <div className="flex flex-col gap-y-10 md:flex-row md:gap-x-40">
             <div className="flex flex-col gap-y-2 md:gap-y-4">
-              <p className={` text-marron text-5xl ${myFont.className}`}>
+              <p className={` text-marron text-4xl ${myFont.className}`}>
                 My Role
               </p>
               <ul className="list-disc list-inside">
@@ -131,7 +131,7 @@ export default function GalleryPal() {
               </ul>
             </div>
             <div className="flex flex-col gap-y-4">
-              <p className={` text-marron text-5xl ${myFont.className}`}>
+              <p className={` text-marron text-4xl ${myFont.className}`}>
                 Timeline
               </p>
               <ul className="list-disc list-inside">
@@ -141,7 +141,7 @@ export default function GalleryPal() {
               </ul>
             </div>
             <div className="flex flex-col gap-y-4">
-              <p className={` text-marron text-5xl ${myFont.className}`}>
+              <p className={` text-marron text-4xl ${myFont.className}`}>
                 Tools
               </p>
               <ul className="list-disc list-inside">
@@ -167,7 +167,7 @@ export default function GalleryPal() {
           </div>
           <div className="flex flex-col gap-y-8">
             <div className="flex flex-col gap-y-8 md:flex-1">
-              <p className={`text-marron text-5xl ${myFont.className}`}>
+              <p className={`text-marron text-4xl ${myFont.className}`}>
                 Expert Interview
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -178,17 +178,17 @@ export default function GalleryPal() {
                 tours.
               </p>
             </div>
-            <div className="w-full relative md:flex-1">
+            <div className="flex justify-center items-center w-full h-screen relative">
               <Image
                 src={interview}
-                className="object-contain md:h-[30rem]"
+                className="object-contain"
                 alt="expert itnerview image"
               />
             </div>
           </div>
           <div className="flex flex-col gap-y-8">
             <div className="flex flex-col gap-y-8 md:flex-1">
-              <p className={`text-marron text-5xl ${myFont.className}`}>
+              <p className={`text-marron text-4xl ${myFont.className}`}>
                 How Might We
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -199,10 +199,10 @@ export default function GalleryPal() {
                 formulating my product`}
               </p>
             </div>
-            <div className=" w-full relative md:flex-1">
+            <div className="flex justify-center items-center w-full h-screen relative">
               <Image
                 src={hmw}
-                className="object-contain md:h-[30rem]"
+                className="object-contain md:h-[50rem]"
                 alt="how might we image"
               />
             </div>
@@ -219,7 +219,7 @@ export default function GalleryPal() {
           </div>
           <div className="flex flex-col gap-y-8">
             <div className="flex flex-col gap-y-8 md:flex-1">
-              <p className={`text-marron text-5xl ${myFont.className}`}>
+              <p className={`text-marron text-4xl ${myFont.className}`}>
                 Crazy 8s Method
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -228,10 +228,10 @@ export default function GalleryPal() {
                 Pal app.
               </p>
             </div>
-            <div className=" w-ful relative md:flex-1">
+            <div className="flex justify-center items-center w-full h-screen relative">
               <Image
                 src={crazyEight}
-                className="object-contain md:h-[30rem]"
+                className="object-contain"
                 alt="image of crazy-8s"
               />
             </div>
@@ -246,16 +246,16 @@ export default function GalleryPal() {
               audio tours.`}
             </p>
           </div>
-          <div className="w-full flex justify-center relative">
+          <div className="flex justify-center items-center w-full h-screen relative">
             <Image
               src={map}
-              className="object-contain md:h-[30rem]"
+              className="object-contain"
               alt="image of storyboarding"
             />
           </div>
           <Title title={"Day Four"} color="text-marron" />
           <div className="flex flex-col gap-y-8">
-            <p className={`text-marron text-5xl ${myFont.className}`}>
+            <p className={`text-marron text-4xl ${myFont.className}`}>
               High Fidelity Screens
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -271,7 +271,7 @@ export default function GalleryPal() {
           )}
 
           <div className="flex flex-col gap-y-8">
-            <p className={`text-marron text-5xl ${myFont.className}`}>
+            <p className={`text-marron text-4xl ${myFont.className}`}>
               Prototype
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -298,7 +298,7 @@ export default function GalleryPal() {
           ></iframe>
           <Title title={"Day Five"} color="text-marron" />
           <div className="flex flex-col gap-y-8">
-            <p className={`text-marron text-5xl ${myFont.className}`}>Test</p>
+            <p className={`text-marron text-4xl ${myFont.className}`}>Test</p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               To conclude the sprint, I conducted usability testing on my
               prototype. During this phase, I enlisted 5 individuals to engage
@@ -312,7 +312,7 @@ export default function GalleryPal() {
             </p>
           </div>
           <div className="flex flex-col gap-y-8">
-            <p className={`text-marron text-5xl ${myFont.className}`}>
+            <p className={`text-marron text-4xl ${myFont.className}`}>
               Reflection
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>

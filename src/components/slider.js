@@ -23,7 +23,7 @@ export default function Slider({ sliderData = [], zoomable = true }) {
   };
 
   return (
-    <div className="flex flex-row gap-x-6 items-center px-10 ">
+    <div className="flex flex-row gap-x-6 items-center px-10">
       <div
         className="bg-purple text-white rounded-full hover:cursor-pointer"
         onClick={onBack}
@@ -32,9 +32,9 @@ export default function Slider({ sliderData = [], zoomable = true }) {
           &#9001;
         </p>
       </div>
-      <div className="flex-1 flex flex-col gap-y-8">
+      <div className="flex-1 flex flex-col gap-y-8 items-center">
         <div
-          className=" w-full relative"
+          className="w-full flex justify-center items-center relative"
           style={zoomable ? zoomImage(zoomedIn) : {}}
         >
           <Image
@@ -48,7 +48,7 @@ export default function Slider({ sliderData = [], zoomable = true }) {
           {sliderData[sliderIndex]?.subtitle}
         </p>
         <a
-          className="text-center text-blue-600 visited:text-purple-600 "
+          className="text-center text-blue-600 visited:text-purple-600"
           href={sliderData[sliderIndex]?.link}
         >
           {sliderData[sliderIndex]?.link}

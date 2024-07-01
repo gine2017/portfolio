@@ -20,12 +20,9 @@ import {
   darkerGrotesqueBold,
 } from "@/utils";
 import useWindowSize from "@/hooks/useWindowSize";
-import Image from "next/image";
 
 // images
 import testWiseHero from "../../../assets/capstone/testwise/test-wise-hero.svg";
-import regine from "../../../assets/capstone/testwise/regine.png";
-import aran from "../../../assets/capstone/testwise/aran.png";
 import airtable from "../../../assets/capstone/testwise/research/airtable.png";
 import asana from "../../../assets/capstone/testwise/research/asana.png";
 import azure from "../../../assets/capstone/testwise/research/azure.png";
@@ -69,7 +66,7 @@ export default function TestWise() {
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && <Hero image={testWiseHero} />}
       {showContent && (
-        <main className="mx-auto w-80% flex flex-col gap-y-16 mt-16 mb-48">
+        <main className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48">
           <div className="flex flex-col gap-y-8 flex-1">
             <p className={` text-testwise-blue text-4xl ${myFont.className}`}>
               Problem Statement
@@ -96,7 +93,7 @@ export default function TestWise() {
           </div>
           <div className="flex flex-col gap-y-10 md:flex-row md:gap-x-40">
             <div className="flex flex-col gap-y-2 md:gap-y-8">
-              <p className={`text-testwise-blue  text-4xl ${myFont.className}`}>
+              <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
                 My Role
               </p>
               <ul className="list-disc list-inside">

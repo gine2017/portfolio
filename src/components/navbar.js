@@ -38,7 +38,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li className="transition-transform hover:-translate-y-1">
-          <Link href={"/files/Regine_Resume.pdf"}>Resume</Link>
+          <Link href={"/files/Resume_Regine_Thimothee.pdf"}>Resume</Link>
         </li>
       </ul>
     </div>

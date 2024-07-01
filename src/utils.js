@@ -9,6 +9,10 @@ const darkerGrotesqueReg = Darker_Grotesque({
   weight: "400",
   subsets: ["latin"],
 });
+const darkerGrotesqueMed = Darker_Grotesque({
+  weight: "500",
+  subsets: ["latin"],
+});
 const darkerGrotesqueBold = Darker_Grotesque({
   weight: "700",
   subsets: ["latin"],
@@ -46,6 +50,7 @@ export {
   darkerGrotesque,
   darkerGrotesqueReg,
   darkerGrotesqueBold,
+  darkerGrotesqueMed,
   createImageArray,
   zoomImage,
 };

@@ -71,10 +71,10 @@ export default function ModernAttire() {
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && <Hero image={heroImg} />}
       {showContent && (
-        <main className="mx-auto w-80% flex flex-col gap-y-16 mt-16 mb-48">
+        <main className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48">
           <div className="flex flex-col gap-y-8 md:flex-row md:gap-x-16 ">
             <div className="flex flex-col gap-y-8 flex-1">
-              <p className={` text-modern-attire text-5xl ${myFont.className}`}>
+              <p className={` text-modern-attire text-4xl ${myFont.className}`}>
                 Problem
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -129,7 +129,7 @@ export default function ModernAttire() {
           </div>
           <div className="flex flex-col gap-y-10 md:flex-row md:gap-x-40">
             <div className="flex flex-col gap-y-2 md:gap-y-4">
-              <p className={`text-modern-attire text-5xl ${myFont.className}`}>
+              <p className={`text-modern-attire text-4xl ${myFont.className}`}>
                 My Role
               </p>
               <ul className="list-disc list-inside">
@@ -142,7 +142,7 @@ export default function ModernAttire() {
               </ul>
             </div>
             <div className="flex flex-col gap-y-4">
-              <p className={`text-modern-attire text-5xl ${myFont.className}`}>
+              <p className={`text-modern-attire text-4xl ${myFont.className}`}>
                 Timeline
               </p>
               <ul className="list-disc list-inside">
@@ -152,7 +152,7 @@ export default function ModernAttire() {
               </ul>
             </div>
             <div className="flex flex-col gap-y-4">
-              <p className={`text-modern-attire text-5xl ${myFont.className}`}>
+              <p className={`text-modern-attire text-4xl ${myFont.className}`}>
                 Tools
               </p>
               <ul className="list-disc list-inside">

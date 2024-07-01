@@ -34,9 +34,9 @@ export default function About() {
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && (
         <main
-          className={` ${`text-2xl ${darkerGrotesqueReg.className}`} w-4/5 mx-auto flex flex-col gap-y-8 mt-16 md:gap-32 md:mt-36 `}
+          className={` ${`text-2xl ${darkerGrotesqueReg.className}`} w-4/5 mx-auto flex flex-col mt-16 md:gap-32 md:mt-36 `}
         >
-          <div className="flex flex-col gap-8 md:gap-16">
+          <div className="flex flex-col gap-8 md:gap-24">
             <Title title={"About Me"} />
             <div className="flex flex-col gap-x-24 md:flex-row ">
               <div className="relative flex-1 w-60 mb-8 md:w-96 md:mb-0">
@@ -85,7 +85,9 @@ export default function About() {
             <Title title={"My Awesome Skills"} />
             <div className="flex flex-col gap-8 md:flex-row">
               <div className="flex-1">
-                <p className={`text-purple ${darkerGrotesqueBold.className}`}>
+                <p
+                  className={`text-purple text-3xl ${darkerGrotesqueBold.className}`}
+                >
                   Key Skills
                 </p>
                 <p>
@@ -103,19 +105,33 @@ export default function About() {
                   <span className={` ${darkerGrotesqueBold.className}`}>
                     Technical Skills:{" "}
                   </span>
-                  HTML5, CSS3, Javascript, Software Design Patterns, Github /
-                  Github Desktop, Storybook, Typescript, Trello, React, Unit
-                  Testing
+                  HTML5, CSS3, TailwindCSS, React, Javascript, Software Design
+                  Patterns, Github / Github Desktop, Storybook, Trello, Unit
+                  Testing, Node, Express, C#
                 </p>
               </div>
               <div className="flex-1">
                 <p>
                   <span
-                    className={`text-purple ${darkerGrotesqueBold.className}`}
+                    className={`text-purple text-3xl ${darkerGrotesqueBold.className}`}
                   >
                     Experience
                   </span>
                 </p>
+                <p>
+                  <span className={`${darkerGrotesqueBold.className}`}>
+                    Product Designer,
+                  </span>{" "}
+                  Contract: KDIT Solutions, April 2024 - May 2024
+                </p>
+                <br />
+                <p>
+                  <span className={`${darkerGrotesqueBold.className}`}>
+                    Lead User Experience Designer and Developer,
+                  </span>{" "}
+                  Freelance: NaturalU, November 2020 - Present
+                </p>
+                <br />
                 <p>
                   <span className={` ${darkerGrotesqueBold.className}`}>
                     Associate Application Developer,
@@ -123,23 +139,12 @@ export default function About() {
                   Full-time: ADP July 2022 - Present
                 </p>
                 <br />
-                <p>
-                  <span className={`${darkerGrotesqueBold.className}`}>
-                    Front End Developer, Jewelry Site Design,
-                  </span>{" "}
-                  Part-time: RDI Diamonds, October 2021 - May 2022
-                </p>
-                <br />
-                <p>
-                  <span className={`${darkerGrotesqueBold.className}`}>
-                    Front End Engineer Intern, Portal Redesign,
-                  </span>{" "}
-                  Intern: Beacon Biosignals, May 2021- August 2021
-                </p>
               </div>
             </div>
             <div className="flex flex-col">
-              <p className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <p
+                className={`text-purple text-3xl ${darkerGrotesqueBold.className}`}
+              >
                 Transferrable Skills
               </p>
               <ul className="list-disc list-inside">
@@ -179,7 +184,7 @@ export default function About() {
               <div className="w-full">
                 <Image src={mybrand} alt="brand colors, font, and logo" />
               </div>
-              <div className="bg-orange hover:bg-[#DA8600] ml-6 w-48 h-14 rounded-3xl text-4xl text-white flex justify-center">
+              <div className="bg-orange hover:bg-[#DA8600] ml-6 w-48 h-14 rounded-3xl text-3xl text-white flex justify-center">
                 <Link
                   href={
                     "https://www.figma.com/file/HjWKivBTvFUTIWzx0N0Il5/Portfolio?type=design&node-id=118%3A1698&mode=design&t=iBWJ6z9TOGjaqo3d-1"

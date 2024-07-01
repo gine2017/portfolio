@@ -10,6 +10,8 @@ import Title from "@/components/title";
 import useWindowSize from "@/hooks/useWindowSize";
 import MobileSlider from "@/components/mobile-slider";
 import Slider from "@/components/slider";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 //images
 import techWork1 from "../../assets/technical-work/tech-work-1.png";
@@ -65,15 +67,15 @@ export default function Home() {
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && (
         <main className="w-4/5 mx-auto flex flex-col mt-16 gap-10 md:gap-32 md:mt-36">
-          <header className="flex flex-col gap-8 mb-16 md:gap-32 xl:flex-row">
+          <header className="flex flex-col gap-8 my-16 md:gap-32 xl:flex-row">
             <div className="flex flex-col gap-8 flex-1">
               <div
                 className={`text-purple text-5xl md:text-8xl ${myFont.className}`}
               >
-                Hi, Im Regine
+                Hi, I'm Regine
               </div>
               <div
-                className={` text-2xl md:text-4xl whitespace-pre-wrap	${darkerGrotesque.className}`}
+                className={`text-2xl md:text-4xl whitespace-pre-wrap ${darkerGrotesque.className}`}
               >
                 {`I'm a UI/UX designer with a background in web development `}
                 <span className={`${darkerGrotesqueBold.className}`}>
@@ -89,11 +91,22 @@ export default function Home() {
                 Currently: Associate Developer @
                 <span className={`${darkerGrotesqueBold.className}`}>ADP</span>
               </div>
+              <FontAwesomeIcon
+                icon={faArrowDown}
+                size="3x"
+                color="#3C0092"
+                className="animate-bounce mt-8"
+              />
             </div>
-            <div className="relative flex-1 w-60 md:w-96 ">
-              <Image src={selfIllustration} alt="svg illustration of regine" />
+            <div className="relative flex-1 w-full md:w-1/2 lg:w-2/3 xl:w-3/4">
+              <Image
+                src={selfIllustration}
+                alt="svg illustration of Regine"
+                className="w-full h-auto"
+              />
             </div>
           </header>
+
           <CaseStudy />
           <Title title={"Technical Work"} />
           {width <= 767 && showContent ? (

@@ -97,9 +97,9 @@ export default function Gatherly() {
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && <Hero image={heroImg} />}
       {showContent && (
-        <main className="mx-auto w-80% flex flex-col gap-y-16 mt-4 md:mt-16 mb-48">
+        <main className="mx-auto w-80% flex flex-col gap-y-20 mt-4 md:mt-16 mb-48">
           <div className="flex flex-col gap-y-8 flex-1">
-            <p className={` text-gatherly-blue text-5xl ${myFont.className}`}>
+            <p className={` text-gatherly-blue text-4xl ${myFont.className}`}>
               Problem Statement
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -124,7 +124,7 @@ export default function Gatherly() {
             </p>
           </div>
           <div className="flex flex-col gap-y-8">
-            <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               My Role
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -132,10 +132,10 @@ export default function Gatherly() {
               handled the research, design, and testing phases
             </p>
           </div>
-          <div className="w-full  ">
+          <div className="flex justify-center items-center w-full h-screen relative">
             <Image
               src={appHero}
-              className="object-contain md:h-[30rem]"
+              className="object-contain "
               alt="small hero image of app screens"
             />
           </div>
@@ -161,7 +161,7 @@ export default function Gatherly() {
           <Stats statsArray={stats} color="text-gatherly-blue" />
 
           <div className="flex flex-col gap-y-8">
-            <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Survey
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -181,7 +181,7 @@ export default function Gatherly() {
             />
           )}
           <div className="flex flex-col gap-y-8">
-            <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               User Interview
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -220,7 +220,7 @@ export default function Gatherly() {
               </li>
             </ul>
           </div>
-          <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+          <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
             Notable Quotes from the interviews
           </p>
           <div
@@ -240,7 +240,7 @@ export default function Gatherly() {
             </p>
           </div>
           <div className="flex flex-col gap-y-8">
-            <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               However
             </p>
             <p className={`text-2xl ${darkerGrotesque.className}`}>
@@ -267,7 +267,7 @@ export default function Gatherly() {
             </p>
           </div>
           <div className="flex flex-col gap-y-8">
-            <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Persona
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -281,20 +281,20 @@ export default function Gatherly() {
           ) : (
             <Slider sliderData={createImageArray(personaImages)} />
           )}
-          <div className="flex flex-col gap-y-8">
-            <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+          <div className="flex flex-col gap-y-14">
+            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Empathy Map
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
               {`To finalize my analysis of user needs, I developed an empathy map
-              to visually represent a user's attitudes and behaviors. This will
-              serve as the cornerstone of truth, guarding the product from any
-              unfounded unwarranted biases.`}
+        to visually represent a user's attitudes and behaviors. This will
+        serve as the cornerstone of truth, guarding the product from any
+        unfounded unwarranted biases.`}
             </p>
-            <div className="w-full  relative ">
+            <div className="flex justify-center items-center w-full">
               <Image
                 src={empathy}
-                className="object-contain md:h-[30rem]"
+                className="object-contain md:h-[50rem]"
                 alt="image of empathy map"
               />
             </div>
@@ -311,7 +311,7 @@ export default function Gatherly() {
           </div>
           <div className="flex flex-col">
             <div className="flex flex-1 gap-y-8 flex-col">
-              <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+              <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
                 Laddering
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -322,16 +322,16 @@ export default function Gatherly() {
                 user's behavior and needs`}
               </p>
             </div>
-            <div className="w-full flex-1">
+            <div className="flex justify-center items-center w-full h-screen relative">
               <Image
                 src={ladder}
-                className="object-contain md:h-[30rem]"
+                className="object-contain md:h-[50rem]"
                 alt="image of laddering"
               />
             </div>
           </div>
           <div className="flex flex-col gap-y-8">
-            <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Sketches of possible solutions
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -345,7 +345,7 @@ export default function Gatherly() {
             )}
           </div>
           <div className="flex flex-col gap-y-8">
-            <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               However
             </p>
             <p className={`text-2xl ${darkerGrotesque.className}`}>
@@ -355,7 +355,7 @@ export default function Gatherly() {
             </p>
           </div>
           <div className="flex flex-col gap-y-8">
-            <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               User Flows
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -366,7 +366,7 @@ export default function Gatherly() {
             <div className="w-full relative">
               <Image
                 src={userflow}
-                className="object-contain md:h-[30rem]"
+                className="object-contain md:h-[50rem]"
                 alt="image of user flow"
               />
             </div>
@@ -381,7 +381,7 @@ export default function Gatherly() {
             </p>
           </div>
           <div className="flex flex-col gap-y-8">
-            <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Wireframes
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -396,7 +396,7 @@ export default function Gatherly() {
             )}
           </div>
           <div className="flex flex-col gap-y-8">
-            <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Styleguide
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -411,7 +411,7 @@ export default function Gatherly() {
             )}
           </div>
           <div className="flex flex-col gap-y-8">
-            <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               High Fidelity Screens
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -419,10 +419,10 @@ export default function Gatherly() {
               elements within the design phase, I complete the creation of my
               high-fidelity screens.
             </p>
-            <div className="w-full relative">
+            <div className="flex justify-center items-center w-full h-screen relative">
               <Image
                 src={highFidelity}
-                className="object-contain md:h-[30rem]"
+                className="object-contain "
                 alt="image of high fidelity screens"
               />
             </div>
@@ -441,7 +441,7 @@ export default function Gatherly() {
             <Slider sliderData={createImageArray(testImages)} />
           )}
           <div className="flex flex-col gap-y-8">
-            <p className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Whats next .. ?
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>

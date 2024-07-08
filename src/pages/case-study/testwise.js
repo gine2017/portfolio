@@ -6,8 +6,11 @@ import MobileNav from "@/components/mobile-nav";
 import Hero from "@/components/hero";
 import Footer from "@/components/footer";
 import Title from "@/components/title";
+import Carousel from "@/components/carousel";
 import CaseStudyFooter from "@/components/case-study-footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+
 import {
   faBookBookmark,
   faLightbulb,
@@ -21,12 +24,11 @@ import {
 } from "@/utils";
 import useWindowSize from "@/hooks/useWindowSize";
 
-// images
 import testWiseHero from "../../../assets/capstone/testwise/test-wise-hero.svg";
-import airtable from "../../../assets/capstone/testwise/research/airtable.png";
-import asana from "../../../assets/capstone/testwise/research/asana.png";
-import azure from "../../../assets/capstone/testwise/research/azure.png";
-import jira from "../../../assets/capstone/testwise/research/jira.png";
+import airtable from "../../../assets/capstone/testwise/research/AirTable Table.png";
+import asana from "../../../assets/capstone/testwise/research/Asana Table.png";
+import azure from "../../../assets/capstone/testwise/research/Azure Table.png";
+import jira from "../../../assets/capstone/testwise/research/Jira Table.png";
 import persona1 from "../../../assets/capstone/testwise/persona/persona-1.png";
 import persona2 from "../../../assets/capstone/testwise/persona/persona-2.png";
 import wireframe_1 from "../../../assets/capstone/testwise/wireframes/wireframe-1.png";
@@ -38,7 +40,13 @@ import wireframe_6 from "../../../assets/capstone/testwise/wireframes/wireframe-
 import wireframe_7 from "../../../assets/capstone/testwise/wireframes/wireframe-7.png";
 import wireframe_8 from "../../../assets/capstone/testwise/wireframes/wireframe-8.png";
 import wireframe_9 from "../../../assets/capstone/testwise/wireframes/wireframe-9.png";
-import Link from "next/link";
+import dashboard from "../../../assets/capstone/testwise/high-fidelity/Dashboard.png";
+import kanban from "../../../assets/capstone/testwise/high-fidelity/Kanban board.png";
+import newRequirement from "../../../assets/capstone/testwise/high-fidelity/New Requirement.png";
+import requirementDetails from "../../../assets/capstone/testwise/high-fidelity/Requirement Details.png";
+import requirementDetailsOne from "../../../assets/capstone/testwise/high-fidelity/Requirement Details-1.png";
+import requirementOne from "../../../assets/capstone/testwise/high-fidelity/Requirements-1.png";
+import Image from "next/image";
 
 export default function TestWise() {
   const { width } = useWindowSize();
@@ -60,11 +68,20 @@ export default function TestWise() {
     wireframe_8,
     wireframe_9,
   ];
+  const highFidelity = [
+    dashboard,
+    kanban,
+    newRequirement,
+    requirementDetails,
+    requirementDetailsOne,
+    requirementOne,
+  ];
 
   return (
     <div>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && <Hero image={testWiseHero} />}
+      {showContent && <Carousel images={highFidelity} />}
       {showContent && (
         <main className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48">
           <div className="flex flex-col gap-y-8 flex-1">
@@ -216,11 +233,51 @@ export default function TestWise() {
               to differentiate our requirements dashboard from other platforms.
             </p>
           </div>
-          {width <= 767 ? (
+
+          <div className="flex flex-wrap  relative">
+            {competitive.map((img, index) => (
+              <div key={index} className=" w-1/2  relative">
+                <div className="relative w-full h-[55vh]">
+                  <Image
+                    src={img.src}
+                    alt={`competitive analysis Image ${index}`}
+                    fill
+                    className="object-cover m-2"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+          {/* <div className="flex flex-wrap relative">
+            {competitive.map((img, index) => (
+              <div key={index} className="w-1/2 ">
+                <div className="relative w-full h-96">
+                  <Image
+                    src={img.src}
+                    alt={`Image ${index}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            ))}
+          </div> */}
+          {/* <div className="flex gap-8">
+            {competitive.map((img, index) => (
+              <div className="relative">
+                <Image
+                  src={img.src}
+                  alt={`competive analysis image ${index} `}
+                  fill
+                />
+              </div>
+            ))}
+          </div> */}
+          {/* {width <= 767 ? (
             <MobileSlider sliderData={createImageArray(competitive)} />
           ) : (
             <Slider sliderData={createImageArray(competitive)} />
-          )}
+          )} */}
           <div className="flex flex-col gap-y-8">
             <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
               Persona

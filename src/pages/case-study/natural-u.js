@@ -197,7 +197,11 @@ export default function NaturalU() {
             </p>
           </div>
           <div className="flex justify-center items-center w-full h-screen relative">
-            <Image src={sketch} alt="sketches of screens" objectFit="contain" />
+            <Image
+              src={sketch}
+              alt="sketches of screens"
+              style={{ objectFit: "contain" }}
+            />
           </div>
           <div className="flex flex-col gap-y-8">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
@@ -213,7 +217,7 @@ export default function NaturalU() {
             <Image
               src={userFlow}
               alt="image of user flow"
-              objectFit="contain"
+              style={{ objectFit: "contain" }}
             />
           </div>
           <Title title={"Design"} color="text-light-purple" />

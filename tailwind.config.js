@@ -85,11 +85,16 @@ module.exports = {
             transform: "rotate(-45deg)",
           },
         },
+        moveAcrossScreen: {
+          "0%": { transform: "translate(0, 0)" },
+          "100%": { transform: "translate(-100%)" },
+        },
       },
       animation: {
         fadeInUp: "fadeInUp 1s ease-in-out",
         rotateBy45deg: "rotateBy45deg 0.25s linear forwards",
         rotateByNeg45deg: "rotateByNeg45deg 0.25s linear forwards",
+        moveAcrossScreen: "moveAcrossScreen 10s linear infinite",
       },
     },
   },

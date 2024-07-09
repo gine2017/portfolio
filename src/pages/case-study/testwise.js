@@ -234,10 +234,10 @@ export default function TestWise() {
             </p>
           </div>
 
-          <div className="flex flex-wrap  relative">
+          <div className=" left-0 right-0 flex flex-wrap w-screen gap-8 bg-testwise-blue/[0.5]  overflow-hidden">
             {competitive.map((img, index) => (
-              <div key={index} className=" w-1/2  relative">
-                <div className="relative w-full h-[55vh]">
+              <div key={index} className=" w-5/12  relative">
+                <div className="relative w-full h-[28rem]">
                   <Image
                     src={img.src}
                     alt={`competitive analysis Image ${index}`}
@@ -248,31 +248,6 @@ export default function TestWise() {
               </div>
             ))}
           </div>
-          {/* <div className="flex flex-wrap relative">
-            {competitive.map((img, index) => (
-              <div key={index} className="w-1/2 ">
-                <div className="relative w-full h-96">
-                  <Image
-                    src={img.src}
-                    alt={`Image ${index}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            ))}
-          </div> */}
-          {/* <div className="flex gap-8">
-            {competitive.map((img, index) => (
-              <div className="relative">
-                <Image
-                  src={img.src}
-                  alt={`competive analysis image ${index} `}
-                  fill
-                />
-              </div>
-            ))}
-          </div> */}
           {/* {width <= 767 ? (
             <MobileSlider sliderData={createImageArray(competitive)} />
           ) : (

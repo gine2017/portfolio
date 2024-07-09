@@ -234,25 +234,21 @@ export default function TestWise() {
             </p>
           </div>
 
-          <div className=" left-0 right-0 flex flex-wrap w-screen gap-8 bg-testwise-blue/[0.5]  overflow-hidden">
+          <div className="relative p-8 left-1/2 right-1/2 transform -translate-x-1/2 flex flex-wrap justify-center w-screen gap-8 bg-testwise-blue overflow-hidden">
             {competitive.map((img, index) => (
-              <div key={index} className=" w-5/12  relative">
+              <div key={index} className="w-[48%] relative">
                 <div className="relative w-full h-[28rem]">
                   <Image
                     src={img.src}
                     alt={`competitive analysis Image ${index}`}
                     fill
-                    className="object-cover m-2"
+                    className="object-cover"
                   />
                 </div>
               </div>
             ))}
           </div>
-          {/* {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(competitive)} />
-          ) : (
-            <Slider sliderData={createImageArray(competitive)} />
-          )} */}
+
           <div className="flex flex-col gap-y-8">
             <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
               Persona

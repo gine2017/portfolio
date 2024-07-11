@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "../../assets/logo_v1.svg";
+import logo from "../../assets/logo-v1.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

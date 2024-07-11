@@ -31,16 +31,22 @@ const createImageArray = (images) => {
   });
 };
 
-const zoomImage = (shouldZoom) => {
+const zoomImage = (shouldZoom, largeImage) => {
   if (shouldZoom) {
     return {
       cursor: "zoom-out",
-      transform: "scale(1.8)",
       transition: "transform 0.25s ease",
       backgroundColor: "rgba(255, 255, 255, 0.9)",
       backgroundRepeat: "no-repeat",
       zIndex: 99,
       height: "100vh",
+      width: "100vw",
+      position: "fixed",
+      top: "50%",
+      left: "50%",
+      transform: `translate(-50%, -50%) ${
+        largeImage ? "scale(1) " : "scale(1.8)"
+      }`,
     };
   }
   return {

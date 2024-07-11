@@ -21,6 +21,7 @@ import {
   darkerGrotesque,
   createImageArray,
   darkerGrotesqueBold,
+  zoomImage,
 } from "@/utils";
 import useWindowSize from "@/hooks/useWindowSize";
 
@@ -40,6 +41,7 @@ import wireframe_6 from "../../../assets/capstone/testwise/wireframes/wireframe-
 import wireframe_7 from "../../../assets/capstone/testwise/wireframes/wireframe-7.png";
 import wireframe_8 from "../../../assets/capstone/testwise/wireframes/wireframe-8.png";
 import wireframe_9 from "../../../assets/capstone/testwise/wireframes/wireframe-9.png";
+import wireframe_10 from "../../../assets/capstone/testwise/wireframes/wireframe-10.png";
 import dashboard from "../../../assets/capstone/testwise/high-fidelity/Dashboard.png";
 import kanban from "../../../assets/capstone/testwise/high-fidelity/Kanban board.png";
 import newRequirement from "../../../assets/capstone/testwise/high-fidelity/New Requirement.png";
@@ -47,14 +49,21 @@ import requirementDetails from "../../../assets/capstone/testwise/high-fidelity/
 import requirementDetailsOne from "../../../assets/capstone/testwise/high-fidelity/Requirement Details-1.png";
 import requirementOne from "../../../assets/capstone/testwise/high-fidelity/Requirements-1.png";
 import Image from "next/image";
+import ImageViewer from "@/components/image-viewer";
 
 export default function TestWise() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
+  const [zoomedIndex, setZoomedIndex] = useState(null);
 
   const updateContent = (state) => {
     setShowContent(state);
   };
+
+  const handleClick = (index) => {
+    setZoomedIndex(zoomedIndex === index ? null : index);
+  };
+
   const competitive = [airtable, asana, azure, jira];
   const persona = [persona1, persona2];
   const wireframes = [
@@ -67,6 +76,7 @@ export default function TestWise() {
     wireframe_7,
     wireframe_8,
     wireframe_9,
+    wireframe_10,
   ];
   const highFidelity = [
     dashboard,
@@ -83,7 +93,7 @@ export default function TestWise() {
       {showContent && <Hero image={testWiseHero} />}
       {showContent && <Carousel images={highFidelity} />}
       {showContent && (
-        <main className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48">
+        <main className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48 ">
           <div className="flex flex-col gap-y-8 flex-1">
             <p className={` text-testwise-blue text-4xl ${myFont.className}`}>
               Problem Statement
@@ -233,21 +243,7 @@ export default function TestWise() {
               to differentiate our requirements dashboard from other platforms.
             </p>
           </div>
-
-          <div className="relative p-8 left-1/2 right-1/2 transform -translate-x-1/2 flex flex-wrap justify-center w-screen gap-8 bg-testwise-blue overflow-hidden">
-            {competitive.map((img, index) => (
-              <div key={index} className="w-[48%] relative">
-                <div className="relative w-full h-[28rem]">
-                  <Image
-                    src={img.src}
-                    alt={`competitive analysis Image ${index}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+          <ImageViewer images={competitive} />
 
           <div className="flex flex-col gap-y-8">
             <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
@@ -258,11 +254,18 @@ export default function TestWise() {
               developed a persona to highlight their goals and pain points.`}
             </p>
           </div>
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(persona)} />
-          ) : (
-            <Slider sliderData={createImageArray(persona)} />
-          )}
+          <div className="flex gap-8">
+            {persona.map((img, index) => (
+              <div
+                className="relative flex-1 h-[20rem] hover:cursor-zoom-in"
+                style={zoomedIndex === index ? zoomImage(true, true) : {}}
+                onClick={() => handleClick(index)}
+              >
+                <Image src={img.src} fill alt={`Persona Image ${index}`} />
+              </div>
+            ))}
+          </div>
+
           <div className="flex flex-col gap-y-8">
             <Title title={"Ideate"} color="text-testwise-blue" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>

@@ -1,67 +1,48 @@
 import { useState } from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
-import { darkerGrotesque, zoomImage } from "@/utils";
 
-export default function Slider({ sliderData = [], zoomable = true }) {
-  const [sliderIndex, setSliderIndex] = useState(0);
-  const [zoomedIn, setZoomdIn] = useState(false);
-
-  const onBack = () => {
-    if (sliderIndex == 0) {
-      const lastIndex = sliderData.length - 1;
-      setSliderIndex(lastIndex);
-    }
-    setSliderIndex((prevIndex) => (prevIndex - 1) % sliderData.length);
+export default function Slider({ sliderData = [] }) {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 3, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
   };
-
-  const onNext = () => {
-    setSliderIndex((prevIndex) => (prevIndex + 1) % sliderData.length);
-  };
-
-  const handleClick = () => {
-    setZoomdIn((prev) => !prev);
-  };
-
   return (
-    <div className="flex flex-row gap-x-6 items-center px-10">
-      <div
-        className="bg-purple text-white rounded-full hover:cursor-pointer"
-        onClick={onBack}
-      >
-        <p className="w-12 h-12 flex justify-center items-center pr-2">
-          &#9001;
-        </p>
-      </div>
-      <div className="flex-1 flex flex-col gap-y-8 items-center">
-        <div
-          className="w-full flex justify-center items-center relative"
-          style={zoomable ? zoomImage(zoomedIn) : {}}
-        >
-          <Image
-            src={sliderData[sliderIndex]?.image}
-            alt="gallery image"
-            className="object-contain h-[20rem]"
-            onClick={handleClick}
-          />
-        </div>
-        <p className={`text-center text-xl ${darkerGrotesque.className}`}>
-          {sliderData[sliderIndex]?.subtitle}
-        </p>
-        <a
-          className="text-center text-blue-600 visited:text-purple-600"
-          href={sliderData[sliderIndex]?.link}
-        >
-          {sliderData[sliderIndex]?.link}
-        </a>
-      </div>
-      <div
-        className="bg-purple text-white rounded-full hover:cursor-pointer"
-        onClick={onNext}
-      >
-        <p className="w-12 h-12 flex justify-center items-center pl-2">
-          &#9002;
-        </p>
-      </div>
-    </div>
+    <Carousel
+      responsive={responsive}
+      autoPlay={true}
+      swipeable={true}
+      draggable={true}
+      showDots={true}
+      infinite={true}
+      partialVisible={false}
+      dotListClass="custom-dot-list-style"
+    >
+      {sliderData.map((item, idx) => {
+        return (
+          <div className="mx-3 overflow-hidden py-2" key={idx}>
+            <Image
+              src={item?.image}
+              alt="gallery image"
+              className="object-contain"
+            />
+          </div>
+        );
+      })}
+    </Carousel>
   );
 }

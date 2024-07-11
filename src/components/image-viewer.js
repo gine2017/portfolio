@@ -14,7 +14,9 @@ export default function ImageViewer({ images = [] }) {
   };
   return (
     <>
-      <div className="relative p-8 left-1/2 right-1/2 transform -translate-x-1/2 flex flex-row justify-center gap-6 2xl:gap-8 2xl:justify-center w-screen bg-slate-200 overflow-hidden">
+      <div
+        className={`relative p-8 left-1/2 right-1/2 transform -translate-x-1/2 flex flex-row justify-center gap-6 2xl:gap-8 2xl:justify-center w-screen bg-slate-200 overflow-hidden`}
+      >
         {images.map((img, index) => (
           <div
             key={index}

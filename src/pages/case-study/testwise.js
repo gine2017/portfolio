@@ -243,7 +243,7 @@ export default function TestWise() {
               to differentiate our requirements dashboard from other platforms.
             </p>
           </div>
-          <ImageViewer images={competitive} />
+          <ImageViewer images={competitive} color="#B7CFF5" />
 
           <div className="flex flex-col gap-y-8">
             <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
@@ -257,11 +257,16 @@ export default function TestWise() {
           <div className="flex gap-8">
             {persona.map((img, index) => (
               <div
-                className="relative flex-1 h-[20rem] hover:cursor-zoom-in"
+                className="relative flex-1 h-[15rem] hover:cursor-zoom-in"
                 style={zoomedIndex === index ? zoomImage(true, true) : {}}
                 onClick={() => handleClick(index)}
               >
-                <Image src={img.src} fill alt={`Persona Image ${index}`} />
+                <Image
+                  src={img.src}
+                  fill
+                  alt={`Persona Image ${index}`}
+                  className="object-contain"
+                />
               </div>
             ))}
           </div>

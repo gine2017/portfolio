@@ -16,6 +16,7 @@ import Image from "next/image";
 import Footer from "@/components/footer";
 import useWindowSize from "@/hooks/useWindowSize";
 import CaseStudyFooter from "@/components/case-study-footer";
+import { zoomImage } from "@/utils";
 
 //images
 import naturalUHero from "../../../assets/capstone/naturalu/natural-u-hero-img.svg";
@@ -77,16 +78,20 @@ const stats = [
   },
 ];
 
-const updateContent = (state) => {
-  setShowContent(state);
-};
-
 export default function NaturalU() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
+  const [zoomedIndex, setZoomedIndex] = useState(false);
+  const [zoomable, setZoomable] = useState(false);
 
   const updateContent = (state) => {
     setShowContent(state);
+  };
+  const handleClick = (index) => {
+    setZoomedIndex(zoomedIndex === index ? null : index);
+  };
+  const handleZoom = () => {
+    setZoomable((prev) => !prev);
   };
 
   return (
@@ -181,11 +186,23 @@ export default function NaturalU() {
               persona to visualize a user that would utilize this app{" "}
             </p>
           </div>
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(personaImages)} />
-          ) : (
-            <Slider sliderData={createImageArray(personaImages)} />
-          )}
+          <div className="flex gap-8">
+            {personaImages.map((img, index) => (
+              <div
+                className="relative flex-1 h-[20rem] hover:cursor-zoom-in"
+                style={zoomedIndex === index ? zoomImage(true, true) : {}}
+                onClick={() => handleClick(index)}
+              >
+                <Image
+                  src={img.src}
+                  fill
+                  alt={`Persona Image ${index}`}
+                  className="object-contain"
+                />
+              </div>
+            ))}
+          </div>
+
           <Title title={"Ideate"} color="text-light-purple" />
           <div className="flex flex-col gap-y-8">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
@@ -213,11 +230,15 @@ export default function NaturalU() {
               visualize how users would navigate through specific processes.{" "}
             </p>
           </div>
-          <div className="flex justify-center items-center w-full h-screen relative">
+          <div
+            className="flex justify-center items-center  w-full h-96 relative"
+            onClick={handleZoom}
+          >
             <Image
               src={userFlow}
               alt="image of user flow"
-              style={{ objectFit: "contain" }}
+              className="object-contain hover:cursor-zoom-in"
+              style={zoomable ? zoomImage(true, true) : {}}
             />
           </div>
           <Title title={"Design"} color="text-light-purple" />

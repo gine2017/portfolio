@@ -14,6 +14,7 @@ import {
   darkerGrotesque,
   createImageArray,
   darkerGrotesqueBold,
+  zoomImage,
 } from "@/utils";
 
 //images
@@ -54,6 +55,10 @@ const styleguideImages = [
 export default function ModernAttire() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
+  const [zoomedIndex, setZoomedIndex] = useState(false);
+  const [zoomedPersonaIndex, setZoomedPersonaIndex] = useState(false);
+
+  const [zoomable, setZoomable] = useState(false);
 
   useEffect(() => {
     if (showContent) {
@@ -66,6 +71,17 @@ export default function ModernAttire() {
   const updateContent = (state) => {
     setShowContent(state);
   };
+  const handleClick = (index, persona) => {
+    if (persona) {
+      setZoomedPersonaIndex(zoomedPersonaIndex === index ? null : index);
+    } else {
+      setZoomedIndex(zoomedIndex === index ? null : index);
+    }
+  };
+  const handleZoom = () => {
+    setZoomable((prev) => !prev);
+  };
+
   return (
     <div>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
@@ -275,11 +291,24 @@ export default function ModernAttire() {
               developed this persona to empathize with their requirements.`}
             </p>
           </div>
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(personaImages)} />
-          ) : (
-            <Slider sliderData={createImageArray(personaImages)} />
-          )}
+          <div className="flex gap-8">
+            {personaImages.map((img, index) => (
+              <div
+                className="relative flex-1 h-[30rem] hover:cursor-zoom-in"
+                style={
+                  zoomedPersonaIndex === index ? zoomImage(true, true) : {}
+                }
+                onClick={() => handleClick(index, true)}
+              >
+                <Image
+                  src={img.src}
+                  fill
+                  alt={`Persona Image ${index}`}
+                  className="object-contain"
+                />
+              </div>
+            ))}
+          </div>
           <div className="flex flex-col gap-y-4">
             <Title title={"Ideate"} color="text-modern-attire" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -298,11 +327,22 @@ export default function ModernAttire() {
               out ideas and flows for the Modern Attire app.
             </p>
           </div>
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(sketchImages)} />
-          ) : (
-            <Slider sliderData={createImageArray(sketchImages)} />
-          )}
+          <div className="flex gap-8">
+            {sketchImages.map((img, index) => (
+              <div
+                className="relative flex-1 h-[30rem] hover:cursor-zoom-in"
+                style={zoomedIndex === index ? zoomImage(true, true) : {}}
+                onClick={() => handleClick(index)}
+              >
+                <Image
+                  src={img.src}
+                  fill
+                  alt={`Persona Image ${index}`}
+                  className="object-contain"
+                />
+              </div>
+            ))}
+          </div>
           <div className="flex flex-col gap-y-8">
             <p className={`text-modern-attire text-4xl ${myFont.className}`}>
               User Flow
@@ -313,11 +353,18 @@ export default function ModernAttire() {
               how users would navigate through specific processes.
             </p>
           </div>
-          <Image
-            src={userFlow}
-            className="object-contain md:h-[30rem]"
-            alt="image of user flow"
-          />
+          <div
+            className="flex justify-center items-center w-full h-96 relative"
+            onClick={handleZoom}
+          >
+            <Image
+              src={userFlow}
+              className="object-contain md:h-[30rem]"
+              alt="image of user flow"
+              style={zoomable ? zoomImage(true, true) : {}}
+            />
+          </div>
+
           <Title title={"Design"} color="text-modern-attire" />
           <div className="flex flex-col gap-y-8">
             <p className={`text-modern-attire text-4xl ${myFont.className}`}>

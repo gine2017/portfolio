@@ -15,6 +15,7 @@ export default function ImageRow({ images = [] }) {
           className="relative flex-1 h-[20rem] hover:cursor-zoom-in"
           style={zoomedIndex === index ? zoomImage(true, true) : {}}
           onClick={() => handleClick(index)}
+          key={index}
         >
           <Image
             src={img.src}

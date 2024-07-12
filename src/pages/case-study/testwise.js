@@ -92,6 +92,7 @@ export default function TestWise() {
     <div>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && <Hero image={testWiseHero} />}
+      {showContent && <Carousel images={highFidelity} />}
       {showContent && (
         <main className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48 ">
           {width <= 767 ? (

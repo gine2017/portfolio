@@ -6,8 +6,11 @@ import MobileNav from "@/components/mobile-nav";
 import Hero from "@/components/hero";
 import Footer from "@/components/footer";
 import Title from "@/components/title";
+import Carousel from "@/components/carousel";
 import CaseStudyFooter from "@/components/case-study-footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+
 import {
   faBookBookmark,
   faLightbulb,
@@ -18,15 +21,15 @@ import {
   darkerGrotesque,
   createImageArray,
   darkerGrotesqueBold,
+  zoomImage,
 } from "@/utils";
 import useWindowSize from "@/hooks/useWindowSize";
 
-// images
 import testWiseHero from "../../../assets/capstone/testwise/test-wise-hero.svg";
-import airtable from "../../../assets/capstone/testwise/research/airtable.png";
-import asana from "../../../assets/capstone/testwise/research/asana.png";
-import azure from "../../../assets/capstone/testwise/research/azure.png";
-import jira from "../../../assets/capstone/testwise/research/jira.png";
+import airtable from "../../../assets/capstone/testwise/research/AirTable Table.png";
+import asana from "../../../assets/capstone/testwise/research/Asana Table.png";
+import azure from "../../../assets/capstone/testwise/research/Azure Table.png";
+import jira from "../../../assets/capstone/testwise/research/Jira Table.png";
 import persona1 from "../../../assets/capstone/testwise/persona/persona-1.png";
 import persona2 from "../../../assets/capstone/testwise/persona/persona-2.png";
 import wireframe_1 from "../../../assets/capstone/testwise/wireframes/wireframe-1.png";
@@ -38,15 +41,30 @@ import wireframe_6 from "../../../assets/capstone/testwise/wireframes/wireframe-
 import wireframe_7 from "../../../assets/capstone/testwise/wireframes/wireframe-7.png";
 import wireframe_8 from "../../../assets/capstone/testwise/wireframes/wireframe-8.png";
 import wireframe_9 from "../../../assets/capstone/testwise/wireframes/wireframe-9.png";
-import Link from "next/link";
+import wireframe_10 from "../../../assets/capstone/testwise/wireframes/wireframe-10.png";
+import dashboard from "../../../assets/capstone/testwise/high-fidelity/Dashboard.png";
+import kanban from "../../../assets/capstone/testwise/high-fidelity/Kanban board.png";
+import newRequirement from "../../../assets/capstone/testwise/high-fidelity/New Requirement.png";
+import requirementDetails from "../../../assets/capstone/testwise/high-fidelity/Requirement Details.png";
+import requirementDetailsOne from "../../../assets/capstone/testwise/high-fidelity/Requirement Details-1.png";
+import requirementOne from "../../../assets/capstone/testwise/high-fidelity/Requirements-1.png";
+import Image from "next/image";
+import ImageViewer from "@/components/image-viewer";
+import ImageRow from "@/components/image-row";
 
 export default function TestWise() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
+  const [zoomedIndex, setZoomedIndex] = useState(null);
 
   const updateContent = (state) => {
     setShowContent(state);
   };
+
+  const handleClick = (index) => {
+    setZoomedIndex(zoomedIndex === index ? null : index);
+  };
+
   const competitive = [airtable, asana, azure, jira];
   const persona = [persona1, persona2];
   const wireframes = [
@@ -59,14 +77,24 @@ export default function TestWise() {
     wireframe_7,
     wireframe_8,
     wireframe_9,
+    wireframe_10,
+  ];
+  const highFidelity = [
+    dashboard,
+    kanban,
+    newRequirement,
+    requirementDetails,
+    requirementDetailsOne,
+    requirementOne,
   ];
 
   return (
     <div>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && <Hero image={testWiseHero} />}
+      {showContent && <Carousel images={highFidelity} />}
       {showContent && (
-        <main className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48">
+        <main className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48 ">
           <div className="flex flex-col gap-y-8 flex-1">
             <p className={` text-testwise-blue text-4xl ${myFont.className}`}>
               Problem Statement
@@ -216,11 +244,8 @@ export default function TestWise() {
               to differentiate our requirements dashboard from other platforms.
             </p>
           </div>
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(competitive)} />
-          ) : (
-            <Slider sliderData={createImageArray(competitive)} />
-          )}
+          <ImageViewer images={competitive} color="#B7CFF5" />
+
           <div className="flex flex-col gap-y-8">
             <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
               Persona
@@ -230,11 +255,7 @@ export default function TestWise() {
               developed a persona to highlight their goals and pain points.`}
             </p>
           </div>
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(persona)} />
-          ) : (
-            <Slider sliderData={createImageArray(persona)} />
-          )}
+          <ImageRow images={persona} />
           <div className="flex flex-col gap-y-8">
             <Title title={"Ideate"} color="text-testwise-blue" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>

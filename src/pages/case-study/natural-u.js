@@ -16,6 +16,7 @@ import Image from "next/image";
 import Footer from "@/components/footer";
 import useWindowSize from "@/hooks/useWindowSize";
 import CaseStudyFooter from "@/components/case-study-footer";
+import { zoomImage } from "@/utils";
 
 //images
 import naturalUHero from "../../../assets/capstone/naturalu/natural-u-hero-img.svg";
@@ -39,6 +40,7 @@ import screen11 from "../../../assets/capstone/naturalu/screens/screen11.png";
 import screen12 from "../../../assets/capstone/naturalu/screens/screen12.png";
 import screen13 from "../../../assets/capstone/naturalu/screens/screen13.png";
 import Link from "next/link";
+import ImageRow from "@/components/image-row";
 
 const highFidelityImages = [
   screen1,
@@ -77,16 +79,20 @@ const stats = [
   },
 ];
 
-const updateContent = (state) => {
-  setShowContent(state);
-};
-
 export default function NaturalU() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
+  const [zoomedIndex, setZoomedIndex] = useState(false);
+  const [zoomable, setZoomable] = useState(false);
 
   const updateContent = (state) => {
     setShowContent(state);
+  };
+  const handleClick = (index) => {
+    setZoomedIndex(zoomedIndex === index ? null : index);
+  };
+  const handleZoom = () => {
+    setZoomable((prev) => !prev);
   };
 
   return (
@@ -181,11 +187,7 @@ export default function NaturalU() {
               persona to visualize a user that would utilize this app{" "}
             </p>
           </div>
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(personaImages)} />
-          ) : (
-            <Slider sliderData={createImageArray(personaImages)} />
-          )}
+          <ImageRow images={personaImages} />
           <Title title={"Ideate"} color="text-light-purple" />
           <div className="flex flex-col gap-y-8">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
@@ -197,7 +199,11 @@ export default function NaturalU() {
             </p>
           </div>
           <div className="flex justify-center items-center w-full h-screen relative">
-            <Image src={sketch} alt="sketches of screens" objectFit="contain" />
+            <Image
+              src={sketch}
+              alt="sketches of screens"
+              style={{ objectFit: "contain" }}
+            />
           </div>
           <div className="flex flex-col gap-y-8">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
@@ -209,11 +215,15 @@ export default function NaturalU() {
               visualize how users would navigate through specific processes.{" "}
             </p>
           </div>
-          <div className="flex justify-center items-center w-full h-screen relative">
+          <div
+            className="flex justify-center items-center  w-full h-96 relative"
+            onClick={handleZoom}
+          >
             <Image
               src={userFlow}
               alt="image of user flow"
-              objectFit="contain"
+              className="object-contain hover:cursor-zoom-in"
+              style={zoomable ? zoomImage(true, true) : {}}
             />
           </div>
           <Title title={"Design"} color="text-light-purple" />

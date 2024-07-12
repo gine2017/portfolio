@@ -14,6 +14,7 @@ import {
   darkerGrotesque,
   createImageArray,
   darkerGrotesqueBold,
+  zoomImage,
 } from "@/utils";
 
 //images
@@ -38,6 +39,7 @@ import test1 from "../../../assets/capstone/modernattire/test/test_1.png";
 import test2 from "../../../assets/capstone/modernattire/test/test_2.png";
 import test3 from "../../../assets/capstone/modernattire/test/test_3.png";
 import test4 from "../../../assets/capstone/modernattire/test/test_4.png";
+import ImageRow from "@/components/image-row";
 
 const industryAnalysis = [indochino, joseABank, mensWarehouse];
 const surveyImages = [survey_1, survey_2, survey_3, survey_4];
@@ -54,6 +56,10 @@ const styleguideImages = [
 export default function ModernAttire() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
+  const [zoomedIndex, setZoomedIndex] = useState(false);
+  const [zoomedPersonaIndex, setZoomedPersonaIndex] = useState(false);
+
+  const [zoomable, setZoomable] = useState(false);
 
   useEffect(() => {
     if (showContent) {
@@ -66,6 +72,17 @@ export default function ModernAttire() {
   const updateContent = (state) => {
     setShowContent(state);
   };
+  const handleClick = (index, persona) => {
+    if (persona) {
+      setZoomedPersonaIndex(zoomedPersonaIndex === index ? null : index);
+    } else {
+      setZoomedIndex(zoomedIndex === index ? null : index);
+    }
+  };
+  const handleZoom = () => {
+    setZoomable((prev) => !prev);
+  };
+
   return (
     <div>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
@@ -275,11 +292,7 @@ export default function ModernAttire() {
               developed this persona to empathize with their requirements.`}
             </p>
           </div>
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(personaImages)} />
-          ) : (
-            <Slider sliderData={createImageArray(personaImages)} />
-          )}
+          <ImageRow images={personaImages} />
           <div className="flex flex-col gap-y-4">
             <Title title={"Ideate"} color="text-modern-attire" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -298,11 +311,7 @@ export default function ModernAttire() {
               out ideas and flows for the Modern Attire app.
             </p>
           </div>
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(sketchImages)} />
-          ) : (
-            <Slider sliderData={createImageArray(sketchImages)} />
-          )}
+          <ImageRow images={sketchImages} />
           <div className="flex flex-col gap-y-8">
             <p className={`text-modern-attire text-4xl ${myFont.className}`}>
               User Flow
@@ -313,11 +322,18 @@ export default function ModernAttire() {
               how users would navigate through specific processes.
             </p>
           </div>
-          <Image
-            src={userFlow}
-            className="object-contain md:h-[30rem]"
-            alt="image of user flow"
-          />
+          <div
+            className="flex justify-center items-center w-full h-96 relative"
+            onClick={handleZoom}
+          >
+            <Image
+              src={userFlow}
+              className="object-contain md:h-[30rem]"
+              alt="image of user flow"
+              style={zoomable ? zoomImage(true, true) : {}}
+            />
+          </div>
+
           <Title title={"Design"} color="text-modern-attire" />
           <div className="flex flex-col gap-y-8">
             <p className={`text-modern-attire text-4xl ${myFont.className}`}>

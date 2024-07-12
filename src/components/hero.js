@@ -6,8 +6,8 @@ export default function Hero({ image }) {
       <Image
         src={image}
         alt="Capstone Hero Image"
-        layout="fill"
-        objectFit="contain"
+        fill
+        style={{ objectFit: "contain" }}
       />
     </div>
   );

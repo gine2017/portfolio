@@ -50,6 +50,7 @@ import requirementDetailsOne from "../../../assets/capstone/testwise/high-fideli
 import requirementOne from "../../../assets/capstone/testwise/high-fidelity/Requirements-1.png";
 import Image from "next/image";
 import ImageViewer from "@/components/image-viewer";
+import ImageRow from "@/components/image-row";
 
 export default function TestWise() {
   const { width } = useWindowSize();
@@ -254,23 +255,7 @@ export default function TestWise() {
               developed a persona to highlight their goals and pain points.`}
             </p>
           </div>
-          <div className="flex gap-8">
-            {persona.map((img, index) => (
-              <div
-                className="relative flex-1 h-[15rem] hover:cursor-zoom-in"
-                style={zoomedIndex === index ? zoomImage(true, true) : {}}
-                onClick={() => handleClick(index)}
-              >
-                <Image
-                  src={img.src}
-                  fill
-                  alt={`Persona Image ${index}`}
-                  className="object-contain"
-                />
-              </div>
-            ))}
-          </div>
-
+          <ImageRow images={persona} />
           <div className="flex flex-col gap-y-8">
             <Title title={"Ideate"} color="text-testwise-blue" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>

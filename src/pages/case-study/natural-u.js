@@ -40,6 +40,7 @@ import screen11 from "../../../assets/capstone/naturalu/screens/screen11.png";
 import screen12 from "../../../assets/capstone/naturalu/screens/screen12.png";
 import screen13 from "../../../assets/capstone/naturalu/screens/screen13.png";
 import Link from "next/link";
+import ImageRow from "@/components/image-row";
 
 const highFidelityImages = [
   screen1,
@@ -186,23 +187,7 @@ export default function NaturalU() {
               persona to visualize a user that would utilize this app{" "}
             </p>
           </div>
-          <div className="flex gap-8">
-            {personaImages.map((img, index) => (
-              <div
-                className="relative flex-1 h-[20rem] hover:cursor-zoom-in"
-                style={zoomedIndex === index ? zoomImage(true, true) : {}}
-                onClick={() => handleClick(index)}
-              >
-                <Image
-                  src={img.src}
-                  fill
-                  alt={`Persona Image ${index}`}
-                  className="object-contain"
-                />
-              </div>
-            ))}
-          </div>
-
+          <ImageRow images={personaImages} />
           <Title title={"Ideate"} color="text-light-purple" />
           <div className="flex flex-col gap-y-8">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>

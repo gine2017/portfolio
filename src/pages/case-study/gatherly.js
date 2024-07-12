@@ -21,7 +21,6 @@ import CaseStudyFooter from "@/components/case-study-footer";
 
 //images
 import heroImg from "../../../assets/capstone/gatherly/hero-bghero_2.svg";
-import appHero from "../../../assets/capstone/gatherly/app_hero.png";
 import ladder from "../../../assets/capstone/gatherly/ladder.png";
 import persona1 from "../../../assets/capstone/gatherly/persona/persona_1.png";
 import persona2 from "../../../assets/capstone/gatherly/persona/persona_2.png";
@@ -49,6 +48,23 @@ import wireframe_4 from "../../../assets/capstone/gatherly/wireframes/wireframe_
 import wireframe_5 from "../../../assets/capstone/gatherly/wireframes/wireframe_5.png";
 import wireframe_6 from "../../../assets/capstone/gatherly/wireframes/wireframe_6.png";
 
+import highFidelity1 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-1.png";
+import highFidelity2 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-2.png";
+import highFidelity3 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-3.png";
+import highFidelity4 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-4.png";
+import highFidelity5 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-5.png";
+import highFidelity6 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-6.png";
+import highFidelity7 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-7.png";
+import highFidelity8 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-8.png";
+import highFidelity9 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-9.png";
+import highFidelity10 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-10.png";
+import highFidelity11 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-11.png";
+import highFidelity12 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-12.png";
+import highFidelity13 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-13.png";
+import highFidelity14 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-14.png";
+import ImageRow from "@/components/image-row";
+import ImageViewer from "@/components/image-viewer";
+
 const personaImages = [persona1, persona2];
 const surveyImages = [survey1, survey2, survey3, survey4];
 const skethesImages = [cultureSketch, directorySketch];
@@ -69,6 +85,22 @@ const wireframeImages = [
   wireframe_6,
 ];
 
+const highFidelityImages = [
+  highFidelity1,
+  highFidelity2,
+  highFidelity3,
+  highFidelity4,
+  highFidelity5,
+  highFidelity6,
+  highFidelity7,
+  highFidelity8,
+  highFidelity9,
+  highFidelity10,
+  highFidelity11,
+  highFidelity12,
+  highFidelity13,
+  highFidelity14,
+];
 const stats = [
   {
     number: 46,
@@ -132,13 +164,8 @@ export default function Gatherly() {
               handled the research, design, and testing phases
             </p>
           </div>
-          <div className="flex justify-center items-center w-full h-screen relative">
-            <Image
-              src={appHero}
-              className="object-contain "
-              alt="small hero image of app screens"
-            />
-          </div>
+          <Slider sliderData={createImageArray(highFidelityImages)} />
+
           <div className="flex flex-col gap-y-4">
             <Title title={"Research"} color="text-gatherly-blue" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -175,10 +202,7 @@ export default function Gatherly() {
           {width <= 767 ? (
             <MobileSlider sliderData={createImageArray(surveyImages)} />
           ) : (
-            <Slider
-              sliderData={createImageArray(surveyImages)}
-              zoomable={false}
-            />
+            <Slider sliderData={createImageArray(surveyImages)} />
           )}
           <div className="flex flex-col gap-y-8">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
@@ -276,11 +300,7 @@ export default function Gatherly() {
               and motivations.`}
             </p>
           </div>
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(personaImages)} />
-          ) : (
-            <Slider sliderData={createImageArray(personaImages)} />
-          )}
+          <ImageRow images={personaImages} />
           <div className="flex flex-col gap-y-14">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Empathy Map
@@ -338,11 +358,7 @@ export default function Gatherly() {
               In concluding the laddering phases I began to converge on two
               possible solutions. A directory app or a cultural/ group app.
             </p>
-            {width <= 767 ? (
-              <MobileSlider sliderData={createImageArray(skethesImages)} />
-            ) : (
-              <Slider sliderData={createImageArray(skethesImages)} />
-            )}
+            <ImageRow images={skethesImages} />
           </div>
           <div className="flex flex-col gap-y-8">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
@@ -435,11 +451,7 @@ export default function Gatherly() {
               my design is perceived by others.
             </p>
           </div>
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(testImages)} />
-          ) : (
-            <Slider sliderData={createImageArray(testImages)} />
-          )}
+          <ImageViewer images={testImages} />
           <div className="flex flex-col gap-y-8">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Whats next .. ?

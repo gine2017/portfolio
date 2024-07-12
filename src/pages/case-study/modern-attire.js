@@ -39,6 +39,7 @@ import test1 from "../../../assets/capstone/modernattire/test/test_1.png";
 import test2 from "../../../assets/capstone/modernattire/test/test_2.png";
 import test3 from "../../../assets/capstone/modernattire/test/test_3.png";
 import test4 from "../../../assets/capstone/modernattire/test/test_4.png";
+import ImageRow from "@/components/image-row";
 
 const industryAnalysis = [indochino, joseABank, mensWarehouse];
 const surveyImages = [survey_1, survey_2, survey_3, survey_4];
@@ -291,24 +292,7 @@ export default function ModernAttire() {
               developed this persona to empathize with their requirements.`}
             </p>
           </div>
-          <div className="flex gap-8">
-            {personaImages.map((img, index) => (
-              <div
-                className="relative flex-1 h-[30rem] hover:cursor-zoom-in"
-                style={
-                  zoomedPersonaIndex === index ? zoomImage(true, true) : {}
-                }
-                onClick={() => handleClick(index, true)}
-              >
-                <Image
-                  src={img.src}
-                  fill
-                  alt={`Persona Image ${index}`}
-                  className="object-contain"
-                />
-              </div>
-            ))}
-          </div>
+          <ImageRow images={personaImages} />
           <div className="flex flex-col gap-y-4">
             <Title title={"Ideate"} color="text-modern-attire" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -327,22 +311,7 @@ export default function ModernAttire() {
               out ideas and flows for the Modern Attire app.
             </p>
           </div>
-          <div className="flex gap-8">
-            {sketchImages.map((img, index) => (
-              <div
-                className="relative flex-1 h-[30rem] hover:cursor-zoom-in"
-                style={zoomedIndex === index ? zoomImage(true, true) : {}}
-                onClick={() => handleClick(index)}
-              >
-                <Image
-                  src={img.src}
-                  fill
-                  alt={`Persona Image ${index}`}
-                  className="object-contain"
-                />
-              </div>
-            ))}
-          </div>
+          <ImageRow images={sketchImages} />
           <div className="flex flex-col gap-y-8">
             <p className={`text-modern-attire text-4xl ${myFont.className}`}>
               User Flow

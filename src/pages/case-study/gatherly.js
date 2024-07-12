@@ -165,9 +165,9 @@ export default function Gatherly() {
             </p>
           </div>
           {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(surveyImages)} />
+            <MobileSlider sliderData={createImageArray(highFidelityImages)} />
           ) : (
-            <Slider sliderData={createImageArray(surveyImages)} />
+            <Slider sliderData={createImageArray(highFidelityImages)} />
           )}
 
           <div className="flex flex-col gap-y-4">

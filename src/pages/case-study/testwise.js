@@ -95,6 +95,11 @@ export default function TestWise() {
       {showContent && <Carousel images={highFidelity} />}
       {showContent && (
         <main className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48 ">
+          {width <= 767 ? (
+            <MobileSlider sliderData={createImageArray(surveyImages)} />
+          ) : (
+            <Slider sliderData={createImageArray(surveyImages)} />
+          )}
           <div className="flex flex-col gap-y-8 flex-1">
             <p className={` text-testwise-blue text-4xl ${myFont.className}`}>
               Problem Statement

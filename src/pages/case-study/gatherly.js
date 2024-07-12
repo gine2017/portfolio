@@ -164,7 +164,11 @@ export default function Gatherly() {
               handled the research, design, and testing phases
             </p>
           </div>
-          <Slider sliderData={createImageArray(highFidelityImages)} />
+          {width <= 767 ? (
+            <MobileSlider sliderData={createImageArray(surveyImages)} />
+          ) : (
+            <Slider sliderData={createImageArray(surveyImages)} />
+          )}
 
           <div className="flex flex-col gap-y-4">
             <Title title={"Research"} color="text-gatherly-blue" />

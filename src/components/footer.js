@@ -18,15 +18,16 @@ export default function Footer() {
         </p>
       </div>
       <div className="flex flex-row gap-8">
-        <Link
+        <a
           href="https://www.linkedin.com/in/regine-thimothee/"
           passHref={true}
+          target="_blank"
           className="rounded-full w-16 h-16 bg-light-pink flex justify-center items-center"
         >
           <div className="w-8 h-8 relative">
             <Image src={linkedInLogo} alt="LinkedIn logo" fill={true} />
           </div>
-        </Link>
+        </a>
         <Link
           href="mailto:ginou10@msn.com"
           passHref={true}

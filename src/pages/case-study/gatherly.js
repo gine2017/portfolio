@@ -64,6 +64,7 @@ import highFidelity13 from "../../../assets/capstone/gatherly/high-fidelity/high
 import highFidelity14 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-14.png";
 import ImageRow from "@/components/image-row";
 import ImageViewer from "@/components/image-viewer";
+import ZoomableImage from "@/components/zoomable-image";
 
 const personaImages = [persona1, persona2];
 const surveyImages = [survey1, survey2, survey3, survey4];
@@ -130,6 +131,11 @@ export default function Gatherly() {
       {showContent && <Hero image={heroImg} />}
       {showContent && (
         <main className="mx-auto w-80% flex flex-col gap-y-20 mt-4 md:mt-16 mb-48">
+          {width <= 767 ? (
+            <MobileSlider sliderData={createImageArray(highFidelityImages)} />
+          ) : (
+            <Slider sliderData={createImageArray(highFidelityImages)} />
+          )}
           <div className="flex flex-col gap-y-8 flex-1">
             <p className={` text-gatherly-blue text-4xl ${myFont.className}`}>
               Problem Statement
@@ -164,11 +170,6 @@ export default function Gatherly() {
               handled the research, design, and testing phases
             </p>
           </div>
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(highFidelityImages)} />
-          ) : (
-            <Slider sliderData={createImageArray(highFidelityImages)} />
-          )}
 
           <div className="flex flex-col gap-y-4">
             <Title title={"Research"} color="text-gatherly-blue" />
@@ -252,7 +253,7 @@ export default function Gatherly() {
             Notable Quotes from the interviews
           </p>
           <div
-            className={`flex flex-wrap justify-center  gap-y-8 text-gatherly-blue md:gap-x-8 text-xl md:text-2xl ${darkerGrotesqueReg.className} text-center`}
+            className={`flex flex-wrap justify-center  gap-y-8 text-gatherly-blue md:gap-x-8 text-xl md:text-3xl ${darkerGrotesqueBold.className} text-center`}
           >
             <p className="w-full">
               {`"I still feel anxious after college.. no one gives you a plan you
@@ -278,7 +279,7 @@ export default function Gatherly() {
           </div>
 
           <div
-            className={`flex flex-wrap justify-center  gap-y-8 text-gatherly-blue md:gap-x-8 text-2xl ${darkerGrotesqueReg.className} text-center`}
+            className={`flex flex-wrap justify-center  gap-y-8 text-gatherly-blue md:gap-x-8 text-3xl ${darkerGrotesqueBold.className} text-center`}
           >
             <p className="w-full">
               {`"Would like if an online group focused on a specific activity to
@@ -315,13 +316,7 @@ export default function Gatherly() {
         serve as the cornerstone of truth, guarding the product from any
         unfounded unwarranted biases.`}
             </p>
-            <div className="flex justify-center items-center w-full">
-              <Image
-                src={empathy}
-                className="object-contain md:h-[50rem]"
-                alt="image of empathy map"
-              />
-            </div>
+            <ZoomableImage image={empathy} />
           </div>
           <div className="flex flex-col gap-y-4">
             <Title title={"Ideate"} color="text-gatherly-blue" />
@@ -346,13 +341,7 @@ export default function Gatherly() {
                 user's behavior and needs`}
               </p>
             </div>
-            <div className="flex justify-center items-center w-full h-screen relative">
-              <Image
-                src={ladder}
-                className="object-contain md:h-[50rem]"
-                alt="image of laddering"
-              />
-            </div>
+            <ZoomableImage image={ladder} />
           </div>
           <div className="flex flex-col gap-y-8">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
@@ -383,13 +372,7 @@ export default function Gatherly() {
               and ideation phase I then proceeded to created use flows to
               visualize how users would complete certain flows
             </p>
-            <div className="w-full relative">
-              <Image
-                src={userflow}
-                className="object-contain md:h-[50rem]"
-                alt="image of user flow"
-              />
-            </div>
+            <ZoomableImage image={userflow} />
           </div>
           <div className="flex flex-col gap-y-4">
             <Title title={"Design"} color="text-gatherly-blue" />
@@ -439,13 +422,33 @@ export default function Gatherly() {
               elements within the design phase, I complete the creation of my
               high-fidelity screens.
             </p>
-            <div className="flex justify-center items-center w-full h-screen relative">
-              <Image
-                src={highFidelity}
-                className="object-contain "
-                alt="image of high fidelity screens"
-              />
-            </div>
+            {width <= 767 ? (
+              <MobileSlider sliderData={createImageArray(highFidelityImages)} />
+            ) : (
+              <Slider sliderData={createImageArray(highFidelityImages)} />
+            )}
+          </div>
+          <div className="flex flex-col gap-y-8">
+            <p className={`text-4xl text-gatherly-blue ${myFont.className}`}>
+              Prototype
+            </p>
+            <p className={` text-2xl ${darkerGrotesque.className}`}>
+              During this phase, I developed a prototype emphasizing key
+              features such as creating groups, organizing events, exploring
+              different communities, and fostering a sense of belonging. My
+              primary focus was on enhancing the user experience to prioritize
+              seamless networking, enabling users to connect effortlessly with
+              others. <br /> <br />
+              This approach aims to address issues of loneliness and mental
+              health by building a supportive community where individuals can
+              find companionship and engage meaningfully with like-minded people
+            </p>
+            <iframe
+              style={{ border: "1px solid rgba(0, 0, 0, 0.1);" }}
+              className="w-full h-[40rem]"
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Ff3XDj0RqNgIrPRiJyOnI2L%2FWireFrame-Capstone%3Fpage-id%3D40%253A985%26node-id%3D1201-6040%26viewport%3D1543%252C-178%252C0.23%26t%3DUHuAWgRAX7sfzyKz-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26starting-point-node-id%3D1201%253A6040%26show-proto-sidebar%3D1"
+              allowfullscreen
+            ></iframe>
           </div>
           <div className="flex flex-col gap-y-8">
             <Title title={"Test"} color="text-gatherly-blue" />

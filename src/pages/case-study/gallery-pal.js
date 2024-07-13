@@ -35,6 +35,7 @@ import screen10 from "../../../assets/capstone/gallerypal/screens/screen-10.png"
 import screen11 from "../../../assets/capstone/gallerypal/screens/screen-11.png";
 import screen12 from "../../../assets/capstone/gallerypal/screens/screen-12.png";
 import screen13 from "../../../assets/capstone/gallerypal/screens/screen-13.png";
+import ZoomableImage from "@/components/zoomable-image";
 
 const highFidelityImages = [
   screen1,
@@ -66,6 +67,12 @@ export default function GalleryPal() {
       {showContent && <Hero image={heroImg} />}
       {showContent && (
         <main className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48">
+          {width <= 767 ? (
+            <MobileSlider sliderData={createImageArray(highFidelityImages)} />
+          ) : (
+            <Slider sliderData={createImageArray(highFidelityImages)} />
+          )}
+
           <div className="flex flex-col gap-y-8 md:flex-row md:gap-x-16 ">
             <div className="flex flex-col gap-y-8 flex-1">
               <p className={` text-marron text-4xl ${myFont.className}`}>
@@ -178,13 +185,7 @@ export default function GalleryPal() {
                 tours.
               </p>
             </div>
-            <div className="flex justify-center items-center w-full h-screen relative">
-              <Image
-                src={interview}
-                className="object-contain"
-                alt="expert itnerview image"
-              />
-            </div>
+            <ZoomableImage image={interview} />
           </div>
           <div className="flex flex-col gap-y-8">
             <div className="flex flex-col gap-y-8 md:flex-1">
@@ -199,13 +200,7 @@ export default function GalleryPal() {
                 formulating my product`}
               </p>
             </div>
-            <div className="flex justify-center items-center w-full h-screen relative">
-              <Image
-                src={hmw}
-                className="object-contain md:h-[50rem]"
-                alt="how might we image"
-              />
-            </div>
+            <ZoomableImage image={hmw} />
           </div>
           <div className="flex flex-col gap-y-8">
             <Title title={"Day Two"} color="text-marron" />
@@ -228,13 +223,7 @@ export default function GalleryPal() {
                 Pal app.
               </p>
             </div>
-            <div className="flex justify-center items-center w-full h-screen relative">
-              <Image
-                src={crazyEight}
-                className="object-contain"
-                alt="image of crazy-8s"
-              />
-            </div>
+            <ZoomableImage image={crazyEight} />
           </div>
           <Title title={"Day Three"} color="text-marron" />
           <div className="flex flex-col gap-y-8">
@@ -246,13 +235,7 @@ export default function GalleryPal() {
               audio tours.`}
             </p>
           </div>
-          <div className="flex justify-center items-center w-full h-screen relative">
-            <Image
-              src={map}
-              className="object-contain"
-              alt="image of storyboarding"
-            />
-          </div>
+          <ZoomableImage image={map} />
           <Title title={"Day Four"} color="text-marron" />
           <div className="flex flex-col gap-y-8">
             <p className={`text-marron text-4xl ${myFont.className}`}>

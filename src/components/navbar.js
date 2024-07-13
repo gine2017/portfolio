@@ -24,7 +24,7 @@ export default function Navbar() {
               className={`${
                 currentPath === "/"
                   ? "active: underline underline-offset-8"
-                  : "text-slate-200 hover:text-purple"
+                  : "text-slate-300 hover:text-purple"
               } hover:animate-bounce`}
             >
               home
@@ -36,13 +36,13 @@ export default function Navbar() {
               className={`${
                 currentPath === "/about"
                   ? "active: underline underline-offset-8"
-                  : "text-slate-200 hover:text-purple"
+                  : "text-slate-300 hover:text-purple"
               } `}
             >
               about
             </Link>
           </li>
-          <li className="transition-transform text-slate-200 hover:-translate-y-1 hover:text-purple">
+          <li className="transition-transform text-slate-300 hover:-translate-y-1 hover:text-purple">
             <a href={"/files/Resume_Regine_Thimothee.pdf"} target="_blank">
               resume
             </a>

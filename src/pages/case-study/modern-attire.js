@@ -16,6 +16,7 @@ import {
   darkerGrotesqueBold,
   zoomImage,
 } from "@/utils";
+import ImageRow from "@/components/image-row";
 
 //images
 import heroImg from "../../../assets/capstone/modernattire/modern_attire_hero.svg";
@@ -39,7 +40,18 @@ import test1 from "../../../assets/capstone/modernattire/test/test_1.png";
 import test2 from "../../../assets/capstone/modernattire/test/test_2.png";
 import test3 from "../../../assets/capstone/modernattire/test/test_3.png";
 import test4 from "../../../assets/capstone/modernattire/test/test_4.png";
-import ImageRow from "@/components/image-row";
+import sliderImage1 from "../../../assets/capstone/modernattire/sliderImages/modernAttire-1.png";
+import sliderImage2 from "../../../assets/capstone/modernattire/sliderImages/modernAttire-2.png";
+import sliderImage3 from "../../../assets/capstone/modernattire/sliderImages/modernAttire-3.png";
+import sliderImage4 from "../../../assets/capstone/modernattire/sliderImages/modernAttire-4.png";
+import sliderImage5 from "../../../assets/capstone/modernattire/sliderImages/modernAttire-5.png";
+import sliderImage6 from "../../../assets/capstone/modernattire/sliderImages/modernAttire-6.png";
+import sliderImage7 from "../../../assets/capstone/modernattire/sliderImages/modernAttire-7.png";
+import sliderImage8 from "../../../assets/capstone/modernattire/sliderImages/modernAttire-8.png";
+import sliderImage9 from "../../../assets/capstone/modernattire/sliderImages/modernAttire-9.png";
+import sliderImage10 from "../../../assets/capstone/modernattire/sliderImages/modernAttire-10.png";
+import sliderImage11 from "../../../assets/capstone/modernattire/sliderImages/modernAttire-11.png";
+import ZoomableImage from "@/components/zoomable-image";
 
 const industryAnalysis = [indochino, joseABank, mensWarehouse];
 const surveyImages = [survey_1, survey_2, survey_3, survey_4];
@@ -52,13 +64,22 @@ const styleguideImages = [
   styleguide_3,
   styleguide_4,
 ];
-
+const sliderImages = [
+  sliderImage1,
+  sliderImage2,
+  sliderImage3,
+  sliderImage4,
+  sliderImage5,
+  sliderImage6,
+  sliderImage7,
+  sliderImage8,
+  sliderImage9,
+  sliderImage10,
+  sliderImage11,
+];
 export default function ModernAttire() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
-  const [zoomedIndex, setZoomedIndex] = useState(false);
-  const [zoomedPersonaIndex, setZoomedPersonaIndex] = useState(false);
-
   const [zoomable, setZoomable] = useState(false);
 
   useEffect(() => {
@@ -72,13 +93,7 @@ export default function ModernAttire() {
   const updateContent = (state) => {
     setShowContent(state);
   };
-  const handleClick = (index, persona) => {
-    if (persona) {
-      setZoomedPersonaIndex(zoomedPersonaIndex === index ? null : index);
-    } else {
-      setZoomedIndex(zoomedIndex === index ? null : index);
-    }
-  };
+
   const handleZoom = () => {
     setZoomable((prev) => !prev);
   };
@@ -89,6 +104,7 @@ export default function ModernAttire() {
       {showContent && <Hero image={heroImg} />}
       {showContent && (
         <main className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48">
+          <Slider sliderData={createImageArray(sliderImages)} />
           <div className="flex flex-col gap-y-8 md:flex-row md:gap-x-16 ">
             <div className="flex flex-col gap-y-8 flex-1">
               <p className={` text-modern-attire text-4xl ${myFont.className}`}>
@@ -322,18 +338,7 @@ export default function ModernAttire() {
               how users would navigate through specific processes.
             </p>
           </div>
-          <div
-            className="flex justify-center items-center w-full h-96 relative"
-            onClick={handleZoom}
-          >
-            <Image
-              src={userFlow}
-              className="object-contain md:h-[30rem]"
-              alt="image of user flow"
-              style={zoomable ? zoomImage(true, true) : {}}
-            />
-          </div>
-
+          <ZoomableImage image={userFlow} />
           <Title title={"Design"} color="text-modern-attire" />
           <div className="flex flex-col gap-y-8">
             <p className={`text-modern-attire text-4xl ${myFont.className}`}>
@@ -369,7 +374,7 @@ export default function ModernAttire() {
           </div>
           <div className="flex flex-col gap-y-8">
             <p className={`text-modern-attire text-4xl ${myFont.className}`}>
-              High Fidelity Screens
+              High Fidelity Prototype
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               After finishing the ideation process and finalizing certain

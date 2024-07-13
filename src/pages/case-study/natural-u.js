@@ -41,6 +41,7 @@ import screen12 from "../../../assets/capstone/naturalu/screens/screen12.png";
 import screen13 from "../../../assets/capstone/naturalu/screens/screen13.png";
 import Link from "next/link";
 import ImageRow from "@/components/image-row";
+import ZoomableImage from "@/components/zoomable-image";
 
 const highFidelityImages = [
   screen1,
@@ -101,6 +102,11 @@ export default function NaturalU() {
       {showContent && <Hero image={naturalUHero} />}
       {showContent && (
         <main className="w-4/5 mx-auto flex flex-col gap-y-20 mt-16 mb-48">
+          {width <= 767 ? (
+            <MobileSlider sliderData={createImageArray(highFidelityImages)} />
+          ) : (
+            <Slider sliderData={createImageArray(highFidelityImages)} />
+          )}
           <div className="flex flex-col gap-y-8 md:flex-row gap-x-16 ">
             <div className="flex flex-col gap-y-8 flex-1">
               <p className={` text-light-purple text-4xl ${myFont.className}`}>
@@ -198,13 +204,7 @@ export default function NaturalU() {
               out ideas and flows for the Natural U app
             </p>
           </div>
-          <div className="flex justify-center items-center w-full h-screen relative">
-            <Image
-              src={sketch}
-              alt="sketches of screens"
-              style={{ objectFit: "contain" }}
-            />
-          </div>
+          <ZoomableImage image={sketch} />
           <div className="flex flex-col gap-y-8">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
               User Flow
@@ -215,17 +215,7 @@ export default function NaturalU() {
               visualize how users would navigate through specific processes.{" "}
             </p>
           </div>
-          <div
-            className="flex justify-center items-center  w-full h-96 relative"
-            onClick={handleZoom}
-          >
-            <Image
-              src={userFlow}
-              alt="image of user flow"
-              className="object-contain hover:cursor-zoom-in"
-              style={zoomable ? zoomImage(true, true) : {}}
-            />
-          </div>
+          <ZoomableImage image={userFlow} />
           <Title title={"Design"} color="text-light-purple" />
           <div className="flex flex-col gap-y-8">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
@@ -240,13 +230,8 @@ export default function NaturalU() {
               atop their heads and encourages them to embrace it proudly.{" "}
             </p>
           </div>
-          <div className="flex justify-center items-center w-full h-screen relative">
-            <Image
-              src={styleguide}
-              className="object-contain"
-              alt="image of style guide"
-            />
-          </div>
+          <ZoomableImage image={styleguide} />
+
           <div className="flex flex-col gap-y-8">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
               High Fidelity Screens

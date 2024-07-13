@@ -22,8 +22,8 @@ body {
 
 .custom-dot-list-style button {
   border: none;
-  background: #1f3f70;
+  background: none;
 }
 .react-multi-carousel-dot.react-multi-carousel-dot--active button {
-  background: #1f3f70 !important;
+  background: #170206 !important;
 }

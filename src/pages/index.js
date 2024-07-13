@@ -12,8 +12,6 @@ import {
 } from "@/utils";
 import MobileNav from "@/components/mobile-nav";
 import useWindowSize from "@/hooks/useWindowSize";
-import MobileSlider from "@/components/mobile-slider";
-import Slider from "@/components/slider";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -39,33 +37,6 @@ export default function Home() {
   const updateContent = (state) => {
     setShowContent(state);
   };
-
-  // const sliderData = [
-  //   {
-  //     subtitle:
-  //       "In this project, I developed a profile page using React, Typescript, TailwindCSS, and Storybook to educate others on the fundamentals of these four technologies. Additionally, I designed the project's layout in Figma.",
-  //     link: "https://github.com/gine2017/Profile-page-tutorial",
-  //     image: techWork1,
-  //   },
-  //   {
-  //     subtitle:
-  //       "Goblin Destroyer is a personal project in where I used the iOS Spritekit framework to create a game",
-  //     link: "",
-  //     image: techWork2,
-  //   },
-  //   {
-  //     subtitle:
-  //       "The objective of this project was to redesign RIT's School of Information while also gaining an understanding of dependency injection and MVC pattern.",
-  //     link: "https://github.com/gine2017/RIT-IST-Project-3",
-  //     image: techWork3,
-  //   },
-  //   {
-  //     subtitle:
-  //       "The goal of this project was to replicate the IST website by utilizing jQuery to fetch data and dynamically generate elements.",
-  //     link: "https://github.com/gine2017/RIT-IST-page-jquery",
-  //     image: techWork4,
-  //   },
-  // ];
 
   return (
     <div>
@@ -105,13 +76,13 @@ export default function Home() {
             </div>
           </header>
           <div className="flex flex-col">
-            <div className="flex flex-row ">
+            <div className="flex flex-col md:flex-row ">
               <div className="relative flex-1 group hover:cursor-pointer">
                 <Link href={"/case-study/testwise"}>
                   <Image src={testwise} alt="Natural U case study" />
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                   <div
-                    className={`${myFontBold.className} text-center text-4xl absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
+                    className={`${myFontBold.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
                   >
                     Test Wise
                     <br /> Requirements Dashboard
@@ -123,7 +94,7 @@ export default function Home() {
                   <Image src={naturalU} alt="Natural U case study" />
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                   <div
-                    className={`${myFontBold.className} text-center text-4xl absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
+                    className={`${myFontBold.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
                   >
                     NaturalU
                     <br /> Hair Education
@@ -136,20 +107,20 @@ export default function Home() {
                 <Image src={modernAttire} alt="Natural U case study" />
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                 <div
-                  className={`${myFontBold.className} text-center text-4xl absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
+                  className={`${myFontBold.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
                 >
                   Modern Attire
                   <br /> Elegant suits
                 </div>
               </Link>
             </div>
-            <div className="flex flex-row">
+            <div className="flex flex-col md:flex-row">
               <div className="relative flex-1 group">
                 <Link href={"/case-study/gatherly"}>
                   <Image src={gatherly} alt="Natural U case study" />
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                   <div
-                    className={`${myFontBold.className} text-center text-4xl absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
+                    className={`${myFontBold.className} text-center text-2xl md:text-4xl absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
                   >
                     Gatherly <br /> Build community
                   </div>
@@ -160,7 +131,7 @@ export default function Home() {
                   <Image src={galleryPal} alt="Natural U case study" />
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                   <div
-                    className={`${myFontBold.className} text-center text-4xl absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
+                    className={`${myFontBold.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
                   >
                     Gallery Pal <br /> Explore Museums
                   </div>

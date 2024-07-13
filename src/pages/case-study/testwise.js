@@ -177,7 +177,7 @@ export default function TestWise() {
             <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
               Design Process
             </p>
-            <div className="flex justify-evenly">
+            <div className="flex flex-col gap-y-4 md:flex-row justify-evenly">
               <div className="flex flex-col items-center">
                 <FontAwesomeIcon
                   icon={faBookBookmark}

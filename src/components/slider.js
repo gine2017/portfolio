@@ -27,7 +27,6 @@ export default function Slider({ sliderData = [] }) {
   };
 
   const handleClick = (index) => {
-    console.log(index, "idx", zoomedIndex, "ZOOM");
     if (zoomedIndex === index) {
       setZoomedIndex(null);
       setZoomStyles({});

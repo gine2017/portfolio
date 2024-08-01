@@ -57,8 +57,6 @@ export default function Home() {
                 <span className={`${darkerGrotesqueBold.className}`}>
                   {`bridging design and development\n`}
                 </span>
-                Currently: Associate Developer @
-                <span className={`${darkerGrotesqueBold.className}`}>ADP</span>
               </div>
               <FontAwesomeIcon
                 icon={faArrowDown}

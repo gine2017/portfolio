@@ -129,34 +129,12 @@ export default function TestWise() {
               <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
                 My Role
               </p>
-              <ul className="list-disc list-inside">
-                <li className={` text-2xl ${darkerGrotesque.className}`}>
-                  UX Design: High-Fidelity screens, Wireframes
-                </li>
-                <li className={` text-2xl ${darkerGrotesque.className}`}>
-                  UX Research: Competitive analysis, User Personas
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-y-8">
-              <p className={`text-testwise-blue  text-4xl ${myFont.className}`}>
-                Timeline
+              <p className={` text-2xl ${darkerGrotesque.className}`}>
+                In this one-month project, I focused on UX design and UX
+                research using Figma as the primary tool. I designed
+                high-fidelity screens and wireframes, and conducted competitive
+                analysis and user research to develop detailed personas.
               </p>
-              <ul className="list-disc list-inside">
-                <li className={` text-2xl ${darkerGrotesque.className}`}>
-                  1 month
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-y-8">
-              <p className={`text-testwise-blue  text-4xl ${myFont.className}`}>
-                Tools
-              </p>
-              <ul className="list-disc list-inside">
-                <li className={` text-2xl ${darkerGrotesque.className}`}>
-                  Figma
-                </li>
-              </ul>
             </div>
           </div>
           <div className="flex flex-col gap-y-8">

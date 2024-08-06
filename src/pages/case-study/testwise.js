@@ -104,23 +104,24 @@ export default function TestWise() {
               Problem Statement
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              As client numbers grow and tasks become more complex,{" "}
+              Test Wise is a project tracking and testing platform similar to
+              Jira. KDIT Solutions, the owner,{" "}
               <span
                 className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
               >
-                accurate analysis and task tracing
+                faced a growing client base with complex tasks that needed
+                accurate tracking and analysis.{" "}
               </span>{" "}
-              are essential for viewing task status, managing features, and
-              coordinating with team members. Test Wise, project tracking and
-              testing platform , addresses these needs for all teams.{" "}
+              To address this, they are looking towards a requirements dashboard
+              as a solution, aiming to allow clients to view, track, analyze,
+              and communicate about tasks. Additionally, KDIT Solutions is
+              focused on creating an effective design solution for this feature.
               <span
                 className={`text-testwise-blue   ${darkerGrotesqueBold.className}`}
               >
                 {`To protect intellectual property, "Test Wise" is used as a
                 pseudonym`}
               </span>
-              . This new requirements module within this product will enhance
-              client capabilities in managing tasks, requiremnts, and issues .
             </p>
           </div>
           <div className="flex flex-col gap-y-10 md:flex-row md:gap-x-40">
@@ -165,11 +166,11 @@ export default function TestWise() {
             <div className="flex flex-col">
               <p className={` text-2xl ${darkerGrotesque.className}`}>
                 For this project, I had the opportunity to work with two other
-                designers, Aran Kim and Jessica Teng. At the beginning, our
-                group met with Pranjal, the president of KDIT Solutions. Pranjal
-                shared his experiences and the challenges he faced when
-                initially creating the requirement dashboard module. He
-                expressed a desire to restart the design process for the module.
+                designers. At the beginning, our group met with Pranjal, the
+                president of KDIT Solutions. Pranjal shared his experiences and
+                the challenges he faced when initially creating the requirement
+                dashboard module. He expressed a desire to restart the design
+                process for the module.
               </p>
             </div>
           </div>
@@ -243,9 +244,13 @@ export default function TestWise() {
               Competitive Analysis
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              Our group conducted a competitive analysis to gain insights into
-              industry standards, understand key competitors, and identify ways
-              to differentiate our requirements dashboard from other platforms.
+              Our group took a deep dive into competitive analysis to see how
+              dashboards stack up against industry standards and make sure ours
+              includes familiar features like table and board views, especially
+              for Agile methodology. This helped us understand what users expect
+              and what works well. Plus, it gave us some great ideas for adding
+              unique, innovative features that will make our design stand out
+              from the competition.
             </p>
           </div>
           <ImageViewer images={competitive} color="#B7CFF5" />
@@ -255,8 +260,10 @@ export default function TestWise() {
               Persona
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              {`To better understand the needs of Test Wise users, our team 
-              developed a persona to highlight their goals and pain points.`}
+              {`To better understand the perspective of the owner of KDIT Solutions and the problem space 
+              of clients with advanced tasks, we use personas. This persona helps me to grasp the pain points, 
+              frustrations, and the goals for the requirements dashboard. This deeper understanding allows us 
+              to address the needs and challenges faced by both the owner and the clients effectively.`}
             </p>
           </div>
           <ImageRow images={persona} />

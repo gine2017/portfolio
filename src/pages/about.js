@@ -134,7 +134,7 @@ export default function About() {
                 <br />
                 <p>
                   <span className={` ${darkerGrotesqueBold.className}`}>
-                    Associate Application Developer,
+                    Software Engineer,
                   </span>{" "}
                   Full-time: ADP July 2022 - Present
                 </p>

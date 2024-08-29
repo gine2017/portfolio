@@ -49,7 +49,7 @@ export default function About() {
               <div className="flex-1">
                 <div>
                   <p>
-                    {`Hello again! I'm Regine Thimothee, and I am currently employed as an Associate Application Developer at ADP. 
+                    {`Hello again! I'm Regine Thimothee, and I am currently employed as a Software Engineer at ADP. 
                     I graduated from Rochester Institute of Technology with a Bachelor of Science 
                     in`}{" "}
                     <span className={`${darkerGrotesqueBold.className}`}>

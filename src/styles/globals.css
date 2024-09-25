@@ -27,3 +27,114 @@ body {
 .react-multi-carousel-dot.react-multi-carousel-dot--active button {
   background: #170206 !important;
 }
+
+.myName-headline,
+.myName-subline {
+  animation: headLineAnimation 1s ease-in-out forwards;
+}
+.myIllustration {
+  width: 100%;
+  height: auto;
+}
+
+.dynamic-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(30, end), blink 0.75s step-end infinite;
+  border-right: 2px solid black;
+}
+
+.purple-chat-bubble {
+  animation: rotateBubblesClockwise 1s linear infinite;
+}
+
+.orange-bubble {
+  animation: rotateBubblesCounterClockwise 1s linear infinite;
+}
+
+.bridge {
+  animation: spinningBidge 10s linear infinite;
+  transform-origin: unset;
+  transform-box: border-box;
+}
+
+#upperArm {
+  animation: forearmAnimation 1s linear infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes forearmAnimation {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(-20deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes headLineAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes rotateBubblesClockwise {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(30deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes rotateBubblesCounterClockwise {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(-30deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes spinningBidge {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(390deg);
+  }
+}

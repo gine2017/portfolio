@@ -55,14 +55,9 @@ import ImageRow from "@/components/image-row";
 export default function TestWise() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
-  const [zoomedIndex, setZoomedIndex] = useState(null);
 
   const updateContent = (state) => {
     setShowContent(state);
-  };
-
-  const handleClick = (index) => {
-    setZoomedIndex(zoomedIndex === index ? null : index);
   };
 
   const competitive = [airtable, asana, azure, jira];

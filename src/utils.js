@@ -4,6 +4,9 @@ import { Darker_Grotesque } from "next/font/google";
 const myFont = localFont({
   src: "../fonts/black_mango/TTF/BlackMango-Medium.ttf",
 });
+const myFontLight = localFont({
+  src: "../fonts/black_mango/TTF/BlackMango-Light.ttf",
+});
 const myFontBold = localFont({
   src: "../fonts/black_mango/TTF/BlackMango-Bold.ttf",
 });
@@ -57,6 +60,7 @@ const zoomImage = (shouldZoom, largeImage) => {
 export {
   myFont,
   myFontBold,
+  myFontLight,
   darkerGrotesque,
   darkerGrotesqueReg,
   darkerGrotesqueBold,

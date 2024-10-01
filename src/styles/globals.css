@@ -8,6 +8,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 body {
   padding: 0;
@@ -54,15 +55,25 @@ body {
 }
 
 .bridge {
-  animation: spinningBidge 10s linear infinite;
-  transform-origin: unset;
+  animation: rotateBubblesClockwise 2s infinite linear;
+  transform-origin: center;
   transform-box: border-box;
+}
+
+.car {
+  animation: drive 4s ease-in-out infinite; /* 5-second duration, infinite looping */
 }
 
 #upperArm {
   animation: forearmAnimation 1s linear infinite;
   transform-origin: bottom;
   transform-box: fill-box;
+}
+#user_head_1 {
+  animation: talking 2s ease-in-out infinite;
+}
+#user_head_2 {
+  animation: talking-right 1.5s ease-in-out infinite;
 }
 
 @keyframes forearmAnimation {
@@ -129,12 +140,52 @@ body {
     transform: rotateZ(0);
   }
 }
-
-@keyframes spinningBidge {
-  from {
-    transform: rotateZ(0);
+@keyframes drive {
+  0% {
+    transform: translateX(0); /* Start the car off the screen to the left */
+    opacity: 1; /* Car is visible */
   }
-  to {
-    transform: rotateZ(390deg);
+  30% {
+    transform: translateX(63vw); /* Move the car 65% across the viewport */
+    opacity: 1; /* Car stays visible */
+  }
+  35% {
+    opacity: 0; /* Start fading out the car */
+  }
+  100% {
+    transform: translateX(0); /* Reset the car back to the start (left) */
+    opacity: 0; /* Car remains invisible while returning */
+  }
+}
+
+@keyframes talking {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg); /* Starting position */
+  }
+  25% {
+    transform: translate(-10px, -5px) rotate(-5deg); /* Move closer and rotate slightly */
+  }
+  50% {
+    transform: translate(10px, 5px) rotate(5deg); /* Move apart and rotate slightly */
+  }
+  75% {
+    transform: translate(-5px, -3px) rotate(-3deg); /* Closer again, slight rotation */
+  }
+}
+
+@keyframes talking-right {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg); /* Starting position */
+  }
+  25% {
+    transform: translate(10px, -5px) rotate(5deg); /* Move closer and rotate slightly */
+  }
+  50% {
+    transform: translate(-10px, 5px) rotate(-5deg); /* Move apart and rotate slightly */
+  }
+  75% {
+    transform: translate(5px, -3px) rotate(3deg); /* Closer again, slight rotation */
   }
 }

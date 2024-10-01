@@ -15,15 +15,13 @@ import MobileNav from "@/components/mobile-nav";
 import useWindowSize from "@/hooks/useWindowSize";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { animated } from "@react-spring/web";
 
 //images
 import testwise from "../../assets/test wise.png";
 import naturalU from "../../assets/naturalU.png";
-import modernAttire from "../../assets/modern attire.png";
 import gatherly from "../../assets/gatherly.png";
-import galleryPal from "../../assets/gallery pal.png";
-import brdige from "../../assets/full circle bridge.svg";
+import bridge from "../../assets/bridge.svg";
+import car from "../../assets/fullcar.svg";
 
 export default function Home() {
   const [showContent, setShowContent] = useState(true);
@@ -385,13 +383,76 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="relative">
-            <div>
-              <Image
-                src={brdige}
-                alt="svg illustration of bridge"
-                className="bridge absolute left-1/2 transform -translate-x-1/2 w-[150%]"
-              />
+          <div
+            className={`flex flex-col relative items-center text-[5.625rem] ${myFontLight.className} `}
+          >
+            <p className={`text-purple ${myFontBold.className}  `}>Bridging</p>
+            <div className="z-10">
+              <Image src={bridge} />
+            </div>
+            <div className="absolute top-[58%] left-[10%] car">
+              <Image src={car} />
+            </div>
+            <div className="absolute top-[58%] left-[5%] car">
+              <Image src={car} />
+            </div>
+            <p>Design and Development</p>
+          </div>
+          <div className="flex flex-col relative text-center gap-y-16">
+            <div className={`text-[5.625rem] ${myFontLight.className}`}>
+              <p>To make solutions that put the </p>
+              <p className={`text-purple ${myFontBold.className}  `}>
+                USER FIRST
+              </p>
+            </div>
+            <div className="flex justify-center gap-x-8">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="120"
+                height="160"
+                viewBox="0 0 120 141"
+                fill="none"
+              >
+                <path
+                  d="M100.877 140.321H18.8542C13.8537 140.321 9.0581 138.554 5.52226 135.409C1.98642 132.264 0 127.998 0 123.55V118.003C0 91.3773 26.8559 69.7026 59.8657 69.7026C92.8756 69.7026 119.731 91.3639 119.731 118.003V123.55C119.731 127.998 117.745 132.264 114.209 135.409C110.673 138.554 105.878 140.321 100.877 140.321ZM59.8657 76.4244C31.0113 76.4244 7.54167 95.0736 7.54167 118.016V123.564C7.54167 126.233 8.73352 128.792 10.855 130.679C12.9765 132.566 15.8539 133.626 18.8542 133.626H100.877C103.878 133.626 106.755 132.566 108.876 130.679C110.998 128.792 112.19 126.233 112.19 123.564V118.003C112.19 95.0736 88.7202 76.4244 59.8657 76.4244Z"
+                  fill="#3C0092"
+                />
+                <path
+                  d="M85.5 27.5C85.5 40.5275 74.0949 51.5 59.5 51.5C44.9051 51.5 33.5 40.5275 33.5 27.5C33.5 14.4725 44.9051 3.5 59.5 3.5C74.0949 3.5 85.5 14.4725 85.5 27.5Z"
+                  stroke="#3C0092"
+                  stroke-width="7"
+                  id="user_head_1"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="120"
+                height="160"
+                viewBox="0 0 120 141"
+                fill="none"
+              >
+                <path
+                  d="M100.877 140.321H18.8542C13.8537 140.321 9.0581 138.554 5.52226 135.409C1.98642 132.264 0 127.998 0 123.55V118.003C0 91.3773 26.8559 69.7026 59.8657 69.7026C92.8756 69.7026 119.731 91.3639 119.731 118.003V123.55C119.731 127.998 117.745 132.264 114.209 135.409C110.673 138.554 105.878 140.321 100.877 140.321ZM59.8657 76.4244C31.0113 76.4244 7.54167 95.0736 7.54167 118.016V123.564C7.54167 126.233 8.73352 128.792 10.855 130.679C12.9765 132.566 15.8539 133.626 18.8542 133.626H100.877C103.878 133.626 106.755 132.566 108.876 130.679C110.998 128.792 112.19 126.233 112.19 123.564V118.003C112.19 95.0736 88.7202 76.4244 59.8657 76.4244Z"
+                  fill="#3C0092"
+                />
+                <path
+                  d="M85.5 27.5C85.5 40.5275 74.0949 51.5 59.5 51.5C44.9051 51.5 33.5 40.5275 33.5 27.5C33.5 14.4725 44.9051 3.5 59.5 3.5C74.0949 3.5 85.5 14.4725 85.5 27.5Z"
+                  stroke="#3C0092"
+                  stroke-width="7"
+                  id="user_head_2"
+                />
+              </svg>
+            </div>
+            <div className="flex flex-col">
+              <p>Checkout my work</p>
+              <div className="bg-light-blue w-full h-80"></div>
+              <div className="flex flex-row">
+                <div className="bg-light-pink flex-1 h-[40rem]"></div>
+                <div className="flex flex-1 flex-col">
+                  <div className="bg-purple  h-[20rem]"></div>
+                  <div className="bg-orange  h-[20rem]"></div>
+                </div>
+              </div>
             </div>
           </div>
         </main>

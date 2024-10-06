@@ -12,9 +12,11 @@ export default function Footer() {
           {"Let's Connect"}
         </p>
         <p
-          className={`text-white  text-xl md:text-2xl ${darkerGrotesqueReg.className}`}
+          className={`text-white text-left text-xl md:text-2xl ${darkerGrotesqueReg.className}`}
         >
-          Design and coded by Regine
+          Design and coded
+          <br />
+          by Regine
         </p>
       </div>
       <div className="flex flex-row gap-8">
@@ -22,7 +24,7 @@ export default function Footer() {
           href="https://www.linkedin.com/in/regine-thimothee/"
           passHref={true}
           target="_blank"
-          className="rounded-full w-16 h-16 bg-light-pink flex justify-center items-center"
+          className="rounded-full w-16 h-16 bg-orange flex justify-center items-center"
         >
           <div className="w-8 h-8 relative">
             <Image src={linkedInLogo} alt="LinkedIn logo" fill={true} />
@@ -31,7 +33,7 @@ export default function Footer() {
         <Link
           href="mailto:ginou10@msn.com"
           passHref={true}
-          className="rounded-full w-16 h-16 bg-light-pink flex justify-center items-center"
+          className="rounded-full w-16 h-16 bg-orange flex justify-center items-center"
         >
           <div className="w-8 h-8 relative">
             <Image src={emailLogo} alt="envelope icon" fill={true} />

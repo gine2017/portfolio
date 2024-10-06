@@ -17,11 +17,13 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 //images
-import testwise from "../../assets/test wise.png";
+import testwise from "../../assets/testwise.png";
+import illustrations from "../../assets/illustrations.png";
 import naturalU from "../../assets/naturalU.png";
 import gatherly from "../../assets/gatherly.png";
 import bridge from "../../assets/bridge.svg";
 import car from "../../assets/fullcar.svg";
+import WavyText from "@/components/wavy-text";
 
 export default function Home() {
   const [showContent, setShowContent] = useState(true);
@@ -33,8 +35,7 @@ export default function Home() {
     "ULTIMATE TRANSLATOR",
     "TRADUCTEUR ULTIME",
     "TRADUCTOR ÚLTIMO",
-    "최고의 번역가",
-    "究極の翻訳者",
+    "TRADUTOR DEFINITIVO",
   ];
 
   useEffect(() => {
@@ -96,14 +97,14 @@ export default function Home() {
           <header className="flex flex-col gap-8  md:gap-32 xl:flex-row">
             <div className="flex flex-col gap-8 flex-1">
               <div
-                className={`myName-headline text-purple text-5xl md:text-8xl ${myFont.className}`}
+                className={`whitespace-nowrap	 text-purple text-5xl md:text-8xl ${myFont.className}`}
               >
-                {`Hi, I'm Regine`}
+                <WavyText text="Hi, I'm Regine" />
               </div>
               <div
                 className={`myName-subline text-2xl md:text-5xl whitespace-pre-wrap ${darkerGrotesqueReg.className}`}
               >
-                {`User Experience Designer`}
+                <WavyText text="User Experience Designer" />
               </div>
               <FontAwesomeIcon
                 icon={faArrowDown}
@@ -300,110 +301,113 @@ export default function Home() {
               </svg>
             </div>
           </header>
-          <div className="flex flex-col relative" ref={translatorRef}>
-            <div className={`text-[5.625rem] ${myFontLight.className}`}>
-              I am passionate <p>about being the</p>
+          <div
+            className="relative flex flex-col gap-y-14 md:gap-32 md:flex-row"
+            ref={translatorRef}
+          >
+            <div
+              className={`text-3xl whitespace-normal md:text-8xl md:whitespace-nowrap ${myFontLight.className}`}
+            >
+              <WavyText text="I am passionate" />
+              <WavyText text="about being the" />{" "}
               <p
-                className={`text-purple ${myFontBold.className} dynamic-text `}
+                className={`text-purple ${myFontBold.className} dynamic-text text-3xl  md:text-8xl md:whitespace-nowrap `}
                 style={{ "--current-text": `"${translatedText[textIndex]}"` }}
                 ref={textRef}
               >
                 {translatedText[textIndex]}
               </p>
             </div>
-            <div className="absolute right-0 top-10">
-              <div className="relative">
-                <div className="purple-chat-bubble absolute z-30 -left-40 bottom-24">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="248"
-                    height="216"
-                    viewBox="0 0 248 216"
-                    fill="none"
-                  >
-                    <mask id="path-1-inside-1_566_430" fill="white">
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M127.5 216C193.774 216 247.5 167.647 247.5 108C247.5 48.3532 193.774 0 127.5 0C61.2259 0 7.50006 48.3532 7.50006 108C7.50006 124.582 11.6522 140.291 19.0717 154.331L0.693115 204.219L58.6595 196.472C78.1474 208.778 101.887 216 127.5 216Z"
-                      />
-                    </mask>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M127.5 216C193.774 216 247.5 167.647 247.5 108C247.5 48.3532 193.774 0 127.5 0C61.2259 0 7.50006 48.3532 7.50006 108C7.50006 124.582 11.6522 140.291 19.0717 154.331L0.693115 204.219L58.6595 196.472C78.1474 208.778 101.887 216 127.5 216Z"
-                      fill="#3C0092"
-                    />
-                    <path
-                      d="M19.0717 154.331L28.4552 157.787L29.9971 153.602L27.913 149.658L19.0717 154.331ZM0.693115 204.219L-8.69039 200.762L-14.4248 216.328L2.01766 214.131L0.693115 204.219ZM58.6595 196.472L63.9985 188.017L60.9309 186.08L57.3349 186.561L58.6595 196.472ZM237.5 108C237.5 161.159 189.269 206 127.5 206V226C198.28 226 257.5 174.135 257.5 108H237.5ZM127.5 10C189.269 10 237.5 54.8411 237.5 108H257.5C257.5 41.8654 198.28 -10 127.5 -10V10ZM17.5001 108C17.5001 54.8411 65.7316 10 127.5 10V-10C56.7202 -10 -2.49994 41.8654 -2.49994 108H17.5001ZM27.913 149.658C21.2211 136.995 17.5001 122.883 17.5001 108H-2.49994C-2.49994 126.28 2.08325 143.586 10.2303 159.003L27.913 149.658ZM10.0766 207.675L28.4552 157.787L9.68819 150.874L-8.69039 200.762L10.0766 207.675ZM57.3349 186.561L-0.631427 194.307L2.01766 214.131L59.984 206.384L57.3349 186.561ZM127.5 206C103.772 206 81.8846 199.311 63.9985 188.017L53.3205 204.928C74.4102 218.245 100.001 226 127.5 226V206Z"
-                      fill="white"
-                      mask="url(#path-1-inside-1_566_430)"
-                    />
-                    <path
-                      d="M136.421 60.1999C137.727 60.5833 138.835 61.4923 139.499 62.7271C140.164 63.962 140.331 65.4215 139.964 66.7847L117.283 151.101C117.102 151.776 116.794 152.408 116.379 152.959C115.963 153.511 115.448 153.971 114.862 154.315C114.276 154.659 113.63 154.878 112.963 154.962C112.295 155.046 111.618 154.991 110.971 154.802C110.323 154.612 109.718 154.292 109.189 153.858C108.66 153.425 108.219 152.887 107.889 152.276C107.56 151.664 107.349 150.991 107.269 150.295C107.189 149.598 107.241 148.892 107.423 148.217L130.103 63.9008C130.284 63.2248 130.592 62.5928 131.008 62.0408C131.423 61.4888 131.939 61.0278 132.526 60.684C133.113 60.3403 133.759 60.1206 134.427 60.0375C135.096 59.9545 135.773 60.0096 136.421 60.1999ZM99.1543 81.0653C100.114 82.0667 100.653 83.4249 100.653 84.841C100.653 86.2571 100.114 87.6152 99.1543 88.6167L81.0561 107.501L99.1543 126.379C99.63 126.875 100.007 127.464 100.265 128.112C100.523 128.76 100.655 129.455 100.655 130.156C100.656 130.857 100.523 131.552 100.266 132.2C100.009 132.848 99.6322 133.437 99.1569 133.934C98.6815 134.43 98.1172 134.823 97.496 135.092C96.8748 135.361 96.209 135.499 95.5365 135.499C94.864 135.5 94.1981 135.362 93.5767 135.094C92.9554 134.825 92.3907 134.432 91.915 133.936L70.1921 111.277C69.2323 110.275 68.6931 108.917 68.6931 107.501C68.6931 106.085 69.2323 104.727 70.1921 103.725L91.915 81.0653C92.8751 80.0641 94.1771 79.5016 95.5347 79.5016C96.8923 79.5016 98.1942 80.0641 99.1543 81.0653ZM148.232 88.6167C147.743 88.1241 147.353 87.5348 147.085 86.8832C146.816 86.2317 146.675 85.5309 146.669 84.8218C146.663 84.1127 146.793 83.4094 147.05 82.7531C147.308 82.0968 147.688 81.5005 148.168 80.9991C148.649 80.4976 149.221 80.1011 149.85 79.8325C150.479 79.564 151.153 79.4289 151.833 79.4351C152.513 79.4412 153.185 79.5885 153.809 79.8684C154.434 80.1483 154.999 80.5552 155.471 81.0653L177.194 103.725C178.154 104.727 178.693 106.085 178.693 107.501C178.693 108.917 178.154 110.275 177.194 111.277L155.471 133.936C154.511 134.938 153.208 135.5 151.85 135.499C150.492 135.499 149.189 134.936 148.229 133.934C147.269 132.932 146.73 131.573 146.731 130.156C146.731 128.739 147.271 127.381 148.232 126.379L166.33 107.501L148.232 88.6167Z"
-                      fill="white"
-                    />
-                  </svg>
-                </div>
-                <div className="orange-bubble relative">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="248"
-                    height="216"
-                    viewBox="0 0 248 216"
-                    fill="none"
-                  >
-                    <mask id="path-1-inside-1_566_413" fill="white">
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M120.5 216C54.2258 216 0.499942 167.647 0.499942 108C0.499942 48.3532 54.2258 0 120.5 0C186.774 0 240.5 48.3532 240.5 108C240.5 124.582 236.348 140.291 228.928 154.331L247.307 204.219L189.341 196.472C169.853 208.778 146.113 216 120.5 216Z"
-                      />
-                    </mask>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M120.5 216C54.2258 216 0.499942 167.647 0.499942 108C0.499942 48.3532 54.2258 0 120.5 0C186.774 0 240.5 48.3532 240.5 108C240.5 124.582 236.348 140.291 228.928 154.331L247.307 204.219L189.341 196.472C169.853 208.778 146.113 216 120.5 216Z"
-                      fill="#F9A620"
-                    />
-                    <path
-                      d="M228.928 154.331L219.545 157.787L218.003 153.602L220.087 149.658L228.928 154.331ZM247.307 204.219L256.69 200.762L262.425 216.328L245.982 214.131L247.307 204.219ZM189.341 196.472L184.001 188.017L187.069 186.08L190.665 186.561L189.341 196.472ZM10.4999 108C10.4999 161.159 58.7315 206 120.5 206V226C49.72 226 -9.50006 174.135 -9.50006 108H10.4999ZM120.5 10C58.7315 10 10.4999 54.8411 10.4999 108H-9.50006C-9.50006 41.8654 49.72 -10 120.5 -10V10ZM230.5 108C230.5 54.8411 182.268 10 120.5 10V-10C191.28 -10 250.5 41.8654 250.5 108H230.5ZM220.087 149.658C226.779 136.995 230.5 122.883 230.5 108H250.5C250.5 126.28 245.917 143.586 237.77 159.003L220.087 149.658ZM237.923 207.675L219.545 157.787L238.312 150.874L256.69 200.762L237.923 207.675ZM190.665 186.561L248.631 194.307L245.982 214.131L188.016 206.384L190.665 186.561ZM120.5 206C144.228 206 166.115 199.311 184.001 188.017L194.68 204.928C173.59 218.245 147.999 226 120.5 226V206Z"
-                      fill="white"
-                      mask="url(#path-1-inside-1_566_413)"
-                    />
-                  </svg>
-                  <div className="absolute inset-0 flex items-center ml-12">
-                    <p
-                      className={`text-white text-5xl ${myFontBold.className}`}
-                    >
-                      UI/UX
-                    </p>
-                  </div>
-                </div>
+            <div className="z-10 purple-chat-bubble absolute top-44 md:-top-10 md:-right-10 xl:-top-16  2xl:right-20">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 248 216"
+                fill="none"
+                className="w-1/2 md:w-[60%] 2xl:w-[80%] "
+              >
+                <mask id="path-1-inside-1_566_430" fill="white">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M127.5 216C193.774 216 247.5 167.647 247.5 108C247.5 48.3532 193.774 0 127.5 0C61.2259 0 7.50006 48.3532 7.50006 108C7.50006 124.582 11.6522 140.291 19.0717 154.331L0.693115 204.219L58.6595 196.472C78.1474 208.778 101.887 216 127.5 216Z"
+                  />
+                </mask>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M127.5 216C193.774 216 247.5 167.647 247.5 108C247.5 48.3532 193.774 0 127.5 0C61.2259 0 7.50006 48.3532 7.50006 108C7.50006 124.582 11.6522 140.291 19.0717 154.331L0.693115 204.219L58.6595 196.472C78.1474 208.778 101.887 216 127.5 216Z"
+                  fill="#3C0092"
+                />
+                <path
+                  d="M19.0717 154.331L28.4552 157.787L29.9971 153.602L27.913 149.658L19.0717 154.331ZM0.693115 204.219L-8.69039 200.762L-14.4248 216.328L2.01766 214.131L0.693115 204.219ZM58.6595 196.472L63.9985 188.017L60.9309 186.08L57.3349 186.561L58.6595 196.472ZM237.5 108C237.5 161.159 189.269 206 127.5 206V226C198.28 226 257.5 174.135 257.5 108H237.5ZM127.5 10C189.269 10 237.5 54.8411 237.5 108H257.5C257.5 41.8654 198.28 -10 127.5 -10V10ZM17.5001 108C17.5001 54.8411 65.7316 10 127.5 10V-10C56.7202 -10 -2.49994 41.8654 -2.49994 108H17.5001ZM27.913 149.658C21.2211 136.995 17.5001 122.883 17.5001 108H-2.49994C-2.49994 126.28 2.08325 143.586 10.2303 159.003L27.913 149.658ZM10.0766 207.675L28.4552 157.787L9.68819 150.874L-8.69039 200.762L10.0766 207.675ZM57.3349 186.561L-0.631427 194.307L2.01766 214.131L59.984 206.384L57.3349 186.561ZM127.5 206C103.772 206 81.8846 199.311 63.9985 188.017L53.3205 204.928C74.4102 218.245 100.001 226 127.5 226V206Z"
+                  fill="white"
+                  mask="url(#path-1-inside-1_566_430)"
+                />
+                <path
+                  d="M136.421 60.1999C137.727 60.5833 138.835 61.4923 139.499 62.7271C140.164 63.962 140.331 65.4215 139.964 66.7847L117.283 151.101C117.102 151.776 116.794 152.408 116.379 152.959C115.963 153.511 115.448 153.971 114.862 154.315C114.276 154.659 113.63 154.878 112.963 154.962C112.295 155.046 111.618 154.991 110.971 154.802C110.323 154.612 109.718 154.292 109.189 153.858C108.66 153.425 108.219 152.887 107.889 152.276C107.56 151.664 107.349 150.991 107.269 150.295C107.189 149.598 107.241 148.892 107.423 148.217L130.103 63.9008C130.284 63.2248 130.592 62.5928 131.008 62.0408C131.423 61.4888 131.939 61.0278 132.526 60.684C133.113 60.3403 133.759 60.1206 134.427 60.0375C135.096 59.9545 135.773 60.0096 136.421 60.1999ZM99.1543 81.0653C100.114 82.0667 100.653 83.4249 100.653 84.841C100.653 86.2571 100.114 87.6152 99.1543 88.6167L81.0561 107.501L99.1543 126.379C99.63 126.875 100.007 127.464 100.265 128.112C100.523 128.76 100.655 129.455 100.655 130.156C100.656 130.857 100.523 131.552 100.266 132.2C100.009 132.848 99.6322 133.437 99.1569 133.934C98.6815 134.43 98.1172 134.823 97.496 135.092C96.8748 135.361 96.209 135.499 95.5365 135.499C94.864 135.5 94.1981 135.362 93.5767 135.094C92.9554 134.825 92.3907 134.432 91.915 133.936L70.1921 111.277C69.2323 110.275 68.6931 108.917 68.6931 107.501C68.6931 106.085 69.2323 104.727 70.1921 103.725L91.915 81.0653C92.8751 80.0641 94.1771 79.5016 95.5347 79.5016C96.8923 79.5016 98.1942 80.0641 99.1543 81.0653ZM148.232 88.6167C147.743 88.1241 147.353 87.5348 147.085 86.8832C146.816 86.2317 146.675 85.5309 146.669 84.8218C146.663 84.1127 146.793 83.4094 147.05 82.7531C147.308 82.0968 147.688 81.5005 148.168 80.9991C148.649 80.4976 149.221 80.1011 149.85 79.8325C150.479 79.564 151.153 79.4289 151.833 79.4351C152.513 79.4412 153.185 79.5885 153.809 79.8684C154.434 80.1483 154.999 80.5552 155.471 81.0653L177.194 103.725C178.154 104.727 178.693 106.085 178.693 107.501C178.693 108.917 178.154 110.275 177.194 111.277L155.471 133.936C154.511 134.938 153.208 135.5 151.85 135.499C150.492 135.499 149.189 134.936 148.229 133.934C147.269 132.932 146.73 131.573 146.731 130.156C146.731 128.739 147.271 127.381 148.232 126.379L166.33 107.501L148.232 88.6167Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div className="absolute orange-bubble -right-20 top-60 md:top-2 md:-right-40 2xl:-right-10 2xl:top-10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 248 216"
+                fill="none"
+                className="w-1/2 md:w-[60%] 2xl:w-[80%]"
+              >
+                <mask id="path-1-inside-1_566_413" fill="white">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M120.5 216C54.2258 216 0.499942 167.647 0.499942 108C0.499942 48.3532 54.2258 0 120.5 0C186.774 0 240.5 48.3532 240.5 108C240.5 124.582 236.348 140.291 228.928 154.331L247.307 204.219L189.341 196.472C169.853 208.778 146.113 216 120.5 216Z"
+                  />
+                </mask>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M120.5 216C54.2258 216 0.499942 167.647 0.499942 108C0.499942 48.3532 54.2258 0 120.5 0C186.774 0 240.5 48.3532 240.5 108C240.5 124.582 236.348 140.291 228.928 154.331L247.307 204.219L189.341 196.472C169.853 208.778 146.113 216 120.5 216Z"
+                  fill="#F9A620"
+                />
+                <path
+                  d="M228.928 154.331L219.545 157.787L218.003 153.602L220.087 149.658L228.928 154.331ZM247.307 204.219L256.69 200.762L262.425 216.328L245.982 214.131L247.307 204.219ZM189.341 196.472L184.001 188.017L187.069 186.08L190.665 186.561L189.341 196.472ZM10.4999 108C10.4999 161.159 58.7315 206 120.5 206V226C49.72 226 -9.50006 174.135 -9.50006 108H10.4999ZM120.5 10C58.7315 10 10.4999 54.8411 10.4999 108H-9.50006C-9.50006 41.8654 49.72 -10 120.5 -10V10ZM230.5 108C230.5 54.8411 182.268 10 120.5 10V-10C191.28 -10 250.5 41.8654 250.5 108H230.5ZM220.087 149.658C226.779 136.995 230.5 122.883 230.5 108H250.5C250.5 126.28 245.917 143.586 237.77 159.003L220.087 149.658ZM237.923 207.675L219.545 157.787L238.312 150.874L256.69 200.762L237.923 207.675ZM190.665 186.561L248.631 194.307L245.982 214.131L188.016 206.384L190.665 186.561ZM120.5 206C144.228 206 166.115 199.311 184.001 188.017L194.68 204.928C173.59 218.245 147.999 226 120.5 226V206Z"
+                  fill="white"
+                  mask="url(#path-1-inside-1_566_413)"
+                />
+              </svg>
+              <div className="absolute top-[3.25rem] md:top-16 ml-12">
+                <p
+                  className={`text-white text-2xl md:text-3xl ${myFontBold.className}`}
+                >
+                  UI/UX
+                </p>
               </div>
             </div>
           </div>
           <div
             className={`flex flex-col relative items-center text-[5.625rem] ${myFontLight.className} `}
           >
-            <p className={`text-purple ${myFontBold.className}  `}>Bridging</p>
+            <div className={`text-purple ${myFontBold.className}  `}>
+              <WavyText text="Bridging" />
+            </div>
             <div className="z-10">
               <Image src={bridge} />
             </div>
             <div className="absolute top-[58%] left-[10%] car">
               <Image src={car} />
             </div>
-            <div className="absolute top-[58%] left-[5%] car">
-              <Image src={car} />
+            <div>
+              <WavyText text="Design and Development" />
             </div>
-            <p>Design and Development</p>
           </div>
           <div className="flex flex-col relative text-center gap-y-16">
             <div className={`text-[5.625rem] ${myFontLight.className}`}>
-              <p>To make solutions that put the </p>
-              <p className={`text-purple ${myFontBold.className}  `}>
-                USER FIRST
-              </p>
+              <WavyText text="To make solutions that " centerText />
+              <WavyText text="put the " centerText />
+
+              <div className={`text-purple ${myFontBold.className}  `}>
+                <WavyText text="USER FIRST" centerText />
+              </div>
             </div>
             <div className="flex justify-center gap-x-8">
               <svg
@@ -444,13 +448,73 @@ export default function Home() {
               </svg>
             </div>
             <div className="flex flex-col">
-              <p>Checkout my work</p>
-              <div className="bg-light-blue w-full h-80"></div>
-              <div className="flex flex-row">
-                <div className="bg-light-pink flex-1 h-[40rem]"></div>
-                <div className="flex flex-1 flex-col">
-                  <div className="bg-purple  h-[20rem]"></div>
-                  <div className="bg-orange  h-[20rem]"></div>
+              <div
+                className={`text-[5.625rem] text-center ${myFontLight.className}`}
+              >
+                <WavyText text="Checkout my work" centerText />
+              </div>
+              <div className="flex flex-col flex-1  gap-y-10">
+                <div className="relative hover:cursor-pointer group">
+                  <Link href={"/case-study/testwise"}>
+                    <Image src={testwise} alt="Link to Test wise case study" />
+                    <div className="absolute inset-0 bg-black opacity-0 rounded-[1.25rem] group-hover:opacity-70 transition-opacity"></div>
+                    <div
+                      className={`${myFontBold.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
+                    >
+                      Test Wise
+                      <br /> Requirements Dashboard
+                    </div>
+                  </Link>
+                </div>
+                <div className="flex flex-row gap-x-8">
+                  <div className="w-1/2  relative hover:cursor-pointer group">
+                    <Link href={""}>
+                      <Image
+                        src={illustrations}
+                        alt="Link to Illustrations page"
+                        className="h-[95%]"
+                      />
+                      <div className="absolute h-[95%] inset-0 bg-black opacity-0 rounded-[1.25rem] group-hover:opacity-70 transition-opacity"></div>
+                      <div
+                        className={`${myFontBold.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
+                      >
+                        Illustrations
+                      </div>
+                    </Link>
+                  </div>
+                  <div className="flex flex-1 flex-col gap-y-10">
+                    <div className=" relative hover:cursor-pointer group">
+                      <Link href={""}>
+                        <Image
+                          src={naturalU}
+                          alt="Link to NaturalU case study "
+                        />
+                        <div className="absolute inset-0 bg-black opacity-0 rounded-[1.25rem] group-hover:opacity-70 transition-opacity"></div>
+                        <div
+                          className={`${myFontBold.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
+                        >
+                          Natural U
+                          <br /> Hair Education
+                        </div>
+                      </Link>
+                    </div>
+                    <div className=" relative hover:cursor-pointer group">
+                      <Link href={""}>
+                        <Image
+                          src={gatherly}
+                          alt="Link to Gatherly case study"
+                        />
+                        <div className="absolute inset-0 bg-black opacity-0 rounded-[1.25rem] group-hover:opacity-70 transition-opacity"></div>
+                        <div
+                          className={`${myFontBold.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
+                        >
+                          Gatherly
+                          <br />
+                          Build community
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

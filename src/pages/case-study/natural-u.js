@@ -113,17 +113,69 @@ export default function NaturalU() {
                 Problem
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
-                {`For years, people with curly or coily hair have `}{" "}
+                For years, people with{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
-                  struggled with self-confidence, hair care know-how, and facing
-                  unfair treatment.
+                  curly or coily hair{" "}
                 </span>
-                {`
-                Today, they're constantly mindful of their appearance, fearing
-                their hair might not fit in or be accepted in certain settings.
-                `}
+                have faced a{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  lack of knowledge
+                </span>{" "}
+                from professionals about proper hair care, along with{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  ongoing social mistreatment.
+                </span>{" "}
+                This project is especially personal for me—growing up, I
+                struggled to{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  fit in
+                </span>{" "}
+                and even asked my mom to{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  chemically straighten my hair,
+                </span>{" "}
+                which caused it to{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  fall out.
+                </span>{" "}
+                That experience showed me the{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  harm of trying to change yourself{" "}
+                </span>
+                to meet others' expectations. In turn, I wanted to create a
+                space where people can learn more about their{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  natural hair
+                </span>{" "}
+                and feel{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  empowered to embrace
+                </span>{" "}
+                who they truly are,{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  {" "}
+                  without fear or shame.
+                </span>{" "}
               </p>
             </div>
             <div className="flex flex-col gap-y-8 flex-1">
@@ -131,18 +183,84 @@ export default function NaturalU() {
                 Solution
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
-                NaturalU is an application designed to{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
                   {" "}
-                  empower users to inquire, educate themselves, and engage in
-                  collaborative discussions regarding all aspects of hair care
+                  NaturalU
+                </span>
+                is an app designed to create a space for{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  open discussions
                 </span>{" "}
-                By fostering an environment that encourages learning,
-                interaction, and awareness of diverse hair types, NaturalU aims
-                to support individuals in feeling confident to embrace their
-                natural hair without fear of discrimination.
+                about natural hair, where users can{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  share videos, ask questions, and learn from one another.
+                </span>{" "}
+                Whether you're a{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  professional
+                </span>{" "}
+                or a{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  novice
+                </span>{" "}
+                , NaturalU offers a platform for{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  everyone
+                </span>{" "}
+                to engage in meaningful conversations about hair care. By
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  breaking down the social stigma
+                </span>{" "}
+                surrounding natural hair, the app encourages{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  open dialogue
+                </span>{" "}
+                and fosters a community that embraces{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  learning
+                </span>{" "}
+                and{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  growth.
+                </span>
+                NaturalU empowers users to confidently{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  embrace their natural hair
+                </span>{" "}
+                , helping to{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  normalize diverse hair types
+                </span>{" "}
+                and promote a{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  more inclusive conversation.
+                </span>
               </p>
             </div>
           </div>
@@ -158,9 +276,43 @@ export default function NaturalU() {
           <div className="flex flex-col gap-y-4">
             <Title title={"Research"} color="text-light-purple" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              {`Before diving into the brainstorming and design stages, it was
-              crucial for me to grasp how hair issues impact people beyond my
-              own experiences. In my research from the `}
+              Before starting the{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                brainstorming
+              </span>{" "}
+              and{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                design
+              </span>{" "}
+              phases, my main goal was to{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                understand how women
+              </span>{" "}
+              truly feel about their{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                natural hair
+              </span>{" "}
+              and whether their experiences{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                mirrored my own
+              </span>
+              . Through my{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                research
+              </span>{" "}
+              , including insights from the{" "}
               <span>
                 {
                   <Link
@@ -172,12 +324,68 @@ export default function NaturalU() {
                     Journal of Clinical and Aesthetic Dermatology
                   </Link>
                 }
+              </span>{" "}
+              , I discovered that many women—especially{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                Black women
+              </span>{" "}
+              often feel{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                frustration
+              </span>{" "}
+              or{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                embarrassment
+              </span>{" "}
+              about their natural hair. I also found a{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                striking issue
               </span>
-              {` I found that many women, especially black
-              women, often felt frustrated or embarrassed about their natural
-              hair. The study also revealed an interesting fact: a significant
-              number of physicians weren't familiar with their patients' hair
-              types when discussing scalp-related problems.`}
+              : many{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                healthcare professionals
+              </span>
+              , such as{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                doctors
+              </span>{" "}
+              , were{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                unfamiliar with their patients' natural hair types
+              </span>{" "}
+              when addressing{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                scalp-related concerns
+              </span>{" "}
+              . This gap in knowledge further highlighted the need for{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                open conversations
+              </span>{" "}
+              and{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                education
+              </span>{" "}
+              around natural hair.
             </p>
           </div>
           <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-0">
@@ -189,8 +397,14 @@ export default function NaturalU() {
               Persona
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              Based on the data obtained from my research phase I create this
-              persona to visualize a user that would utilize this app{" "}
+              Based on my research, I created a persona named Nia, whose life
+              revolves around always helping others. However, when it comes to
+              doing things for herself, like practicing self-care or doing her
+              hair, she often encounters difficulties and feels defeated. I
+              developed this persona to better understand and align with the
+              experiences of women from the Journal of Clinical and Aesthetic
+              Dermatology, particularly those who face challenges with their
+              natural hair.
             </p>
           </div>
           <ImageRow images={personaImages} />
@@ -200,8 +414,15 @@ export default function NaturalU() {
               Sketches
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              After the conclusion of my research phase I take time to sketch
-              out ideas and flows for the Natural U app
+              Based on my research, where many women expressed frustration with
+              caring for their natural hair and felt their doctors lacked
+              knowledge about their hair texture, I wanted to include features
+              that allow both professionals and non-professionals to ask
+              questions, visually showcase hair care techniques, and engage in
+              conversations. After completing the research phase, I focused on
+              sketching pages and flows for the NaturalU app, ensuring these
+              features addressed the challenges women face with natural hair,
+              while also bridging the knowledge gap with professionals
             </p>
           </div>
           <ZoomableImage image={sketch} />

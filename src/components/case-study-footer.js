@@ -1,8 +1,6 @@
 import { myFont, darkerGrotesque } from "@/utils";
-import galleryPal from "../../assets/gallery-pal-logo.svg";
 import naturalU from "../../assets/natualU_logo.svg";
 import friendship_illustration from "../../assets/friendship_illustration.svg";
-import modernAttire from "../../assets/capstone/modernattire/modern-attire-thumbnail.png";
 import kdit from "../../assets/capstone/testwise/kdit-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,17 +12,8 @@ export default function CaseStudyFooter({ casestudy = "" }) {
       subtitle: "Gatherly",
       link: "/case-study/gatherly",
     },
-    {
-      image: modernAttire,
-      subtitle: "Modern Attire",
-      link: "/case-study/modern-attire",
-    },
     { image: naturalU, subtitle: "NaturalU", link: "/case-study/natural-u" },
-    {
-      image: galleryPal,
-      subtitle: "Gallery Pal",
-      link: "/case-study/gallery-pal",
-    },
+    ,
     {
       image: kdit,
       subtitle: "Test Wise",

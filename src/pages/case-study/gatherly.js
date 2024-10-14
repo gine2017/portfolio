@@ -1,12 +1,10 @@
 import { useState } from "react";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
-import Image from "next/image";
 import Link from "next/link";
 import {
   myFont,
   darkerGrotesque,
-  darkerGrotesqueReg,
   createImageArray,
   darkerGrotesqueBold,
 } from "@/utils";

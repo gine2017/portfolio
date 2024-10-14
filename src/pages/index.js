@@ -324,7 +324,7 @@ export default function Home() {
                 </Link>
               </div>
               <div className="relative flex-1 group">
-                <Link href={"/case-study/gallery-pal"}>
+                <Link href={"/illustrations"}>
                   <Image src={illustrations} alt="Illustrations page" />
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                   <div

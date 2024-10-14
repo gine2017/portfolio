@@ -19,7 +19,6 @@ import {
   darkerGrotesque,
   createImageArray,
   darkerGrotesqueBold,
-  zoomImage,
 } from "@/utils";
 import useWindowSize from "@/hooks/useWindowSize";
 

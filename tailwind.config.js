@@ -43,6 +43,7 @@ module.exports = {
         "light-pink": "#FBB7C0",
         orange: "#F9A620",
         marron: "#5B2E48",
+        red: "#FF0035",
         "gatherly-blue": "#0072BB",
         "modern-attire": "#010154",
         "testwise-blue": "#1F3F70",

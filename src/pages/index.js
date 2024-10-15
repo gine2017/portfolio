@@ -74,9 +74,8 @@ export default function Home() {
               >
                 <WavyText
                   text="I'm a User Experience Designer passionate about being the "
-                  styles="whitespace-pre-line"
+                  styles="flex"
                 />
-                <br />
                 <span
                   className={`text-purple  dynamic-text overflow-hidden inline-block whitespace-nowrap align-baseline ${darkerGrotesqueBold.className}`}
                   ref={textRef}
@@ -85,7 +84,7 @@ export default function Home() {
                 </span>
                 <div></div>
                 <WavyText
-                  styles="whitespace-pre-line"
+                  styles="flex"
                   text=" bridging design and development to create user-first solutions"
                 />
               </div>

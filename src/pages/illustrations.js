@@ -2,6 +2,8 @@ import { useState } from "react";
 import Navbar from "@/components/navbar";
 import MobileNav from "@/components/mobile-nav";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
+
 import useWindowSize from "@/hooks/useWindowSize";
 import {
   myFont,
@@ -10,6 +12,21 @@ import {
   darkerGrotesqueBold,
 } from "@/utils";
 
+// images
+import amelia from "../../assets/illustrations/Amelia.svg";
+import asian from "../../assets/illustrations/asian woman.svg";
+import black from "../../assets/illustrations/blk woman.svg";
+import chat from "../../assets/illustrations/chat illustration.svg";
+import emerald from "../../assets/illustrations/Emerald.svg";
+import friendship from "../../assets/illustrations/friendship illustration.svg";
+import group from "../../assets/illustrations/group illustration.svg";
+import blowhorn from "../../assets/illustrations/illustration.svg";
+import jaxith from "../../assets/illustrations/Jaxith.svg";
+import latina from "../../assets/illustrations/latina.svg";
+import logo from "../../assets/illustrations/logo.svg";
+import myIllustration from "../../assets/illustrations/my_illustration.svg";
+import waving from "../../assets/illustrations/waving illustrations.svg";
+
 export default function Illustrations() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
@@ -17,6 +34,30 @@ export default function Illustrations() {
   const updateContent = (state) => {
     setShowContent(state);
   };
+
+  const bgColorsClassname = [
+    "purple",
+    "orange",
+    "light-blue",
+    "light-pink",
+    "red",
+  ];
+
+  const allImages = [
+    asian,
+    amelia,
+    black,
+    chat,
+    group,
+    emerald,
+    jaxith,
+    friendship,
+    latina,
+    myIllustration,
+    logo,
+    waving,
+    blowhorn,
+  ];
 
   return (
     <div>
@@ -33,6 +74,22 @@ export default function Illustrations() {
               Here are some illustrations I have made for some of my own
               projects
             </p>
+          </div>
+          <div className="flex flex-row flex-wrap gap-20 justify-center">
+            {allImages.map((img, index) => (
+              <div
+                key={index}
+                className={`w-1/4 p-8 flex justify-center items-center bg-${
+                  bgColorsClassname[index % bgColorsClassname.length]
+                }`}
+              >
+                <Image
+                  className="max-h-full max-w-full"
+                  src={img}
+                  alt="Natural U case study"
+                />
+              </div>
+            ))}
           </div>
         </main>
       )}

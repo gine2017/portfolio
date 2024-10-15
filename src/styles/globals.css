@@ -27,17 +27,12 @@ body {
 .react-multi-carousel-dot.react-multi-carousel-dot--active button {
   background: #170206 !important;
 }
-.wavy-text {
-  display: inline-block;
-  transform: translateY(20px);
+.animate {
+  /* display: inline-block; */
   opacity: 0;
-  transition: transform 0.75s ease, opacity 0.5s ease;
+  animation: slideUp 1s ease-out forwards;
 }
 
-.animate .wavy-text {
-  transform: translateY(0);
-  opacity: 1;
-}
 .dynamic-text {
   width: 13ch; /* Set to reserve space for dynamic text */
   border-right: 2px solid black; /* Cursor effect */
@@ -67,5 +62,16 @@ body {
   }
   to {
     width: 13ch;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

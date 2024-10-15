@@ -13,7 +13,7 @@ const useIntersectionObserver = () => {
         }
       },
       {
-        threshold: 1.0, // adjust this value for when the animation starts (10% visibility here)
+        threshold: 0.1, // adjust this value for when the animation starts (10% visibility here)
       }
     );
 

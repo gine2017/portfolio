@@ -71,8 +71,10 @@ export default function Illustrations() {
         <main className="mx-auto w-80% flex flex-col gap-y-20 mt-4 md:mt-16 mb-48">
           <div className="flex flex-col gap-y-8 flex-1">
             <div className="mt-12 flex flex-row gap-x-4 items-center">
-              <span className="text-4xl write">🖋️</span>
-              <p className={` text-purple text-5xl ${myFont.className}`}>
+              <span className=" text-3xl md:text-4xl write">🖋️</span>
+              <p
+                className={` text-purple text-3xl md:text-5xl ${myFont.className}`}
+              >
                 Illustrations
               </p>
             </div>
@@ -88,7 +90,7 @@ export default function Illustrations() {
             {allImages.map((img, index) => (
               <div
                 key={index}
-                className={`w-1/4 illustrationImg p-8 flex justify-center items-center ${
+                className={`md:w-1/4 illustrationImg p-8 flex justify-center items-center ${
                   bgColorsClassname[index % bgColorsClassname.length]
                 }`}
                 ref={(el) => (imagesRef.current[index] = el)}

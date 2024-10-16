@@ -3,7 +3,6 @@ import Navbar from "@/components/navbar";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/footer";
-import WavyText from "@/components/wavy-text";
 import {
   myFont,
   myFontBold,
@@ -67,26 +66,24 @@ export default function Home() {
               <div
                 className={`text-purple text-5xl md:text-8xl ${myFont.className}`}
               >
-                <WavyText text="Hi, I'm Regine" styles="flex" />
+                <span className="flex animate">Hi, I'm Regine</span>
               </div>
               <div
                 className={`text-2xl md:text-4xl whitespace-pre-wrap ${darkerGrotesque.className}`}
               >
-                <WavyText
-                  text="I'm a User Experience Designer passionate about being the "
-                  styles="flex"
-                />
+                <span className="flex animate">
+                  I'm a User Experience Designer passionate about being the
+                </span>
+
                 <span
                   className={`text-purple  dynamic-text overflow-hidden inline-block whitespace-nowrap align-baseline ${darkerGrotesqueBold.className}`}
                   ref={textRef}
                 >
                   {translatedText[textIndex]}
                 </span>
-                <div></div>
-                <WavyText
-                  styles="flex"
-                  text=" bridging design and development to create user-first solutions"
-                />
+                <span className="flex animate">
+                  bridging design and development to create user-first solutions
+                </span>
               </div>
               <FontAwesomeIcon
                 icon={faArrowDown}

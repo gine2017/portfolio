@@ -1,34 +1,33 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
-const useIntersectionObserver = () => {
-  const [isIntersecting, setIsIntersecting] = useState(false);
-  const ref = useRef(null);
+const useIntersectionObserver = (callback, options = {}) => {
+  const elementsRef = useRef([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setIsIntersecting(true);
-          observer.unobserve(entry.target); // Stop observing after first intersection
+          callback(entry.target);
         }
-      },
-      {
-        threshold: 0.1, // adjust this value for when the animation starts (10% visibility here)
-      }
-    );
+      });
+    }, options);
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    elementsRef.current.forEach((element) => {
+      if (element) {
+        observer.observe(element);
+      }
+    });
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      elementsRef.current.forEach((element) => {
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
     };
-  }, []);
+  }, [callback, options]);
 
-  return [isIntersecting, ref];
+  return elementsRef;
 };
 
 export default useIntersectionObserver;

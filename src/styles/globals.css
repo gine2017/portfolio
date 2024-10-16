@@ -39,6 +39,21 @@ body {
   animation: typing 2s steps(13, end), blink 0.75s step-end infinite;
 }
 
+.write {
+  animation: write 1s ease-in-out infinite;
+}
+
+.illustrationImg {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 #upperArm {
   animation: forearmAnimation 1s linear infinite;
   transform-origin: bottom;
@@ -73,5 +88,15 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes write {
+  0%,
+  100% {
+    transform: translate(0, 0); /* Starting point */
+  }
+  50% {
+    transform: translate(-3px, 2px); /* Slight movement to mimic writing */
   }
 }

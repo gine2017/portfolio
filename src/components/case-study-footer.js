@@ -4,6 +4,7 @@ import friendship_illustration from "../../assets/friendship_illustration.svg";
 import kdit from "../../assets/capstone/testwise/kdit-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
+import myIllustration from "../../assets/illustrations/my_illustration.svg";
 
 export default function CaseStudyFooter({ casestudy = "" }) {
   const caseStudies = [
@@ -19,12 +20,17 @@ export default function CaseStudyFooter({ casestudy = "" }) {
       subtitle: "Test Wise",
       link: "/case-study/testwise",
     },
+    {
+      image: myIllustration,
+      subtitle: "Illustrations",
+      link: "/illustrations",
+    },
   ];
   return (
     <div className=" w-full flex flex-col gap-y-8">
       <div className=" w-full flex justify-start border-b-4 border-black text-4xl md:text-5xl">
         <span className={`text-purple bg-white pb-4 ${myFont.className}`}>
-          Read more of my case studies
+          Check out more of my work
         </span>
       </div>
       <div className="flex flex-row justify-center justify-evenly flex-wrap">

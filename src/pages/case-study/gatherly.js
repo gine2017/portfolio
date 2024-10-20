@@ -54,14 +54,12 @@ import highFidelity3 from "../../../assets/capstone/gatherly/high-fidelity/high-
 import highFidelity4 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-4.png";
 import highFidelity5 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-5.png";
 import highFidelity6 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-6.png";
-import highFidelity7 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-7.png";
 import highFidelity8 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-8.png";
 import highFidelity9 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-9.png";
 import highFidelity10 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-10.png";
 import highFidelity11 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-11.png";
 import highFidelity12 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-12.png";
 import highFidelity13 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-13.png";
-import highFidelity14 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-14.png";
 import ImageRow from "@/components/image-row";
 import ImageViewer from "@/components/image-viewer";
 import ZoomableImage from "@/components/zoomable-image";
@@ -95,14 +93,12 @@ const highFidelityImages = [
   highFidelity4,
   highFidelity5,
   highFidelity6,
-  highFidelity7,
   highFidelity8,
   highFidelity9,
   highFidelity10,
   highFidelity11,
   highFidelity12,
   highFidelity13,
-  highFidelity14,
 ];
 const stats = [
   {
@@ -1112,7 +1108,7 @@ export default function Gatherly() {
             <iframe
               style={{ border: "1px solid rgba(0, 0, 0, 0.1);" }}
               className="w-full h-[40rem]"
-              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Ff3XDj0RqNgIrPRiJyOnI2L%2FWireFrame-Capstone%3Fpage-id%3D40%253A985%26node-id%3D1201-6040%26viewport%3D1543%252C-178%252C0.23%26t%3DUHuAWgRAX7sfzyKz-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26starting-point-node-id%3D1201%253A6040%26show-proto-sidebar%3D1"
+              src="https://embed.figma.com/proto/f3XDj0RqNgIrPRiJyOnI2L/WireFrame-Capstone?page-id=40%3A985&node-id=2066-9590&node-type=frame&viewport=1533%2C-318%2C0.19&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2066%3A9590&show-proto-sidebar=1&embed-host=share"
               allowfullscreen
             ></iframe>
           </div>

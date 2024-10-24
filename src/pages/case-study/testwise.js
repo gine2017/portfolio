@@ -583,7 +583,7 @@ export default function TestWise() {
               <span
                 className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
               >
-                Pranjal's vision
+                {` Pranjal's vision`}
               </span>{" "}
               and provided unique value. This research laid the groundwork for a
               strong presentation, demonstrating how we could meet his
@@ -613,9 +613,9 @@ export default function TestWise() {
               <span
                 className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
               >
-                client's goals
+                {`client's goals`}
               </span>{" "}
-              and to comprehend Pranjal's{" "}
+              {`and to comprehend Pranjal's`}{" "}
               <span
                 className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
               >
@@ -666,15 +666,15 @@ export default function TestWise() {
               >
                 Alex
               </span>
-              , who faces the challenge of tracking his team's work as his
+              {`, who faces the challenge of tracking his team's work as his
               business sales grow. To overcome this challenge, he seeks a
-              solution that can help{" "}
+              solution that can help`}{" "}
               <span
                 className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
               >
                 organize
               </span>{" "}
-              his team's{" "}
+              {`his team's`}{" "}
               <span
                 className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
               >
@@ -937,8 +937,8 @@ export default function TestWise() {
               </span>
               .
               <br /> <br />
-              Once we presented all our designs to Pranjal, one team member's
-              design stood out for its{" "}
+              {`Once we presented all our designs to Pranjal, one team member's
+              design stood out for its`}{" "}
               <span
                 className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
               >
@@ -1078,7 +1078,7 @@ export default function TestWise() {
               >
                 collaboration
               </span>
-              , especially when contributing to my team's{" "}
+              {`, especially when contributing to my team's`}{" "}
               <span
                 className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
               >

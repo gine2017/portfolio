@@ -12,11 +12,9 @@ import Slider from "@/components/slider";
 import MobileSlider from "@/components/mobile-slider";
 import Navbar from "@/components/navbar";
 import MobileNav from "@/components/mobile-nav";
-import Image from "next/image";
 import Footer from "@/components/footer";
 import useWindowSize from "@/hooks/useWindowSize";
 import CaseStudyFooter from "@/components/case-study-footer";
-import { zoomImage } from "@/utils";
 
 //images
 import naturalUHero from "../../../assets/capstone/naturalu/natural-u-hero-img.svg";
@@ -25,6 +23,7 @@ import persona2 from "../../../assets/capstone/naturalu/natural-u-persona-2.png"
 import sketch from "../../../assets/capstone/naturalu/naturalUSketch.png";
 import userFlow from "../../../assets/capstone/naturalu/naturalU-userflow.png";
 import styleguide from "../../../assets/capstone/naturalu/naturaluU-styleguide.png";
+import components from "../../../assets/capstone/naturalu/components.png";
 
 import screen1 from "../../../assets/capstone/naturalu/screens/screen1.png";
 import screen2 from "../../../assets/capstone/naturalu/screens/screen2.png";
@@ -39,6 +38,10 @@ import screen10 from "../../../assets/capstone/naturalu/screens/screen10.png";
 import screen11 from "../../../assets/capstone/naturalu/screens/screen11.png";
 import screen12 from "../../../assets/capstone/naturalu/screens/screen12.png";
 import screen13 from "../../../assets/capstone/naturalu/screens/screen13.png";
+import screen14 from "../../../assets/capstone/naturalu/screens/screen14.png";
+import screen15 from "../../../assets/capstone/naturalu/screens/screen15.png";
+import screen16 from "../../../assets/capstone/naturalu/screens/screen16.png";
+
 import Link from "next/link";
 import ImageRow from "@/components/image-row";
 import ZoomableImage from "@/components/zoomable-image";
@@ -57,9 +60,13 @@ const highFidelityImages = [
   screen11,
   screen12,
   screen13,
+  screen14,
+  screen15,
+  screen16,
 ];
 
 const personaImages = [persona1, persona2];
+const styleguideImages = [styleguide, components];
 
 const stats = [
   {
@@ -219,7 +226,7 @@ export default function NaturalU() {
                 >
                   everyone
                 </span>{" "}
-                to engage in meaningful conversations about hair care. By
+                to engage in meaningful conversations about hair care. By{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
@@ -645,7 +652,7 @@ export default function NaturalU() {
           <Title title={"Design"} color="text-light-purple" />
           <div className="flex flex-col gap-y-8">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
-              Style Guide
+              Style Guide and UI Components
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               To instill a sense of{" "}
@@ -666,13 +673,25 @@ export default function NaturalU() {
               >
                 purple
               </span>{" "}
-              as the primary color for the{" "}
+              as the{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                primary color
+              </span>{" "}
+              for the{" "}
               <span
                 className={`text-light-purple  ${darkerGrotesqueBold.className}`}
               >
                 NaturalU
               </span>{" "}
-              app. Purple symbolizes{" "}
+              app.{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                Purple
+              </span>{" "}
+              symbolizes{" "}
               <span
                 className={`text-light-purple  ${darkerGrotesqueBold.className}`}
               >
@@ -696,18 +715,122 @@ export default function NaturalU() {
               >
                 ambition
               </span>
-              . By integrating this color, I wanted to signify empowerment and
-              remind users of the importance of their{" "}
+              . By integrating this color, I wanted to signify{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                empowerment
+              </span>{" "}
+              and remind users of the importance of their{" "}
               <span
                 className={`text-light-purple  ${darkerGrotesqueBold.className}`}
               >
                 crowns
+              </span>
+              , encouraging them to confidently engage with the app’s features
+              to learn more about{" "}
+              <span
+                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                hair care
               </span>{" "}
-              with pride and to confidently engage with the app’s features to
-              learn more about hair care and themselves.
+              and themselves.
+              <p>
+                <br />
+                Additionally, I infused{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  purple
+                </span>{" "}
+                throughout various{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  UI components
+                </span>{" "}
+                of the app. This color is reflected in the{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  buttons
+                </span>
+                ,{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  navigation bars
+                </span>
+                ,{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  cards
+                </span>
+                , and{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  toggles
+                </span>
+                , ensuring visual consistency across the platform. By using{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  purple
+                </span>{" "}
+                in these key interactive elements, the app emphasizes both{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  functionality
+                </span>{" "}
+                and{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  aesthetics
+                </span>
+                , aligning the overall user experience with the sense of{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  empowerment
+                </span>{" "}
+                and{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  identity
+                </span>{" "}
+                that the color symbolizes. Each element—whether a button or a
+                card—serves as a cohesive part of the design that enhances{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  usability
+                </span>{" "}
+                while reinforcing the app’s core message of{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  embracing
+                </span>{" "}
+                and{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  celebrating natural hair
+                </span>
+                .
+              </p>
             </p>
           </div>
-          <ZoomableImage image={styleguide} />
+          {width <= 767 ? (
+            <MobileSlider sliderData={createImageArray(styleguideImages)} />
+          ) : (
+            <Slider sliderData={createImageArray(styleguideImages)} />
+          )}
 
           <div className="flex flex-col gap-y-8">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
@@ -782,6 +905,42 @@ export default function NaturalU() {
               </span>
               .
             </p>
+            <p className={` text-2xl ${darkerGrotesque.className}`}>
+              To combat social stigma, expand hair knowledge, and help Black
+              women and others feel more comfortable with their natural hair, I
+              implemented the following features:
+            </p>
+            <ul className={` text-2xl ${darkerGrotesque.className} list-disc`}>
+              <li>
+                <span
+                  className={`text-light-purple ${darkerGrotesqueBold.className}`}
+                >
+                  Interactive Q&A Forum:
+                </span>{" "}
+                An open space for users to ask hair care questions and share
+                advice with others.
+              </li>
+              <li>
+                <span
+                  className={`text-light-purple ${darkerGrotesqueBold.className}`}
+                >
+                  Video Tutorials:
+                </span>{" "}
+                A dedicated section for sharing video content, where users and
+                professionals can demonstrate styling techniques or hair care
+                tips.
+              </li>
+              <li>
+                <span
+                  className={`text-light-purple ${darkerGrotesqueBold.className}`}
+                >
+                  Informational Articles:{" "}
+                </span>
+                A resource for users to learn more about different hair types,
+                complete with detailed guides on hair care tailored to various
+                textures and conditions.
+              </li>
+            </ul>
           </div>
 
           {width <= 767 ? (

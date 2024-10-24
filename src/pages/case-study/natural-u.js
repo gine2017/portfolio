@@ -163,7 +163,7 @@ export default function NaturalU() {
                 >
                   harm of trying to change yourself{" "}
                 </span>
-                to meet others' expectations. In turn, I wanted to create a
+                {`to meet others' expectations.`} In turn, I wanted to create a
                 space where people can learn more about their{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
@@ -208,7 +208,7 @@ export default function NaturalU() {
                 >
                   share videos, ask questions, and learn from one another.
                 </span>{" "}
-                Whether you're a{" "}
+                {`Whether you're a`}{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
@@ -372,7 +372,7 @@ export default function NaturalU() {
               <span
                 className={`text-light-purple  ${darkerGrotesqueBold.className}`}
               >
-                unfamiliar with their patients' natural hair types
+                {`unfamiliar with their patients' natural hair types`}
               </span>{" "}
               when addressing{" "}
               <span
@@ -970,7 +970,7 @@ export default function NaturalU() {
               >
                 interactive
               </span>
-              . Additionally, I'm considering incorporating{" "}
+              {`. Additionally, I'm considering incorporating`}{" "}
               <span
                 className={`text-light-purple ${darkerGrotesqueBold.className}`}
               >
@@ -988,7 +988,7 @@ export default function NaturalU() {
               >
                 learn
               </span>{" "}
-              about different hair types. Overall, I'm proud of the{" "}
+              {`about different hair types. Overall, I'm proud of the`}{" "}
               <span
                 className={`text-light-purple ${darkerGrotesqueBold.className}`}
               >
@@ -1012,7 +1012,7 @@ export default function NaturalU() {
               >
                 interactive
               </span>
-              . Additionally, I'm considering incorporating{" "}
+              {` . Additionally, I'm considering incorporating`}{" "}
               <span
                 className={`text-light-purple ${darkerGrotesqueBold.className}`}
               >
@@ -1030,14 +1030,14 @@ export default function NaturalU() {
               >
                 learn
               </span>{" "}
-              about different hair types. Overall, I'm proud of the{" "}
+              {`about different hair types. Overall, I'm proud of the`}{" "}
               <span
                 className={`text-light-purple ${darkerGrotesqueBold.className}`}
               >
                 progress
               </span>{" "}
-              I've made so far in bringing this app to life. My ultimate goal is
-              to ensure that everyone feels{" "}
+              {`I've made so far in bringing this app to life. My ultimate goal is
+              to ensure that everyone feels`}{" "}
               <span
                 className={`text-light-purple ${darkerGrotesqueBold.className}`}
               >

@@ -657,8 +657,10 @@ export default function Gatherly() {
                 >
                   laddering
                 </span>
-                , a technique that helps uncover the deeper reasons behind
-                users' actions and needs. As the sole{" "}
+                ,{" "}
+                {`a technique that helps uncover the deeper reasons behind
+                users' actions and needs.`}{" "}
+                As the sole{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
@@ -678,8 +680,8 @@ export default function Gatherly() {
                 >
                   values
                 </span>{" "}
-                driving users' behaviors, ensuring that the final product truly
-                aligns with their needs.
+                {`driving users' behaviors, ensuring that the final product truly
+                aligns with their needs.`}
               </p>
             </div>
             <ZoomableImage image={ladder} />

@@ -66,13 +66,13 @@ export default function Home() {
               <div
                 className={`text-purple text-5xl md:text-8xl ${myFont.className}`}
               >
-                <span className="flex animate">Hi, I'm Regine</span>
+                <span className="flex animate">{`Hi, I'm Regine`}</span>
               </div>
               <div
                 className={`text-2xl md:text-4xl whitespace-pre-wrap ${darkerGrotesque.className}`}
               >
                 <span className="flex animate">
-                  I'm a User Experience Designer passionate about being the
+                  {`I'm a User Experience Designer passionate about being the`}
                 </span>
 
                 <span

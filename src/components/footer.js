@@ -11,32 +11,34 @@ export default function Footer() {
         <p className={`text-white text-2xl md:text-4xl ${myFont.className}`}>
           {"Let's Connect"}
         </p>
+      </div>
+      <div className="flex flex-row justify-between items-end">
+        <div className="flex flex-row gap-8">
+          <a
+            href="https://www.linkedin.com/in/regine-thimothee/"
+            passHref={true}
+            target="_blank"
+            className="rounded-full w-16 h-16 bg-orange flex justify-center items-center"
+          >
+            <div className="w-8 h-8 relative">
+              <Image src={linkedInLogo} alt="LinkedIn logo" fill={true} />
+            </div>
+          </a>
+          <Link
+            href="mailto:ginou10@msn.com"
+            passHref={true}
+            className="rounded-full w-16 h-16 bg-orange  flex justify-center items-center"
+          >
+            <div className="w-8 h-8 relative">
+              <Image src={emailLogo} alt="envelope icon" fill={true} />
+            </div>
+          </Link>
+        </div>
         <p
-          className={`text-white  text-xl md:text-2xl ${darkerGrotesqueReg.className}`}
+          className={`text-white text-right relative bottom-0  text-xl md:text-2xl ${darkerGrotesqueReg.className}`}
         >
           Design and coded by Regine
         </p>
-      </div>
-      <div className="flex flex-row gap-8">
-        <a
-          href="https://www.linkedin.com/in/regine-thimothee/"
-          passHref={true}
-          target="_blank"
-          className="rounded-full w-16 h-16 bg-light-pink flex justify-center items-center"
-        >
-          <div className="w-8 h-8 relative">
-            <Image src={linkedInLogo} alt="LinkedIn logo" fill={true} />
-          </div>
-        </a>
-        <Link
-          href="mailto:ginou10@msn.com"
-          passHref={true}
-          className="rounded-full w-16 h-16 bg-light-pink flex justify-center items-center"
-        >
-          <div className="w-8 h-8 relative">
-            <Image src={emailLogo} alt="envelope icon" fill={true} />
-          </div>
-        </Link>
       </div>
     </footer>
   );

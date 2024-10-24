@@ -27,3 +27,77 @@ body {
 .react-multi-carousel-dot.react-multi-carousel-dot--active button {
   background: #170206 !important;
 }
+.animate {
+  /* display: inline-block; */
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards;
+}
+
+.dynamic-text {
+  width: 13ch; /* Set to reserve space for dynamic text */
+  border-right: 2px solid black; /* Cursor effect */
+  animation: slideUp 1s ease-out forwards, typing 2s steps(13, end),
+    blink 0.75s step-end infinite;
+}
+
+.write {
+  animation: write 1s ease-in-out infinite;
+}
+
+.illustrationImg {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#upperArm {
+  animation: forearmAnimation 1s linear infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes forearmAnimation {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(-20deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 13ch;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes write {
+  0%,
+  100% {
+    transform: translate(0, 0); /* Starting point */
+  }
+  50% {
+    transform: translate(-3px, 2px); /* Slight movement to mimic writing */
+  }
+}

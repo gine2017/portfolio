@@ -80,10 +80,10 @@ export default function Illustrations() {
             </div>
 
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              One of the most important skills I have accquired during my journy
-              within UI/UX design indutry was my love for creating illustraions.
-              Here are some illustrations I have made for some of my own
-              projects
+              One of the most important skills I have acquired during my journey
+              in the UI/UX design industry is my passion for creating
+              illustrations. Here are some illustrations I have created for my
+              personal projects.
             </p>
           </div>
           <div className="flex flex-row flex-wrap gap-20 justify-center">

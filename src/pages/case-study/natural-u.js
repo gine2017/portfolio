@@ -654,176 +654,24 @@ export default function NaturalU() {
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
               Style Guide and UI Components
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              To instill a sense of{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                strength
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                confidence
-              </span>{" "}
-              among users who may feel uneasy about their natural hair, I chose{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                purple
-              </span>{" "}
-              as the{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                primary color
-              </span>{" "}
-              for the{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                NaturalU
-              </span>{" "}
-              app.{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                Purple
-              </span>{" "}
-              symbolizes{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                pride
-              </span>
-              ,{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                loyalty
-              </span>
-              ,{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                magic
-              </span>
-              , and{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                ambition
-              </span>
-              . By integrating this color, I wanted to signify{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                empowerment
-              </span>{" "}
-              and remind users of the importance of their{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                crowns
-              </span>
-              , encouraging them to confidently engage with the app’s features
-              to learn more about{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                hair care
-              </span>{" "}
-              and themselves.
-              <p>
-                <br />
-                Additionally, I infused{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  purple
-                </span>{" "}
-                throughout various{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  UI components
-                </span>{" "}
-                of the app. This color is reflected in the{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  buttons
-                </span>
-                ,{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  navigation bars
-                </span>
-                ,{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  cards
-                </span>
-                , and{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  toggles
-                </span>
-                , ensuring visual consistency across the platform. By using{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  purple
-                </span>{" "}
-                in these key interactive elements, the app emphasizes both{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  functionality
-                </span>{" "}
-                and{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  aesthetics
-                </span>
-                , aligning the overall user experience with the sense of{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  empowerment
-                </span>{" "}
-                and{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  identity
-                </span>{" "}
-                that the color symbolizes. Each element—whether a button or a
-                card—serves as a cohesive part of the design that enhances{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  usability
-                </span>{" "}
-                while reinforcing the app’s core message of{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  embracing
-                </span>{" "}
-                and{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  celebrating natural hair
-                </span>
-                .
-              </p>
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              To instill a sense of strength and confidence among users who may
+              feel uneasy about their natural hair, I chose purple as the
+              primary color for the NaturalU app. Purple symbolizes pride,
+              loyalty, magic, and ambition. By integrating this color, I aimed
+              to convey empowerment and remind users of the importance of their
+              crowns, encouraging them to confidently explore the app’s features
+              for hair care and self-discovery.
+            </p>
+            <p>
+              Additionally, I used purple throughout various UI components,
+              including buttons, navigation bars, cards, and toggles, ensuring
+              visual consistency across the platform. This choice emphasizes
+              functionality and aesthetics, aligning the overall user experience
+              with the sense of empowerment and identity that the color
+              represents. Each element serves as a cohesive part of the design,
+              enhancing usability while reinforcing the app’s core message of
+              embracing and celebrating natural hair.
             </p>
           </div>
           {width <= 767 ? (

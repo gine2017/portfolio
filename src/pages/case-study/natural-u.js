@@ -20,8 +20,9 @@ import CaseStudyFooter from "@/components/case-study-footer";
 import naturalUHero from "../../../assets/capstone/naturalu/natural-u-hero-img.svg";
 import persona1 from "../../../assets/capstone/naturalu/natural-u-persona-1.png";
 import persona2 from "../../../assets/capstone/naturalu/natural-u-persona-2.png";
-import sketch from "../../../assets/capstone/naturalu/naturalUSketch.png";
-import userFlow from "../../../assets/capstone/naturalu/naturalU-userflow.png";
+import sketch1 from "../../../assets/capstone/naturalu/sketch1.png";
+import sketch2 from "../../../assets/capstone/naturalu/sketch2.png";
+import userFlow from "../../../assets/capstone/naturalu/UserFlowNaturalU.png";
 import styleguide from "../../../assets/capstone/naturalu/naturaluU-styleguide.png";
 import components from "../../../assets/capstone/naturalu/components.png";
 
@@ -66,6 +67,7 @@ const highFidelityImages = [
 
 const personaImages = [persona1, persona2];
 const styleguideImages = [styleguide, components];
+const sketchImages = [sketch1, sketch2];
 
 const stats = [
   {
@@ -111,158 +113,121 @@ export default function NaturalU() {
                 Problem
               </p>
               <p className={` text-2xl ${darkerGrotesque.className}`}>
-                For years, people with{" "}
+                For{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
-                  curly or coily hair{" "}
+                  years
                 </span>
-                have faced a{" "}
+                , people with{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
-                  lack of knowledge
+                  curly and coily hair
                 </span>{" "}
-                from professionals about proper hair care, along with{" "}
+                have faced a significant gap in knowledge from professionals on
+                proper hair care, alongside{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
-                  ongoing social mistreatment.
-                </span>{" "}
-                This project is especially personal for me—growing up, I
-                struggled to{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  fit in
-                </span>{" "}
-                and even asked my mom to{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  chemically straighten my hair,
-                </span>{" "}
-                which caused it to{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  fall out.
-                </span>{" "}
-                That experience showed me the{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  harm of trying to change yourself{" "}
+                  societal stigma
                 </span>
-                {`to meet others' expectations.`} In turn, I wanted to create a
-                space where people can learn more about their{" "}
+                . This project is deeply{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
-                  natural hair
+                  personal
                 </span>{" "}
-                and feel{" "}
+                to me as I grew up feeling the pressure to fit in, leading me to
+                chemically straighten my hair, which damaged it and resulted in
+                hair loss. That experience highlighted the harm of conforming to
+                external expectations. My goal with this project is to create a
+                space where individuals can{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
-                  empowered to embrace
+                  learn
                 </span>{" "}
-                who they truly are,{" "}
+                about their natural hair and feel{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
-                  {" "}
-                  without fear or shame.
+                  confident
                 </span>{" "}
+                embracing their true selves, free from fear or shame.
               </p>
             </div>
             <div className="flex flex-col gap-y-8 flex-1">
               <p className={` text-light-purple text-4xl ${myFont.className}`}>
                 Solution
               </p>
-              <p className={` text-2xl ${darkerGrotesque.className}`}>
+              <p className={`text-2xl ${darkerGrotesque.className}`}>
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
-                  {" "}
-                  NaturalU{" "}
+                  NaturalU
+                </span>{" "}
+                is designed to create a{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  supportive platform
+                </span>{" "}
+                for open conversations about{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  natural hair
                 </span>
-                is an app designed to create a space for{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  open discussions
-                </span>{" "}
-                about natural hair, where users can{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  share videos, ask questions, and learn from one another.
-                </span>{" "}
-                {`Whether you're a`}{" "}
+                , allowing users to share videos, ask questions, and learn from
+                each other. Whether a{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
                   professional
                 </span>{" "}
-                or a{" "}
+                or a beginner, everyone can engage in{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
-                  novice
+                  meaningful discussions
                 </span>{" "}
-                , NaturalU offers a platform for{" "}
+                and gain valuable insights into hair care. By addressing the{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
-                  everyone
+                  social stigma
                 </span>{" "}
-                to engage in meaningful conversations about hair care. By{" "}
+                surrounding natural hair,{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
-                  breaking down the social stigma
+                  NaturalU
                 </span>{" "}
-                surrounding natural hair, the app encourages{" "}
+                fosters a{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
-                  open dialogue
+                  community
                 </span>{" "}
-                and fosters a community that embraces{" "}
+                that promotes open dialogue, learning, and growth. The app
+                empowers users to confidently embrace and celebrate their{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
-                  learning
-                </span>{" "}
-                and{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  growth.
+                  natural hair
                 </span>
-                NaturalU empowers users to confidently{" "}
+                , normalizing diverse hair types and promoting{" "}
                 <span
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
-                  embrace their natural hair
-                </span>{" "}
-                , helping to{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  normalize diverse hair types
-                </span>{" "}
-                and promote a{" "}
-                <span
-                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-                >
-                  more inclusive conversation.
+                  inclusivity
                 </span>
+                .
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
               My Role
             </p>
@@ -315,11 +280,11 @@ export default function NaturalU() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-0">
+          <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-0 md:mx-auto">
             <Stats statsArray={stats} color="text-light-purple" />
           </div>
 
-          <div className="flex flex-col gap-y-8 mx-auto w-3/4">
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
               Persona
             </p>
@@ -447,13 +412,16 @@ export default function NaturalU() {
               research.
             </p>
           </div>
-          <ImageRow images={personaImages} />
+          <div className="md:mx-auto md:w-3/4">
+            <ImageRow images={personaImages} />
+          </div>
+
           <Title
             title={"Ideate"}
             color="text-light-purple"
             styles="w-3/4 mx-auto"
           />
-          <div className="flex flex-col gap-y-8 mx-auto w-3/4">
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
               Sketches
             </p>
@@ -544,7 +512,12 @@ export default function NaturalU() {
               .
             </p>
           </div>
-          <ZoomableImage image={sketch} />
+          <div>
+            <div className="md:mx-auto md:w-3/4">
+              <ImageRow images={sketchImages} />
+            </div>
+          </div>
+
           <div className="flex flex-col gap-y-8 w-3/4 mx-auto">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
               User Flow
@@ -597,9 +570,9 @@ export default function NaturalU() {
           <Title
             title={"Design"}
             color="text-light-purple"
-            styles="mx-auto w-3/4"
+            styles="w-full md:mx-auto md:w-3/4 "
           />
-          <div className="flex flex-col gap-y-8 mx-auto w-3/4">
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
               Style Guide and UI Components
             </p>
@@ -735,13 +708,11 @@ export default function NaturalU() {
               and engaged.
             </p>
           </div>
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(styleguideImages)} />
-          ) : (
-            <Slider sliderData={createImageArray(styleguideImages)} />
-          )}
+          <div className="md:mx-auto md:w-3/4">
+            <ImageRow images={styleguideImages} />
+          </div>
 
-          <div className="flex flex-col gap-y-8 mx-auto w-3/4">
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
               High Fidelity Screens
             </p>
@@ -792,7 +763,7 @@ export default function NaturalU() {
             <Slider sliderData={createImageArray(highFidelityImages)} />
           )}
 
-          <div className="flex flex-col gap-y-4 mx-auto w-3/4">
+          <div className="flex flex-col gap-y-4 w-full md:mx-auto md:w-3/4 ">
             <Title title={"What's Next"} color="text-light-purple" />
             <p className={`text-2xl ${darkerGrotesque.className}`}>
               I'm excited about the progress I've made on the{" "}

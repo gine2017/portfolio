@@ -25,7 +25,7 @@ import userFlow from "../../../assets/capstone/naturalu/naturalU-userflow.png";
 import styleguide from "../../../assets/capstone/naturalu/naturaluU-styleguide.png";
 import components from "../../../assets/capstone/naturalu/components.png";
 
-import screen1 from "../../../assets/capstone/naturalu/screens/screen1.png";
+import screen1 from "../../../assets/capstone/naturalu/screens/screen_1.png";
 import screen2 from "../../../assets/capstone/naturalu/screens/screen2.png";
 import screen3 from "../../../assets/capstone/naturalu/screens/screen3.png";
 import screen4 from "../../../assets/capstone/naturalu/screens/screen4.png";
@@ -42,7 +42,6 @@ import screen14 from "../../../assets/capstone/naturalu/screens/screen14.png";
 import screen15 from "../../../assets/capstone/naturalu/screens/screen15.png";
 import screen16 from "../../../assets/capstone/naturalu/screens/screen16.png";
 
-import Link from "next/link";
 import ImageRow from "@/components/image-row";
 import ZoomableImage from "@/components/zoomable-image";
 
@@ -90,17 +89,9 @@ const stats = [
 export default function NaturalU() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
-  const [zoomedIndex, setZoomedIndex] = useState(false);
-  const [zoomable, setZoomable] = useState(false);
 
   const updateContent = (state) => {
     setShowContent(state);
-  };
-  const handleClick = (index) => {
-    setZoomedIndex(zoomedIndex === index ? null : index);
-  };
-  const handleZoom = () => {
-    setZoomable((prev) => !prev);
   };
 
   return (
@@ -194,7 +185,7 @@ export default function NaturalU() {
                   className={`text-light-purple  ${darkerGrotesqueBold.className}`}
                 >
                   {" "}
-                  NaturalU
+                  NaturalU{" "}
                 </span>
                 is an app designed to create a space for{" "}
                 <span
@@ -280,440 +271,469 @@ export default function NaturalU() {
               handled the research and design
             </p>
           </div>
-          <div className="flex flex-col gap-y-4">
+          <div className="flex flex-col gap-y-4 w-3/4 mx-auto">
             <Title title={"Research"} color="text-light-purple" />
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              Before starting the{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+            <div>
+              <p className={`text-2xl ${darkerGrotesque.className}`}>
+                Before brainstorming and designing, my main objective was to
+                understand how women, particularly Black women, feel about their
+                natural hair and whether their experiences reflected my own.
+              </p>
+              <br />
+              <p className={` text-2xl ${darkerGrotesque.className}`}>
+                Key findings included from primary research from the Journal of
+                Clinical and Aesthetic Dermatology:
+              </p>
+              <ul
+                className={`list-disc pl-5 text-2xl ${darkerGrotesque.className}`}
               >
-                brainstorming
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                design
-              </span>{" "}
-              phases, my main goal was to{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                understand how women
-              </span>{" "}
-              truly feel about their{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                natural hair
-              </span>{" "}
-              and whether their experiences{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                mirrored my own
-              </span>
-              . Through my{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                research
-              </span>{" "}
-              , including insights from the{" "}
-              <span>
-                {
-                  <Link
-                    className={` hover:underline text-light-purple ${darkerGrotesqueBold.className} `}
-                    href={
-                      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4174916/"
-                    }
+                <li>
+                  <span
+                    className={`text-light-purple text-2xl ${darkerGrotesqueBold.className}`}
                   >
-                    Journal of Clinical and Aesthetic Dermatology
-                  </Link>
-                }
-              </span>{" "}
-              , I discovered that many women—especially{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                Black women
-              </span>{" "}
-              often feel{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                frustration
-              </span>{" "}
-              or{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                embarrassment
-              </span>{" "}
-              about their natural hair. I also found a{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                striking issue
-              </span>
-              : many{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                healthcare professionals
-              </span>
-              , such as{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                doctors
-              </span>{" "}
-              , were{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                {`unfamiliar with their patients' natural hair types`}
-              </span>{" "}
-              when addressing{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                scalp-related concerns
-              </span>{" "}
-              . This gap in knowledge further highlighted the need for{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                open conversations
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                education
-              </span>{" "}
-              around natural hair.
-            </p>
+                    Frustration and embarrassment about natural hair{" "}
+                  </span>
+                </li>
+                <li className="text-2xl">
+                  <span
+                    className={`text-light-purple ${darkerGrotesqueBold.className}`}
+                  >
+                    Healthcare professionals' limited knowledge{" "}
+                  </span>
+                  of natural hair types when addressing{" "}
+                  <span
+                    className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                  >
+                    scalp-related care
+                  </span>
+                </li>
+              </ul>
+              <br />
+              <p className={`text-2xl ${darkerGrotesque.className}`}>
+                These insights highlighted the need for open dialogue and better
+                education surrounding natural hair.
+              </p>
+            </div>
           </div>
           <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-0">
             <Stats statsArray={stats} color="text-light-purple" />
           </div>
 
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 mx-auto w-3/4">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
               Persona
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              Based on my{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                research
-              </span>
-              , I created a persona named{" "}
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              Based on my research, I developed a persona named{" "}
               <span
                 className={`text-light-purple  ${darkerGrotesqueBold.className}`}
               >
                 Nia
-              </span>
-              , whose life revolves around always{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                helping others
-              </span>
-              . However, when it comes to doing things for{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                herself
-              </span>
-              , like practicing{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                self-care
               </span>{" "}
-              or doing her{" "}
+              to represent the struggles faced by many women, especially{" "}
               <span
                 className={`text-light-purple  ${darkerGrotesqueBold.className}`}
               >
-                hair
+                Black women
               </span>
-              , she often encounters{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                difficulties
-              </span>{" "}
-              and feels{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                defeated
-              </span>
-              . I developed this persona to better{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                understand
-              </span>{" "}
-              and align with the experiences of{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                women
-              </span>{" "}
+              , regarding their natural hair. This persona is rooted in insights
               from the{" "}
               <span
                 className={`text-light-purple  ${darkerGrotesqueBold.className}`}
               >
                 Journal of Clinical and Aesthetic Dermatology
               </span>
-              , particularly those who face challenges with their{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                natural hair
-              </span>
-              .
-            </p>
-          </div>
-          <ImageRow images={personaImages} />
-          <Title title={"Ideate"} color="text-light-purple" />
-          <div className="flex flex-col gap-y-8">
-            <p className={`text-light-purple text-4xl ${myFont.className}`}>
-              Sketches
-            </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              Based on my{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                research
-              </span>
-              , where many women expressed{" "}
+              , revealing common feelings of{" "}
               <span
                 className={`text-light-purple  ${darkerGrotesqueBold.className}`}
               >
                 frustration
               </span>{" "}
-              with caring for their{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                natural hair{" "}
-              </span>
-              and felt their{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                doctors lacked knowledge
-              </span>{" "}
-              about their{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                hair texture
-              </span>
-              , I wanted to include features that allow both{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                professionals{" "}
-              </span>
-              and
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                non-professionals{" "}
-              </span>
-              to{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                ask questions, visually showcase{" "}
-              </span>
-              hair care techniques, and{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                engage in conversations
-              </span>
-              . After completing the{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                research phase
-              </span>
-              , I focused on sketching pages and flows for the{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                NaturalU app
-              </span>
-              , ensuring these features addressed the challenges women face with
-              natural hair, while also{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                bridging the knowledge gap
-              </span>{" "}
-              with professionals
-            </p>
-          </div>
-          <ZoomableImage image={sketch} />
-          <div className="flex flex-col gap-y-8">
-            <p className={`text-light-purple text-4xl ${myFont.className}`}>
-              User Flow
-            </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                Based on my research
-              </span>
-              —where many women felt{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                frustrated with caring for their natural hair
-              </span>{" "}
-              and noted their{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                doctors lacked knowledge of hair texture
-              </span>
-              —I focused on{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                sketching pages and flows
-              </span>{" "}
-              for the NaturalU app. I included features that allow{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                professionals and non-professionals
-              </span>{" "}
-              to ask questions,{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                showcase hair care techniques
-              </span>
-              , and{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                engage in conversations
-              </span>
-              . When designing the{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                user flows
-              </span>
-              , I emphasized how users would navigate{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                key features
-              </span>
-              , like{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                asking questions
-              </span>{" "}
-              and using the{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                learning section
-              </span>{" "}
-              to better understand their hair type. This ensures{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                easy access to valuable information
-              </span>{" "}
-              and promotes{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                interaction and education about natural hair
-              </span>
-              .
-            </p>
-          </div>
-          <ZoomableImage image={userFlow} />
-          <Title title={"Design"} color="text-light-purple" />
-          <div className="flex flex-col gap-y-8">
-            <p className={`text-light-purple text-4xl ${myFont.className}`}>
-              Style Guide and UI Components
-            </p>
-            <p className={`text-2xl ${darkerGrotesque.className}`}>
-              To instill a sense of{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                strength
-              </span>{" "}
               and{" "}
               <span
                 className={`text-light-purple  ${darkerGrotesqueBold.className}`}
               >
-                confidence
+                embarrassment
               </span>{" "}
-              among users who may feel uneasy about their natural hair, I chose{" "}
+              about natural hair. Additionally, the{" "}
               <span
                 className={`text-light-purple  ${darkerGrotesqueBold.className}`}
               >
-                purple
+                limited knowledge
               </span>{" "}
-              as the primary color for the{" "}
+              among healthcare professionals regarding various hair types
+              underscored the importance of deeply understanding user needs.
+            </p>
+
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              Nia embodies the challenges women face when prioritizing
+              themselves, such as practicing{" "}
               <span
                 className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+              >
+                self-care
+              </span>{" "}
+              or managing their hair. This persona was instrumental in shaping
+              my ideation and decision-making process by:
+            </p>
+
+            <ul
+              className={`list-disc pl-5 text-2xl ${darkerGrotesque.className}`}
+            >
+              <li>
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  Empathizing with core user pain points
+                </span>
+                : The persona helped me internalize the emotional and practical
+                challenges these women experience, ensuring my design choices
+                were{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  user-centric
+                </span>
+                .
+              </li>
+              <li>
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  Guiding feature prioritization
+                </span>
+                : Knowing that users like Nia often feel overwhelmed or defeated
+                by self-care routines influenced my decision to create features
+                that promote{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  support
+                </span>{" "}
+                and{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  encouragement
+                </span>
+                .
+              </li>
+              <li>
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  Tying research to solutions
+                </span>
+                : The persona emphasized the need for{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  educational
+                </span>{" "}
+                and{" "}
+                <span
+                  className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                >
+                  interactive components
+                </span>{" "}
+                in the app, fostering an environment where users could engage
+                confidently and learn in a relatable way.
+              </li>
+            </ul>
+
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              This foundation ensured that my design approach resonated with
+              real user experiences and addressed specific issues found in my
+              research.
+            </p>
+          </div>
+          <ImageRow images={personaImages} />
+          <Title
+            title={"Ideate"}
+            color="text-light-purple"
+            styles="w-3/4 mx-auto"
+          />
+          <div className="flex flex-col gap-y-8 mx-auto w-3/4">
+            <p className={`text-light-purple text-4xl ${myFont.className}`}>
+              Sketches
+            </p>
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              Based on my research and the persona of Nia, I aim to tackle the
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                {" "}
+                frustration{" "}
+              </span>
+              and
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                {" "}
+                embarrassment{" "}
+              </span>
+              many women, particularly Black women, experience regarding their
+              natural hair, along with the limited knowledge many healthcare
+              professionals have about different hair types.
+            </p>
+
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              To create a more supportive and informative space, I'm sketching
+              features for the
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                {" "}
+                NaturalU{" "}
+              </span>
+              app that will:
+            </p>
+
+            <ul
+              className={`list-disc pl-5 text-2xl ${darkerGrotesque.className}`}
+            >
+              <li>
+                <span
+                  className={`text-light-purple ${darkerGrotesqueBold.className}`}
+                >
+                  Encourage users to ask questions{" "}
+                </span>
+                about hair care, making it easy to get personalized advice.
+              </li>
+              <li>
+                <span
+                  className={`text-light-purple ${darkerGrotesqueBold.className}`}
+                >
+                  Showcase videos demonstrating techniques
+                </span>
+                , providing fun and practical tips.
+              </li>
+              <li>
+                <span
+                  className={`text-light-purple ${darkerGrotesqueBold.className}`}
+                >
+                  Offer informative content{" "}
+                </span>
+                on various hair types, helping users feel more confident and
+                informed.
+              </li>
+            </ul>
+
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              These educational and interactive features are designed to
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                {" "}
+                empower{" "}
+              </span>
+              users like Nia, turning their experiences from
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                {" "}
+                frustration{" "}
+              </span>
+              into
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                {" "}
+                confidence{" "}
+              </span>
+              .
+            </p>
+          </div>
+          <ZoomableImage image={sketch} />
+          <div className="flex flex-col gap-y-8 w-3/4 mx-auto">
+            <p className={`text-light-purple text-4xl ${myFont.className}`}>
+              User Flow
+            </p>
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              Now that I have a clear understanding of the{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                features
+              </span>{" "}
+              needed to address users'{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                frustration
+              </span>{" "}
+              and{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                embarrassment
+              </span>{" "}
+              about their natural hair while enhancing educational resources, I
+              began to visualize the key{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                tasks
+              </span>{" "}
+              and{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                decisions
+              </span>{" "}
+              that users like Nia would encounter in the NaturalU app. By
+              identifying specific scenarios that Nia may face, I created a{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                user flow
+              </span>{" "}
+              from her perspective. This ensures that the design focuses on
+              essential tasks that facilitate learning and empower users in
+              their hair care journey.
+            </p>
+          </div>
+          <ZoomableImage image={userFlow} />
+          <Title
+            title={"Design"}
+            color="text-light-purple"
+            styles="mx-auto w-3/4"
+          />
+          <div className="flex flex-col gap-y-8 mx-auto w-3/4">
+            <p className={`text-light-purple text-4xl ${myFont.className}`}>
+              Style Guide and UI Components
+            </p>
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              After defining the app's key screens and features, I focused on
+              branding as well as building UI components{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
               >
                 NaturalU
               </span>{" "}
-              app. Purple symbolizes{" "}
+              to reflect{" "}
               <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                pride
-              </span>
-              ,{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                loyalty
-              </span>
-              ,{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
-              >
-                magic
-              </span>
-              , and{" "}
-              <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
               >
                 ambition
               </span>
-              . By integrating this color, I wanted to signify empowerment and
-              remind users of the importance of their{" "}
+              ,{" "}
               <span
-                className={`text-light-purple  ${darkerGrotesqueBold.className}`}
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
               >
-                crowns
-              </span>{" "}
-              with pride and to confidently engage with the app’s features to
-              learn more about hair care and themselves.
+                independence
+              </span>
+              ,{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                confidence
+              </span>
+              ,{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                fun
+              </span>
+              ,{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                comfort
+              </span>
+              , and{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                introspection
+              </span>
+              .
             </p>
-            <p></p>
+
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              I chose{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                purple
+              </span>{" "}
+              as the primary color for its associations with{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                independence
+              </span>{" "}
+              and{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                self-reflection
+              </span>
+              , encouraging users to embrace their natural hair and enhance
+              their confidence.
+            </p>
+
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              As a secondary color, I selected{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                orange
+              </span>{" "}
+              to evoke{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                comfort
+              </span>{" "}
+              and{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                fun
+              </span>
+              , inviting users to engage with the app in an interactive way.
+            </p>
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              These color choices are intended to create an empowering user
+              experience that fosters confidence and a positive relationship
+              with natural beauty.
+            </p>
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              I chose{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                Nunito
+              </span>{" "}
+              as the typography for NaturalU because its rounded sans-serif
+              design conveys a{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                warm
+              </span>{" "}
+              and{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                friendly
+              </span>{" "}
+              tone. This inviting style not only enhances clarity but also
+              reflects the supportive personality of the{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                NaturalU{" "}
+              </span>
+              brand, making users feel{" "}
+              <span
+                className={`text-light-purple ${darkerGrotesqueBold.className}`}
+              >
+                comfortable
+              </span>{" "}
+              and engaged.
+            </p>
           </div>
           {width <= 767 ? (
             <MobileSlider sliderData={createImageArray(styleguideImages)} />
@@ -721,115 +741,49 @@ export default function NaturalU() {
             <Slider sliderData={createImageArray(styleguideImages)} />
           )}
 
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 mx-auto w-3/4">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
               High Fidelity Screens
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              After finalizing the{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                ideation phase
-              </span>{" "}
-              and solidifying the{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                design direction
-              </span>
-              , I began creating{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                high-fidelity screens
-              </span>{" "}
-              for NaturalU, focusing on its{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                core goal
-              </span>
-              —providing a space for users to{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                openly discuss natural hair
-              </span>
-              ,{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                ask questions
-              </span>
-              , and{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                learn from others
-              </span>
-              . Every design decision was made to ensure the app fosters{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                meaningful conversations
-              </span>
-              ,{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                educates both professionals and non-professionals
-              </span>
-              , and helps{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                break down the social stigma
-              </span>{" "}
-              surrounding{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                natural hair
-              </span>
-              .
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              After utilizing my ideation and research phases to inform my
+              design decisions, I established a clear style guide and defined UI
+              components. This groundwork enabled me to create my final
+              high-fidelity screens for the NaturalU app. I ensured these
+              screens featured essential elements such as:
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              To combat social stigma, expand hair knowledge, and help Black
-              women and others feel more comfortable with their natural hair, I
-              implemented the following features:
-            </p>
-            <ul className={` text-2xl ${darkerGrotesque.className} list-disc`}>
+
+            <ul
+              className={`list-disc pl-5 text-2xl ${darkerGrotesque.className}`}
+            >
               <li>
                 <span
                   className={`text-light-purple ${darkerGrotesqueBold.className}`}
                 >
-                  Interactive Q&A Forum:
-                </span>{" "}
-                An open space for users to ask hair care questions and share
-                advice with others.
-              </li>
-              <li>
-                <span
-                  className={`text-light-purple ${darkerGrotesqueBold.className}`}
-                >
-                  Video Tutorials:
-                </span>{" "}
-                A dedicated section for sharing video content, where users and
-                professionals can demonstrate styling techniques or hair care
-                tips.
-              </li>
-              <li>
-                <span
-                  className={`text-light-purple ${darkerGrotesqueBold.className}`}
-                >
-                  Informational Articles:{" "}
+                  Interactive Q&A Forum
                 </span>
-                A resource for users to learn more about different hair types,
-                complete with detailed guides on hair care tailored to various
-                textures and conditions.
+              </li>
+              <li>
+                <span
+                  className={`text-light-purple ${darkerGrotesqueBold.className}`}
+                >
+                  Video Tutorials
+                </span>
+              </li>
+              <li>
+                <span
+                  className={`text-light-purple ${darkerGrotesqueBold.className}`}
+                >
+                  Informational Articles
+                </span>
               </li>
             </ul>
+
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              This approach not only enhances user engagement but also addresses
+              the core needs identified during my research, making my designs
+              both user-centered and effective.
+            </p>
           </div>
 
           {width <= 767 ? (
@@ -838,107 +792,71 @@ export default function NaturalU() {
             <Slider sliderData={createImageArray(highFidelityImages)} />
           )}
 
-          <div className="flex flex-col gap-y-4">
+          <div className="flex flex-col gap-y-4 mx-auto w-3/4">
             <Title title={"What's Next"} color="text-light-purple" />
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              In the next phases of this project, I aim to enhance the{" "}
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              I'm excited about the progress I've made on the{" "}
               <span
                 className={`text-light-purple ${darkerGrotesqueBold.className}`}
               >
-                designs
+                NaturalU
               </span>{" "}
-              within the{" "}
+              app and the potential it has to empower users to embrace their
+              natural hair. As I move forward, my next phases will focus on
+              enhancing the hair discovery pages to make them more interactive.
+            </p>
+
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              I plan to incorporate additional features, including:
+            </p>
+
+            <ul
+              className={`list-disc pl-5 text-2xl ${darkerGrotesque.className}`}
+            >
+              <li>
+                <span
+                  className={`text-light-purple ${darkerGrotesqueBold.className}`}
+                >
+                  Personal hair journals
+                </span>{" "}
+                for tracking hair journeys
+              </li>
+              <li>
+                <span
+                  className={`text-light-purple ${darkerGrotesqueBold.className}`}
+                >
+                  Supportive message displays
+                </span>{" "}
+                to motivate users
+              </li>
+              <li>
+                <span
+                  className={`text-light-purple ${darkerGrotesqueBold.className}`}
+                >
+                  Hair quizzes
+                </span>{" "}
+                for personalized insights
+              </li>
+              <li>
+                <span
+                  className={`text-light-purple ${darkerGrotesqueBold.className}`}
+                >
+                  Gamification elements
+                </span>{" "}
+                to encourage exploration and learning about various hair types
+              </li>
+            </ul>
+
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              Ultimately, I want this app to create a welcoming space where
+              users can feel comfortable learning about themselves.{" "}
               <span
                 className={`text-light-purple ${darkerGrotesqueBold.className}`}
               >
-                hair discovery pages
+                Knowledge
               </span>{" "}
-              to make them more{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                interactive
-              </span>
-              {`. Additionally, I'm considering incorporating`}{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                gamification features
-              </span>{" "}
-              to encourage users to{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                explore
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                learn
-              </span>{" "}
-              {`about different hair types. Overall, I'm proud of the`}{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                progress
-              </span>{" "}
-              In the next phases of this project, I aim to enhance the{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                designs
-              </span>{" "}
-              within the{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                hair discovery pages
-              </span>{" "}
-              to make them more{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                interactive
-              </span>
-              {` . Additionally, I'm considering incorporating`}{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                gamification features
-              </span>{" "}
-              to encourage users to{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                explore
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                learn
-              </span>{" "}
-              {`about different hair types. Overall, I'm proud of the`}{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                progress
-              </span>{" "}
-              {`I've made so far in bringing this app to life. My ultimate goal is
-              to ensure that everyone feels`}{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                proud
-              </span>{" "}
-              of the{" "}
-              <span
-                className={`text-light-purple ${darkerGrotesqueBold.className}`}
-              >
-                crowns
-              </span>{" "}
-              they wear atop their heads.
+              is a powerful tool, and I hope to inspire people to take pride in
+              their natural crowns once the app is launched.
             </p>
           </div>
           <CaseStudyFooter casestudy="NaturalU" />

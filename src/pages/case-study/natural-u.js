@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Hero from "@/components/hero";
+import Link from "next/link";
 import {
   myFont,
   darkerGrotesque,
@@ -246,8 +247,15 @@ export default function NaturalU() {
               </p>
               <br />
               <p className={` text-2xl ${darkerGrotesque.className}`}>
-                Key findings included from primary research from the Journal of
-                Clinical and Aesthetic Dermatology:
+                Key findings included from primary research from the{" "}
+                <Link
+                  className={` hover:underline text-light-purple ${darkerGrotesqueBold.className} `}
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4174916/"
+                  target="_blank"
+                >
+                  {" "}
+                  Journal of Clinical and Aesthetic Dermatology
+                </Link>
               </p>
               <ul
                 className={`list-disc pl-5 text-2xl ${darkerGrotesque.className}`}

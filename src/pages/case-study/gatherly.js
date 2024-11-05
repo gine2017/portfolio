@@ -134,88 +134,101 @@ export default function Gatherly() {
           ) : (
             <Slider sliderData={createImageArray(highFidelityImages)} />
           )}
-          <div className="flex flex-col gap-y-8 flex-1">
+          <div className="flex flex-col gap-y-8 flex-1 md:mx-auto md:w-3/4">
             <p className={` text-gatherly-blue text-4xl ${myFont.className}`}>
               Problem Statement
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              Navigating adulthood has become increasingly difficult for{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                young adults
-              </span>
-              , particularly in the wake of the{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                COVID-19 pandemic
-              </span>
-              . The{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                isolation
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                social disconnection
-              </span>{" "}
-              stemming from this crisis have severely impacted their{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                mental health
-              </span>
-              , making it challenging to{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                communicate effectively
-              </span>{" "}
-              and deepening feelings of{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                loneliness
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                anxiety
-              </span>
-              . My{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                hypothesis
-              </span>{" "}
-              suggests that other underlying issues may also contribute to these
-              challenges. To address this, I aim to propose a{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                solution
-              </span>{" "}
-              that fosters{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                connections
-              </span>{" "}
-              among young adults, helping them navigate this{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                critical phase
-              </span>{" "}
-              of their lives while combating these pervasive issues.
-            </p>
+            <div className={` text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                Navigating{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  adulthood{" "}
+                </span>
+                has become increasingly{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  challenging{" "}
+                </span>
+                for{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  young adults
+                </span>
+                , especially after the{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  COVID-19 pandemic
+                </span>
+                .{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  Social isolation{" "}
+                </span>
+                and{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  disconnection{" "}
+                </span>
+                have significantly impacted{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  mental health
+                </span>
+                , leading to difficulties in{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  communication
+                </span>
+                , increased{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  loneliness
+                </span>
+                , and{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  anxiety
+                </span>
+                . My goal is to create a{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  solution
+                </span>
+                that supports{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  young adults{" "}
+                </span>
+                in building{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  meaningful connections
+                </span>
+                , addressing these issues, and helping them better{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  navigate{" "}
+                </span>
+                this phase of life.
+              </p>
+            </div>
           </div>
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               My Role
             </p>
@@ -225,268 +238,296 @@ export default function Gatherly() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-y-4">
+          <div className="flex flex-col gap-y-4 md:mx-auto md:w-3/4">
             <Title title={"Research"} color="text-gatherly-blue" />
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              In order to understand why young adults feel this way, I first
-              needed to set aside my own perspective and conduct both
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                {" "}
-                primary{" "}
-              </span>{" "}
-              and
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                {" "}
-                secondary research{" "}
-              </span>
-              . Prior to initiating the
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                {" "}
-                ideation{" "}
-              </span>{" "}
-              and
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                {" "}
-                design stages{" "}
-              </span>
-              , it was essential for me to conduct thorough research to grasp
-              the extent of the
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                {" "}
-                epidemic of loneliness{" "}
-              </span>{" "}
-              and
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                {" "}
-                stress{" "}
-              </span>{" "}
-              among adults. Through
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                {" "}
-                secondary research{" "}
-              </span>{" "}
-              from
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                {" "}
+
+            <div className={` text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                To understand why young adults face heightened stress and
+                loneliness, I conducted both{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  primary and secondary research
+                </span>
+                , setting aside my assumptions for an unbiased approach. This
+                research phase was crucial to grasp the
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  {" "}
+                  depth of the issue{" "}
+                </span>
+                before moving to ideation and design.
+              </p>
+              <ul className="list-disc pl-5">
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Secondary Research{" "}
+                  </span>
+                  (e.g., Pew Research) confirmed that{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    psychological stress
+                  </span>{" "}
+                  among young adults has risen, worsened by the{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    COVID-19 pandemic
+                  </span>
+                  , impacting their communication abilities.
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Beyond the pandemic
+                  </span>
+                  , findings indicated that many young adults struggle with{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    forming relationships
+                  </span>{" "}
+                  and managing elevated stress levels.
+                </li>
+              </ul>
+              <br />
+              <p>
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  Importance of Both Research Types
+                </span>
+                :
+              </p>
+              <ul className="list-disc pl-5">
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Secondary research
+                  </span>{" "}
+                  provided a broad understanding and validated the{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    extent of the problem
+                  </span>
+                  , supporting my hypothesis that stressors extend beyond the
+                  pandemic.
+                </li>
+                <li>
+                  {" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Primary research
+                  </span>{" "}
+                  will be essential for uncovering{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    personal stories
+                  </span>{" "}
+                  and specific pain points, shaping user-focused design
+                  decisions.
+                </li>
+              </ul>
+              <br />
+              <p>
+                This comprehensive approach ensures the final solution
+                effectively addresses{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  core challenges
+                </span>{" "}
+                faced by young adults. Below are some statistical insights from
+                my secondary research based on a{" "}
                 <Link
                   className={` hover:underline text-gatherly-blue ${darkerGrotesqueBold.className} `}
                   href="https://www.pewresearch.org/short-reads/2023/03/02/mental-health-and-the-pandemic-what-u-s-surveys-have-found/"
+                  target="_blank"
                 >
-                  Pew Research
-                </Link>{" "}
-              </span>
-              , I determined that young people are increasingly plagued by
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                {" "}
-                psychological stress{" "}
-              </span>{" "}
-              and are experiencing difficulties in
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                {" "}
-                communication,{" "}
-              </span>
-              much of which stems from the effects of
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                {" "}
-                COVID-19{" "}
-              </span>
-              . While this finding is not surprising, it confirms my
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                {" "}
-                hypothesis{" "}
-              </span>{" "}
-              that I need to delve into the core issues and understand the
-              factors contributing to this stress beyond the pandemic.
-              Additionally, I discovered that a significant portion of young
-              individuals were struggling not only with elevated stress levels
-              but also with
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                {" "}
-                forming relationships{" "}
-              </span>
-              .
-            </p>
+                  Pew Research study
+                </Link>
+              </p>
+            </div>
           </div>
           <Stats statsArray={stats} color="text-gatherly-blue" />
 
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Survey
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              In order to validate the secondary research and develop a
-              solution, I created a user survey to gather personalized insights
-              from individuals coping with stress in real life. The survey
-              yielded a total of 16 responses, from which the most significant
-              findings emerged. These findings include :
-            </p>
+            <div className={` text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                To validate my{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  secondary research
+                </span>{" "}
+                and gain firsthand insights, I designed a{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  user survey
+                </span>{" "}
+                aimed at understanding real-life experiences of stress. The
+                survey was crucial in collecting data that reflects the needs
+                and challenges faced by young adults. This approach supported my
+                primary research by:
+              </p>
+              <ul className="list-disc pl-5">
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Confirming key points from secondary research
+                  </span>{" "}
+                  with direct user feedback.
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Identifying real user pain points
+                  </span>
+                  , motivations, and behavior patterns.
+                </li>
+                <li>
+                  Informing design decisions to align with actual user
+                  experiences.
+                </li>
+              </ul>
+              <br />
+              <p>
+                The survey garnered{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  16 responses
+                </span>
+                , which highlighted essential findings that guided the design
+                process.
+              </p>
+            </div>
           </div>
           {width <= 767 ? (
             <MobileSlider sliderData={createImageArray(surveyImages)} />
           ) : (
             <Slider sliderData={createImageArray(surveyImages)} />
           )}
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               User Interview
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              To further{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                explore
-              </span>{" "}
-              my{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                research
-              </span>{" "}
-              and grasp{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                potential solutions
-              </span>{" "}
-              to address the{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                widespread issues
-              </span>{" "}
-              of{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                loneliness
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                stress
-              </span>{" "}
-              among{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                young adults
-              </span>
-              , I{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                conducted interviews
-              </span>{" "}
-              with three{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                participants
-              </span>{" "}
-              aged between{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                18 and 29
-              </span>
-              . These individuals were either{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                recent graduates
-              </span>{" "}
-              or had{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                recently departed
-              </span>{" "}
-              from college. The aim was to{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                gain insights
-              </span>{" "}
-              directly from their{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                perspectives
-              </span>{" "}
-              and understand their{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                daily emotions
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                challenges
-              </span>
-              .
-            </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              During the interview I asked the following questions
-            </p>
-            <ul className={` text-2xl ${darkerGrotesque.className} list-disc`}>
-              <li>
-                Now that you have left college/ finished your baccalaureate
-                degree do you feel better or more anxious
-              </li>
-              <li>
-                Do you have student loan debt, if so do you feel overwhelmed by
-                it
-              </li>
-              <li>Do feel that your social life/meter/battery has changed</li>
-              <li>
-                Do you find it difficult to expand upon your friendships, if so
-                elaborate
-              </li>
-              <li>
-                What specific elements/aspects of your life (whether personally
-                or physically) has changed ever since graduated
-              </li>
-              <li>
-                Do you feel that online support groups/communities are helpful ,
-                if so why
-              </li>
-            </ul>
+
+            <div className={` text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                To deepen my{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  understanding
+                </span>{" "}
+                of the issues surrounding{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  loneliness and stress among young adults
+                </span>
+                , I conducted{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  user interviews
+                </span>{" "}
+                with three participants aged 18-29 who were recent graduates or
+                had recently left college. These interviews aimed to gain direct
+                insights into their emotions and daily challenges to inform
+                potential solutions.
+              </p>
+              <br />
+              <p>Key questions asked during the interviews included:</p>
+              <ul className="list-disc pl-5">
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Post-graduation anxiety:
+                  </span>{" "}
+                  Do you feel better or more anxious now that you've left
+                  college/finished your degree?
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Student loan impact:
+                  </span>{" "}
+                  Do you have student loan debt, and if so, does it feel
+                  overwhelming?
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Social life changes:
+                  </span>{" "}
+                  Has your social life or energy for socializing changed?
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Expanding friendships:
+                  </span>{" "}
+                  Do you find it difficult to expand friendships? If so, how?
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Life changes:
+                  </span>{" "}
+                  What aspects of your life, personally or physically, have
+                  changed since graduating?
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Support group utility:
+                  </span>{" "}
+                  Do you find online support groups or communities helpful? Why?
+                </li>
+              </ul>
+              <br />
+              <p>
+                These interviews were essential for{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  understanding user perspectives
+                </span>{" "}
+                and shaping solutions that resonate with real needs.
+              </p>
+            </div>
           </div>
-          <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+          <p
+            className={`md:mx-auto md:w-3/4 text-gatherly-blue text-4xl ${myFont.className}`}
+          >
             Notable Quotes from the interviews
           </p>
           <div
-            className={`flex flex-wrap justify-center  gap-y-8 text-gatherly-blue md:gap-x-8 text-xl md:text-3xl ${darkerGrotesqueBold.className} text-center`}
+            className={`md:mx-auto md:w-3/4 flex flex-wrap justify-center  gap-y-8 text-gatherly-blue md:gap-x-8 text-xl md:text-3xl ${darkerGrotesqueBold.className} text-center`}
           >
             <p className="w-full">
               {`"I still feel anxious after college.. no one gives you a plan you
@@ -501,7 +542,7 @@ export default function Gatherly() {
               my own personal growth"`}
             </p>
           </div>
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               However
             </p>
@@ -512,7 +553,7 @@ export default function Gatherly() {
           </div>
 
           <div
-            className={`flex flex-wrap justify-center  gap-y-8 text-gatherly-blue md:gap-x-8 text-3xl ${darkerGrotesqueBold.className} text-center`}
+            className={`md:mx-auto md:w-3/4 flex flex-wrap justify-center  gap-y-8 text-gatherly-blue md:gap-x-8 text-3xl ${darkerGrotesqueBold.className} text-center`}
           >
             <p className="w-full">
               {`"Would like if an online group focused on a specific activity to
@@ -528,319 +569,427 @@ export default function Gatherly() {
               group"`}
             </p>
           </div>
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Persona
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              Based on both{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                primary
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                secondary research
-              </span>
-              , I created a persona to align with my interviewees as well as the
-              insights from the{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                Pew Research study
-              </span>
-              . The persona,{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                Camile
-              </span>
-              , represents a recent graduate who is newly introduced to the real
-              world and is facing challenges since moving away from home and
-              school. This persona helps me gain a deeper understanding of the{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                needs
-              </span>
-              ,{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                desires
-              </span>
-              , and{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                motivations
-              </span>{" "}
-              of young adults navigating similar life transitions.
-            </p>
+
+            <div className={` text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                To better understand the challenges faced by young adults, I
+                created a persona named{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  Camile
+                </span>
+                . This persona synthesizes insights from both my primary
+                research, including interviews, and secondary research from the{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  Pew Research study
+                </span>
+                . Camile represents a recent graduate adjusting to life outside
+                of school and home, encapsulating the needs and motivations of
+                young adults in similar situations.
+              </p>
+              <br />
+              <p>The purpose of creating this persona is to:</p>
+              <ul className="list-disc pl-5">
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Empathize:
+                  </span>{" "}
+                  Understand the emotional landscape of young adults navigating
+                  major life transitions.
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Inform Design:
+                  </span>{" "}
+                  Guide design decisions by keeping user needs at the forefront.
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Validate Solutions:
+                  </span>{" "}
+                  Ensure that proposed solutions resonate with real-world
+                  challenges faced by users.
+                </li>
+              </ul>
+              <br />
+              <p>
+                By grounding my design process in research-backed insights
+                through this persona, I can create more relevant and effective
+                solutions for young adults.
+              </p>
+            </div>
           </div>
           <ImageRow images={personaImages} />
-          <div className="flex flex-col gap-y-14">
+          <div className="flex flex-col gap-y-14 md:mx-auto md:w-3/4">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Empathy Map
             </p>
-            <p className={`text-2xl ${darkerGrotesque.className}`}>
-              {`To finalize my analysis of user needs, I developed an empathy map
-        to visually represent a user's attitudes and behaviors. This will
-        serve as the cornerstone of truth, guarding the product from any
-        unfounded unwarranted biases.`}
-            </p>
+
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                To enhance my understanding of user needs, I developed an{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  empathy map
+                </span>
+                . This tool visually captures user attitudes and behaviors,
+                serving as a vital reference throughout the design process. Its
+                purpose is to ensure that our solutions are rooted in user
+                insights, minimizing biases that could skew our understanding.
+              </p>
+              <br />
+              <p>Key reasons for the empathy map's creation include:</p>
+              <ul className="list-disc pl-5">
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    User-Centric Focus:
+                  </span>{" "}
+                  It maintains a user-first approach, guiding design decisions
+                  based on real experiences.
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Clarification:
+                  </span>{" "}
+                  It summarizes user insights, clarifying needs, pain points,
+                  and motivations for the team.
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Bias Reduction:
+                  </span>{" "}
+                  The map prevents unfounded assumptions, ensuring solutions are
+                  based on actual data.
+                </li>
+              </ul>
+              <br />
+              <p>
+                Ultimately, the empathy map is essential for creating effective,
+                user-centered solutions that address real user challenges.
+              </p>
+            </div>
             <ZoomableImage image={empathy} />
           </div>
-          <div className="flex flex-col gap-y-4">
+          <div className="flex flex-col gap-y-4 md:mx-auto md:w-3/4">
             <Title title={"Ideate"} color="text-gatherly-blue" />
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              Upon completing the research phase, which included both{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                primary and secondary research
-              </span>
-              , I found that people strongly yearn to connect with others who
-              share{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                similar backgrounds and interests
-              </span>
-              . To finalize a solution, I began the{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                ideation process
-              </span>
-              , utilizing methods such as{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                laddering, preliminary sketching,
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                user flows
-              </span>{" "}
-              to lay the foundation for the idea.
-            </p>
-          </div>
-          <div className="flex flex-col">
-            <div className="flex flex-1 gap-y-8 flex-col">
-              <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
-                Laddering
+
+            <div className={` text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                After completing the research phase, which combined both primary
+                and secondary insights, I identified a strong desire among users
+                to connect with individuals who share their backgrounds and
+                interests. This understanding led me to initiate the{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  ideation phase
+                </span>
+                , crucial for developing a viable solution.
               </p>
-              <p className={` text-2xl ${darkerGrotesque.className}`}>
-                To build the foundation for a solution that fosters connections
-                between people with similar backgrounds and interests, I needed
-                to first explore the{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  motivations
-                </span>{" "}
-                and{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  behaviors
-                </span>{" "}
-                of young adults. To do this, I employed{" "}
+              <br />
+              <p>
+                During this phase, I employed techniques such as{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
                   laddering
                 </span>
-                ,{" "}
-                {`a technique that helps uncover the deeper reasons behind
-                users' actions and needs.`}{" "}
-                As the sole{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  UI/UX designer
-                </span>{" "}
-                on this project, I used various techniques to approach the
-                problem from multiple angles, with laddering being a key method.
-                This allowed me to delve into the underlying{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  motivations
-                </span>{" "}
-                and{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  values
-                </span>{" "}
-                {`driving users' behaviors, ensuring that the final product truly
-                aligns with their needs.`}
+                , preliminary sketching, and user flows. These methods helped
+                clarify user needs and structure the design process effectively,
+                ensuring that the final solution directly addresses user
+                motivations for connection.
               </p>
+            </div>
+          </div>
+          <div className="flex flex-col md:mx-auto md:w-3/4">
+            <div className="flex flex-1 gap-y-8 flex-col">
+              <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+                Laddering
+              </p>
+
+              <div className={` text-2xl ${darkerGrotesque.className}`}>
+                <p>
+                  To create a solution that connects young adults with similar
+                  backgrounds and interests, understanding their motivations and
+                  behaviors is crucial.
+                </p>
+
+                <p>
+                  I used{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    laddering
+                  </span>{" "}
+                  to uncover the deeper reasons behind their actions. As the
+                  sole UI/UX designer on this project, I employed various
+                  methods to gather insights from different angles, with
+                  laddering being key to revealing users' core motivations and
+                  values.
+                </p>
+                <p>
+                  This process ensured that my design decisions align with user
+                  needs, ultimately fostering meaningful connections and
+                  enhancing their experience.
+                </p>
+              </div>
             </div>
             <ZoomableImage image={ladder} />
           </div>
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Sketches of possible solutions
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              In understanding the{" "}
-              <span
+
+            <div className={` text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                To understand young adults and their need for connection, I
+                explored ideas to bring people together based on shared
+                backgrounds and interests. During user interviews, many
+                participants expressed that online communities would be
+                incredibly helpful in combating feelings of loneliness and
+                stress.
+              </p>
+              <br />
+              <p>Concepts Developed:</p>
+              <p
                 className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
               >
-                motivations
-              </span>{" "}
-              of young adults and recognizing the{" "}
-              <span
+                Directory App:
+              </p>
+
+              <ul className="list-disc pl-5">
+                <li>
+                  Connects young people with{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    mental health specialists
+                  </span>{" "}
+                  for essential support.
+                </li>
+                <li>
+                  Provides a platform to alleviate stress beyond just online
+                  communities.
+                </li>
+              </ul>
+              <br />
+              <p
                 className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
               >
-                need to connect
-              </span>{" "}
-              people, I began exploring ideas that would facilitate connections
-              based on shared{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                backgrounds
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                interests
-              </span>
-              . As I concluded the{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                laddering phase
-              </span>
-              , I converged on two potential solutions: a{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                directory app
-              </span>{" "}
-              or an app dedicated to{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                cultural groups
-              </span>
-              . Both concepts aimed to bridge the gap and foster meaningful
-              connections among users with similar experiences.
-            </p>
+                Cultural App:
+              </p>
+              <ul className="list-disc pl-5">
+                <li>
+                  Allows users to join groups based on{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    cultural backgrounds
+                  </span>
+                  .
+                </li>
+                <li>
+                  Facilitates networking and relationship-building with others
+                  who share similar experiences.
+                </li>
+              </ul>
+
+              <br />
+              <p>
+                These concepts directly address the needs identified in my
+                research, ensuring users have opportunities to form meaningful
+                connections.
+              </p>
+            </div>
             <ImageRow images={skethesImages} />
           </div>
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               However
             </p>
-            <p className={`text-2xl ${darkerGrotesque.className}`}>
-              Returning to the{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                insights
-              </span>{" "}
-              from my research, I realized that expanding the concept of a
-              dedicated{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                culture app
-              </span>{" "}
-              into a solution that allows users to create groups could foster
-              deeper connections. These groups could revolve around shared{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                cultural
-              </span>{" "}
-              identities, common{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                activities
-              </span>
-              , or even support networks. Based on user feedback, where
-              participants found online groups to be highly{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                helpful
-              </span>
-              , I chose the group app as the{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                optimal solution
-              </span>{" "}
-              for addressing the problem.
-            </p>
+
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                Based on my{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  user interviews
+                </span>
+                , I saw the need for a{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  dedicated cultural app
+                </span>{" "}
+                to address key pain points identified by my persona.
+                Participants highlighted that{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  online communities
+                </span>{" "}
+                are valuable for alleviating{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  loneliness
+                </span>{" "}
+                and building{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  connections
+                </span>
+                . This insight solidified my decision to create a solution that
+                would allow users to form and join groups centered around{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  shared cultural identities
+                </span>
+                ,{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  common interests
+                </span>
+                , and{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  support networks
+                </span>
+                .
+              </p>
+              <br />
+              <p>
+                By expanding the concept to include more diverse group options,
+                the app directly aligns with user feedback emphasizing the
+                importance of{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  online group interactions
+                </span>
+                . This approach makes the cultural app the most effective
+                solution for fostering{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  meaningful connections
+                </span>{" "}
+                and supporting young adults as they navigate life challenges.
+              </p>
+            </div>
           </div>
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               User Flows
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              As I committed to developing an online group community app to
-              address the growing{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                mental health challenges
-              </span>{" "}
-              among{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                young adults
-              </span>
-              , I focused on creating essential flows that would allow users to
-              not only{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                form their own groups
-              </span>{" "}
-              but also{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                interact with existing groups
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                create events
-              </span>
-              . Building on the insights from both the{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                research
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                ideation phases
-              </span>
-              , I then crafted user flows to visualize how users would navigate
-              these key interactions.
-            </p>
+
+            <div className={` text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                With a clear understanding of how{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  community
+                </span>{" "}
+                can aid young adults in managing{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  emotional stress
+                </span>
+                , I visualized actions for my persona,{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  Camile
+                </span>
+                , as she navigates early adulthood.
+              </p>
+              <p>
+                I developed an{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  online group community app
+                </span>{" "}
+                that allows users to:
+              </p>
+              <ul className="list-disc pl-5">
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Form groups
+                  </span>
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Interact
+                  </span>{" "}
+                  with existing ones
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Organize events
+                  </span>
+                </li>
+              </ul>
+              <br />
+              <p>
+                Recognizing the need for broader connections, I expanded my
+                cultural group idea to include ways for users to connect beyond
+                just culture, which I believe will be beneficial as well.
+                Drawing on insights from my research and ideation phases, I
+                crafted{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  user flows
+                </span>{" "}
+                that illustrate how Camile and others can engage with these key
+                features, ultimately fostering meaningful connections and
+                reducing feelings of{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  loneliness
+                </span>
+                .
+              </p>
+            </div>
             <ZoomableImage image={userflow} />
           </div>
-          <div className="flex flex-col gap-y-4">
+          <div className="flex flex-col gap-y-4 md:mx-auto md:w-3/4">
             <Title title={"Design"} color="text-gatherly-blue" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               In this stage, I{" "}
@@ -894,219 +1043,295 @@ export default function Gatherly() {
               .
             </p>
           </div>
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Wireframes
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              After employing both my user flows and sketches, I begin
-              constructing low-fidelity wireframes to establish the foundational
-              structure of my app.
-            </p>
+
+            <div className={` text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                Now that I have a strong foundation in understanding the
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  {" "}
+                  user
+                </span>
+                , the{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  key features
+                </span>
+                , and how users will interact with the app, I began constructing
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  {" "}
+                  low-fidelity wireframes{" "}
+                </span>
+                to establish the app's basic structure. I utilized insights from
+                my
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  {" "}
+                  user flows{" "}
+                </span>
+                and{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  sketches{" "}
+                </span>
+                to guide this process and ensure the wireframes aligned with
+                user needs and expectations.
+              </p>
+            </div>
             {width <= 767 ? (
               <MobileSlider sliderData={createImageArray(wireframeImages)} />
             ) : (
               <Slider sliderData={createImageArray(wireframeImages)} />
             )}
           </div>
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Styleguide and UI elements
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              To establish the foundation of the Gatherly app, I explore various
-              color meanings and develop UI components to construct the style
-              guide that will inform its design.
-            </p>
+
+            <div className={` text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                After defining the key screens and features of{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  Gatherly
+                </span>
+                , I focused on branding and building UI components that align
+                with the app's vision of fostering meaningful connections.
+              </p>
+              <br />
+              <p>
+                I selected{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  blue
+                </span>{" "}
+                as the primary color for its association with{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  trust, calmness, and connection
+                </span>
+                , promoting a sense of belonging and reducing feelings of stress
+                among users.
+              </p>
+              <br />
+              <p>
+                For the secondary color, I chose{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  purple
+                </span>
+                , symbolizing{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  introspection and independence
+                </span>
+                , to encourage users to engage with the app in a way that
+                supports emotional growth and community interaction.
+              </p>
+              <br />
+              <p>
+                These color choices are designed to create a{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  welcoming and supportive user experience
+                </span>{" "}
+                that encourages connection and alleviates feelings of isolation.
+              </p>
+              <br />
+              <p>
+                I opted for{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  Poppins
+                </span>{" "}
+                as the typography for Gatherly due to its{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  modern, geometric sans-serif design
+                </span>{" "}
+                that enhances{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  legibility and approachability
+                </span>
+                . This font choice supports a professional yet friendly feel,
+                reinforcing the app’s purpose of fostering{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  community and comfort
+                </span>
+                .
+              </p>
+            </div>
             {width <= 767 ? (
               <MobileSlider sliderData={createImageArray(styleguideImages)} />
             ) : (
               <Slider sliderData={createImageArray(styleguideImages)} />
             )}
           </div>
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               High Fidelity Screens
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              After completing the{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                ideation process
-              </span>{" "}
-              and finalizing key elements in the{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                design phase
-              </span>
-              , I moved forward to create the{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                high-fidelity screens
-              </span>
-              . This is where my solution fully comes together, resulting in the
-              development of{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                Gatherly
-              </span>
-              , an app designed to{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                simplify and encourage communication
-              </span>{" "}
-              among people with shared{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                interests
-              </span>
-              ,{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                backgrounds
-              </span>
-              , and{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                cultures
-              </span>
-              . The app directly addresses issues highlighted in both my{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                primary
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                secondary research
-              </span>
-              , by fostering{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                community building
-              </span>{" "}
-              to{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                reduce stress
-              </span>
-              , promote{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                relationships
-              </span>
-              , and offer a{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                sense of relief
-              </span>{" "}
-              through connecting individuals with similar experiences.
-            </p>
+
+            <div className={` text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                Informed by both the{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  research
+                </span>{" "}
+                and{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  ideation phases
+                </span>
+                , I laid the groundwork for the final{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  high-fidelity screens
+                </span>
+                . These foundational steps shaped my{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  UI components
+                </span>{" "}
+                and{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  style guide
+                </span>
+                , ensuring that each design decision aligned with user needs and
+                insights gathered.
+              </p>
+              <br />
+              <p>The final screens include key features such as:</p>
+              <ul className="list-disc pl-5">
+                <li>
+                  The ability to{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    create and join groups
+                  </span>
+                  , facilitating shared connections based on interests and
+                  backgrounds.
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Event creation and participation
+                  </span>
+                  , which promotes active community involvement.
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    In-app chat functionality
+                  </span>
+                  , supporting direct communication among users.
+                </li>
+              </ul>
+              <br />
+              <p>
+                These features were developed to address the emotional stress
+                highlighted in my research, providing a supportive environment
+                for young adults navigating early adulthood and fostering a
+                sense of{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  community and belonging
+                </span>
+                .
+              </p>
+            </div>
             {width <= 767 ? (
               <MobileSlider sliderData={createImageArray(highFidelityImages)} />
             ) : (
               <Slider sliderData={createImageArray(highFidelityImages)} />
             )}
           </div>
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <p className={`text-4xl text-gatherly-blue ${myFont.className}`}>
               Prototype
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              During this phase, I developed a{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                prototype
-              </span>{" "}
-              emphasizing key features such as{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                creating groups
-              </span>
-              ,{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                organizing events
-              </span>
-              , exploring{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                different communities
-              </span>
-              , and fostering a{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                sense of belonging
-              </span>
-              . My primary focus was on enhancing the{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                user experience
-              </span>{" "}
-              to prioritize seamless{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                networking
-              </span>
-              , enabling users to{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                connect effortlessly
-              </span>{" "}
-              with others. This approach aims to address issues of{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                loneliness
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                mental health
-              </span>{" "}
-              by building a{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                supportive community
-              </span>{" "}
-              where individuals can find{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                companionship
-              </span>{" "}
-              and engage meaningfully with{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                like-minded people
-              </span>
-              .
-            </p>
+
+            <div className={` text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                After the{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  research
+                </span>
+                ,{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  ideation
+                </span>
+                , and{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  design
+                </span>{" "}
+                phases, I created a prototype highlighting essential user
+                actions, such as:
+              </p>
+              <ul className="list-disc pl-5 mt-3">
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Creating groups
+                  </span>
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Organizing events
+                  </span>
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Exploring communities
+                  </span>
+                </li>
+              </ul>
+            </div>
             <iframe
               style={{ border: "1px solid rgba(0, 0, 0, 0.1);" }}
               className="w-full h-[40rem]"
@@ -1114,59 +1339,58 @@ export default function Gatherly() {
               allowfullscreen
             ></iframe>
           </div>
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <Title title={"Test"} color="text-gatherly-blue" />
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              In this phase, I conducted{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                usability tests
-              </span>{" "}
-              involving 10 diverse users to gather insights and obtain an{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                external perspective
-              </span>{" "}
-              on how my design is perceived by others. In order to ensure that
-              users are able to complete essential user flows, such as{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                adding groups
-              </span>
-              ,{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                creating events
-              </span>
-              , and{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                connecting with others
-              </span>
-              , I tested the design with these users to understand where I could
-              enhance my initial design. Through this process, I was able to
-              deliver a{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                more concrete design
-              </span>{" "}
-              that clearly demonstrated the{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                features
-              </span>{" "}
-              of the app.
-            </p>
+
+            <div className={` text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                I conducted usability tests with 10 diverse users after
+                completing my first iteration of high-fidelity screens to
+                enhance their functionality. These tests focused on key flows,
+                including creating and joining groups, organizing events, and
+                communicating with other members. This feedback was essential in
+                refining the initial design.
+              </p>
+              <br />
+              <p>
+                These tests helped identify areas for improvement. I made the
+                following changes:
+              </p>
+              <ul className="list-disc pl-5 ">
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Refined the navigation bar
+                  </span>{" "}
+                  to make elements clearer.
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Redesigned specific pages
+                  </span>{" "}
+                  for better clarity.
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Adjusted UI elements
+                  </span>{" "}
+                  to ensure they were more visible and didn't block content.
+                </li>
+              </ul>
+              <br />
+              <p>
+                These changes enhanced the usability and functionality of the
+                app, ensuring that users could navigate and interact seamlessly.
+              </p>
+            </div>
           </div>
           <ImageViewer images={testImages} />
-          <div className="flex flex-col gap-y-8">
+          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Whats next .. ?
             </p>

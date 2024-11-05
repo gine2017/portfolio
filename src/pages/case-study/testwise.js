@@ -600,7 +600,7 @@ export default function TestWise() {
                   >
                     Agreement
                   </span>{" "}
-                  on Jira and Azure's{" "}
+                  {`on Jira and Azure's`}{" "}
                   <span
                     className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                   >

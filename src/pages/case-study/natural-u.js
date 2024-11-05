@@ -271,7 +271,7 @@ export default function NaturalU() {
                   <span
                     className={`text-light-purple ${darkerGrotesqueBold.className}`}
                   >
-                    Healthcare professionals' limited knowledge{" "}
+                    {`Healthcare professionals' limited knowledge`}{" "}
                   </span>
                   of natural hair types when addressing{" "}
                   <span
@@ -454,8 +454,8 @@ export default function NaturalU() {
             </p>
 
             <p className={`text-2xl ${darkerGrotesque.className}`}>
-              To create a more supportive and informative space, I'm sketching
-              features for the
+              {`To create a more supportive and informative space, I'm sketching
+              features for the`}
               <span
                 className={`text-light-purple ${darkerGrotesqueBold.className}`}
               >
@@ -537,7 +537,7 @@ export default function NaturalU() {
               >
                 features
               </span>{" "}
-              needed to address users'{" "}
+              {`needed to address users'`}{" "}
               <span
                 className={`text-light-purple ${darkerGrotesqueBold.className}`}
               >
@@ -585,8 +585,8 @@ export default function NaturalU() {
               Style Guide and UI Components
             </p>
             <p className={`text-2xl ${darkerGrotesque.className}`}>
-              After defining the app's key screens and features, I focused on
-              branding as well as building UI components{" "}
+              {`After defining the app's key screens and features, I focused on
+              branding as well as building UI components`}{" "}
               <span
                 className={`text-light-purple ${darkerGrotesqueBold.className}`}
               >
@@ -774,7 +774,7 @@ export default function NaturalU() {
           <div className="flex flex-col gap-y-4 w-full md:mx-auto md:w-3/4 ">
             <Title title={"What's Next"} color="text-light-purple" />
             <p className={`text-2xl ${darkerGrotesque.className}`}>
-              I'm excited about the progress I've made on the{" "}
+              {`I'm excited about the progress I've made on the`}{" "}
               <span
                 className={`text-light-purple ${darkerGrotesqueBold.className}`}
               >

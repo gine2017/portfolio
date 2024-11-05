@@ -588,10 +588,10 @@ export default function TestWise() {
             <Title title={"Ideate"} color="text-testwise-blue" />
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <p>
-                After presenting our research analysis, Pranjal found our
+                {`After presenting our research analysis, Pranjal found our
                 findings promising. He confirmed that the persona effectively
                 captured his clients' goals and pain points. Key feedback from
-                our competitive analysis included:
+                our competitive analysis included:`}
               </p>
               <ul className="list-disc list-inside">
                 <li>
@@ -606,15 +606,15 @@ export default function TestWise() {
                   >
                     complex UI
                   </span>{" "}
-                  and steep learning curve, which he wanted to avoid in the
-                  module.
+                  {`and steep learning curve, which he wanted to avoid in the
+                  module.`}
                 </li>
                 <li>
                   Appreciation for{" "}
                   <span
                     className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                   >
-                    Asana's simplicity
+                    {`Asana's simplicity`}
                   </span>{" "}
                   and{" "}
                   <span
@@ -631,7 +631,7 @@ export default function TestWise() {
                   >
                     issue tracking
                   </span>{" "}
-                  for the module, aligning with our persona's goals.
+                  {`for the module, aligning with our persona's goals.`}
                 </li>
               </ul>
               <br />
@@ -810,10 +810,10 @@ export default function TestWise() {
                 >
                   industry standards
                 </span>{" "}
-                but also facilitates a straightforward user experience. By
+                {`but also facilitates a straightforward user experience. By
                 integrating this insight, we aimed to enhance the usability of
                 our tool, ensuring clients could effortlessly track their team's
-                progress.
+                progress.`}
               </p>
               <br />
               <p>
@@ -824,8 +824,8 @@ export default function TestWise() {
                 >
                   high-fidelity screens
                 </span>
-                , focusing on creating a solution that effectively addresses
-                user needs while aligning with Pranjal's vision.
+                {`, focusing on creating a solution that effectively addresses
+                user needs while aligning with Pranjal's vision.`}
               </p>
             </div>
           </div>
@@ -948,9 +948,9 @@ export default function TestWise() {
               </ul>
               <br />
               <p>
-                This structured approach ensured that our final solution met
+                {`This structured approach ensured that our final solution met
                 user needs while aligning with Pranjal's vision and
-                expectations.
+                expectations.`}
               </p>
             </div>
             <a

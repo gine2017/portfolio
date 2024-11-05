@@ -463,8 +463,8 @@ export default function Gatherly() {
                   >
                     Post-graduation anxiety:
                   </span>{" "}
-                  Do you feel better or more anxious now that you've left
-                  college/finished your degree?
+                  {`Do you feel better or more anxious now that you've left
+                  college/finished your degree?`}
                 </li>
                 <li>
                   <span
@@ -652,7 +652,7 @@ export default function Gatherly() {
                 insights, minimizing biases that could skew our understanding.
               </p>
               <br />
-              <p>Key reasons for the empathy map's creation include:</p>
+              <p>{`Key reasons for the empathy map's creation include:`}</p>
               <ul className="list-disc pl-5">
                 <li>
                   <span
@@ -741,11 +741,11 @@ export default function Gatherly() {
                   >
                     laddering
                   </span>{" "}
-                  to uncover the deeper reasons behind their actions. As the
+                  {`to uncover the deeper reasons behind their actions. As the
                   sole UI/UX designer on this project, I employed various
                   methods to gather insights from different angles, with
                   laddering being key to revealing users' core motivations and
-                  values.
+                  values.`}
                 </p>
                 <p>
                   This process ensured that my design decisions align with user
@@ -1070,8 +1070,8 @@ export default function Gatherly() {
                   {" "}
                   low-fidelity wireframes{" "}
                 </span>
-                to establish the app's basic structure. I utilized insights from
-                my
+                {`to establish the app's basic structure. I utilized insights from
+                my`}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
@@ -1107,8 +1107,8 @@ export default function Gatherly() {
                 >
                   Gatherly
                 </span>
-                , I focused on branding and building UI components that align
-                with the app's vision of fostering meaningful connections.
+                {`, I focused on branding and building UI components that align
+                with the app's vision of fostering meaningful connections.`}
               </p>
               <br />
               <p>
@@ -1379,7 +1379,7 @@ export default function Gatherly() {
                   >
                     Adjusted UI elements
                   </span>{" "}
-                  to ensure they were more visible and didn't block content.
+                  {`to ensure they were more visible and didn't block content.`}
                 </li>
               </ul>
               <br />

@@ -16,6 +16,7 @@ import MobileNav from "@/components/mobile-nav";
 import MobileSlider from "@/components/mobile-slider";
 import Footer from "@/components/footer";
 import CaseStudyFooter from "@/components/case-study-footer";
+import AutoScrollNavigator from "@/components/auto-scoll-navigator";
 
 //images
 import heroImg from "../../../assets/capstone/gatherly/hero-bghero_2.svg";
@@ -114,7 +115,12 @@ const stats = [
     text: "4 in 10 U.S Adults have experienced high levels of psychological stress during the pandemic",
   },
 ];
-
+const steps = [
+  { name: "Research", id: "research" },
+  { name: "Ideate", id: "ideate" },
+  { name: "Design", id: "design" },
+  { name: "Test", id: "test" },
+];
 export default function Gatherly() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
@@ -228,6 +234,8 @@ export default function Gatherly() {
               </p>
             </div>
           </div>
+          <AutoScrollNavigator sections={steps} fontColor={"gatherly-blue"} />
+
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               My Role
@@ -239,7 +247,11 @@ export default function Gatherly() {
           </div>
 
           <div className="flex flex-col gap-y-4 md:mx-auto md:w-3/4">
-            <Title title={"Research"} color="text-gatherly-blue" />
+            <Title
+              title={"Research"}
+              color="text-gatherly-blue"
+              id="research"
+            />
 
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <p>
@@ -691,7 +703,7 @@ export default function Gatherly() {
             <ZoomableImage image={empathy} />
           </div>
           <div className="flex flex-col gap-y-4 md:mx-auto md:w-3/4">
-            <Title title={"Ideate"} color="text-gatherly-blue" />
+            <Title title={"Ideate"} color="text-gatherly-blue" id="ideate" />
 
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <p>
@@ -990,7 +1002,7 @@ export default function Gatherly() {
             <ZoomableImage image={userflow} />
           </div>
           <div className="flex flex-col gap-y-4 md:mx-auto md:w-3/4">
-            <Title title={"Design"} color="text-gatherly-blue" />
+            <Title title={"Design"} color="text-gatherly-blue" id="design" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               In this stage, I{" "}
               <span
@@ -1340,7 +1352,7 @@ export default function Gatherly() {
             ></iframe>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <Title title={"Test"} color="text-gatherly-blue" />
+            <Title title={"Test"} color="text-gatherly-blue" id="test" />
 
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <p>

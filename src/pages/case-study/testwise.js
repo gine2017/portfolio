@@ -8,6 +8,7 @@ import Footer from "@/components/footer";
 import Title from "@/components/title";
 import CaseStudyFooter from "@/components/case-study-footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AutoScrollNavigator from "@/components/auto-scoll-navigator";
 
 import {
   faBookBookmark,
@@ -45,7 +46,6 @@ import newRequirement from "../../../assets/capstone/testwise/high-fidelity/New 
 import requirementDetails from "../../../assets/capstone/testwise/high-fidelity/Requirement Details.png";
 import requirementDetailsOne from "../../../assets/capstone/testwise/high-fidelity/Requirement Details-1.png";
 import requirementOne from "../../../assets/capstone/testwise/high-fidelity/Requirements-1.png";
-import Image from "next/image";
 import ImageViewer from "@/components/image-viewer";
 import ImageRow from "@/components/image-row";
 
@@ -80,6 +80,11 @@ export default function TestWise() {
     requirementOne,
   ];
 
+  const steps = [
+    { name: "Research", id: "research" },
+    { name: "Ideate", id: "ideate" },
+    { name: "Design", id: "design" },
+  ];
   return (
     <div>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
@@ -162,6 +167,8 @@ export default function TestWise() {
               </p>
             </div>
           </div>
+          <AutoScrollNavigator sections={steps} fontColor={"testwise-blue"} />
+
           <div className="flex flex-col gap-y-10 md:gap-x-40 md:mx-auto md:w-3/4">
             <div className="flex flex-col gap-y-2 md:gap-y-8">
               <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
@@ -309,7 +316,11 @@ export default function TestWise() {
             </p>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <Title title={"Research"} color="text-testwise-blue" />
+            <Title
+              title={"Research"}
+              color="text-testwise-blue"
+              id="research"
+            />
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <p>
                 Before starting the ideation process, our team met with{" "}
@@ -508,7 +519,7 @@ export default function TestWise() {
               </p>
             </div>
           </div>
-          <ImageViewer images={competitive} color="#B7CFF5" />
+          <ImageViewer images={competitive} />
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
@@ -585,7 +596,7 @@ export default function TestWise() {
           </div>
           <ImageRow images={persona} />
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <Title title={"Ideate"} color="text-testwise-blue" />
+            <Title title={"Ideate"} color="text-testwise-blue" id="ideate" />
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <p>
                 {`After presenting our research analysis, Pranjal found our
@@ -763,7 +774,7 @@ export default function TestWise() {
             <Slider sliderData={createImageArray(wireframes)} />
           )}
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <Title title={"Design"} color="text-testwise-blue" />
+            <Title title={"Design"} color="text-testwise-blue" id="design" />
 
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <p>

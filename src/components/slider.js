@@ -39,7 +39,7 @@ export default function Slider({ sliderData = [] }) {
     <>
       <Carousel
         responsive={responsive}
-        autoPlay={true}
+        autoPlay={false}
         swipeable={true}
         draggable={true}
         showDots={true}

@@ -46,6 +46,7 @@ import screen16 from "../../../assets/capstone/naturalu/screens/screen16.png";
 
 import ImageRow from "@/components/image-row";
 import ZoomableImage from "@/components/zoomable-image";
+import AutoScrollNavigator from "@/components/auto-scoll-navigator";
 
 const highFidelityImages = [
   screen1,
@@ -87,6 +88,12 @@ const stats = [
     number: 41,
     text: "Black women report chemically straightening their hair between the ages of 1-15",
   },
+];
+
+const steps = [
+  { name: "Research", id: "research" },
+  { name: "Ideate", id: "ideate" },
+  { name: "Design", id: "design" },
 ];
 
 export default function NaturalU() {
@@ -228,6 +235,7 @@ export default function NaturalU() {
               </p>
             </div>
           </div>
+          <AutoScrollNavigator sections={steps} fontColor={"light-purple"} />
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
               My Role
@@ -238,7 +246,7 @@ export default function NaturalU() {
             </p>
           </div>
           <div className="flex flex-col gap-y-4 w-3/4 mx-auto">
-            <Title title={"Research"} color="text-light-purple" />
+            <Title title={"Research"} color="text-light-purple" id="research" />
             <div>
               <p className={`text-2xl ${darkerGrotesque.className}`}>
                 Before brainstorming and designing, my main objective was to
@@ -428,6 +436,7 @@ export default function NaturalU() {
             title={"Ideate"}
             color="text-light-purple"
             styles="w-3/4 mx-auto"
+            id="ideate"
           />
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
@@ -579,6 +588,7 @@ export default function NaturalU() {
             title={"Design"}
             color="text-light-purple"
             styles="w-full md:mx-auto md:w-3/4 "
+            id="design"
           />
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>

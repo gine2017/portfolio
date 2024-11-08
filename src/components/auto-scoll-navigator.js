@@ -28,7 +28,7 @@ export default function AutoScrollNavigator({ fontColor, sections }) {
           <>
             {index > 0 && (
               <div
-                className={` border-t-4 border-${fontColor} w-full w-2/12 -h-px`}
+                className={` border-t-4 border-${fontColor}  w-2/12 -h-px`}
               ></div>
             )}
             <div

@@ -1,12 +1,14 @@
+import React from "react";
 import { darkerGrotesqueReg, darkerGrotesqueBold } from "@/utils";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function AutoScrollNavigator({ fontColor, sections }) {
   const [active, setActive] = useState(null);
+
+  // Function for smooth scrolling when clicking on a section
   const handleScroll = (sectionId, offset = 200) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      // Get the position of the element and subtract the offset
       const elementPosition =
         element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - offset;
@@ -15,35 +17,60 @@ export default function AutoScrollNavigator({ fontColor, sections }) {
         top: offsetPosition,
         behavior: "smooth",
       });
-      setActive(sectionId);
+      setActive(sectionId); // Set active state for clicked section
     }
   };
 
+  // Function to update active section based on scroll position
+  const updateActiveOnScroll = () => {
+    const offset = 200; // Adjust offset to match handleScroll function
+
+    sections.forEach((elm) => {
+      const element = document.getElementById(elm.id);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const elementTop = rect.top + window.pageYOffset - offset;
+
+        // Check if the element is in view
+        if (
+          window.pageYOffset >= elementTop &&
+          window.pageYOffset < elementTop + rect.height
+        ) {
+          setActive(elm.id);
+        }
+      }
+    });
+  };
+
+  // Attach the scroll event listener to update active section
+  useEffect(() => {
+    window.addEventListener("scroll", updateActiveOnScroll);
+    return () => {
+      window.removeEventListener("scroll", updateActiveOnScroll);
+    };
+  }, [sections]);
+
   return (
     <div
-      className={`sticky top-[4.25rem]  z-50 bg-white flex flex-row text-4xl border-b-2 pb-16 pt-10 justify-evenly items-center w-full h-10 text-${fontColor} ${darkerGrotesqueReg.className}`}
+      className={`sticky top-[4.25rem] z-50 bg-white flex flex-row text-4xl border-b-2 pb-16 pt-10 justify-evenly items-center w-full h-10 text-${fontColor} ${darkerGrotesqueReg.className}`}
     >
-      {sections.map((elm, index) => {
-        return (
-          <>
-            {index > 0 && (
-              <div
-                className={` border-t-4 border-${fontColor}  w-2/12 -h-px`}
-              ></div>
-            )}
-            <div
-              className={`hover:cursor-pointer ${
-                active === elm.id
-                  ? `text-${fontColor} ${darkerGrotesqueBold.className}`
-                  : ""
-              }`}
-              onClick={() => handleScroll(elm.id)}
-            >
-              {elm.name}
-            </div>
-          </>
-        );
-      })}
+      {sections.map((elm, index) => (
+        <React.Fragment key={elm.id}>
+          {index > 0 && (
+            <div className={`border-t-4 border-${fontColor} w-2/12 h-px`}></div>
+          )}
+          <div
+            className={`hover:cursor-pointer ${
+              active === elm.id
+                ? `text-${fontColor} ${darkerGrotesqueBold.className}`
+                : ""
+            }`}
+            onClick={() => handleScroll(elm.id)}
+          >
+            {elm.name}
+          </div>
+        </React.Fragment>
+      ))}
     </div>
   );
 }

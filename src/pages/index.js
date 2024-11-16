@@ -326,7 +326,7 @@ export default function Home() {
                   <div
                     className={`${myFontBold.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
                   >
-                    Illusrations
+                    Illustrations
                   </div>
                 </Link>
               </div>

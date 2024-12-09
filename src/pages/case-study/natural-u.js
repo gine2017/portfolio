@@ -235,7 +235,10 @@ export default function NaturalU() {
               </p>
             </div>
           </div>
-          <AutoScrollNavigator sections={steps} fontColor={"light-purple"} />
+          {width >= 767 && (
+            <AutoScrollNavigator sections={steps} fontColor={"light-purple"} />
+          )}
+
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
             <p className={`text-light-purple text-4xl ${myFont.className}`}>
               My Role

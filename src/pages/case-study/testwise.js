@@ -167,8 +167,9 @@ export default function TestWise() {
               </p>
             </div>
           </div>
-          <AutoScrollNavigator sections={steps} fontColor={"testwise-blue"} />
-
+          {width >= 767 && (
+            <AutoScrollNavigator sections={steps} fontColor={"testwise-blue"} />
+          )}
           <div className="flex flex-col gap-y-10 md:gap-x-40 md:mx-auto md:w-3/4">
             <div className="flex flex-col gap-y-2 md:gap-y-8">
               <p className={`text-testwise-blue text-4xl ${myFont.className}`}>

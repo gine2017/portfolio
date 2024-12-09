@@ -234,7 +234,9 @@ export default function Gatherly() {
               </p>
             </div>
           </div>
-          <AutoScrollNavigator sections={steps} fontColor={"gatherly-blue"} />
+          {width >= 767 && (
+            <AutoScrollNavigator sections={steps} fontColor={"gatherly-blue"} />
+          )}
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>

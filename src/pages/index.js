@@ -11,7 +11,7 @@ import {
 } from "@/utils";
 import MobileNav from "@/components/mobile-nav";
 import useWindowSize from "@/hooks/useWindowSize";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown, faCode } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 //images
@@ -25,11 +25,12 @@ export default function Home() {
   const { width } = useWindowSize();
   const [textIndex, setTextIndex] = useState(0);
   const textRef = useRef(null);
+  const caseStudiesRef = useRef(null);
   const translatedText = [
-    "ultimate translator",
-    "traducteur ultime",
-    "traductor último",
-    "tradutor definitivo",
+    "the ultimate translator",
+    "le traducteur ultime",
+    "la traductora definitiva",
+    "o tradutor definitivo",
   ];
 
   useEffect(() => {
@@ -56,24 +57,26 @@ export default function Home() {
     setShowContent(state);
   };
 
+  const handleArrowClick = () => {
+    caseStudiesRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && (
         <main className="w-4/5 mx-auto flex flex-col mt-16 gap-10 md:gap-32 md:mt-36">
           <header className="flex flex-col gap-8  md:gap-32 xl:flex-row">
-            <div className="flex flex-col gap-8 flex-1">
+            <div className="flex flex-col gap-6 flex-1">
               <div
-                className={`text-purple text-5xl md:text-8xl ${myFont.className}`}
+                className={`text-purple text-5xl md:text-7xl ${myFont.className}`}
               >
                 <span className="flex animate">{`Hi, I'm Regine`}</span>
               </div>
               <div
                 className={`text-2xl md:text-4xl whitespace-pre-wrap ${darkerGrotesque.className}`}
               >
-                <span className="flex animate">
-                  {`I'm a User Experience Designer passionate about being the`}
-                </span>
+                <span className="flex animate">{`I'm a UX Designer and`}</span>
 
                 <span
                   className={`text-purple  dynamic-text overflow-hidden inline-block whitespace-nowrap align-baseline ${darkerGrotesqueBold.className}`}
@@ -82,14 +85,21 @@ export default function Home() {
                   {translatedText[textIndex]}
                 </span>
                 <span className="flex animate">
-                  bridging design and development to create user-first solutions
+                  between design and code, turning user insights into intuitive,
+                  developer-ready solutions for seamless experiences
                 </span>
               </div>
+              <p
+                className={`text-2xl text-purple flex animate ${darkerGrotesqueBold.className}`}
+              >
+                This portfolio was designed and coded by me
+              </p>
               <FontAwesomeIcon
                 icon={faArrowDown}
                 size="3x"
                 color="#3C0092"
-                className="animate-bounce mt-8"
+                className="animate-bounce mt-8 mr-auto"
+                onClick={handleArrowClick}
               />
             </div>
             <div className="relative flex-1 w-full md:w-1/2 lg:w-2/3 xl:w-3/4">
@@ -280,7 +290,7 @@ export default function Home() {
               </svg>
             </div>
           </header>
-          <div className="flex flex-col">
+          <div className="flex flex-col" id="case-studies" ref={caseStudiesRef}>
             <div className="flex flex-col md:flex-row ">
               <div className="relative flex-1 group hover:cursor-pointer">
                 <Link href={"/case-study/testwise"}>

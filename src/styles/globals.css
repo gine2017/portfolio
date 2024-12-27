@@ -34,9 +34,9 @@ body {
 }
 
 .dynamic-text {
-  width: 13ch; /* Set to reserve space for dynamic text */
-  border-right: 2px solid black; /* Cursor effect */
-  animation: slideUp 1s ease-out forwards, typing 2s steps(13, end),
+  width: 17ch;
+  border-right: 2px solid black;
+  animation: slideUp 1s ease-out forwards, typing 1s steps(17, end),
     blink 0.75s step-end infinite;
 }
 
@@ -77,7 +77,7 @@ body {
     width: 0ch;
   }
   to {
-    width: 13ch;
+    width: 17ch;
   }
 }
 

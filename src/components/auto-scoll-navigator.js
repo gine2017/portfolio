@@ -10,7 +10,7 @@ export default function AutoScrollNavigator({ fontColor, sections }) {
     const element = document.getElementById(sectionId);
     if (element) {
       const elementPosition =
-        element.getBoundingClientRect().top + window.pageYOffset;
+        element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - offset;
 
       window.scrollTo({
@@ -29,12 +29,12 @@ export default function AutoScrollNavigator({ fontColor, sections }) {
       const element = document.getElementById(elm.id);
       if (element) {
         const rect = element.getBoundingClientRect();
-        const elementTop = rect.top + window.pageYOffset - offset;
+        const elementTop = rect.top + window.scrollY - offset;
 
         // Check if the element is in view
         if (
-          window.pageYOffset >= elementTop &&
-          window.pageYOffset < elementTop + rect.height
+          window.scrollY >= elementTop &&
+          window.scrollY < elementTop + rect.height
         ) {
           setActive(elm.id);
         }

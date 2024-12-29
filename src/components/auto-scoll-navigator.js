@@ -52,7 +52,7 @@ export default function AutoScrollNavigator({ fontColor, sections }) {
 
   return (
     <div
-      className={`sticky top-[4.25rem] z-50 bg-white flex flex-row text-4xl border-b-2 pb-16 pt-10 justify-evenly items-center w-full h-10 text-${fontColor} ${darkerGrotesqueReg.className}`}
+      className={`sticky top-[4.25rem] z-[60] bg-white flex flex-row text-4xl border-b-2 pb-16 pt-10 justify-evenly items-center w-full h-10 text-${fontColor} ${darkerGrotesqueReg.className}`}
     >
       {sections.map((elm, index) => (
         <React.Fragment key={elm.id}>

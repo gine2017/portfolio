@@ -8,8 +8,8 @@ export default function Navbar() {
   const currentPath = usePathname();
 
   return (
-    <div>
-      <Link className="fixed top-4 z-[99]" href={"/"}>
+    <div className="z-[80]">
+      <Link className="fixed top-4 " href={"/"}>
         <div className="w-14 h-10 relative ml-16 ">
           <Image src={logo} alt="logo" fill={true} />
         </div>

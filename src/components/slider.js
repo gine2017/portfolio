@@ -37,7 +37,7 @@ export default function Slider({ sliderData = [] }) {
     }
   };
   return (
-    <div>
+    <div className=" ">
       <Carousel
         responsive={responsive}
         autoPlay={false}
@@ -51,7 +51,7 @@ export default function Slider({ sliderData = [] }) {
         {sliderData.map((item, idx) => {
           return (
             <div
-              className="mx-3 overflow-hidden py-2 cursor-zoom-in	"
+              className="mx-3 overflow-hidden py-2 cursor-zoom-in z-[70]	"
               key={idx}
               onClick={() => {
                 handleClick(idx);

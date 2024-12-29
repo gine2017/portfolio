@@ -129,14 +129,14 @@ export default function About() {
                   <span className={`${darkerGrotesqueBold.className}`}>
                     Lead User Experience Designer and Developer,
                   </span>{" "}
-                  Freelance: NaturalU, November 2020 - Present
+                  Founder: NaturalU, November 2020 - Present
                 </p>
                 <br />
                 <p>
                   <span className={` ${darkerGrotesqueBold.className}`}>
                     Software Engineer,
                   </span>{" "}
-                  Full-time: ADP July 2022 - Present
+                  Full-time: ADP July 2022 - December 2024
                 </p>
                 <br />
               </div>

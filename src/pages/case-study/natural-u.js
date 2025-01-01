@@ -106,7 +106,12 @@ export default function NaturalU() {
   };
 
   const handleArrowClick = () => {
-    caseStudyRef.current.scrollIntoView({ behavior: "smooth" });
+    const offset = -100;
+    const elementPosition =
+      caseStudyRef.current.getBoundingClientRect().top + window.scrollY;
+    const targetPosition = elementPosition + offset;
+
+    window.scrollTo({ top: targetPosition, behavior: "smooth" });
   };
 
   return (

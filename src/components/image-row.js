@@ -29,7 +29,7 @@ export default function ImageRow({ images = [] }) {
         ))}
       </div>
       <p
-        className={`${darkerGrotesqueMed.className} italic text-xl text-center  pt-4`}
+        className={`${darkerGrotesqueMed.className} italic text-xl text-center  mt-8`}
       >
         Click on each image to enlarge
       </p>

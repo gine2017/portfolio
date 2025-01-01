@@ -5,6 +5,7 @@ import kdit from "../../assets/capstone/testwise/kdit-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import myIllustration from "../../assets/illustrations/my_illustration.svg";
+import emerald from "../../assets/illustrations/Emerald.svg";
 
 export default function CaseStudyFooter({ casestudy = "" }) {
   const caseStudies = [
@@ -21,9 +22,14 @@ export default function CaseStudyFooter({ casestudy = "" }) {
       link: "/case-study/testwise",
     },
     {
-      image: myIllustration,
+      image: emerald,
       subtitle: "Illustrations",
       link: "/illustrations",
+    },
+    {
+      image: myIllustration,
+      subtitle: "Portfolio creation",
+      link: "/portfolio",
     },
   ];
   return (

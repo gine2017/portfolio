@@ -59,7 +59,12 @@ export default function Home() {
   };
 
   const handleArrowClick = () => {
-    caseStudiesRef.current.scrollIntoView({ behavior: "smooth" });
+    const offset = -100;
+    const elementPosition =
+      caseStudiesRef.current.getBoundingClientRect().top + window.scrollY;
+    const targetPosition = elementPosition + offset;
+
+    window.scrollTo({ top: targetPosition, behavior: "smooth" });
   };
 
   return (

@@ -229,8 +229,9 @@ export default function NaturalU() {
                 >
                   natural hair
                 </span>
-                . Users can share videos, ask questions, and learn from each
-                other, whether they're{" "}
+                .{" "}
+                {`Users can share videos, ask questions, and learn from each
+                other, whether they're`}{" "}
                 <span
                   className={`text-light-purple ${darkerGrotesqueBold.className}`}
                 >
@@ -712,8 +713,9 @@ export default function NaturalU() {
                 >
                   friendly tone
                 </span>
-                , enhancing clarity and reflecting the app's supportive
-                personality.
+                ,{" "}
+                {`enhancing clarity and reflecting the app's supportive
+                personality.`}
               </p>
             </div>
           </div>
@@ -802,7 +804,7 @@ export default function NaturalU() {
             <Title title={"What's Next"} color="text-light-purple" />
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
-                I'm proud of the progress on the{" "}
+                {`I'm proud of the progress on the`}{" "}
                 <span
                   className={`text-light-purple ${darkerGrotesqueBold.className}`}
                 >

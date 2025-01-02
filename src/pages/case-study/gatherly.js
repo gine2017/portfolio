@@ -515,8 +515,9 @@ export default function Gatherly() {
                     >
                       Post-graduation anxiety
                     </span>
-                    : Do you feel better or more anxious now that you've left
-                    college?
+                    :{" "}
+                    {`Do you feel better or more anxious now that you've left
+                    college?`}
                   </li>
                   <li>
                     <span
@@ -630,8 +631,9 @@ export default function Gatherly() {
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <div className="flex flex-col ">
                 <p>
-                  To better understand young adults' challenges, I created a
-                  persona,{" "}
+                  {`To better understand young adults' challenges, I created a
+                  persona`}
+                  ,{" "}
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
@@ -845,9 +847,9 @@ export default function Gatherly() {
                     >
                       UI/UX designer
                     </span>{" "}
-                    on this project, I relied on this method to reveal users'
+                    {`on this project, I relied on this method to reveal users'
                     core motivations and values, ensuring my design decisions
-                    aligned with their needs.
+                    aligned with their needs.`}
                   </p>
                   <p>
                     This approach fostered meaningful connections and enhanced
@@ -1130,7 +1132,7 @@ export default function Gatherly() {
                   >
                     low-fidelity wireframes
                   </span>{" "}
-                  to define the app's structure. Using insights from{" "}
+                  {`to define the app's structure. Using insights from`}{" "}
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >

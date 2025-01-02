@@ -119,66 +119,53 @@ export default function TestWise() {
             </p>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
+                The{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  {`client's goal`}
+                </span>{" "}
+                was to build a{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  custom requirements dashboard
+                </span>{" "}
+                that integrates with{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   Test Wise
                 </span>
-                , an enterprise cloud platform by{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  KDIT Solutions
-                </span>
-                , streamlines workflows for{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  ERP/CRM systems
-                </span>{" "}
-                like{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  IBM Maximo, SAP, and Microsoft Dynamics
-                </span>
-                . I collaborated with two{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  Springboard UX Bootcamp designers
-                </span>{" "}
-                to create a{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  requirements dashboard
-                </span>
-                , improving{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  task clarity
-                </span>
-                , accelerating{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  completion
-                </span>
-                , and enhancing{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  stakeholder collaboration
-                </span>
-                . (Note:{" "}
+                , an enterprise cloud platform by KDIT Solutions.{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   Test Wise
                 </span>{" "}
-                is a pseudonym for IP protection.)
+                streamlines workflows for ERP/CRM systems like IBM Maximo, SAP,
+                and Microsoft Dynamics, while also offering modules for{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  testing
+                </span>
+                ,{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  release management
+                </span>
+                , and{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  workflow visualizations
+                </span>
+                .{" "}
+                {`I collaborated with two designers from Springboard's UX
+                Bootcamp to create a dashboard that clarifies tasks, accelerates
+                completion, and enhances stakeholder collaboration.`}
               </p>
             </div>
           </div>
@@ -657,8 +644,8 @@ export default function TestWise() {
                 >
                   short timeline
                 </span>
-                , we couldn't validate the designs with users, but we validated
-                them with{" "}
+                {`, we couldn't validate the designs with users, but we validated
+                them with`}{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >

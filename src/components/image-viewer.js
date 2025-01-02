@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { zoomImage } from "@/utils";
+import { darkerGrotesqueMed } from "@/utils";
 import Image from "next/image";
 
 export default function ImageViewer({ images = [] }) {
@@ -13,27 +14,35 @@ export default function ImageViewer({ images = [] }) {
     }
   };
   return (
-    <>
+    <div>
       <div
-        className={`relative p-8 left-1/2 right-1/2 transform -translate-x-1/2 flex flex-row justify-center gap-6 2xl:gap-8 2xl:justify-center w-screen bg-slate-200 overflow-hidden`}
+        className={`relative p-8 left-1/2 right-1/2 transform -translate-x-1/2  w-screen bg-slate-200 `}
       >
-        {images.map((img, index) => (
-          <div
-            key={index}
-            className={`w-[20rem] h-[15rem] relative hover:cursor-zoom-in ${
-              zoomedIndex === index ? "fixed" : ""
-            }`}
-          >
-            <Image
-              src={img.src}
-              alt={`Viewer Image ${index}`}
-              fill
-              className="object-contain w-full"
-              onClick={() => handleClick(index)}
-            />
-          </div>
-        ))}
+        <div className=" flex flex-row justify-center overflow-hidden gap-6 2xl:gap-8 2xl:justify-center">
+          {images.map((img, index) => (
+            <div
+              key={index}
+              className={`w-[20rem] h-[15rem] relative hover:cursor-zoom-in ${
+                zoomedIndex === index ? "fixed" : ""
+              }`}
+            >
+              <Image
+                src={img.src}
+                alt={`Viewer Image ${index}`}
+                fill
+                className="object-contain w-full"
+                onClick={() => handleClick(index)}
+              />
+            </div>
+          ))}
+        </div>
+        <p
+          className={`${darkerGrotesqueMed.className} italic text-xl text-center  pt-4`}
+        >
+          Click on each image to enlarge
+        </p>
       </div>
+
       {zoomedIndex !== null && (
         <div style={zoomImage(true, true)} onClick={() => setZoomedIndex(null)}>
           <Image
@@ -44,6 +53,6 @@ export default function ImageViewer({ images = [] }) {
           />
         </div>
       )}
-    </>
+    </div>
   );
 }

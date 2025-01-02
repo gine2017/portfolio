@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Navbar from "@/components/navbar";
 import MobileSlider from "@/components/mobile-slider";
 import Slider from "@/components/slider";
@@ -28,8 +28,6 @@ import airtable from "../../../assets/capstone/testwise/research/AirTable Table.
 import asana from "../../../assets/capstone/testwise/research/Asana Table.png";
 import azure from "../../../assets/capstone/testwise/research/Azure Table.png";
 import jira from "../../../assets/capstone/testwise/research/Jira Table.png";
-import persona1 from "../../../assets/capstone/testwise/persona/persona-1.png";
-import persona2 from "../../../assets/capstone/testwise/persona/persona-2.png";
 import wireframe_1 from "../../../assets/capstone/testwise/wireframes/wireframe-1.png";
 import wireframe_2 from "../../../assets/capstone/testwise/wireframes/wireframe-2.png";
 import wireframe_3 from "../../../assets/capstone/testwise/wireframes/wireframe-3.png";
@@ -47,18 +45,17 @@ import requirementDetails from "../../../assets/capstone/testwise/high-fidelity/
 import requirementDetailsOne from "../../../assets/capstone/testwise/high-fidelity/Requirement Details-1.png";
 import requirementOne from "../../../assets/capstone/testwise/high-fidelity/Requirements-1.png";
 import ImageViewer from "@/components/image-viewer";
-import ImageRow from "@/components/image-row";
 
 export default function TestWise() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
+  const caseStudyRef = useRef(null);
 
   const updateContent = (state) => {
     setShowContent(state);
   };
 
   const competitive = [airtable, asana, azure, jira];
-  const persona = [persona1, persona2];
   const wireframes = [
     wireframe_1,
     wireframe_2,
@@ -85,12 +82,32 @@ export default function TestWise() {
     { name: "Ideate", id: "ideate" },
     { name: "Design", id: "design" },
   ];
+
+  const handleArrowClick = () => {
+    const offset = -100;
+    const elementPosition =
+      caseStudyRef.current.getBoundingClientRect().top + window.scrollY;
+    const targetPosition = elementPosition + offset;
+
+    window.scrollTo({ top: targetPosition, behavior: "smooth" });
+  };
+
   return (
     <div>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
-      {showContent && <Hero image={testWiseHero} />}
       {showContent && (
-        <main className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48 ">
+        <Hero
+          image={testWiseHero}
+          width={width}
+          color={"#1F3F70"}
+          arrowClick={handleArrowClick}
+        />
+      )}
+      {showContent && (
+        <main
+          className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48"
+          ref={caseStudyRef}
+        >
           {width <= 767 ? (
             <MobileSlider sliderData={createImageArray(highFidelity)} />
           ) : (
@@ -100,70 +117,55 @@ export default function TestWise() {
             <p className={` text-testwise-blue text-4xl ${myFont.className}`}>
               Problem Statement
             </p>
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
+                The{" "}
                 <span
-                  className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  {`client's goal`}
+                </span>{" "}
+                was to build a{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  custom requirements dashboard
+                </span>{" "}
+                that integrates with{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  Test Wise
+                </span>
+                , an enterprise cloud platform by KDIT Solutions.{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   Test Wise
                 </span>{" "}
-                is a project tracking and testing platform by{" "}
+                streamlines workflows for ERP/CRM systems like IBM Maximo, SAP,
+                and Microsoft Dynamics, while also offering modules for{" "}
                 <span
-                  className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  KDIT Solutions
+                  testing
                 </span>
-                . With a growing client base and increasingly complex tasks,
-                they needed a solution for better task tracking and analysis. To
-                meet this need, they aimed to build a task tracking module
-                within{" "}
+                ,{" "}
                 <span
-                  className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  Test Wise
-                </span>{" "}
-                to help clients:
-              </p>
-              <ul className="list-disc pl-5">
-                <li>
-                  <span
-                    className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                  >
-                    View and track tasks efficiently
-                  </span>
-                </li>
-                <li>
-                  <span
-                    className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                  >
-                    Analyze and communicate
-                  </span>{" "}
-                  task details effectively
-                </li>
-              </ul>
-              <br />
-              <p>
-                The president of KDIT Solutions stressed the importance of a
-                proper design process, leading them to outsource the project to
-                me and two other designers from the{" "}
-                <span
-                  className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                >
-                  Springboard UX design bootcamp
+                  release management
                 </span>
-                . This ensured the project followed a{" "}
+                , and{" "}
                 <span
-                  className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  structured design approach
+                  workflow visualizations
                 </span>
-                . Note:{" "}
-                <span
-                  className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                >
-                  Test Wise
-                </span>{" "}
-                is a pseudonym used for intellectual property protection.
+                .{" "}
+                {`I collaborated with two designers from Springboard's UX
+                Bootcamp to create a dashboard that clarifies tasks, accelerates
+                completion, and enhances stakeholder collaboration.`}
               </p>
             </div>
           </div>
@@ -176,42 +178,9 @@ export default function TestWise() {
                 My Role
               </p>
               <div className={` text-2xl ${darkerGrotesque.className}`}>
-                <p>
-                  In this one-month project, I collaborated with two designers
-                  to help KDIT Solutions enhance their application, Test Wise.
-                  My primary contributions included:
-                </p>
-                <br />
-                <ul className={`list-disc pl-5 `}>
-                  <li>
-                    <span
-                      className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                    >
-                      UX Research:
-                    </span>{" "}
-                    Leveraged my experience with similar tools to identify
-                    opportunities for differentiation and make informed design
-                    decisions.
-                  </li>
-                  <li>
-                    <span
-                      className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                    >
-                      Design Solutions:
-                    </span>{" "}
-                    Assisted in developing alternate high-fidelity screen
-                    designs.
-                  </li>
-                  <li>
-                    <span
-                      className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                    >
-                      Tools Used:
-                    </span>{" "}
-                    Utilized Figma for creating wireframes and personas, which
-                    supported our final design outcomes.
-                  </li>
-                </ul>
+                In one month, I collaborated with two designers to enhance Test
+                Wise by conducting UX research,wireframes, and creating
+                high-fidelity screens in Figma.
               </div>
             </div>
           </div>
@@ -219,45 +188,27 @@ export default function TestWise() {
             <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
               Meeting the Client
             </p>
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
-                For this project, I collaborated with two designers to address
-                the challenges faced by KDIT Solutions. During our initial
-                meeting with Pranjal, the president, he shared his
+                I collaborated with two designers to help{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  {" "}
-                  experiences{" "}
-                </span>
-                and the
+                  KDIT Solutions
+                </span>{" "}
+                redesign their{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  {" "}
-                  difficulties{" "}
+                  requirements dashboard
                 </span>
-                encountered in creating the
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  {" "}
-                  requirement dashboard module
-                </span>
-                . He expressed a desire to
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  {" "}
-                  restart{" "}
-                </span>
-                the process, ensuring adherence to a{" "}
+                . Pranjal, the president, emphasized the need for a{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   structured design approach
-                </span>
-                .
+                </span>{" "}
+                to address previous challenges.
               </p>
             </div>
           </div>
@@ -279,7 +230,6 @@ export default function TestWise() {
                     Research
                   </p>
                   <p>Competitive Analysis</p>
-                  <p>Persona</p>
                 </div>
               </div>
               <div className="flex flex-col  items-center">
@@ -310,10 +260,10 @@ export default function TestWise() {
               </div>
             </div>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              To tackle the project, our team decided to start with research,
-              including competitive analysis and persona development. We then
-              moved on to ideation, creating wireframes, and finally concluded
-              with high-fidelity frames and a small prototype.
+              To tackle the project, our team decided to start with research
+              that included competitive analysis. We then moved on to ideation,
+              creating wireframes, and finally concluded with high-fidelity
+              frames and a small prototype.
             </p>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
@@ -322,109 +272,68 @@ export default function TestWise() {
               color="text-testwise-blue"
               id="research"
             />
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
-                Before starting the ideation process, our team met with{" "}
+                Our team met with{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   Pranjal
                 </span>{" "}
-                to discuss the key aspects of the{" "}
+                to outline key aspects of the{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  requirements dashboard
-                </span>{" "}
-                for{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  Test Wise
+                  Test Wise requirements dashboard
                 </span>
-                :
-              </p>
-              <ul className="list-disc list-inside">
-                <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    {" "}
-                    Functionality
-                  </span>{" "}
-                  within the application
-                </li>
-                <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    {" "}
-                    Agile Workflow
-                  </span>{" "}
-                  standards
-                </li>
-                <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    {" "}
-                    Differentiation
-                  </span>{" "}
-                  to set our dashboard apart
-                </li>
-              </ul>
-              <br />
-              <p>
-                Prior to our second meeting, our team conducted more research on{" "}
+                :{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  functionality
+                </span>
+                ,{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  agile workflow standards
+                </span>
+                , and{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  differentiation
+                </span>
+                . After researching{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   KDIT Solutions
-                </span>{" "}
-                to identify necessary features. During the second meeting, we
-                took additional time to ask detailed questions about the module
-                and its use within{" "}
+                </span>
+                , we held a second meeting to dive deeper into the module’s use.
+                Drawing from my experience with similar{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  Test Wise
+                  tools
                 </span>
-                . I recognized that the module was similar to a tool I had used
-                at my job, allowing me to offer valuable insights.
-              </p>
-              <p>
+                , I contributed valuable insights.{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   Pranjal
                 </span>{" "}
-                acknowledged my experience and emphasized the importance of:
-              </p>
-              <ul className="list-disc list-inside">
-                <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    {" "}
-                    Simplicity
-                  </span>
-                </li>
-                <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    {" "}
-                    User Customization
-                  </span>
-                </li>
-              </ul>
-              <br />
-              <p>
-                We then scheduled a follow-up meeting to present our{" "}
+                emphasized the importance of{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  research analysis
+                  simplicity
+                </span>{" "}
+                and{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  user customization
                 </span>
                 .
               </p>
@@ -434,8 +343,7 @@ export default function TestWise() {
             <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
               Competitive Analysis
             </p>
-
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
                 After meeting with{" "}
                 <span
@@ -443,19 +351,19 @@ export default function TestWise() {
                 >
                   Pranjal
                 </span>{" "}
-                to understand how the module would work within{" "}
+                to discuss the module’s role in{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   Test Wise
                 </span>
-                , I led the{" "}
+                , I led a{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   competitive analysis
-                </span>
-                . We focused on key project management tools like{" "}
+                </span>{" "}
+                of tools like{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
@@ -467,166 +375,66 @@ export default function TestWise() {
                 >
                   Jira
                 </span>
-                ,{" "}
+                , and{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   Azure DevOps
                 </span>
-                , and{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  Asana{" "}
-                </span>
-                to identify{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  strengths and weaknesses
-                </span>{" "}
-                and pinpoint areas where our module could offer{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  unique value
-                </span>
-                .
-              </p>
-              <br />
-              <p>
-                Using my{" "}
+                , identifying gaps and opportunities for differentiation.
+                Leveraging my{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   software development background
-                </span>{" "}
-                and experience with{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  task management tools
                 </span>
-                , I explained how these platforms support{" "}
+                , I highlighted how these platforms support{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  Agile
-                </span>{" "}
-                workflows and enterprise needs. This analysis aligned our
-                solution with Pranjal’s vision and set the stage for our next
-                presentation, showcasing how our approach could fill gaps and
-                stand out in the market.
+                  Agile workflows
+                </span>
+                , aligning our solution with Pranjal’s vision and preparing for
+                our next presentation.
               </p>
             </div>
           </div>
           <ImageViewer images={competitive} />
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
-              Persona
-            </p>
-
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <Title title={"Ideate"} color="text-testwise-blue" id="ideate" />
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
-                To ensure our design choices resonated with current clients of{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  Test Wise
-                </span>{" "}
-                and aligned with{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  Pranjal’s
-                </span>{" "}
-                expectations, our team developed a persona. I led this effort,
-                leveraging my experience with similar tools and insights from
-                our initial meetings with{" "}
+                After presenting our research,{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   Pranjal
-                </span>
-                .
+                </span>{" "}
+                found our findings promising. Key feedback included:
               </p>
-
-              <ul className="list-disc list-inside">
+              <ul className="list-disc ml-12">
                 <li>
+                  Agreement on avoiding{" "}
                   <span
                     className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                   >
-                    Align design decisions
+                    Jira
                   </span>{" "}
-                  with real client needs and goals.
-                </li>
-                <li>
-                  Create a shared understanding among the team for{" "}
+                  and{" "}
                   <span
                     className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                   >
-                    informed decision-making
-                  </span>
-                  .
-                </li>
-                <li>
-                  Present research analysis to show how solutions would stand
-                  out and meet{" "}
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    client objectives
-                  </span>
-                  .
-                </li>
-              </ul>
-              <br />
-              <p>
-                Our persona focused on a start-up owner,{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  Alex
-                </span>
-                , who struggles with tracking team tasks as his business scales.
-                This approach helped us understand pain points and user needs,
-                guiding our design to address these effectively.
-              </p>
-            </div>
-          </div>
-          <ImageRow images={persona} />
-          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <Title title={"Ideate"} color="text-testwise-blue" id="ideate" />
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
-              <p>
-                {`After presenting our research analysis, Pranjal found our
-                findings promising. He confirmed that the persona effectively
-                captured his clients' goals and pain points. Key feedback from
-                our competitive analysis included:`}
-              </p>
-              <ul className="list-disc list-inside">
-                <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    Agreement
+                    Azure’s
                   </span>{" "}
-                  {`on Jira and Azure's`}{" "}
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    complex UI
-                  </span>{" "}
-                  {`and steep learning curve, which he wanted to avoid in the
-                  module.`}
+                  complex UI.
                 </li>
                 <li>
                   Appreciation for{" "}
                   <span
                     className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                   >
-                    {`Asana's simplicity`}
+                    Asana’s simplicity
                   </span>{" "}
                   and{" "}
                   <span
@@ -637,135 +445,95 @@ export default function TestWise() {
                   .
                 </li>
                 <li>
-                  Emphasis on the critical importance of{" "}
+                  Emphasis on the importance of{" "}
                   <span
                     className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                   >
                     issue tracking
-                  </span>{" "}
-                  {`for the module, aligning with our persona's goals.`}
+                  </span>
+                  , aligning with client goals.
                 </li>
               </ul>
               <br />
               <p>
-                Informed by this feedback, we began the{" "}
+                Using this feedback, we began{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  ideation phase
+                  ideation
                 </span>{" "}
-                and worked on{" "}
+                and created{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   low-fidelity wireframes
                 </span>{" "}
-                that balanced user customization and essential task-tracking
-                capabilities.
+                balancing customization with task-tracking needs.
               </p>
             </div>
+
             <div className="flex flex-col gap-y-8 ">
               <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
                 Low-fidelity Wireframes
               </p>
-              <div className={` text-2xl ${darkerGrotesque.className}`}>
+              <div className={`text-2xl ${darkerGrotesque.className}`}>
                 <p>
-                  Again, After meeting with{" "}
+                  After meeting with{" "}
                   <span
-                    className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                   >
                     Pranjal
                   </span>
-                  , our team gained a clear understanding of the{" "}
+                  , we clarified user needs, module goals, and expectations.
+                  Using insights from our competitive analysis, we created{" "}
                   <span
-                    className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                  >
-                    user needs
-                  </span>
-                  ,{" "}
-                  <span
-                    className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                  >
-                    module goals
-                  </span>
-                  , and his{" "}
-                  <span
-                    className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                  >
-                    expectations
-                  </span>
-                  . We then used insights from our{" "}
-                  <span
-                    className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                  >
-                    competitive analysis
-                  </span>{" "}
-                  to craft{" "}
-                  <span
-                    className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                   >
                     low-fidelity wireframes
-                  </span>
-                  . These wireframes serve to visualize key functionalities,
-                  ensuring our design aligns with{" "}
-                  <span
-                    className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                  >
-                    user requirements
                   </span>{" "}
-                  and simplifies{" "}
-                  <span
-                    className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                  >
-                    task tracking
-                  </span>
-                  .
+                  to visualize key functionalities and simplify task tracking.
                 </p>
                 <br />
-                <p>The features presented include:</p>
-                <ul className="list-disc list-inside">
-                  <li>
-                    <span
-                      className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                    >
-                      Kanban boards
-                    </span>
-                  </li>
-                  <li>
-                    <span
-                      className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                    >
-                      Customizable Dashboard
-                    </span>
-                  </li>
-                  <li>
-                    <span
-                      className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                    >
-                      Table of tasks
-                    </span>{" "}
-                    and their{" "}
-                    <span
-                      className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                    >
-                      statuses
-                    </span>
-                  </li>
-                  <li>
-                    <span
-                      className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                    >
-                      Task Detail pages
-                    </span>
-                  </li>
-                  <li>
-                    <span
-                      className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-                    >
-                      Ability to add new tasks
-                    </span>
-                  </li>
-                </ul>
+                <div>
+                  <p>The features presented include:</p>
+                  <ul className="list-disc ml-12">
+                    <li>
+                      <span
+                        className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                      >
+                        Kanban boards
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                      >
+                        Customizable Dashboard
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                      >
+                        Task status table
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                      >
+                        Task detail pages
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                      >
+                        New task creation
+                      </span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -776,68 +544,37 @@ export default function TestWise() {
           )}
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <Title title={"Design"} color="text-testwise-blue" id="design" />
-
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
-                As we transitioned to creating{" "}
+                As we moved to{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   high-fidelity screens
                 </span>
-                , our primary focus was to ensure clarity in{" "}
+                , our focus was on clarity in{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   task tracking
-                </span>{" "}
-                for users. We revisited our{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  persona
-                </span>{" "}
-                to align our design decisions with the needs and expectations of
-                our clients.
-              </p>
-              <br />
-              <p>
-                After presenting our wireframe ideations to{" "}
+                </span>
+                . After presenting our wireframes to{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   Pranjal
                 </span>
-                , he affirmed that we were on the right track but advised us to
-                follow a format akin to the{" "}
+                , he confirmed we were on track but suggested using a format
+                similar to{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  Requirements and Test app for Jira
+                  Jira’s Requirements and Test app
                 </span>
-                . This feedback was crucial; it highlighted the need for a
-                design that not only meets{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  industry standards
-                </span>{" "}
-                {`but also facilitates a straightforward user experience. By
-                integrating this insight, we aimed to enhance the usability of
-                our tool, ensuring clients could effortlessly track their team's
-                progress.`}
-              </p>
-              <br />
-              <p>
-                With this foundation, we confidently moved forward in developing
-                our{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  high-fidelity screens
-                </span>
-                {`, focusing on creating a solution that effectively addresses
-                user needs while aligning with Pranjal's vision.`}
+                . This feedback emphasized industry standards and a
+                straightforward user experience. We integrated this insight into
+                our design to enhance usability and ensure easy progress
+                tracking for clients.
               </p>
             </div>
           </div>
@@ -845,135 +582,149 @@ export default function TestWise() {
             <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
               High Fidelity Prototype
             </p>
-
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
-                During the design phase, our team developed{" "}
+                Our team developed{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  three distinct solutions{" "}
+                  three solutions
                 </span>{" "}
-                to ensure a comprehensive approach. We drew on insights from our
-                discussions with Pranjal and our understanding of the persona,
-                which guided our design choices. Each solution integrated{" "}
+                to address the task tracking module. These designs incorporated{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  innovative features{" "}
+                  industry standards
                 </span>{" "}
-                while adhering to{" "}
+                and feedback from{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  industry standards{" "}
+                  Pranjal
                 </span>
-                , such as:
+                , including:
               </p>
-              <br />
-              <ul className="list-disc list-inside">
+              <ul className="list-disc ml-12">
                 <li>
                   <span
                     className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                   >
-                    A table list view{" "}
+                    Table list view
                   </span>{" "}
-                  for task tracking, inspired by the Requirements and Task app.
-                </li>
-                <li>
-                  A{" "}
+                  for task tracking, inspired by the{" "}
                   <span
                     className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                   >
-                    customizable dashboard{" "}
-                  </span>{" "}
-                  for users to tailor their experience.
-                </li>
-                <li>
-                  A{" "}
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    clear and intuitive UI{" "}
-                  </span>{" "}
-                  to enhance usability.
-                </li>
-              </ul>
-              <br />
-              <p>
-                After presenting our designs to Pranjal, one solution stood out
-                for its{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  exceptional execution{" "}
-                </span>
-                , prompting us to adopt it as our primary approach. Key features
-                of this chosen solution included:
-              </p>
-              <br />
-              <ul className="list-disc list-inside">
-                <li>
-                  An{" "}
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    accordion feature{" "}
-                  </span>{" "}
-                  for navigating sub-tasks easily.
-                </li>
-                <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    Live chat functionality{" "}
-                  </span>{" "}
-                  for seamless team communication.
-                </li>
-                <li>
-                  Options for both{" "}
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    project board and list views{" "}
+                    Requirements and Task app
                   </span>
                   .
                 </li>
                 <li>
-                  A{" "}
                   <span
                     className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                   >
-                    task details page{" "}
+                    Customizable dashboard
                   </span>{" "}
-                  for in-depth task information.
+                  for user-tailored experiences.
                 </li>
                 <li>
-                  A{" "}
                   <span
                     className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                   >
-                    customizable dashboard{" "}
+                    Intuitive UI
                   </span>{" "}
-                  with the ability to add widgets.
+                  for improved usability.
                 </li>
               </ul>
               <br />
               <p>
-                {`This structured approach ensured that our final solution met
-                user needs while aligning with Pranjal's vision and
-                expectations.`}
+                Due to the{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  short timeline
+                </span>
+                {`, we couldn't validate the designs with users, but we validated
+                them with`}{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  Pranjal
+                </span>
+                , who selected one solution for its execution. The chosen design
+                featured:
               </p>
+              <ul className="list-disc ml-12">
+                <li>
+                  <span
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Accordion for sub-task navigation
+                  </span>
+                  .
+                </li>
+                <li>
+                  <span
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Live chat
+                  </span>{" "}
+                  for team communication.
+                </li>
+                <li>
+                  <span
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Project board and list views
+                  </span>
+                  .
+                </li>
+                <li>
+                  <span
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Task details page
+                  </span>{" "}
+                  for detailed task info.
+                </li>
+                <li>
+                  <span
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Customizable dashboard
+                  </span>{" "}
+                  with widget options.
+                </li>
+              </ul>
+              <br />
+              <div>
+                <p>
+                  This approach ensured alignment with{" "}
+                  <span
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Pranjal’s vision
+                  </span>{" "}
+                  and{" "}
+                  <span
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    user needs
+                  </span>
+                  .
+                </p>
+
+                <a
+                  className={`text-2xl hover:underline text-testwise-blue ${darkerGrotesqueBold.className} `}
+                  href={
+                    "https://www.figma.com/design/pODnwNo9vwRSEJSnxqJhdk/requirement-dash-(case-study)?node-id=88-3321&t=3wMJlIncDNZksy4C-1"
+                  }
+                  target="_blank"
+                >
+                  The other two alternate solutions
+                </a>
+              </div>
             </div>
-            <a
-              className={`text-2xl hover:underline text-testwise-blue ${darkerGrotesqueBold.className} `}
-              href={
-                "https://www.figma.com/design/pODnwNo9vwRSEJSnxqJhdk/requirement-dash-(case-study)?node-id=88-3321&t=3wMJlIncDNZksy4C-1"
-              }
-              target="_blank"
-            >
-              Alternate Solutions
-            </a>
           </div>
           <iframe
             style={{ border: "1px solid rgba(0, 0, 0, 0.1);" }}
@@ -985,126 +736,173 @@ export default function TestWise() {
             <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
               Crossing the finish line
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              As our team concluded the project and presented our final screens
-              and prototype to Pranjal, he responded{" "}
-              <span
-                className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-              >
-                very positively
-              </span>{" "}
-              to our{" "}
-              <span
-                className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-              >
-                solutions
-              </span>
-              . He shared that he plans to use our{" "}
-              <span
-                className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-              >
-                designs
-              </span>{" "}
-              as the{" "}
-              <span
-                className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-              >
-                foundation
-              </span>{" "}
-              for building the module, allowing his team to{" "}
-              <span
-                className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-              >
-                expand upon
-              </span>{" "}
-              it and eventually begin{" "}
-              <span
-                className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-              >
-                development
-              </span>
-              . Overall, our team felt{" "}
-              <span
-                className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-              >
-                proud
-              </span>{" "}
-              to have worked with our first{" "}
-              <span
-                className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-              >
-                real-world client
-              </span>{" "}
-              and made a{" "}
-              <span
-                className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-              >
-                significant impact
-              </span>{" "}
-              on their company.
-            </p>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                After presenting our final screens and prototype,{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  Pranjal
+                </span>{" "}
+                responded{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  positively
+                </span>{" "}
+                and confirmed that our designs would serve as the{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  foundation
+                </span>{" "}
+                for the module. His team plans to{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  build
+                </span>{" "}
+                on it and begin{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  development
+                </span>
+                . Our team was{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  proud
+                </span>{" "}
+                to make a significant{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  impact
+                </span>{" "}
+                with our first{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  real-world client
+                </span>
+                .
+              </p>
+            </div>
           </div>
           <div className="flex flex-col gap-y-8 md:w-3/4 md:mx-auto">
             <Title title={"Project takeways"} color="text-testwise-blue" />
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              My main takeaway from this project is a strong sense of pride in
-              both what I accomplished and how I worked with my team. I was able
-              to showcase my{" "}
-              <span
-                className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-              >
-                UX research
-              </span>{" "}
-              skills while also demonstrating{" "}
-              <span
-                className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-              >
-                effective communication
-              </span>
-              ,{" "}
-              <span
-                className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-              >
-                leadership
-              </span>
-              , and{" "}
-              <span
-                className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-              >
-                collaboration
-              </span>
-              {`, especially when contributing to my team's`}{" "}
-              <span
-                className={`text-testwise-blue  ${darkerGrotesqueBold.className}`}
-              >
-                UI designs
-              </span>
-              . The most important key takeaways from this project include these
-              valuable experiences.
-            </p>
-            <ul className="list-disc list-inside">
-              <li className={` text-2xl ${darkerGrotesque.className}`}>
-                Our client was pleased with our solution, particularly the
-                dynamic display of tasks for specific requirements and the use
-                of horizontal scroll to view all tasks.
-              </li>
-              <li className={` text-2xl ${darkerGrotesque.className}`}>
-                {`Unfortunately, due to time constraints, we were unable to
-                conduct any testing. In the future, it's best to allocate time
-                for testing.`}
-              </li>
-              <li className={` text-2xl ${darkerGrotesque.className}`}>
-                Despite the time difference and having a client in Canada, our
-                group effectively communicated and ensured our client was
-                updated weekly.
-              </li>
-              <li className={` text-2xl ${darkerGrotesque.className}`}>
-                This experience was incredibly valuable, as I learned how to
-                effectively work with real-world clients, apply my technical
-                knowledge to UX research, and collaborate with a diverse group
-                of designers.
-              </li>
-            </ul>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                My main takeaway from this project is{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  pride
+                </span>{" "}
+                in both what I accomplished and how I worked with my team. I
+                showcased my{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  UX research
+                </span>{" "}
+                skills, along with strong{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  communication
+                </span>
+                ,{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  leadership
+                </span>{" "}
+                , and{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  collaboration
+                </span>{" "}
+                , especially in contributing to{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  UI designs
+                </span>
+                . Key takeaways include:
+              </p>
+              <ul className="list-disc ml-12">
+                <li>
+                  Our client was pleased with the{" "}
+                  <span
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    dynamic task display
+                  </span>{" "}
+                  and use of{" "}
+                  <span
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    horizontal scroll
+                  </span>
+                  .
+                </li>
+                <li>
+                  Due to{" "}
+                  <span
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    time constraints
+                  </span>
+                  , we couldn’t conduct{" "}
+                  <span
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    testing
+                  </span>
+                  , which should be prioritized in the future.
+                </li>
+                <li>
+                  Despite the{" "}
+                  <span
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    time difference
+                  </span>{" "}
+                  and the client being in{" "}
+                  <span
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Canada
+                  </span>
+                  , our team maintained{" "}
+                  <span
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    effective communication
+                  </span>
+                  , providing weekly updates.
+                </li>
+                <li>
+                  This experience taught me how to work with{" "}
+                  <span
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    real-world clients
+                  </span>
+                  , apply my{" "}
+                  <span
+                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    technical knowledge
+                  </span>{" "}
+                  to UX research, and collaborate with a diverse team of
+                  designers.
+                </li>
+              </ul>
+            </div>
           </div>
           <CaseStudyFooter casestudy="Test Wise" />
         </main>

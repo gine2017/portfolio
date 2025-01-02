@@ -10,7 +10,7 @@ export default function AutoScrollNavigator({ fontColor, sections }) {
     const element = document.getElementById(sectionId);
     if (element) {
       const elementPosition =
-        element.getBoundingClientRect().top + window.pageYOffset;
+        element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - offset;
 
       window.scrollTo({
@@ -29,12 +29,12 @@ export default function AutoScrollNavigator({ fontColor, sections }) {
       const element = document.getElementById(elm.id);
       if (element) {
         const rect = element.getBoundingClientRect();
-        const elementTop = rect.top + window.pageYOffset - offset;
+        const elementTop = rect.top + window.scrollY - offset;
 
         // Check if the element is in view
         if (
-          window.pageYOffset >= elementTop &&
-          window.pageYOffset < elementTop + rect.height
+          window.scrollY >= elementTop &&
+          window.scrollY < elementTop + rect.height
         ) {
           setActive(elm.id);
         }
@@ -52,7 +52,7 @@ export default function AutoScrollNavigator({ fontColor, sections }) {
 
   return (
     <div
-      className={`sticky top-[4.25rem] z-50 bg-white flex flex-row text-4xl border-b-2 pb-16 pt-10 justify-evenly items-center w-full h-10 text-${fontColor} ${darkerGrotesqueReg.className}`}
+      className={`sticky top-[4.25rem] z-[60] bg-white flex flex-row text-4xl border-b-2 pb-16 pt-10 justify-evenly items-center w-full h-10 text-${fontColor} ${darkerGrotesqueReg.className}`}
     >
       {sections.map((elm, index) => (
         <React.Fragment key={elm.id}>

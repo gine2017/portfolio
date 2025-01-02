@@ -3,6 +3,7 @@ import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
 import { zoomImage } from "@/utils";
 import { useState } from "react";
+import { darkerGrotesqueMed } from "@/utils";
 
 export default function Slider({ sliderData = [] }) {
   const [zoomStyles, setZoomStyles] = useState({});
@@ -36,7 +37,7 @@ export default function Slider({ sliderData = [] }) {
     }
   };
   return (
-    <>
+    <div className=" ">
       <Carousel
         responsive={responsive}
         autoPlay={false}
@@ -50,7 +51,7 @@ export default function Slider({ sliderData = [] }) {
         {sliderData.map((item, idx) => {
           return (
             <div
-              className="mx-3 overflow-hidden py-2 cursor-zoom-in	"
+              className="mx-3 overflow-hidden py-2 cursor-zoom-in z-[70]	"
               key={idx}
               onClick={() => {
                 handleClick(idx);
@@ -65,6 +66,12 @@ export default function Slider({ sliderData = [] }) {
           );
         })}
       </Carousel>
+      <p
+        className={`${darkerGrotesqueMed.className} italic text-xl text-center  mt-4`}
+      >
+        Click on each image to enlarge
+      </p>
+
       {zoomedIndex !== null && (
         <div style={zoomStyles} onClick={() => handleClick(zoomedIndex)}>
           <Image
@@ -75,6 +82,6 @@ export default function Slider({ sliderData = [] }) {
           />
         </div>
       )}
-    </>
+    </div>
   );
 }

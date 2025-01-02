@@ -8,8 +8,8 @@ export default function Navbar() {
   const currentPath = usePathname();
 
   return (
-    <div>
-      <Link className="fixed top-4 z-[99]" href={"/"}>
+    <div className="z-[80]">
+      <Link className="fixed top-4 " href={"/"}>
         <div className="w-14 h-10 relative ml-16 ">
           <Image src={logo} alt="logo" fill={true} />
         </div>
@@ -43,7 +43,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="transition-transform text-slate-300 hover:-translate-y-1 hover:text-purple">
-            <a href={"/files/Regine_Resume.pdf"} target="_blank">
+            <a href={"/files/Regine_Thimothee_Resume.pdf"} target="_blank">
               resume
             </a>
           </li>

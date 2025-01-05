@@ -1436,7 +1436,7 @@ export default function Gatherly() {
           <CaseStudyFooter casestudy="Gatherly" />
         </main>
       )}
-      {showContent && <Footer />}
+      {showContent && <Footer width={width} />}
     </div>
   );
 }

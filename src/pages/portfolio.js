@@ -356,7 +356,7 @@ export default function Portfolio() {
           <CaseStudyFooter casestudy="Portfolio creation" />
         </main>
       )}
-      {showContent && <Footer />}
+      {showContent && <Footer width={width} />}
     </div>
   );
 }

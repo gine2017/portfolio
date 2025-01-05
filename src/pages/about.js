@@ -215,7 +215,7 @@ export default function About() {
           </div>
         </main>
       )}
-      {showContent && <Footer />}
+      {showContent && <Footer width={width} />}
     </div>
   );
 }

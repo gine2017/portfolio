@@ -106,7 +106,7 @@ export default function Illustrations() {
           <CaseStudyFooter casestudy="Illustrations" />
         </main>
       )}
-      {showContent && <Footer />}
+      {showContent && <Footer width={width} />}
     </div>
   );
 }

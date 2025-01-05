@@ -4,7 +4,7 @@ import linkedInLogo from "../../assets/icons/linkedin.svg";
 import emailLogo from "../../assets/icons/envelope.svg";
 import Image from "next/image";
 
-export default function Footer() {
+export default function Footer({ width }) {
   return (
     <footer className="w-full bg-purple flex flex-col gap-8 mt-40 px-16 py-5 md:px-36 md:py-10 ">
       <div>
@@ -25,7 +25,7 @@ export default function Footer() {
             </div>
           </a>
           <Link
-            href="mailto:ginou10@msn.com"
+            href="mailto:reginethimothee@gmail.com"
             passHref={true}
             className="rounded-full w-16 h-16 bg-orange  flex justify-center items-center"
           >
@@ -34,11 +34,13 @@ export default function Footer() {
             </div>
           </Link>
         </div>
-        <p
-          className={`text-white text-right relative bottom-0  text-xl md:text-2xl ${darkerGrotesqueReg.className}`}
-        >
-          Design and coded by Regine
-        </p>
+        {width >= 767 && (
+          <p
+            className={`text-white text-right relative bottom-0  text-xl md:text-2xl ${darkerGrotesqueReg.className}`}
+          >
+            Design and coded by Regine
+          </p>
+        )}
       </div>
     </footer>
   );

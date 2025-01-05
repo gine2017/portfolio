@@ -907,7 +907,7 @@ export default function TestWise() {
           <CaseStudyFooter casestudy="Test Wise" />
         </main>
       )}
-      {showContent && <Footer />}
+      {showContent && <Footer width={width} />}
     </div>
   );
 }

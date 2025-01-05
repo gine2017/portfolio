@@ -870,7 +870,7 @@ export default function NaturalU() {
           <CaseStudyFooter casestudy="NaturalU" />
         </main>
       )}
-      {showContent && <Footer />}
+      {showContent && <Footer width={width} />}
     </div>
   );
 }

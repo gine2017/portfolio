@@ -365,7 +365,7 @@ export default function Home() {
           </div>
         </main>
       )}
-      {showContent && <Footer />}
+      {showContent && <Footer width={width} />}
     </div>
   );
 }

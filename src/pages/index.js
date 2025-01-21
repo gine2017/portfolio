@@ -94,6 +94,14 @@ export default function Home() {
                   between design and code, turning user insights into intuitive,
                   developer-ready solutions for seamless experiences
                 </span>
+                <p className={`flex animate  `}>
+                  <span
+                    className={`text-purple ${darkerGrotesqueBold.className}`}
+                  >
+                    Previously
+                  </span>{" "}
+                  @ ADP
+                </p>
               </div>
               <p
                 className={`text-2xl text-purple flex animate ${darkerGrotesqueBold.className}`}

@@ -98,7 +98,7 @@ export default function Home() {
                   <span
                     className={`text-purple ${darkerGrotesqueBold.className}`}
                   >
-                    Previously
+                    Previously{" "}
                   </span>{" "}
                   @ ADP
                 </p>

@@ -8,6 +8,7 @@ import ZoomableImage from "@/components/zoomable-image";
 import ImageRow from "@/components/image-row";
 import Hero from "@/components/hero";
 import { myFont, darkerGrotesque, darkerGrotesqueBold } from "@/utils";
+import Head from "next/head";
 
 //images
 import brand from "../../assets/capstone/portfolio/My Brand.png";
@@ -45,7 +46,10 @@ export default function Portfolio() {
   };
 
   return (
-    <div>
+    <>
+      <Head>
+        <title>Portfolio Case Study</title>
+      </Head>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && (
         <Hero
@@ -60,12 +64,17 @@ export default function Portfolio() {
           className="w-4/5 mx-auto flex flex-col gap-y-20 mt-16 mb-48"
           ref={caseStudyRef}
         >
+          <h1
+            className={`flex justify-center text-purple ${myFont.className} text-6xl`}
+          >
+            Creating my Portfolio
+          </h1>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p
-              className={` text-purple text-3xl md:text-5xl ${myFont.className}`}
+            <h2
+              className={` text-purple text-3xl md:text-3xl ${myFont.className}`}
             >
               Bridging Creativity and Code
-            </p>
+            </h2>
             <p className={`text-2xl ${darkerGrotesque.className}`}>
               I built my portfolio from scratch to showcase my{" "}
               <span className={`text-purple ${darkerGrotesqueBold.className}`}>
@@ -119,11 +128,9 @@ export default function Portfolio() {
             </p>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p
-              className={` text-purple text-3xl md:text-5xl ${myFont.className}`}
-            >
+            <h2 className={` text-purple text-3xl ${myFont.className}`}>
               Laying the foundation
-            </p>
+            </h2>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               I started by establishing a solid{" "}
               <span className={`text-purple ${darkerGrotesqueBold.className}`}>
@@ -194,11 +201,9 @@ export default function Portfolio() {
           <div
             className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
           >
-            <p
-              className={`text-purple text-3xl md:text-5xl ${myFont.className}`}
-            >
+            <h2 className={`text-purple text-3xl ${myFont.className}`}>
               Improving Through Insights
-            </p>
+            </h2>
             <p>
               Design is an iterative process, and my portfolio evolved
               significantly from its initial concept. I took time to gather{" "}
@@ -242,11 +247,9 @@ export default function Portfolio() {
           <div
             className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
           >
-            <p
-              className={` text-purple text-3xl md:text-5xl ${myFont.className}`}
-            >
+            <h2 className={` text-purple text-3xl ${myFont.className}`}>
               Bringing Designs to Life
-            </p>
+            </h2>
             <p>
               Translating the design into a fully functional website was where
               my
@@ -291,11 +294,9 @@ export default function Portfolio() {
           <div
             className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
           >
-            <p
-              className={` text-purple text-3xl md:text-5xl ${myFont.className}`}
-            >
+            <h2 className={` text-purple text-3xl ${myFont.className}`}>
               Being the Ultimate Translator
-            </p>
+            </h2>
             <p>
               Building this portfolio reinforced my role as the{" "}
               <span className={`text-purple ${darkerGrotesqueBold.className}`}>
@@ -357,6 +358,6 @@ export default function Portfolio() {
         </main>
       )}
       {showContent && <Footer width={width} />}
-    </div>
+    </>
   );
 }

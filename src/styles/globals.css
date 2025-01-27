@@ -104,3 +104,9 @@ body {
     transform: translate(-3px, 2px); /* Slight movement to mimic writing */
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .element {
+    animation: none; /* Disable animation */
+  }
+}

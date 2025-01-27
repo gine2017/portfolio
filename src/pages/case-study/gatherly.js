@@ -17,6 +17,10 @@ import MobileSlider from "@/components/mobile-slider";
 import Footer from "@/components/footer";
 import CaseStudyFooter from "@/components/case-study-footer";
 import AutoScrollNavigator from "@/components/auto-scoll-navigator";
+import ImageRow from "@/components/image-row";
+import ImageViewer from "@/components/image-viewer";
+import ZoomableImage from "@/components/zoomable-image";
+import Head from "next/head";
 
 //images
 import heroImg from "../../../assets/capstone/gatherly/hero-bghero_2.svg";
@@ -61,9 +65,6 @@ import highFidelity10 from "../../../assets/capstone/gatherly/high-fidelity/high
 import highFidelity11 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-11.png";
 import highFidelity12 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-12.png";
 import highFidelity13 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-13.png";
-import ImageRow from "@/components/image-row";
-import ImageViewer from "@/components/image-viewer";
-import ZoomableImage from "@/components/zoomable-image";
 
 const personaImages = [persona1, persona2];
 const surveyImages = [survey1, survey2, survey3, survey4];
@@ -77,7 +78,11 @@ const styleguideImages = [
   styleguide_6,
 ];
 
-const testImages = [test1, test2, test3];
+const testImages = [
+  { img: test1, altText: "First Test results" },
+  { img: test2, altText: "Second Test results" },
+  { img: test3, altText: "Third Test results" },
+];
 const wireframeImages = [
   wireframe_1,
   wireframe_2,
@@ -141,6 +146,9 @@ export default function Gatherly() {
 
   return (
     <div>
+      <Head>
+        <title> Gatherly Case Study Page</title>
+      </Head>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && (
         <Hero
@@ -160,10 +168,15 @@ export default function Gatherly() {
           ) : (
             <Slider sliderData={createImageArray(highFidelityImages)} />
           )}
+          <h1
+            className={`flex justify-center text-gatherly-blue  ${myFont.className} text-6xl`}
+          >
+            Gatherly Case Study
+          </h1>
           <div className="flex flex-col gap-y-8 flex-1 md:mx-auto md:w-3/4">
-            <p className={` text-gatherly-blue text-4xl ${myFont.className}`}>
+            <h2 className={` text-gatherly-blue text-3xl ${myFont.className}`}>
               Problem Statement
-            </p>
+            </h2>
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <p>
                 This was my{" "}
@@ -237,20 +250,19 @@ export default function Gatherly() {
               </p>
             </div>
           </div>
-          {width >= 767 && (
-            <AutoScrollNavigator sections={steps} fontColor={"gatherly-blue"} />
-          )}
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+            <h2 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               My Role
-            </p>
+            </h2>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               I served as the sole UI/UX designer for this project; therefore, I
               handled the research, design, and testing phases
             </p>
           </div>
-
+          {width >= 767 && (
+            <AutoScrollNavigator sections={steps} fontColor={"gatherly-blue"} />
+          )}
           <div className="flex flex-col gap-y-4 md:mx-auto md:w-3/4">
             <Title
               title={"Research"}
@@ -388,9 +400,9 @@ export default function Gatherly() {
           <Stats statsArray={stats} color="text-gatherly-blue" />
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               Survey
-            </p>
+            </h3>
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <div className="flex flex-col gap-8">
                 <p>
@@ -466,9 +478,9 @@ export default function Gatherly() {
             <Slider sliderData={createImageArray(surveyImages)} />
           )}
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               User Interview
-            </p>
+            </h3>
 
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <div className="flex flex-col gap-8">
@@ -575,11 +587,11 @@ export default function Gatherly() {
               </div>
             </div>
           </div>
-          <p
-            className={`md:mx-auto md:w-3/4 text-gatherly-blue text-4xl ${myFont.className}`}
+          <h3
+            className={`md:mx-auto md:w-3/4 text-gatherly-blue text-3xl ${myFont.className}`}
           >
             Notable Quotes from the interviews
-          </p>
+          </h3>
           <div
             className={`md:mx-auto md:w-3/4 flex flex-wrap justify-center  gap-y-8 text-gatherly-blue md:gap-x-8 text-xl md:text-3xl ${darkerGrotesqueBold.className} text-center`}
           >
@@ -597,9 +609,9 @@ export default function Gatherly() {
             </p>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               However
-            </p>
+            </h3>
             <p className={`text-2xl ${darkerGrotesque.className}`}>
               There was a consistent quotes about how the participants felt that
               the use online communities would be very helpful to them
@@ -624,9 +636,9 @@ export default function Gatherly() {
             </p>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               Persona
-            </p>
+            </h3>
 
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <div className="flex flex-col ">
@@ -693,9 +705,9 @@ export default function Gatherly() {
           </div>
           <ImageRow images={personaImages} />
           <div className="flex flex-col gap-y-14 md:mx-auto md:w-3/4">
-            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               Empathy Map
-            </p>
+            </h3>
 
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <div className="flex flex-col">
@@ -805,9 +817,9 @@ export default function Gatherly() {
           </div>
           <div className="flex flex-col md:mx-auto md:w-3/4">
             <div className="flex flex-1 gap-y-8 flex-col">
-              <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+              <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
                 Laddering
-              </p>
+              </h3>
 
               <div className={` text-2xl ${darkerGrotesque.className}`}>
                 <div className="flex flex-col gap-8">
@@ -861,9 +873,9 @@ export default function Gatherly() {
             <ZoomableImage image={ladder} />
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               Sketches of possible solutions
-            </p>
+            </h3>
 
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <div className="flex flex-col gap-8">
@@ -944,9 +956,9 @@ export default function Gatherly() {
             <ImageRow images={skethesImages} />
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               However
-            </p>
+            </h3>
 
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <div className="flex flex-col gap-8">
@@ -999,9 +1011,9 @@ export default function Gatherly() {
             </div>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               User Flows
-            </p>
+            </h3>
 
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <div className="flex flex-col gap-8">
@@ -1118,9 +1130,9 @@ export default function Gatherly() {
             </p>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               Wireframes
-            </p>
+            </h3>
 
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <div>
@@ -1150,9 +1162,9 @@ export default function Gatherly() {
             )}
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               Styleguide and UI elements
-            </p>
+            </h3>
 
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <div className="flex flex-col gap-8">
@@ -1206,9 +1218,9 @@ export default function Gatherly() {
             )}
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               High Fidelity Screens
-            </p>
+            </h3>
 
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <div className="flex flex-col ">
@@ -1259,9 +1271,9 @@ export default function Gatherly() {
             )}
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-4xl text-gatherly-blue ${myFont.className}`}>
+            <h3 className={`text-3xl text-gatherly-blue ${myFont.className}`}>
               Prototype
-            </p>
+            </h3>
 
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <p>
@@ -1313,6 +1325,7 @@ export default function Gatherly() {
             <iframe
               style={{ border: "1px solid rgba(0, 0, 0, 0.1);" }}
               className="w-full h-[40rem]"
+              title="Embedded Gatherly Figma Prototype"
               src="https://embed.figma.com/proto/f3XDj0RqNgIrPRiJyOnI2L/WireFrame-Capstone?page-id=40%3A985&node-id=2066-9590&node-type=frame&viewport=1533%2C-318%2C0.19&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2066%3A9590&show-proto-sidebar=1&embed-host=share"
               allowfullscreen
             ></iframe>
@@ -1364,9 +1377,9 @@ export default function Gatherly() {
           </div>
           <ImageViewer images={testImages} />
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+            <h2 className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Whats next .. ?
-            </p>
+            </h2>
             <div
               className={`flex flex-col gap-6 text-2xl ${darkerGrotesque.className}`}
             >

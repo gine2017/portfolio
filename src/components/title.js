@@ -8,12 +8,10 @@ export default function Title({
 }) {
   return (
     <div
-      className={` ${styles} flex justify-start border-b-4 border-black text-6xl`}
+      className={` ${styles} flex justify-start border-b-4 border-black text-4xl`}
       id={id}
     >
-      <span className={`${color} bg-white pb-8 ${myFont.className}`}>
-        {title}
-      </span>
+      <h2 className={`${color} bg-white pb-8 ${myFont.className}`}>{title}</h2>
     </div>
   );
 }

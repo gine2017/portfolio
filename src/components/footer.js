@@ -18,7 +18,7 @@ export default function Footer({ width }) {
             href="https://www.linkedin.com/in/regine-thimothee/"
             passHref={true}
             target="_blank"
-            className="rounded-full w-16 h-16 bg-orange flex justify-center items-center"
+            className="rounded-full w-16 h-16 bg-white flex justify-center items-center"
           >
             <div className="w-8 h-8 relative">
               <Image src={linkedInLogo} alt="LinkedIn logo" fill={true} />
@@ -27,7 +27,7 @@ export default function Footer({ width }) {
           <Link
             href="mailto:reginethimothee@gmail.com"
             passHref={true}
-            className="rounded-full w-16 h-16 bg-orange  flex justify-center items-center"
+            className="rounded-full w-16 h-16 bg-white  flex justify-center items-center"
           >
             <div className="w-8 h-8 relative">
               <Image src={emailLogo} alt="envelope icon" fill={true} />

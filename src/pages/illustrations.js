@@ -42,8 +42,8 @@ export default function Illustrations() {
   };
 
   const bgColorsClassname = [
-    "bg-purple",
     "bg-orange",
+    "bg-purple",
     "bg-light-blue",
     "bg-light-pink",
     "bg-red",

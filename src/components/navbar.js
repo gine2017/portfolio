@@ -8,7 +8,7 @@ export default function Navbar() {
   const currentPath = usePathname();
 
   return (
-    <div className="z-[80]">
+    <nav className="z-[80]">
       <Link className="fixed top-4 " href={"/"}>
         <div className="w-14 h-10 relative ml-16 ">
           <Image src={logo} alt="logo" fill={true} />
@@ -23,8 +23,8 @@ export default function Navbar() {
               href={"/"}
               className={`${
                 currentPath === "/"
-                  ? "active: underline underline-offset-8"
-                  : "text-slate-300 hover:text-purple"
+                  ? "active: underline underline-offset-8 p-2"
+                  : "text-[#597891] hover:text-purple"
               } hover:animate-bounce`}
             >
               home
@@ -35,20 +35,20 @@ export default function Navbar() {
               href={"/about"}
               className={`${
                 currentPath === "/about"
-                  ? "active: underline underline-offset-8"
-                  : "text-slate-300 hover:text-purple"
+                  ? "active: underline underline-offset-8 p-2"
+                  : "text-[#597891] hover:text-purple"
               } `}
             >
               about
             </Link>
           </li>
-          <li className="transition-transform text-slate-300 hover:-translate-y-1 hover:text-purple">
+          <li className="transition-transform text-[#597891] hover:-translate-y-1 hover:text-purple">
             <a href={"/files/Regine-Thimothee-Resume.pdf"} target="_blank">
               resume
             </a>
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 }

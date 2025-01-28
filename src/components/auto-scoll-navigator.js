@@ -63,7 +63,7 @@ export default function AutoScrollNavigator({ fontColor, sections }) {
             className={`hover:cursor-pointer ${
               active === elm.id
                 ? `text-${fontColor} ${darkerGrotesqueBold.className}`
-                : ""
+                : "text-[#597891]"
             }`}
             onClick={() => handleScroll(elm.id)}
           >

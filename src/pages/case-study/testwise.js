@@ -9,6 +9,7 @@ import Title from "@/components/title";
 import CaseStudyFooter from "@/components/case-study-footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AutoScrollNavigator from "@/components/auto-scoll-navigator";
+import Head from "next/head";
 
 import {
   faBookBookmark,
@@ -55,7 +56,12 @@ export default function TestWise() {
     setShowContent(state);
   };
 
-  const competitive = [airtable, asana, azure, jira];
+  const competitive = [
+    { img: airtable, altText: "Airtable competitive analysis" },
+    { img: asana, altText: "Asana competitive analysis" },
+    { img: azure, altText: "Azure competitive analysis" },
+    { img: jira, altText: " Jira competitive analysis" },
+  ];
   const wireframes = [
     wireframe_1,
     wireframe_2,
@@ -93,7 +99,10 @@ export default function TestWise() {
   };
 
   return (
-    <div>
+    <>
+      <Head>
+        <title>Test Wise Case Study</title>
+      </Head>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && (
         <Hero
@@ -113,10 +122,21 @@ export default function TestWise() {
           ) : (
             <Slider sliderData={createImageArray(highFidelity)} />
           )}
+          <h1
+            className={`flex justify-center text-testwise-blue ${myFont.className} text-6xl`}
+          >
+            Test Wise Case Study
+          </h1>
+
           <div className="flex flex-col gap-y-8 flex-1 md:mx-auto md:w-3/4">
-            <p className={` text-testwise-blue text-4xl ${myFont.className}`}>
+            <Title
+              title={"Project Insights and Client Needs"}
+              color="text-testwise-blue"
+              id="research"
+            />
+            <h3 className={` text-testwise-blue text-3xl ${myFont.className}`}>
               Problem Statement
-            </p>
+            </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
                 The{" "}
@@ -169,14 +189,12 @@ export default function TestWise() {
               </p>
             </div>
           </div>
-          {width >= 767 && (
-            <AutoScrollNavigator sections={steps} fontColor={"testwise-blue"} />
-          )}
+
           <div className="flex flex-col gap-y-10 md:gap-x-40 md:mx-auto md:w-3/4">
             <div className="flex flex-col gap-y-2 md:gap-y-8">
-              <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
+              <h3 className={`text-testwise-blue text-3xl ${myFont.className}`}>
                 My Role
-              </p>
+              </h3>
               <div className={` text-2xl ${darkerGrotesque.className}`}>
                 In one month, I collaborated with two designers to enhance Test
                 Wise by conducting UX research,wireframes, and creating
@@ -185,9 +203,9 @@ export default function TestWise() {
             </div>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
+            <h3 className={`text-testwise-blue text-3xl ${myFont.className}`}>
               Meeting the Client
-            </p>
+            </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
                 I collaborated with two designers to help{" "}
@@ -213,9 +231,9 @@ export default function TestWise() {
             </div>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
+            <h3 className={`text-testwise-blue text-3xl ${myFont.className}`}>
               Design Process
-            </p>
+            </h3>
             <div className="flex flex-col gap-y-4 md:flex-row justify-evenly">
               <div className="flex flex-col items-center">
                 <FontAwesomeIcon
@@ -266,6 +284,9 @@ export default function TestWise() {
               frames and a small prototype.
             </p>
           </div>
+          {width >= 767 && (
+            <AutoScrollNavigator sections={steps} fontColor={"testwise-blue"} />
+          )}
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <Title
               title={"Research"}
@@ -340,9 +361,9 @@ export default function TestWise() {
             </div>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
+            <h3 className={`text-testwise-blue text-3xl ${myFont.className}`}>
               Competitive Analysis
-            </p>
+            </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
                 After meeting with{" "}
@@ -473,9 +494,9 @@ export default function TestWise() {
             </div>
 
             <div className="flex flex-col gap-y-8 ">
-              <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
+              <h3 className={`text-testwise-blue text-3xl ${myFont.className}`}>
                 Low-fidelity Wireframes
-              </p>
+              </h3>
               <div className={`text-2xl ${darkerGrotesque.className}`}>
                 <p>
                   After meeting with{" "}
@@ -579,9 +600,9 @@ export default function TestWise() {
             </div>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
+            <h3 className={`text-testwise-blue text-3xl ${myFont.className}`}>
               High Fidelity Prototype
-            </p>
+            </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
                 Our team developed{" "}
@@ -729,13 +750,14 @@ export default function TestWise() {
           <iframe
             style={{ border: "1px solid rgba(0, 0, 0, 0.1);" }}
             className="w-full h-[40rem]"
+            title="Embedded Test Wise Requirement Dashboard Figma Prototype"
             src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FpODnwNo9vwRSEJSnxqJhdk%2Frequirement-dash-(case-study)%3Fpage-id%3D0%253A1%26node-id%3D42-1567%26viewport%3D-1206%252C-796%252C0.34%26t%3Di3WmacbvZgTFEXac-1%26scaling%3Dscale-down%26starting-point-node-id%3D42%253A1567"
             allowfullscreen
           ></iframe>
           <div className="flex flex-col gap-y-8 md:w-3/4 md:mx-auto">
-            <p className={`text-testwise-blue text-4xl ${myFont.className}`}>
+            <h3 className={`text-testwise-blue text-3xl ${myFont.className}`}>
               Crossing the finish line
-            </p>
+            </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
                 After presenting our final screens and prototype,{" "}
@@ -908,6 +930,6 @@ export default function TestWise() {
         </main>
       )}
       {showContent && <Footer width={width} />}
-    </div>
+    </>
   );
 }

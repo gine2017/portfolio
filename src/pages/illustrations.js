@@ -4,6 +4,7 @@ import MobileNav from "@/components/mobile-nav";
 import Image from "next/image";
 import Footer from "@/components/footer";
 import CaseStudyFooter from "@/components/case-study-footer";
+import Head from "next/head";
 
 import useWindowSize from "@/hooks/useWindowSize";
 import useIntersectionObserver from "@/hooks/userIntersectionObserver";
@@ -41,8 +42,8 @@ export default function Illustrations() {
   };
 
   const bgColorsClassname = [
-    "bg-purple",
     "bg-orange",
+    "bg-purple",
     "bg-light-blue",
     "bg-light-pink",
     "bg-red",
@@ -65,18 +66,21 @@ export default function Illustrations() {
   ];
 
   return (
-    <div>
+    <>
+      <Head>
+        <title>Illustrations Page</title>
+      </Head>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && (
         <main className="mx-auto w-80% flex flex-col gap-y-20 mt-4 md:mt-16 mb-48">
           <div className="flex flex-col gap-y-8 flex-1">
             <div className="mt-12 flex flex-row gap-x-4 items-center">
               <span className=" text-3xl md:text-4xl write">🖋️</span>
-              <p
+              <h1
                 className={` text-purple text-3xl md:text-5xl ${myFont.className}`}
               >
                 Illustrations
-              </p>
+              </h1>
             </div>
 
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -107,6 +111,6 @@ export default function Illustrations() {
         </main>
       )}
       {showContent && <Footer width={width} />}
-    </div>
+    </>
   );
 }

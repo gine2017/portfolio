@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
-import Link from "next/link";
 import {
   myFont,
   darkerGrotesque,
@@ -145,7 +144,7 @@ export default function Gatherly() {
   };
 
   return (
-    <div>
+    <>
       <Head>
         <title> Gatherly Case Study Page</title>
       </Head>
@@ -1450,6 +1449,6 @@ export default function Gatherly() {
         </main>
       )}
       {showContent && <Footer width={width} />}
-    </div>
+    </>
   );
 }

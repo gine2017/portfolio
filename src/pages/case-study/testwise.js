@@ -128,7 +128,7 @@ export default function TestWise() {
               Problem Statement
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
-              <p>
+              <p className="mb-2">
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
@@ -178,7 +178,10 @@ export default function TestWise() {
                   previous design attempt
                 </span>{" "}
                 for the requirements dashboard didn't align with the president's
-                vision and faced delays. Through a partnership between my{" "}
+                vision and faced delays.
+              </p>
+              <p>
+                Through a partnership between my{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >

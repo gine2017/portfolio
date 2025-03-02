@@ -97,6 +97,10 @@ module.exports = {
         rotateByNeg45deg: "rotateByNeg45deg 0.25s linear forwards",
         moveAcrossScreen: "moveAcrossScreen 10s linear infinite",
       },
+      fontSize: {
+        h4Size: "1.7rem",
+        h5Size: "1.55rem",
+      },
     },
   },
   plugins: [],

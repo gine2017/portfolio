@@ -47,6 +47,7 @@ import screen16 from "../../../assets/capstone/naturalu/screens/screen16.png";
 import screen17 from "../../../assets/capstone/naturalu/screens/screen17.png";
 import screen18 from "../../../assets/capstone/naturalu/screens/screen18.png";
 import screen19 from "../../../assets/capstone/naturalu/screens/screen19.png";
+import screen20 from "../../../assets/capstone/naturalu/screens/screen20.png";
 
 import ImageRow from "@/components/image-row";
 import ZoomableImage from "@/components/zoomable-image";
@@ -72,6 +73,7 @@ const highFidelityImages = [
   screen17,
   screen18,
   screen19,
+  screen20,
 ];
 
 const personaImages = [persona1, persona2];
@@ -153,73 +155,89 @@ export default function NaturalU() {
           <div className="flex flex-col gap-y-8 md:flex-row gap-x-16 ">
             <div className="flex flex-col gap-y-8 flex-1">
               <h2
-                className={` text-naturalu-purple text-3xl ${myFont.className}`}
+                className={`text-naturalu-purple text-3xl ${myFont.className}`}
               >
                 Problem
               </h2>
               <p className={`text-2xl ${darkerGrotesque.className}`}>
-                There is a significant{" "}
+                My journey with{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >
-                  gap in knowledge
-                </span>{" "}
-                about proper hair care, compounded by{" "}
-                <span
-                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
-                >
-                  societal stigma
-                </span>
-                . This is a{" "}
-                <span
-                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
-                >
-                  personal project
-                </span>{" "}
-                I{" "}
-                <span
-                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
-                >
-                  founded
+                  damaged hair
                 </span>{" "}
                 and{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >
-                  began developing
+                  loss
                 </span>{" "}
-                to address these issues. I grew up feeling pressured to fit in,
-                leading to{" "}
+                from{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >
                   chemical straightening
                 </span>{" "}
-                that damaged my hair and caused{" "}
+                highlighted two critical issues:{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >
-                  hair loss
-                </span>
-                . This experience taught me the harm of conforming to external
-                expectations. My goal is to create a space where individuals can
-                learn about their{" "}
-                <span
-                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
-                >
-                  natural hair
+                  insufficient education
                 </span>{" "}
-                and embrace their true selves with{" "}
+                about{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >
-                  confidence
+                  natural hair care
+                </span>{" "}
+                and widespread{" "}
+                <span
+                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
+                >
+                  societal pressure
+                </span>{" "}
+                to alter one's natural appearance. Both{" "}
+                <span
+                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
+                >
+                  personally
+                </span>{" "}
+                and{" "}
+                <span
+                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
+                >
+                  communally
                 </span>
-                , free from{" "}
+                , these challenges create cycles of hair damage and diminished{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >
-                  fear
+                  self-acceptance
+                </span>
+                . This project creates an{" "}
+                <span
+                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
+                >
+                  informative
+                </span>
+                ,{" "}
+                <span
+                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
+                >
+                  supportive space
+                </span>{" "}
+                where people can learn about their natural hair and embrace
+                their{" "}
+                <span
+                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
+                >
+                  authentic selves
+                </span>{" "}
+                without{" "}
+                <span
+                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
+                >
+                  judgment
                 </span>{" "}
                 or{" "}
                 <span

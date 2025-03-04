@@ -38,9 +38,6 @@ import userflow from "../../../assets/capstone/gatherly/userflow.png";
 import styleguide_1 from "../../../assets/capstone/gatherly/styleguide/styleguide_1.png";
 import styleguide_2 from "../../../assets/capstone/gatherly/styleguide/styleguide_2.png";
 import styleguide_3 from "../../../assets/capstone/gatherly/styleguide/styleguide_3.png";
-import styleguide_4 from "../../../assets/capstone/gatherly/styleguide/styleguide_4.png";
-import styleguide_5 from "../../../assets/capstone/gatherly/styleguide/styleguide_5.png";
-import styleguide_6 from "../../../assets/capstone/gatherly/styleguide/styleguide_6.png";
 
 import test1 from "../../../assets/capstone/gatherly/test/test_1.png";
 import test2 from "../../../assets/capstone/gatherly/test/test_2.png";
@@ -51,30 +48,34 @@ import wireframe_3 from "../../../assets/capstone/gatherly/wireframes/wireframe_
 import wireframe_4 from "../../../assets/capstone/gatherly/wireframes/wireframe_4.png";
 import wireframe_5 from "../../../assets/capstone/gatherly/wireframes/wireframe_5.png";
 import wireframe_6 from "../../../assets/capstone/gatherly/wireframes/wireframe_6.png";
+import wireframe_7 from "../../../assets/capstone/gatherly/wireframes/wireframe_7.png";
+import wireframe_8 from "../../../assets/capstone/gatherly/wireframes/wireframe_8.png";
+import wireframe_9 from "../../../assets/capstone/gatherly/wireframes/wireframe_9.png";
 
-import highFidelity1 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-1.png";
-import highFidelity2 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-2.png";
-import highFidelity3 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-3.png";
-import highFidelity4 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-4.png";
-import highFidelity5 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-5.png";
-import highFidelity6 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-6.png";
-import highFidelity8 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-8.png";
-import highFidelity9 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-9.png";
-import highFidelity10 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-10.png";
-import highFidelity11 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-11.png";
-import highFidelity12 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-12.png";
-import highFidelity13 from "../../../assets/capstone/gatherly/high-fidelity/high-fideity-13.png";
+import highFidelity1 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity1.png";
+import highFidelity2 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity2.png";
+import highFidelity3 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity3.png";
+import highFidelity4 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity4.png";
+import highFidelity5 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity5.png";
+import highFidelity6 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity6.png";
+import highFidelity7 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity7.png";
+import highFidelity8 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity8.png";
+import highFidelity9 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity9.png";
+import highFidelity10 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity10.png";
+import highFidelity11 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity11.png";
+import highFidelity12 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity12.png";
+import highFidelity13 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity13.png";
+import highFidelity14 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity14.png";
+import highFidelity15 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity15.png";
+import highFidelity16 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity16.png";
 
 const personaImages = [persona1, persona2];
 const surveyImages = [survey1, survey2, survey3, survey4];
 const skethesImages = [cultureSketch, directorySketch];
 const styleguideImages = [
-  styleguide_1,
-  styleguide_2,
-  styleguide_3,
-  styleguide_4,
-  styleguide_5,
-  styleguide_6,
+  { img: styleguide_1, altText: "Explanation of color palette" },
+  { img: styleguide_2, altText: "Typography" },
+  { img: styleguide_3, altText: "UI Components" },
 ];
 
 const testImages = [
@@ -89,6 +90,9 @@ const wireframeImages = [
   wireframe_4,
   wireframe_5,
   wireframe_6,
+  wireframe_7,
+  wireframe_8,
+  wireframe_9,
 ];
 
 const highFidelityImages = [
@@ -98,12 +102,16 @@ const highFidelityImages = [
   highFidelity4,
   highFidelity5,
   highFidelity6,
+  highFidelity7,
   highFidelity8,
   highFidelity9,
   highFidelity10,
   highFidelity11,
   highFidelity12,
   highFidelity13,
+  highFidelity14,
+  highFidelity15,
+  highFidelity16,
 ];
 const stats = [
   {
@@ -184,38 +192,37 @@ export default function Gatherly() {
                 >
                   first case study
                 </span>
-                , heavily{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  focused on research
-                </span>
-                , and completed during the{" "}
+                , completed during the{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
                   Springboard BootCamp
                 </span>
-                . Navigating adulthood has become increasingly challenging for
-                young adults, especially{" "}
+                , where I{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  focused heavily on research
+                </span>{" "}
+                to understand a critical issue: Young adults today struggle to{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  build meaningful connections
+                </span>
+                , especially{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
                   post-COVID-19
                 </span>
-                .
+                .{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
                   Social isolation
                 </span>{" "}
-                and{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  disconnection
-                </span>{" "}
-                have heightened feelings of{" "}
+                has intensified feelings of{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
@@ -237,15 +244,22 @@ export default function Gatherly() {
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
-                  communication
+                  communication abilities
                 </span>
-                . This project aimed to explore solutions to help young adults{" "}
+                . This project explored how{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
-                  build meaningful connections
+                  technology
                 </span>{" "}
-                and navigate this pivotal phase of life.
+                might help young adults overcome these barriers to build
+                meaningful connections during this{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  pivotal life stage
+                </span>
+                .
               </p>
             </div>
           </div>
@@ -296,18 +310,12 @@ export default function Gatherly() {
                 >
                   unbiased approach
                 </span>
-                . This phase was critical in understanding the problem before
-                moving to{" "}
+                . This methodical exploration was essential to deeply understand
+                the problem before moving to{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
-                  ideation
-                </span>{" "}
-                and{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  design
+                  solution ideation
                 </span>
                 .
               </p>
@@ -315,18 +323,28 @@ export default function Gatherly() {
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
-                  Secondary Research
-                </span>{" "}
-                (e.g., Pew Research) revealed:
+                  Secondary Research Findings
+                </span>
+                :
               </p>
               <ul className="list-disc ml-12">
+                <li>
+                  My analysis of{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Pew Research studies
+                  </span>{" "}
+                  revealed concerning trends about young adults' social
+                  wellbeing.
+                </li>
                 <li>
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
                     Psychological stress
                   </span>{" "}
-                  among young adults has risen, exacerbated by the{" "}
+                  among young adults has risen significantly, exacerbated by the{" "}
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
@@ -335,7 +353,7 @@ export default function Gatherly() {
                   .
                 </li>
                 <li>
-                  Beyond the pandemic, young adults struggle with{" "}
+                  Beyond the pandemic, young adults consistently struggle with{" "}
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
@@ -365,7 +383,7 @@ export default function Gatherly() {
                   >
                     Secondary research
                   </span>{" "}
-                  validated the problem’s scope and confirmed stressors extend
+                  validated the problem's scope and confirmed stressors extend
                   beyond the pandemic.
                 </li>
                 <li>
@@ -374,7 +392,13 @@ export default function Gatherly() {
                   >
                     Primary research
                   </span>{" "}
-                  will uncover personal stories and pain points, driving{" "}
+                  through{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    surveys and interviews
+                  </span>{" "}
+                  uncovered personal stories and pain points, driving{" "}
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
@@ -384,9 +408,19 @@ export default function Gatherly() {
                 </li>
               </ul>
               <p>
-                This combined approach ensures the solution addresses the core
-                challenges effectively. Below are key statistical insights from
-                my{" "}
+                This combined approach ensured the solution would address both{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  widespread trends
+                </span>{" "}
+                and{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  individual experiences
+                </span>
+                . Below are key statistical insights from my{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
@@ -421,6 +455,12 @@ export default function Gatherly() {
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
+                    social disconnection
+                  </span>{" "}
+                  and{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
                     stress
                   </span>
                   . This approach helped me:
@@ -439,15 +479,21 @@ export default function Gatherly() {
                     <span
                       className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                     >
-                      pain points, motivations
+                      specific pain points
+                    </span>
+                    ,{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      motivations
                     </span>
                     , and{" "}
                     <span
                       className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                     >
                       behavior patterns
-                    </span>
-                    .
+                    </span>{" "}
+                    in social connection.
                   </li>
                   <li>
                     Align design decisions with{" "}
@@ -466,7 +512,88 @@ export default function Gatherly() {
                   >
                     16 responses
                   </span>
-                  , offering valuable insights that shaped the design process.
+                  , revealing critical insights about young adults'{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    post-college experiences
+                  </span>
+                  :
+                </p>
+                <p>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Key Findings:
+                  </span>
+                </p>
+                <ul className="list-disc ml-12">
+                  <li>
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      56%
+                    </span>{" "}
+                    of participants reported their routines changed{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      drastically after college
+                    </span>
+                    .
+                  </li>
+                  <li>
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      All respondents
+                    </span>{" "}
+                    experienced{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      anxiety
+                    </span>{" "}
+                    after leaving college, distributed evenly (
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      31% each
+                    </span>
+                    ) across very anxious, mildly anxious, and a little bit
+                    anxious.
+                  </li>
+                  <li>
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      56%
+                    </span>{" "}
+                    of participants engaged in social activities only{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      1-3 times per week
+                    </span>
+                    .
+                  </li>
+                </ul>
+                <p>
+                  These findings confirmed that post-college transition
+                  represents a{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    crucial intervention point
+                  </span>{" "}
+                  where young adults need support establishing new social
+                  connections while addressing their{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    anxiety
+                  </span>{" "}
+                  around relationship formation.
                 </p>
               </div>
             </div>
@@ -759,7 +886,6 @@ export default function Gatherly() {
           </div>
           <div className="flex flex-col gap-y-4 md:mx-auto md:w-3/4">
             <Title title={"Ideate"} color="text-gatherly-blue" id="ideate" />
-
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <div className="flex flex-col">
                 <p>
@@ -770,13 +896,44 @@ export default function Gatherly() {
                     strong desire among users
                   </span>{" "}
                   to connect with people who share similar backgrounds and
-                  interests. This insight guided me into the{" "}
+                  interests. The{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    complexity of emotions
+                  </span>{" "}
+                  revealed in my interviews, from{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    post-college anxiety
+                  </span>{" "}
+                  to the desire for{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    culturally similar connections
+                  </span>
+                  , suggested that surface-level design solutions wouldn't
+                  address users' deeper needs. These insights guided me into the{" "}
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
                     ideation phase
                   </span>
-                  , focused on crafting a viable solution.
+                  , focused on crafting a solution that addressed both{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    practical
+                  </span>{" "}
+                  and{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    emotional aspects
+                  </span>{" "}
+                  of connection.
                 </p>
                 <br />
                 <p className="font-bold">Key techniques used:</p>
@@ -787,7 +944,8 @@ export default function Gatherly() {
                     >
                       Laddering
                     </span>
-                    : To uncover deeper user motivations.
+                    : To uncover deeper user motivations beyond initial
+                    statements.
                   </li>
                   <li>
                     <span
@@ -795,7 +953,8 @@ export default function Gatherly() {
                     >
                       Preliminary Sketching
                     </span>
-                    : To visualize potential solutions.
+                    : To visualize potential solutions and test different
+                    interaction models.
                   </li>
                   <li>
                     <span
@@ -803,13 +962,26 @@ export default function Gatherly() {
                     >
                       User Flows
                     </span>
-                    : To map the user journey and structure the design process.
+                    : To map the user journey and structure the design process
+                    with user goals at the center.
                   </li>
                 </ul>
                 <br />
                 <p>
-                  These methods ensured the final design directly addressed user
-                  needs and motivations.
+                  These methods ensured the final design directly addressed not
+                  just what users{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    said they wanted
+                  </span>
+                  , but what they{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    truly needed
+                  </span>{" "}
+                  to form meaningful connections.
                 </p>
               </div>
             </div>
@@ -819,7 +991,6 @@ export default function Gatherly() {
               <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
                 Laddering
               </h3>
-
               <div className={` text-2xl ${darkerGrotesque.className}`}>
                 <div className="flex flex-col gap-8">
                   <p>
@@ -834,7 +1005,7 @@ export default function Gatherly() {
                     <span
                       className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                     >
-                      motivations
+                      deeper motivations
                     </span>{" "}
                     and{" "}
                     <span
@@ -845,26 +1016,53 @@ export default function Gatherly() {
                     .
                   </p>
                   <p>
-                    Using{" "}
+                    Through{" "}
                     <span
                       className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                     >
                       laddering
                     </span>
-                    , I uncovered the deeper reasons behind their actions. As
-                    the sole{" "}
+                    , I uncovered that users' preference for{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      'smaller groups'
+                    </span>{" "}
+                    actually reflected deeper needs for{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      recognition
+                    </span>{" "}
+                    and{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      validation
+                    </span>
+                    . As the sole{" "}
                     <span
                       className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                     >
                       UI/UX designer
                     </span>{" "}
-                    {`on this project, I relied on this method to reveal users'
-                    core motivations and values, ensuring my design decisions
-                    aligned with their needs.`}
+                    {`on this project, this method revealed core values that directly shaped Gatherly's community size limits and matching features.`}
                   </p>
                   <p>
-                    This approach fostered meaningful connections and enhanced
-                    the user experience.
+                    This approach ensured design decisions addressed users'{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      fundamental emotional needs
+                    </span>{" "}
+                    rather than surface-level preferences, creating a foundation
+                    for{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      meaningful connections
+                    </span>
+                    .
                   </p>
                 </div>
               </div>
@@ -875,282 +1073,364 @@ export default function Gatherly() {
             <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               Sketches of possible solutions
             </h3>
-
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <div className="flex flex-col gap-8">
                 <p>
-                  To address the need for connection among young adults, I
-                  explored solutions that connect individuals based on shared{" "}
+                  Building on insights from my{" "}
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
-                    backgrounds
+                    research
                   </span>{" "}
                   and{" "}
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
-                    interests
+                    laddering process
                   </span>
-                  . User interviews revealed that many felt online communities
-                  could help combat{" "}
+                  , I explored solutions addressing young adults' need for
+                  meaningful connection. The interviews revealed not just a
+                  desire for connection, but specifically for communities where
+                  users feel{" "}
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
-                    loneliness
+                    recognized
                   </span>{" "}
                   and{" "}
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
-                    stress
-                  </span>
-                  .
+                    validated
+                  </span>{" "}
+                  through shared experiences.
                 </p>
-                <div className="flex flex-col gap-4">
-                  <p>
+
+                <p>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Solution Concepts:
+                  </span>
+                </p>
+
+                <ul className="list-disc ml-12">
+                  <li>
                     <span
                       className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                     >
-                      Directory App
-                    </span>
-                    : Connects users with{" "}
+                      Directory App:
+                    </span>{" "}
+                    Connects users with{" "}
                     <span
                       className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                     >
                       mental health specialists
                     </span>
-                    , providing essential support and offering a platform to
-                    alleviate{" "}
+                    , providing essential support for managing stress and
+                    anxiety that{" "}
                     <span
                       className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                     >
-                      stress
+                      58%
                     </span>{" "}
-                    beyond just online communities.
-                  </p>
-                  <p>
+                    of young adults reported experiencing since COVID-19.
+                  </li>
+
+                  <li>
                     <span
                       className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                     >
-                      Cultural App
-                    </span>
-                    : Allows users to join{" "}
+                      Cultural Community App:
+                    </span>{" "}
+                    Enables users to join{" "}
                     <span
                       className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                     >
-                      groups based on cultural backgrounds
+                      smaller, intimate groups
+                    </span>{" "}
+                    based on cultural backgrounds and interests, directly
+                    addressing the interview insight that users would "be more
+                    comfortable in{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      smaller, familiar groups
                     </span>
-                    , facilitating networking and relationship-building with
-                    those who share similar experiences.
-                  </p>
-                </div>
+                    " where they can feel recognized.
+                  </li>
+                </ul>
+
                 <p>
-                  These concepts were developed to directly address the insights
-                  from my research, ensuring users could form meaningful
-                  connections.
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Research Connections:
+                  </span>
                 </p>
+
+                <ul className="list-disc ml-12">
+                  <li>
+                    These concepts directly address{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      isolation
+                    </span>{" "}
+                    that{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      56%
+                    </span>{" "}
+                    of survey participants reported experiencing
+                  </li>
+
+                  <li>
+                    Both solutions focus on the{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      deeper emotional needs
+                    </span>{" "}
+                    uncovered during laddering
+                  </li>
+
+                  <li>
+                    Each concept offers different approaches to fostering{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      meaningful relationships
+                    </span>{" "}
+                    among young adults
+                  </li>
+                </ul>
               </div>
             </div>
             <ImageRow images={skethesImages} />
           </div>
-          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
-              However
-            </h3>
 
-            <div className={`text-2xl ${darkerGrotesque.className}`}>
-              <div className="flex flex-col gap-8">
-                <p>
-                  User interviews highlighted the need for a{" "}
-                  <span
-                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    cultural app
-                  </span>{" "}
-                  to address loneliness and foster{" "}
-                  <span
-                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    connections
-                  </span>
-                  . This led to the idea of a solution where users can join
-                  groups based on{" "}
-                  <span
-                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    shared cultural identities
-                  </span>
-                  , common{" "}
-                  <span
-                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    interests
-                  </span>
-                  , and{" "}
-                  <span
-                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    support networks
-                  </span>
-                  .
-                </p>
-                <p>
-                  Expanding group options aligns with user feedback on the
-                  importance of online communities, making the cultural app a
-                  key tool for{" "}
-                  <span
-                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    meaningful connections
-                  </span>{" "}
-                  and supporting young adults.
-                </p>
-              </div>
-            </div>
-          </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               User Flows
             </h3>
-
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <div className="flex flex-col gap-8">
                 <p>
-                  Understanding the role of community in managing emotional
-                  stress, I visualized actions for my persona,{" "}
+                  After evaluating both concepts, the{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Cultural Community App
+                  </span>{" "}
+                  emerged as the stronger solution, directly addressing user
+                  insights about finding{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    comfort
+                  </span>{" "}
+                  through shared{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    cultural backgrounds
+                  </span>{" "}
+                  during life transitions.
+                </p>
+
+                <p>
+                  I visualized how my persona,{" "}
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
                     Camile
                   </span>
-                  , in navigating adulthood.
+                  , would navigate the app as she adjusts to post-college life.
+                  The community app design allows users to:
                 </p>
+
+                <ul className="list-disc ml-12">
+                  <li>
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      Form intimate groups
+                    </span>{" "}
+                    based on cultural identity or interests, addressing the
+                    deeper need for recognition uncovered in laddering
+                  </li>
+
+                  <li>
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      Interact within communities
+                    </span>{" "}
+                    through discussions and support
+                  </li>
+
+                  <li>
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      Organize events
+                    </span>{" "}
+                    to transform online connections into in-person relationships
+                  </li>
+                </ul>
+
                 <p>
-                  I designed an{" "}
-                  <span
-                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                  >
-                    online group community app
-                  </span>{" "}
-                  that allows users to:
-                  <ul className="list-disc ml-12">
-                    <li>
-                      <span
-                        className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                      >
-                        Form
-                      </span>{" "}
-                      and{" "}
-                      <span
-                        className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                      >
-                        interact
-                      </span>{" "}
-                      with groups
-                    </li>
-                    <li>
-                      <span
-                        className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                      >
-                        Organize events
-                      </span>
-                    </li>
-                  </ul>
-                </p>
-                <p>
-                  Expanding on the cultural group concept, I included broader
-                  connection options to meet user needs. Using insights from
-                  research, I created{" "}
+                  I created{" "}
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
                     user flows
                   </span>{" "}
-                  that show how Camile and others can engage with these features
-                  to foster meaningful connections and reduce loneliness.
+                  mapping Camile's journey to discover, join, and engage with
+                  these communities. These flows ensured the design would help
+                  overcome the connection barriers that{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    46%
+                  </span>{" "}
+                  of young adults struggle with, according to my research.
                 </p>
               </div>
             </div>
+
             <ZoomableImage image={userflow} />
           </div>
           <div className="flex flex-col gap-y-4 md:mx-auto md:w-3/4">
             <Title title={"Design"} color="text-gatherly-blue" id="design" />
             <p className={` text-2xl ${darkerGrotesque.className}`}>
-              In this stage, I{" "}
               <span
                 className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
               >
-                initiate
+                Translating research insights
               </span>{" "}
-              the{" "}
+              into a tangible product, I began designing an interface that would
+              address young adults' need for{" "}
               <span
                 className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
               >
-                creation
-              </span>{" "}
-              and{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                development
-              </span>{" "}
-              of{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                visual components
-              </span>{" "}
-              based on my{" "}
-              <span
-                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-              >
-                initial sketches
+                meaningful connections
               </span>
-              . I start by crafting{" "}
+              . My process moved from{" "}
               <span
                 className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
               >
                 wireframes
-              </span>
-              , followed by the construction of a{" "}
+              </span>{" "}
+              establishing core functionality, through a{" "}
               <span
                 className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
               >
-                style guide
+                unified style guide
               </span>
-              , and ultimately produce{" "}
+              , to{" "}
               <span
                 className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
               >
                 high-fidelity screens
               </span>
-              .
+              . Each step was guided by the{" "}
+              <span
+                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+              >
+                emotional
+              </span>{" "}
+              and{" "}
+              <span
+                className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+              >
+                practical needs
+              </span>{" "}
+              identified in my research.
             </p>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               Wireframes
             </h3>
-
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <div>
                 <p>
-                  With a clear understanding of the user and key features, I
-                  created{" "}
+                  With a clear understanding of{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    young adults' challenges
+                  </span>{" "}
+                  in forming connections, I created{" "}
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
                     low-fidelity wireframes
                   </span>{" "}
-                  {`to define the app's structure. Using insights from`}{" "}
+                  to define Gatherly's structure. These wireframes specifically
+                  addressed key user needs by:
+                </p>
+
+                <ul className="list-disc ml-12 mt-4">
+                  <li>
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      Simplifying group discovery
+                    </span>{" "}
+                    to overcome the{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      46%
+                    </span>{" "}
+                    of young adults' difficulty in initiating relationships
+                  </li>
+
+                  <li>
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      Creating intimate group spaces
+                    </span>{" "}
+                    that fulfilled the desire for recognition and validation
+                    uncovered during{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      laddering
+                    </span>
+                  </li>
+
+                  <li>
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      Designing event organization features
+                    </span>{" "}
+                    to facilitate the transition from online to in-person
+                    connections
+                  </li>
+                </ul>
+
+                <p className="mt-4">
+                  The wireframe structure emerged directly from my{" "}
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
                     user flows
+                  </span>
+                  , ensuring each screen supported{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Camile's journey
                   </span>{" "}
-                  and sketches, I ensured the wireframes aligned with user needs
-                  and expectations.
+                  from discovering relevant communities to actively
+                  participating in meaningful group interactions.
                 </p>
               </div>
             </div>
@@ -1164,13 +1444,24 @@ export default function Gatherly() {
             <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               Styleguide and UI elements
             </h3>
-
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <div className="flex flex-col gap-8">
                 <p>
-                  After defining key screens for Gatherly, I focused on branding
-                  and UI components to align with its vision of fostering
-                  connections.
+                  After defining the key screens for Gatherly, I developed a{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    visual identity
+                  </span>{" "}
+                  that would support young adults seeking connection during
+                  transitional life stages. My color and typography choices
+                  directly addressed the{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    emotional needs
+                  </span>{" "}
+                  revealed in my research:
                 </p>
                 <ul className="list-disc ml-12">
                   <li>
@@ -1179,8 +1470,14 @@ export default function Gatherly() {
                     >
                       Blue
                     </span>{" "}
-                    was chosen as the primary color for trust and calmness,
-                    promoting a sense of belonging and reducing stress.
+                    was chosen as the primary color for its associations with
+                    trust and calmness, helping address the anxiety that{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      31%
+                    </span>{" "}
+                    of survey respondents reported experiencing after college.
                   </li>
                   <li>
                     <span
@@ -1189,12 +1486,23 @@ export default function Gatherly() {
                       Purple
                     </span>
                     , as the secondary color, symbolizes introspection and
-                    independence, encouraging emotional growth and community
-                    interaction.
+                    independence, qualities that support users as they navigate
+                    new social connections while maintaining their identity.
                   </li>
                   <li>
-                    These colors create a welcoming, supportive experience that
-                    reduces isolation.
+                    The color palette creates a{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      welcoming, supportive environment
+                    </span>{" "}
+                    that visually counteracts the isolation{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      56%
+                    </span>{" "}
+                    of participants experienced.
                   </li>
                 </ul>
                 <p>
@@ -1204,29 +1512,41 @@ export default function Gatherly() {
                   >
                     Poppins
                   </span>{" "}
-                  for typography, a modern sans-serif font that enhances
-                  legibility and approachability, reinforcing the app’s goal of
-                  fostering community and comfort.
+                  as the primary typeface, a modern, approachable sans-serif
+                  that enhances legibility across devices while conveying the{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    friendly, supportive community spirit
+                  </span>{" "}
+                  that interview participants expressed wanting in online
+                  groups.
                 </p>
               </div>
             </div>
-            {width <= 767 ? (
-              <MobileSlider sliderData={createImageArray(styleguideImages)} />
-            ) : (
-              <Slider sliderData={createImageArray(styleguideImages)} />
-            )}
+            <ImageViewer images={styleguideImages} />
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               High Fidelity Screens
             </h3>
-
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <div className="flex flex-col ">
                 <p>
-                  Based on research and ideation, I created the final
-                  high-fidelity screens, ensuring each design decision was
-                  aligned with user needs and insights.
+                  The final{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    high-fidelity screens
+                  </span>{" "}
+                  translate research insights into a cohesive user experience
+                  that directly addresses young adults'{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    connection challenges
+                  </span>
+                  . Key features include:
                 </p>
                 <br />
                 <ul className="list-disc ml-12">
@@ -1234,32 +1554,63 @@ export default function Gatherly() {
                     <span
                       className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                     >
-                      Group creation and joining
+                      Culturally-focused group discovery and creation
                     </span>
-                    , fostering connections based on interests and backgrounds.
+                    , responding to interview feedback that users 'would love to
+                    connect to people with{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      similar cultural backgrounds
+                    </span>
+                    '
                   </li>
                   <li>
                     <span
                       className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                     >
-                      Event creation and participation
+                      Intimate community spaces
+                    </span>{" "}
+                    with limited membership, addressing the preference for '
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      smaller, familiar groups
                     </span>
-                    , encouraging active community involvement.
+                    ' uncovered during laddering
                   </li>
                   <li>
                     <span
                       className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                     >
-                      In-app chat
+                      Streamlined event organization
+                    </span>{" "}
+                    to help transition online relationships to in-person
+                    connections, combating the limited social engagement (
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      1-3 times weekly
                     </span>
-                    , enabling direct communication among users.
+                    ) reported by 56% of survey participants
                   </li>
                 </ul>
                 <br />
                 <p>
-                  These features address emotional stress, providing a
-                  supportive environment for young adults to build community and
-                  belonging.
+                  Each screen was designed to reduce{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    barriers to meaningful connection
+                  </span>{" "}
+                  while providing the recognition and validation users sought,
+                  creating a supportive environment where young adults can build{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    community
+                  </span>{" "}
+                  during post-college transitions.
                 </p>
               </div>
             </div>
@@ -1273,53 +1624,88 @@ export default function Gatherly() {
             <h3 className={`text-3xl text-gatherly-blue ${myFont.className}`}>
               Prototype
             </h3>
-
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <p>
-                After the{" "}
+                With{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
-                  research
-                </span>
-                ,{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  ideation
-                </span>
-                , and{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  design
+                  research insights
                 </span>{" "}
-                phases, I created a prototype highlighting essential user
-                actions, such as:
+                and{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  design decisions
+                </span>{" "}
+                aligned, I created an{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  interactive prototype
+                </span>{" "}
+                that brings Gatherly's core functionality to life. The prototype
+                demonstrates how users can:
               </p>
               <ul className="list-disc pl-5 mt-3">
                 <li>
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
-                    Creating groups
+                    Discover and create cultural groups
                   </span>
+                  , addressing the{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    46%
+                  </span>{" "}
+                  of young adults who struggle with initiating relationships and
+                  the expressed desire for culturally-similar connections
                 </li>
                 <li>
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
-                    Organizing events
-                  </span>
+                    Join intimate communities
+                  </span>{" "}
+                  with built-in conversation features, fostering the sense of
+                  recognition and validation uncovered during laddering
                 </li>
                 <li>
                   <span
                     className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                   >
-                    Exploring communities
+                    Organize and participate in events
                   </span>
+                  , helping transition online connections to in-person
+                  relationships, combating the limited social engagement
+                  reported by{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    56%
+                  </span>{" "}
+                  of survey participants
                 </li>
               </ul>
+              <p className="mt-3">
+                The prototype bridges the gap between concept and
+                implementation, allowing users to experience how Gatherly
+                creates{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  meaningful connections
+                </span>{" "}
+                through a design that's responsive to their{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  emotional and practical needs
+                </span>{" "}
+                during post-college transitions.
+              </p>
             </div>
             <iframe
               style={{ border: "1px solid rgba(0, 0, 0, 0.1);" }}
@@ -1331,16 +1717,27 @@ export default function Gatherly() {
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <Title title={"Test"} color="text-gatherly-blue" id="test" />
-
             <div className={` text-2xl ${darkerGrotesque.className}`}>
               <div className="flex flex-col gap-6">
                 <p>
-                  I conducted usability tests with 10 diverse users after the
-                  first iteration of high-fidelity screens to improve
-                  functionality. Tests focused on key flows like creating
-                  groups, organizing events, and messaging members. Feedback led
-                  to these refinements:
+                  To validate my design decisions, I conducted{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    usability tests
+                  </span>{" "}
+                  with 10 diverse participants, focusing on how well the
+                  prototype addressed the{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    connection challenges
+                  </span>{" "}
+                  identified in my research. Participants tested key flows like
+                  creating cultural groups, organizing events, and engaging with
+                  community members.
                 </p>
+                <p>User feedback led to several important refinements:</p>
                 <ul className="list-disc ml-12">
                   <li>
                     <span
@@ -1348,15 +1745,24 @@ export default function Gatherly() {
                     >
                       Refined navigation bar
                     </span>{" "}
-                    for clearer elements.
+                    to create clearer pathways to community discovery,
+                    addressing the difficulty{" "}
+                    <span
+                      className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                    >
+                      46%
+                    </span>{" "}
+                    of young adults face in initiating connections
                   </li>
                   <li>
                     <span
                       className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                     >
-                      Redesigned pages
+                      Redesigned group pages
                     </span>{" "}
-                    for better clarity.
+                    to better highlight cultural elements and shared interests,
+                    reinforcing the sense of belonging users sought in "smaller,
+                    familiar groups"
                   </li>
                   <li>
                     <span
@@ -1364,12 +1770,20 @@ export default function Gatherly() {
                     >
                       Adjusted UI elements
                     </span>{" "}
-                    to improve visibility and prevent content blocking.
+                    to improve visibility of event creation features,
+                    encouraging the transition from online to in-person
+                    interactions that survey participants lacked
                   </li>
                 </ul>
                 <p>
-                  These updates improved usability, ensuring seamless navigation
-                  and interaction.
+                  These refinements enhanced the{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    user experience
+                  </span>{" "}
+                  by directly addressing the emotional and practical barriers to
+                  connection uncovered throughout my research.
                 </p>
               </div>
             </div>
@@ -1383,47 +1797,89 @@ export default function Gatherly() {
               className={`flex flex-col gap-6 text-2xl ${darkerGrotesque.className}`}
             >
               <p>
-                This is my{" "}
+                As my{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
-                  first case study
+                  first comprehensive case study
                 </span>
-                , and I’m proud of how much I’ve learned through applying
-                different{" "}
+                , Gatherly represents significant growth in my{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
-                  UX research techniques
-                </span>
-                . For future iterations, I plan to introduce features like a{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  friend list
-                </span>
-                ,{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  voice chat
+                  UX research
                 </span>{" "}
-                in group chats, and the option for users to{" "}
+                and{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
-                  purchase event admissions
-                </span>{" "}
-                for special occasions, such as{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  fundraisers
+                  design capabilities
                 </span>
-                . These features will be tested to evaluate user reactions.
+                . The process taught me how thorough research leads to{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  meaningful solutions
+                </span>{" "}
+                for real human challenges.
               </p>
               <p>
-                This project is a significant milestone in leveraging my{" "}
+                For future iterations, I'm exploring features that further
+                address the{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  core needs
+                </span>{" "}
+                identified in my research:
+              </p>
+              <ul className="list-disc ml-12">
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Friend connections within groups
+                  </span>{" "}
+                  to help users build more intimate relationships within larger
+                  cultural communities
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Voice chat functionality
+                  </span>{" "}
+                  to provide additional modes of connection for users who may
+                  feel anxiety in text-only environments
+                </li>
+                <li>
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    Event ticketing options
+                  </span>{" "}
+                  for special occasions like{" "}
+                  <span
+                    className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                  >
+                    fundraisers
+                  </span>
+                  , helping communities extend their impact beyond social
+                  connection
+                </li>
+              </ul>
+              <p>
+                Each potential feature will be evaluated against the{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  foundational insights
+                </span>{" "}
+                about young adults' connection needs that drove this project
+                from research through design.
+              </p>
+              <p>
+                This project demonstrates how I leverage{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
@@ -1435,13 +1891,13 @@ export default function Gatherly() {
                 >
                   design experience
                 </span>
-                , and newfound knowledge to create a comprehensive{" "}
+                , and{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
-                  case study
-                </span>
-                .
+                  user-centered research
+                </span>{" "}
+                to create solutions that address meaningful human challenges.
               </p>
             </div>
           </div>

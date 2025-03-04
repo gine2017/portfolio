@@ -68,6 +68,7 @@ import highFidelity13 from "../../../assets/capstone/gatherly/high-fidelity/high
 import highFidelity14 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity14.png";
 import highFidelity15 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity15.png";
 import highFidelity16 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity16.png";
+import highFidelity17 from "../../../assets/capstone/gatherly/high-fidelity/highFidelity17.png";
 
 const personaImages = [persona1, persona2];
 const surveyImages = [survey1, survey2, survey3, survey4];
@@ -112,6 +113,7 @@ const highFidelityImages = [
   highFidelity14,
   highFidelity15,
   highFidelity16,
+  highFidelity17,
 ];
 const stats = [
   {

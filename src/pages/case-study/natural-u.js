@@ -196,7 +196,7 @@ export default function NaturalU() {
                 >
                   societal pressure
                 </span>{" "}
-                to alter one's natural appearance. Both{" "}
+                {`to alter one's natural appearance. Both`}{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >

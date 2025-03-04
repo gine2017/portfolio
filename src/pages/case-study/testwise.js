@@ -132,7 +132,7 @@ export default function TestWise() {
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  KDIT Solutions'
+                  {`KDIT Solutions'`}
                 </span>{" "}
                 Test Wise platform, an{" "}
                 <span
@@ -177,8 +177,8 @@ export default function TestWise() {
                 >
                   previous design attempt
                 </span>{" "}
-                for the requirements dashboard didn't align with the president's
-                vision and faced delays.
+                {`for the requirements dashboard didn't align with the president's
+                vision and faced delays.`}
               </p>
               <p>
                 Through a partnership between my{" "}
@@ -401,7 +401,7 @@ export default function TestWise() {
                 >
                   differentiate
                 </span>{" "}
-                Test Wise's dashboard.
+                {`Test Wise's dashboard.`}
               </p>
 
               <p className="mt-4">
@@ -429,8 +429,8 @@ export default function TestWise() {
                 >
                   Asana
                 </span>{" "}
-                , tools that potential users might already be familiar with. By
-                analyzing these leading platforms'{" "}
+                {`, tools that potential users might already be familiar with. By
+                analyzing these leading platforms'`}{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
@@ -721,7 +721,7 @@ export default function TestWise() {
                   <span
                     className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                   >
-                    Asana's
+                    {`Asana's`}
                   </span>{" "}
                   clean design and customization features as elements he wanted
                   to incorporate
@@ -804,7 +804,7 @@ export default function TestWise() {
                   <span
                     className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                   >
-                    Pranjal's feedback
+                    {`Pranjal's feedback`}
                   </span>{" "}
                   about balancing simplicity with functionality, we identified
                   five key features for our solution, each addressing specific
@@ -833,7 +833,7 @@ export default function TestWise() {
                     >
                       Customizable Dashboard:
                     </span>{" "}
-                    Flexible layouts inspired by Asana's user-friendly approach
+                    {`Flexible layouts inspired by Asana's user-friendly approach`}
                   </li>
                   <li>
                     <span
@@ -841,8 +841,8 @@ export default function TestWise() {
                     >
                       Task status table:
                     </span>{" "}
-                    Comprehensive tracking functionality that maintained
-                    Pranjal's essential requirements
+                    {`Comprehensive tracking functionality that maintained
+                    Pranjal's essential requirements`}
                   </li>
                   <li>
                     <span
@@ -913,10 +913,10 @@ export default function TestWise() {
                   >
                     Balance of approaches:
                   </span>{" "}
-                  While our wireframes successfully addressed the complexity
+                  {`While our wireframes successfully addressed the complexity
                   issues identified in Jira, Pranjal requested specific
                   organizational elements from Jira's Requirements and Test
-                  module
+                  module`}
                 </li>
                 <li>
                   <span
@@ -924,8 +924,8 @@ export default function TestWise() {
                   >
                     Brand integration:
                   </span>{" "}
-                  We incorporated KDIT Solutions' brand colors into our designs
-                  for consistency with the existing Test Wise platform
+                  {`We incorporated KDIT Solutions' brand colors into our designs
+                  for consistency with the existing Test Wise platform`}
                 </li>
                 <li>
                   <span
@@ -982,7 +982,7 @@ export default function TestWise() {
             ></iframe>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
-                Due to the project's{" "}
+                {`Due to the project's`}{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
@@ -1040,8 +1040,8 @@ export default function TestWise() {
                 </li>
               </ul>
               <p className="mt-4 italic text-gray-600">
-                Note: Logos have been removed from these designs at the client's
-                request.
+                {`Note: Logos have been removed from these designs at the client's
+                request.`}
               </p>
             </div>
           </div>
@@ -1053,7 +1053,7 @@ export default function TestWise() {
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  KDIT Solutions'
+                  {`KDIT Solutions'`}
                 </span>{" "}
                 Test Wise requirements dashboard. Working with a client across
                 international time zones, we balanced three key priorities:
@@ -1109,11 +1109,11 @@ export default function TestWise() {
                 >
                   technical background
                 </span>{" "}
-                to UX challenges, communicate across diverse teams, and
+                {`to UX challenges, communicate across diverse teams, and
                 translate complex requirements into effective designs. Given
                 more time, I would have advocated for user testing to validate
                 our approach beyond stakeholder approval, a key learning I'll
-                apply to future projects.
+                apply to future projects.`}
               </p>
             </div>
           </div>

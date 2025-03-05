@@ -43,7 +43,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="transition-transform text-[#597891] hover:-translate-y-1 hover:text-purple">
-            <a href={"/files/Regine-Thimothee-Resume.pdf"} target="_blank">
+            <a href={"/files/Regine-Resume.pdf"} target="_blank">
               resume
             </a>
           </li>

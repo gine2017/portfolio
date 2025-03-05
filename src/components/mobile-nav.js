@@ -77,7 +77,7 @@ export default function MobileNav({ updateContent = {} }) {
               </Link>
             </li>
             <li>
-              <Link href={"/files/Regine-Thimothee-Resume.pdf"}>Resume</Link>
+              <Link href={"/files/Regine-Resume.pdf"}>Resume</Link>
             </li>
           </ul>
         </div>

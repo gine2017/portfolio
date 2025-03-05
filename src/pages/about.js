@@ -61,32 +61,30 @@ export default function About() {
                 <div className="flex-1">
                   <div>
                     <p>
-                      {`Hello again! I'm Regine Thimothee, a former Software Engineer with a strong foundation in front-end development and a passion for design. 
-                    I earned my Bachelor of Science degree in`}{" "}
+                      {`Hello again! I'm Regine Thimothee, a UX Engineer with a unique background that bridges design and development. I earned my Bachelor of Science degree in`}{" "}
                       <span className={`${darkerGrotesqueBold.className}`}>
                         Web and Mobile Computing
                       </span>{" "}
-                      from Rochester Institute of Technology, where I discovered
-                      a love for mobile design. While I initially focused on
-                      front-end web development, which allowed me to blend my
-                      artistic and technical skills, my journey has since
-                      evolved into a deep commitment to creating thoughtful,
-                      user-centered designs.
+                      from Rochester Institute of Technology, where I developed
+                      strong technical foundations and discovered my passion for
+                      creating intuitive digital experiences. My journey began
+                      in front-end development, which allowed me to blend my
+                      technical skills with creative problem-solving.
                     </p>
                   </div>
                   <br />
                   <div>
                     <p>
-                      {`After collaborating with design teams and reflecting on my career journey, I realized that `}
+                      {`While working closely with design teams at ADP, I found myself naturally gravitating toward the intersection of design thinking and technical implementation. This experience revealed my true calling as a `}
                       <span className={`${darkerGrotesqueBold.className}`}>
-                        UI/UX design is my true passion lies.
-                      </span>{" "}
-                      Leveraging my background in web development I’m now{" "}
-                      <span className={`${darkerGrotesqueBold.className}`}>
-                        dedicated to uniting design and development to craft
-                        innovative, seamless, and technically robust experiences
-                        that truly resonate with users
+                        translator between design vision and technical reality
                       </span>
+                      {`. Today, I leverage my technical expertise in React, JavaScript, and accessibility alongside my UX design training to `}
+                      <span className={`${darkerGrotesqueBold.className}`}>
+                        create component systems that are both beautiful and
+                        implementable
+                      </span>
+                      {`. As a UX Engineer, I'm passionate about bridging the gap between designers and developers, ensuring that nothing gets lost in translation.`}
                     </p>
                   </div>
                 </div>

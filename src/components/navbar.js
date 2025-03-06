@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className="z-[80]">
-      <Link className="fixed top-4 " href={"/"}>
+      <Link rel="noopener noreferrer" className="fixed top-4 " href={"/"}>
         <div className="w-14 h-10 relative ml-16 ">
           <Image src={logo} alt="logo" fill={true} />
         </div>
@@ -20,6 +20,7 @@ export default function Navbar() {
         <ul className="nav-list ml-8 flex flex-row gap-88 text-4xl">
           <li className=" transition-transform hover:-translate-y-1 ">
             <Link
+              rel="noopener noreferrer"
               href={"/"}
               className={`${
                 currentPath === "/"
@@ -32,6 +33,7 @@ export default function Navbar() {
           </li>
           <li className="transition-transform hover:-translate-y-1">
             <Link
+              rel="noopener noreferrer"
               href={"/about"}
               className={`${
                 currentPath === "/about"
@@ -43,7 +45,11 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="transition-transform text-[#597891] hover:-translate-y-1 hover:text-purple">
-            <a href={"/files/Regine-Resume.pdf"} target="_blank">
+            <a
+              href={"/files/Regine-Resume.pdf"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               resume
             </a>
           </li>

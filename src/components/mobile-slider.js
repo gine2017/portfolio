@@ -23,6 +23,7 @@ export default function MobileSlider({ sliderData = [] }) {
           {sliderData[sliderIndex]?.subtitle}
         </p>
         <a
+          rel="noopener noreferrer"
           className="text-center text-base text-blue-600 visited:text-purple-600 "
           href={sliderData[sliderIndex]?.link}
         >

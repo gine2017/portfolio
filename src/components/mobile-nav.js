@@ -54,6 +54,7 @@ export default function MobileNav({ updateContent = {} }) {
           >
             <li>
               <Link
+                rel="noopener noreferrer"
                 href={"/"}
                 className={`${
                   currentPath === "/"
@@ -66,6 +67,7 @@ export default function MobileNav({ updateContent = {} }) {
             </li>
             <li>
               <Link
+                rel="noopener noreferrer"
                 href={"/about"}
                 className={`${
                   currentPath === "/about"
@@ -77,13 +79,19 @@ export default function MobileNav({ updateContent = {} }) {
               </Link>
             </li>
             <li>
-              <Link href={"/files/Regine-Resume.pdf"}>Resume</Link>
+              <Link rel="noopener noreferrer" href={"/files/Regine-Resume.pdf"}>
+                Resume
+              </Link>
             </li>
           </ul>
         </div>
       ) : (
         <div className="w-full bg-white fixed top-0 left-0 flex justify-between z-50 ">
-          <Link className="w-12 h-12 relative ml-4 mt-2" href={"/"}>
+          <Link
+            rel="noopener noreferrer"
+            className="w-12 h-12 relative ml-4 mt-2"
+            href={"/"}
+          >
             <Image src={logo} alt="logo" fill={true} />
           </Link>
           <div

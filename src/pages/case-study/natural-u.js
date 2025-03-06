@@ -339,6 +339,7 @@ export default function NaturalU() {
                   className={` hover:underline text-naturalu-purple ${darkerGrotesqueBold.className} `}
                   href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4174916/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {" "}
                   Journal of Clinical and Aesthetic Dermatology

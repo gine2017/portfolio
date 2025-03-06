@@ -22,6 +22,7 @@ import naturalU from "../../assets/naturalU.png";
 import gatherly from "../../assets/gatherly.png";
 import illustrations from "../../assets/illustrations.png";
 import portfolio from "../../assets/portfolio.png";
+import tutorial from "../../assets/tutorial.png";
 
 export default function Home() {
   const [showContent, setShowContent] = useState(true);
@@ -326,7 +327,7 @@ export default function Home() {
             >
               <div className="flex flex-col md:flex-row ">
                 <div className="relative flex-1 group hover:cursor-pointer">
-                  <Link href={"/case-study/testwise"}>
+                  <Link rel="noopener noreferrer" href={"/case-study/testwise"}>
                     <Image src={testwise} alt="Test wise case study" />
                     <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                     <div
@@ -338,7 +339,10 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="relative flex-1 group">
-                  <Link href={"/case-study/natural-u"}>
+                  <Link
+                    rel="noopener noreferrer"
+                    href={"/case-study/natural-u"}
+                  >
                     <Image src={naturalU} alt="Natural U case study" />
                     <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                     <div
@@ -351,7 +355,21 @@ export default function Home() {
                 </div>
               </div>
               <div className=" relative group">
-                <Link href={"/portfolio"}>
+                <Link rel="noopener noreferrer" href={"/design-system"}>
+                  <Image
+                    src={tutorial}
+                    alt="UI component tutorial case study"
+                  />
+                  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
+                  <div
+                    className={`${myFontBold.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
+                  >
+                    Design System
+                  </div>
+                </Link>
+              </div>
+              <div className=" relative group">
+                <Link rel="noopener noreferrer" href={"/portfolio"}>
                   <Image src={portfolio} alt="portfolio case study" />
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                   <div
@@ -361,9 +379,10 @@ export default function Home() {
                   </div>
                 </Link>
               </div>
+
               <div className="flex flex-col md:flex-row">
                 <div className="relative flex-1 group">
-                  <Link href={"/case-study/gatherly"}>
+                  <Link rel="noopener noreferrer" href={"/case-study/gatherly"}>
                     <Image src={gatherly} alt="Gatherly case study" />
                     <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                     <div
@@ -374,7 +393,7 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="relative flex-1 group">
-                  <Link href={"/illustrations"}>
+                  <Link rel="noopener noreferrer" href={"/illustrations"}>
                     <Image
                       src={illustrations}
                       alt="Illustrations page"

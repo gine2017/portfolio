@@ -18,6 +18,7 @@ export default function Footer({ width }) {
             href="https://www.linkedin.com/in/regine-thimothee/"
             passHref={true}
             target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full w-16 h-16 bg-white flex justify-center items-center"
           >
             <div className="w-8 h-8 relative">
@@ -27,6 +28,7 @@ export default function Footer({ width }) {
           <Link
             href="mailto:reginethimothee@gmail.com"
             passHref={true}
+            rel="noopener noreferrer"
             className="rounded-full w-16 h-16 bg-white  flex justify-center items-center"
           >
             <div className="w-8 h-8 relative">

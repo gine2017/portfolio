@@ -39,7 +39,11 @@ export default function Card({
         <div
           className={`mx-auto ${darkerGrotesqueMed.className} bg-orange hover:bg-[#DA8600] w-52 h-11 rounded-[1.5rem] text-4xl text-white md:absolute md:bottom-6 md:right-6`}
         >
-          <Link href={link} className="flex justify-center">
+          <Link
+            href={link}
+            rel="noopener noreferrer"
+            className="flex justify-center"
+          >
             View
           </Link>
         </div>

@@ -327,7 +327,7 @@ export default function Home() {
             >
               <div className="flex flex-col md:flex-row ">
                 <div className="relative flex-1 group hover:cursor-pointer">
-                  <Link href={"/case-study/testwise"}>
+                  <Link rel="noopener noreferrer" href={"/case-study/testwise"}>
                     <Image src={testwise} alt="Test wise case study" />
                     <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                     <div
@@ -339,7 +339,10 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="relative flex-1 group">
-                  <Link href={"/case-study/natural-u"}>
+                  <Link
+                    rel="noopener noreferrer"
+                    href={"/case-study/natural-u"}
+                  >
                     <Image src={naturalU} alt="Natural U case study" />
                     <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                     <div
@@ -352,7 +355,7 @@ export default function Home() {
                 </div>
               </div>
               <div className=" relative group">
-                <Link href={"/design-system"}>
+                <Link rel="noopener noreferrer" href={"/design-system"}>
                   <Image
                     src={tutorial}
                     alt="UI component tutorial case study"
@@ -366,7 +369,7 @@ export default function Home() {
                 </Link>
               </div>
               <div className=" relative group">
-                <Link href={"/portfolio"}>
+                <Link rel="noopener noreferrer" href={"/portfolio"}>
                   <Image src={portfolio} alt="portfolio case study" />
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                   <div
@@ -379,7 +382,7 @@ export default function Home() {
 
               <div className="flex flex-col md:flex-row">
                 <div className="relative flex-1 group">
-                  <Link href={"/case-study/gatherly"}>
+                  <Link rel="noopener noreferrer" href={"/case-study/gatherly"}>
                     <Image src={gatherly} alt="Gatherly case study" />
                     <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                     <div
@@ -390,7 +393,7 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="relative flex-1 group">
-                  <Link href={"/illustrations"}>
+                  <Link rel="noopener noreferrer" href={"/illustrations"}>
                     <Image
                       src={illustrations}
                       alt="Illustrations page"

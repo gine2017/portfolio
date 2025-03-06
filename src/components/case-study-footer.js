@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import myIllustration from "../../assets/illustrations/my_illustration.svg";
 import emerald from "../../assets/illustrations/Emerald.svg";
+import designSystemTools from "../../assets/illustrations/design-system-tools.svg";
 
 export default function CaseStudyFooter({ casestudy = "" }) {
   const caseStudies = [
@@ -31,6 +32,11 @@ export default function CaseStudyFooter({ casestudy = "" }) {
       subtitle: "Portfolio creation",
       link: "/portfolio",
     },
+    {
+      image: designSystemTools,
+      subtitle: "Design System",
+      link: "/design-system",
+    },
   ];
   return (
     <div className=" w-full flex flex-col gap-y-8">
@@ -39,12 +45,16 @@ export default function CaseStudyFooter({ casestudy = "" }) {
           Check out more of my work
         </span>
       </div>
-      <div className="flex flex-row justify-center justify-evenly flex-wrap">
+      <div className="flex flex-wrap justify-center justify-evenly flex-wrap">
         {caseStudies
           .filter((study) => study.subtitle != casestudy)
           .map((elm) => {
             return (
-              <Link href={elm.link} key={elm.subtitle}>
+              <Link
+                href={elm.link}
+                key={elm.subtitle}
+                rel="noopener noreferrer"
+              >
                 <Image
                   src={elm.image}
                   className="w-36 h-36 object-contain"

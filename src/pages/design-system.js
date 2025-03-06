@@ -3,11 +3,55 @@ import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Navbar from "@/components/navbar";
 import MobileNav from "@/components/mobile-nav";
-import { myFont, darkerGrotesque, darkerGrotesqueBold } from "@/utils";
+import CaseStudyFooter from "@/components/case-study-footer";
+import Footer from "@/components/footer";
+import {
+  myFont,
+  darkerGrotesque,
+  darkerGrotesqueBold,
+  createImageArray,
+} from "@/utils";
 import Hero from "@/components/hero";
+import MobileSlider from "@/components/mobile-slider";
+import Slider from "@/components/slider";
+import ZoomableImage from "@/components/zoomable-image";
 
 //images
 import uiComponentHero from "../../assets/capstone/ui-component/ui-component-banner.svg";
+import vidTutorial1 from "../../assets/capstone/ui-component/presentation/vidTutorial1.png";
+import vidTutorial2 from "../../assets/capstone/ui-component/presentation/vidTutorial2.png";
+import vidTutorial3 from "../../assets/capstone/ui-component/presentation/vidTutorial3.png";
+import vidTutorial4 from "../../assets/capstone/ui-component/presentation/vidTutorial4.png";
+import vidTutorial5 from "../../assets/capstone/ui-component/presentation/vidTutorial5.png";
+import technicalSetup from "../../assets/capstone/ui-component/vscode.png";
+import storybook1 from "../../assets/capstone/ui-component/storybook/storybook1.png";
+import storybook2 from "../../assets/capstone/ui-component/storybook/storybook2.png";
+import storybook3 from "../../assets/capstone/ui-component/storybook/storybook3.png";
+import storybook4 from "../../assets/capstone/ui-component/storybook/storybook4.png";
+import storybook5 from "../../assets/capstone/ui-component/storybook/storybook5.png";
+import avatar from "../../assets/capstone/ui-component/implementation/avatar.png";
+import button from "../../assets/capstone/ui-component/implementation/button.png";
+import card from "../../assets/capstone/ui-component/implementation/card.png";
+import hero from "../../assets/capstone/ui-component/implementation/hero.png";
+import profilePage from "../../assets/capstone/ui-component/profile.png";
+
+const vidImages = [
+  vidTutorial1,
+  vidTutorial2,
+  vidTutorial3,
+  vidTutorial4,
+  vidTutorial5,
+];
+
+const storybookImages = [
+  storybook1,
+  storybook2,
+  storybook3,
+  storybook4,
+  storybook5,
+];
+
+const implementationImages = [avatar, button, card, hero];
 
 export default function DesignSystem() {
   const [showContent, setShowContent] = useState(true);
@@ -136,6 +180,11 @@ export default function DesignSystem() {
               </span>{" "}
               while maintaining design consistency.
             </div>
+            {width <= 767 ? (
+              <MobileSlider sliderData={createImageArray(vidImages)} />
+            ) : (
+              <Slider sliderData={createImageArray(vidImages)} />
+            )}
           </div>
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
@@ -178,7 +227,7 @@ export default function DesignSystem() {
               </span>{" "}
               independently before combining them.
             </div>
-            {/* <ZoomableImage image={technicalSetup} /> */}
+            <ZoomableImage image={technicalSetup} />
           </div>
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
@@ -223,7 +272,11 @@ export default function DesignSystem() {
               in mind, with proper props for customization and complete
               documentation in Storybook.
             </div>
-            {/* <ImageRow images={componentExamples} /> */}
+            {width <= 767 ? (
+              <MobileSlider sliderData={createImageArray(storybookImages)} />
+            ) : (
+              <Slider sliderData={createImageArray(storybookImages)} />
+            )}
           </div>
 
           <div
@@ -261,7 +314,13 @@ export default function DesignSystem() {
               , ensuring each component's purpose and capabilities were clear
               before integration.
             </p>
-            {/* <ZoomableImage image={storybookDocumentation} /> */}
+            {width <= 767 ? (
+              <MobileSlider
+                sliderData={createImageArray(implementationImages)}
+              />
+            ) : (
+              <Slider sliderData={createImageArray(implementationImages)} />
+            )}
           </div>
 
           <div
@@ -290,11 +349,14 @@ export default function DesignSystem() {
                 component library
               </span>{" "}
               and adding an{" "}
-              <span
-                className={`text-design-system ${darkerGrotesqueBold.className}`}
+              <a
+                href="https://api.npoint.io/b7869167c6757876a385"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-design-system ${darkerGrotesqueBold.className} underline`}
               >
                 API call
-              </span>{" "}
+              </a>{" "}
               to fetch user data, we transformed individual UI elements into a{" "}
               <span
                 className={`text-design-system ${darkerGrotesqueBold.className}`}
@@ -304,7 +366,7 @@ export default function DesignSystem() {
               , showing the power of component-driven development in creating
               maintainable, consistent user experiences.
             </p>
-            {/* <ZoomableImage image={profilePage} /> */}
+            <ZoomableImage image={profilePage} />
           </div>
 
           <div
@@ -349,8 +411,10 @@ export default function DesignSystem() {
               across products and platforms.
             </p>
           </div>
+          <CaseStudyFooter casestudy="Design System" />
         </main>
       )}
+      {showContent && <Footer width={width} />}
     </>
   );
 }

@@ -311,8 +311,8 @@ export default function DesignSystem() {
               >
                 reference guide
               </span>
-              , ensuring each component's purpose and capabilities were clear
-              before integration.
+              {`, ensuring each component's purpose and capabilities were clear
+              before integration.`}
             </p>
             {width <= 767 ? (
               <MobileSlider
@@ -382,7 +382,7 @@ export default function DesignSystem() {
               >
                 educational project
               </span>{" "}
-              reflects professional principles I've since applied in my career.
+              {`reflects professional principles I've since applied in my career.`}
               This{" "}
               <span
                 className={`text-design-system ${darkerGrotesqueBold.className}`}

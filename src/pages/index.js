@@ -22,6 +22,7 @@ import naturalU from "../../assets/naturalU.png";
 import gatherly from "../../assets/gatherly.png";
 import illustrations from "../../assets/illustrations.png";
 import portfolio from "../../assets/portfolio.png";
+import tutorial from "../../assets/tutorial.png";
 
 export default function Home() {
   const [showContent, setShowContent] = useState(true);
@@ -351,6 +352,20 @@ export default function Home() {
                 </div>
               </div>
               <div className=" relative group">
+                <Link href={"/design-system"}>
+                  <Image
+                    src={tutorial}
+                    alt="UI component tutorial case study"
+                  />
+                  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
+                  <div
+                    className={`${myFontBold.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
+                  >
+                    Design System
+                  </div>
+                </Link>
+              </div>
+              <div className=" relative group">
                 <Link href={"/portfolio"}>
                   <Image src={portfolio} alt="portfolio case study" />
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
@@ -361,6 +376,7 @@ export default function Home() {
                   </div>
                 </Link>
               </div>
+
               <div className="flex flex-col md:flex-row">
                 <div className="relative flex-1 group">
                   <Link href={"/case-study/gatherly"}>

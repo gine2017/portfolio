@@ -74,7 +74,8 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Regine Thimothee - UX Engineer & Front-End Developer Portfolio
+          Regine Thimothee - Design-Driven Technologist & Front-End Developer
+          Portfolio
         </title>
       </Head>
       <div>
@@ -95,7 +96,7 @@ export default function Home() {
                 <div
                   className={`text-2xl md:text-4xl whitespace-pre-wrap ${darkerGrotesque.className}`}
                 >
-                  <span className="flex animate">{`I'm a UX Engineer and`}</span>
+                  <span className="flex animate">{`Design-Driven Technologist  | `}</span>
 
                   <span
                     className={`text-purple  dynamic-text overflow-hidden inline-block whitespace-nowrap align-baseline ${darkerGrotesqueBold.className}`}
@@ -105,9 +106,8 @@ export default function Home() {
                     {translatedText[textIndex].language}
                   </span>
                   <span className="flex animate">
-                    between design and code, turning user insights into
-                    intuitive, developer-ready solutions for seamless
-                    experiences
+                    between design and code crafting intuitive experiences
+                    across UX Design, Design Systems, and Creative Technology
                   </span>
                   <p className={`flex animate  `}>
                     <span

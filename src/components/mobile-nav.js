@@ -79,7 +79,10 @@ export default function MobileNav({ updateContent = {} }) {
               </Link>
             </li>
             <li>
-              <Link rel="noopener noreferrer" href={"/files/Regine-Resume.pdf"}>
+              <Link
+                rel="noopener noreferrer"
+                href={"/files/Regine_Resume_Technologist.pdf"}
+              >
                 Resume
               </Link>
             </li>

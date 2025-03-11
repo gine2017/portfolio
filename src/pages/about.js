@@ -65,8 +65,8 @@ export default function About() {
                       <span className={`${darkerGrotesqueBold.className}`}>
                         Web and Mobile Computing
                       </span>{" "}
-                      from Rochester Institute of Technology, I've cultivated
-                      expertise that spans both creative and technical domains.
+                      {`from Rochester Institute of Technology, I've cultivated
+                      expertise that spans both creative and technical domains.`}
                     </p>
                   </div>
                   <br />

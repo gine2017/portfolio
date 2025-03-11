@@ -61,30 +61,44 @@ export default function About() {
                 <div className="flex-1">
                   <div>
                     <p>
-                      {`Hello again! I'm Regine Thimothee, a UX Engineer with a unique background that bridges design and development. I earned my Bachelor of Science degree in`}{" "}
+                      {`Hello! I'm Regine Thimothee, a Design Technologist working at the intersection of user experience and front-end development. With a Bachelor of Science in`}{" "}
                       <span className={`${darkerGrotesqueBold.className}`}>
                         Web and Mobile Computing
                       </span>{" "}
-                      from Rochester Institute of Technology, where I developed
-                      strong technical foundations and discovered my passion for
-                      creating intuitive digital experiences. My journey began
-                      in front-end development, which allowed me to blend my
-                      technical skills with creative problem-solving.
+                      from Rochester Institute of Technology, I've cultivated
+                      expertise that spans both creative and technical domains.
                     </p>
                   </div>
                   <br />
                   <div>
                     <p>
-                      {`While working closely with design teams at ADP, I found myself naturally gravitating toward the intersection of design thinking and technical implementation. This experience revealed my true calling as a `}
+                      {`My professional journey has been shaped by a passion for translating human needs into digital solutions. Whether crafting research-driven UX strategies, building accessible component libraries, or developing`}{" "}
                       <span className={`${darkerGrotesqueBold.className}`}>
-                        translator between design vision and technical reality
+                        design systems
                       </span>
-                      {`. Today, I leverage my technical expertise in React, JavaScript, and accessibility alongside my UX design training to `}
+                      {`, I thrive in spaces where design thinking meets technical execution.`}
+                    </p>
+                  </div>
+                  <br />
+                  <div>
+                    <p>
+                      {`At companies like ADP and through my own venture, NaturalU, I've honed my ability to serve as a`}{" "}
                       <span className={`${darkerGrotesqueBold.className}`}>
-                        create component systems that are both beautiful and
-                        implementable
+                        bridge between design vision and technical
+                        implementation
                       </span>
-                      {`. As a UX Engineer, I'm passionate about bridging the gap between designers and developers, ensuring that nothing gets lost in translation.`}
+                      {`. Using my skills in React, JavaScript, and UI/UX methodologies, I create digital experiences that balance aesthetic appeal with technical performance.`}
+                    </p>
+                  </div>
+                  <br />
+                  <div>
+                    <p>
+                      {`I'm particularly passionate about`}{" "}
+                      <span className={`${darkerGrotesqueBold.className}`}>
+                        design systems, accessible interfaces, and creative
+                        technology
+                      </span>
+                      {` that pushes boundaries while remaining intuitive for users. My dual perspective allows me to anticipate challenges across the product development lifecycle and create solutions that honor both design intent and technical feasibility.`}
                     </p>
                   </div>
                 </div>

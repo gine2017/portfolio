@@ -7,6 +7,7 @@ import Footer from "@/components/footer";
 import MobileNav from "@/components/mobile-nav";
 import useWindowSize from "@/hooks/useWindowSize";
 import Head from "next/head";
+import Link from "next/link";
 
 // images
 import myphoto from "../../assets/about/me_2.png";
@@ -217,15 +218,22 @@ export default function About() {
               <div className="flex flex-col gap-y-8 md:flex-row gap-x-24">
                 <div className="flex-1">
                   <p>
-                    {`When I'm not working, you'll often find me testing my
-                  knowledge at trivia night, gearing up for my Muay Thai
-                  classes, or immersing myself in video games. Additionally, I'm
-                  endeavoring to carve out time once more for my artistic
-                  pursuits like watercolor painting.`}
+                    When I'm not working, you'll often find me testing my
+                    knowledge at trivia night, gearing up for my Muay Thai
+                    classes, or immersing myself in video games. Additionally,
+                    I'm endeavoring to carve out time once more for my artistic
+                    pursuits like watercolor painting and{" "}
+                    <Link
+                      href="/illustrations"
+                      className={`${darkerGrotesqueBold.className} text-purple hover:underline`}
+                    >
+                      digital illustrations
+                    </Link>
+                    .
                   </p>
                 </div>
                 <div className="relative flex-1 w-60 mb-8 md:w-96 md:mb-0">
-                  <Image src={watercolor} alt="waterolor painting" />
+                  <Image src={watercolor} alt="watercolor painting" />
                 </div>
               </div>
             </div>

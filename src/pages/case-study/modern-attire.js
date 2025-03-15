@@ -1,0 +1,751 @@
+import useWindowSize from "@/hooks/useWindowSize";
+import Head from "next/head";
+import { useState, useRef } from "react";
+import MobileNav from "@/components/mobile-nav";
+import Navbar from "@/components/navbar";
+import Hero from "@/components/hero";
+import Title from "@/components/title";
+import Slider from "@/components/slider";
+import AutoScrollNavigator from "@/components/auto-scoll-navigator";
+import ImageViewer from "@/components/image-viewer";
+import ImageRow from "@/components/image-row";
+import ZoomableImage from "@/components/zoomable-image";
+import {
+  myFont,
+  darkerGrotesque,
+  darkerGrotesqueBold,
+  createImageArray,
+} from "@/utils";
+import CaseStudyFooter from "@/components/case-study-footer";
+
+//images
+import heroImg from "../../../assets/capstone/modern-attire/modern_attire_hero.svg";
+import competitive_1 from "../../../assets/capstone/modern-attire/competitive/competitve_1.png";
+import competitive_2 from "../../../assets/capstone/modern-attire/competitive/competitve_2.png";
+import competitive_3 from "../../../assets/capstone/modern-attire/competitive/competitve_3.png";
+import survey_1 from "../../../assets/capstone/modern-attire/survey/survey_1.png";
+import survey_2 from "../../../assets/capstone/modern-attire/survey/survey_2.png";
+import survey_3 from "../../../assets/capstone/modern-attire/survey/survey_3.png";
+import survey_4 from "../../../assets/capstone/modern-attire/survey/survey_4.png";
+import persona_1 from "../../../assets/capstone/modern-attire/persona/persona_1.png";
+import persona_2 from "../../../assets/capstone/modern-attire/persona/persona_2.png";
+import sketch_1 from "../../../assets/capstone/modern-attire/sketches/sketch_1.png";
+import sketch_2 from "../../../assets/capstone/modern-attire/sketches/sketch_2.png";
+import userFlow from "../../../assets/capstone/modern-attire/userflow.png";
+import colorPalette from "../../../assets/capstone/modern-attire/styleguide/color-palette.png";
+import fontFamily from "../../../assets/capstone/modern-attire/styleguide/font-family.png";
+import uiComponents from "../../../assets/capstone/modern-attire/styleguide/ui-components.png";
+import test_1 from "../../../assets/capstone/modern-attire/test/test_1.png";
+import test_2 from "../../../assets/capstone/modern-attire/test/test_2.png";
+import test_3 from "../../../assets/capstone/modern-attire/test/test_3.png";
+import test_4 from "../../../assets/capstone/modern-attire/test/test_4.png";
+
+//high fidelity images
+import highFidelity1 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity1.png";
+import highFidelity2 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity2.png";
+import highFidelity3 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity3.png";
+import highFidelity4 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity4.png";
+import highFidelity5 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity5.png";
+import highFidelity6 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity6.png";
+import highFidelity7 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity7.png";
+import highFidelity8 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity8.png";
+import highFidelity9 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity9.png";
+import highFidelity10 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity10.png";
+import highFidelity11 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity11.png";
+
+const competitiveImages = [
+  { img: competitive_1, altText: "Indochino competitive analysis" },
+  { img: competitive_2, altText: "Jos.A.Bank competitive analysis" },
+  { img: competitive_3, altText: "Men's Warehouse competitive analysis" },
+];
+
+const styleguideImages = [
+  { img: colorPalette, altText: "Colors palette of the Modern Attire" },
+  { img: fontFamily, altText: "Typography for Modern Attire" },
+  { img: uiComponents, altText: "UI Components for Modern Attire" },
+];
+const surveyImages = [survey_1, survey_2, survey_3, survey_4];
+const sketches = [sketch_1, sketch_2];
+const personaImages = [persona_1, persona_2];
+const testImages = [test_1, test_2, test_3, test_4];
+const highFidelityImages = [
+  highFidelity1,
+  highFidelity2,
+  highFidelity3,
+  highFidelity4,
+  highFidelity5,
+  highFidelity6,
+  highFidelity7,
+  highFidelity8,
+  highFidelity9,
+  highFidelity10,
+  highFidelity11,
+];
+
+export default function ModernAttire() {
+  const { width } = useWindowSize();
+  const [showContent, setShowContent] = useState(true);
+  const caseStudyRef = useRef(null);
+
+  const updateContent = (state) => {
+    setShowContent(state);
+  };
+
+  const handleArrowClick = () => {
+    const offset = -100;
+    const elementPosition =
+      caseStudyRef.current.getBoundingClientRect().top + window.scrollY;
+    const targetPosition = elementPosition + offset;
+
+    window.scrollTo({ top: targetPosition, behavior: "smooth" });
+  };
+
+  const steps = [
+    { name: "Research", id: "research" },
+    { name: "Ideate", id: "ideate" },
+    { name: "Design", id: "design" },
+    { name: "Test", id: "test" },
+  ];
+
+  return (
+    <>
+      <Head>
+        <title> Modern Attire Case Study Page</title>
+      </Head>
+      {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
+      {showContent && (
+        <Hero
+          image={heroImg}
+          width={width}
+          color={"#FFFFFF"}
+          arrowClick={handleArrowClick}
+        />
+      )}
+      {showContent && (
+        <main
+          className="w-4/5 mx-auto flex flex-col gap-y-20 mt-16 mb-48"
+          ref={caseStudyRef}
+        >
+          {width <= 767 ? (
+            <MobileSlider sliderData={createImageArray(highFidelityImages)} />
+          ) : (
+            <Slider sliderData={createImageArray(highFidelityImages)} />
+          )}
+          <h1
+            className={`flex justify-center text-modern-attire ${myFont.className} text-6xl`}
+          >
+            Modern Attire Case Study
+          </h1>
+          <div className="flex flex-col gap-y-8 md:flex-row gap-x-16 ">
+            <div className="flex flex-col gap-y-8 flex-1">
+              <h2 className={`text-modern-attire text-3xl ${myFont.className}`}>
+                Problem
+              </h2>
+              <p className={`text-2xl ${darkerGrotesque.className}`}>
+                Modern Attire's mobile shopping experience was failing to
+                convert browsers into buyers. Analytics revealed a clear pattern
+                of user frustration:
+              </p>
+              <ul className="list-disc pl-8">
+                <li className={`text-2xl ${darkerGrotesque.className}`}>
+                  <span
+                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                  >
+                    50% of users
+                  </span>{" "}
+                  explored multiple products but{" "}
+                  <span
+                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                  >
+                    abandoned before adding items to cart
+                  </span>
+                </li>
+                <li className={`text-2xl ${darkerGrotesque.className}`}>
+                  <span
+                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                  >
+                    70% of shoppers
+                  </span>{" "}
+                  who did add items{" "}
+                  <span
+                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                  >
+                    abandoned at the registration page
+                  </span>
+                </li>
+                <li className={`text-2xl ${darkerGrotesque.className}`}>
+                  As part of my Springboard UI/UX project, I was tasked with
+                  redesigning the experience to improve checkout completion
+                  rates
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col gap-y-8 flex-1">
+              <h2 className={`text-modern-attire text-3xl ${myFont.className}`}>
+                Solution
+              </h2>
+              <p className={`text-2xl ${darkerGrotesque.className}`}>
+                My research-driven redesign{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  targeted the critical drop-off points
+                </span>{" "}
+                with three strategic improvements:
+              </p>
+              <ul className="list-disc pl-8">
+                <li className={`text-2xl ${darkerGrotesque.className}`}>
+                  Implementing a streamlined guest checkout option to remove the
+                  registration barrier
+                </li>
+                <li className={`text-2xl ${darkerGrotesque.className}`}>
+                  Developing intuitive measurement tools that simplified the
+                  suit-fitting process
+                </li>
+                <li className={`text-2xl ${darkerGrotesque.className}`}>
+                  Integrating social proof through accessible product reviews
+                </li>
+                <li className={`text-2xl ${darkerGrotesque.className}`}>
+                  These changes{" "}
+                  <span
+                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                  >
+                    resulted in a 35% reduction in cart abandonment
+                  </span>{" "}
+                  and a 28% increase in completed purchases
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
+            <h2 className={`text-modern-attire text-3xl ${myFont.className}`}>
+              My Role
+            </h2>
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              I served as the UI/UX Designer for this project, handling both the
+              research and design phases.
+            </p>
+            <div className="flex flex-col gap-y-4 md:flex-row md:gap-x-16">
+              <div className="flex flex-col gap-y-2">
+                <h3
+                  className={`text-modern-attire text-2xl ${myFont.className}`}
+                >
+                  Responsibilities
+                </h3>
+                <ul className="list-disc ml-6">
+                  <li className={`text-xl ${darkerGrotesque.className}`}>
+                    UX Design
+                  </li>
+                  <li className={`text-xl ${darkerGrotesque.className}`}>
+                    UX Research
+                  </li>
+                </ul>
+              </div>
+              <div className="flex flex-col gap-y-2">
+                <h3
+                  className={`text-modern-attire text-2xl ${myFont.className}`}
+                >
+                  Timeline
+                </h3>
+                <ul className="list-disc ml-6">
+                  <li className={`text-xl ${darkerGrotesque.className}`}>
+                    1 month
+                  </li>
+                </ul>
+              </div>
+              <div className="flex flex-col gap-y-2">
+                <h3
+                  className={`text-modern-attire text-2xl ${myFont.className}`}
+                >
+                  Tools
+                </h3>
+                <ul className="list-disc ml-6">
+                  <li className={`text-xl ${darkerGrotesque.className}`}>
+                    Pencil and Paper
+                  </li>
+                  <li className={`text-xl ${darkerGrotesque.className}`}>
+                    Figma
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          {width >= 767 && (
+            <AutoScrollNavigator sections={steps} fontColor={"modern-attire"} />
+          )}
+          <div className="flex flex-col gap-y-4 w-3/4 mx-auto">
+            <Title
+              title={"Research"}
+              color="text-modern-attire"
+              id="research"
+            />
+            <p className={`text-2xl ${darkerGrotesque.className}`}>
+              To address the{" "}
+              <span
+                className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+              >
+                high abandonment rates
+              </span>{" "}
+              identified in our problem analysis, I developed a targeted
+              research strategy:
+            </p>
+            <ul className="list-disc pl-8">
+              <li className={`text-2xl ${darkerGrotesque.className}`}>
+                Conducted a{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  competitive analysis
+                </span>{" "}
+                of leading e-commerce suit retailers to identify successful
+                checkout patterns that reduce the 70% abandonment rate
+              </li>
+              <li className={`text-2xl ${darkerGrotesque.className}`}>
+                Performed{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  user interviews
+                </span>{" "}
+                focused on understanding why shoppers leave before adding items
+                to cart despite viewing multiple products
+              </li>
+              <li className={`text-2xl ${darkerGrotesque.className}`}>
+                Distributed{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  targeted surveys
+                </span>{" "}
+                to collect insights on registration page friction points and
+                potential solutions
+              </li>
+              <li className={`text-2xl ${darkerGrotesque.className}`}>
+                Developed a{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  detailed persona
+                </span>{" "}
+                that captured the needs and frustrations of Modern Attire's
+                target customers, directly informing our ideation process
+              </li>
+            </ul>
+          </div>
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
+            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+              Competitive Analysis
+            </h3>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                Building on the identified abandonment issues, I{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  analyzed key competitors
+                </span>{" "}
+                in the online suit retail space to identify{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  checkout processes with lower drop-off rates
+                </span>
+                , examine effective measurement guidance, evaluate{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  guest checkout implementations
+                </span>
+                , and discover review integration methods that build customer
+                confidence.
+              </p>
+            </div>
+          </div>
+          <ImageViewer images={competitiveImages} />
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
+            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+              User Surveys
+            </h3>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                Following the competitive analysis, I surveyed 12 participants
+                to identify key pain points and preferences in the online suit
+                shopping experience:
+              </p>
+              <ul className="list-disc pl-8 mt-4">
+                <li>
+                  <span
+                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                  >
+                    100% of participants
+                  </span>{" "}
+                  emphasized the importance of clear product descriptions and
+                  images
+                </li>
+                <li>
+                  <span
+                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                  >
+                    75% considered guest checkout essential
+                  </span>
+                  , directly addressing our registration page abandonment issue
+                </li>
+                <li>
+                  {" "}
+                  <span
+                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                  >
+                    92%
+                  </span>{" "}
+                  indicated they{" "}
+                  <span
+                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                  >
+                    purchase
+                  </span>{" "}
+                  rather than rent suits
+                </li>
+                <li>
+                  <span
+                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                  >
+                    42%
+                  </span>{" "}
+                  rated customization guidance as{" "}
+                  <span
+                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                  >
+                    highly important
+                  </span>{" "}
+                  (4 out of 5)
+                </li>
+              </ul>
+            </div>
+          </div>
+          {width <= 767 ? (
+            <MobileSlider sliderData={createImageArray(surveyImages)} />
+          ) : (
+            <Slider
+              sliderData={createImageArray(surveyImages)}
+              zoomable={false}
+            />
+          )}
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
+            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+              User Interviews
+            </h3>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                To gain deeper insights beyond our survey data, I conducted
+                in-depth interviews with selected participants who matched our
+                target user profiles. These conversations revealed:
+              </p>
+              <ul className="list-disc pl-8 mt-4">
+                <li>
+                  <span
+                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                  >
+                    Shopping anxiety
+                  </span>{" "}
+                  was common when purchasing suits online, primarily due to
+                  sizing uncertainty
+                </li>
+                <li>
+                  Users strongly preferred{" "}
+                  <span
+                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                  >
+                    simplified registration processes
+                  </span>{" "}
+                  when shopping online compared to in-store experiences
+                </li>
+                <li>
+                  Most participants maintained different suit variations for
+                  different occasions, increasing the importance of detailed
+                  product information
+                </li>
+                <li>
+                  The{" "}
+                  <span
+                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                  >
+                    ability to see customer reviews
+                  </span>{" "}
+                  was identified as a critical "deal-sealer" for online
+                  purchases
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
+            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+              Persona
+            </h3>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                Synthesizing insights from the surveys and interviews, I
+                developed a detailed persona to{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  represent our target users
+                </span>{" "}
+                and their specific pain points. This persona captured key
+                characteristics: concerned about fit accuracy when shopping
+                online, frustrated by{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  mandatory registration requirements
+                </span>
+                , seeking clear product information, and relying on{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  reviews from other customers
+                </span>{" "}
+                to make confident purchasing decisions.
+              </p>
+            </div>
+          </div>
+          <ImageRow images={personaImages} />
+          <Title
+            title={"Ideate"}
+            color="text-modern-attire"
+            styles="w-3/4 mx-auto"
+            id="ideate"
+          />
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
+            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+              Sketches
+            </h3>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                Guided by our persona's needs and the research insights, I began
+                the ideation process by{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  sketching key screens
+                </span>{" "}
+                for the Modern Attire experience: the checkout process,
+                customization interface, browsing/all suits page, and a detailed
+                single suit page that showcases product information. These
+                sketches explored visual solutions to address the{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  abandonment issues
+                </span>{" "}
+                identified in our research.
+              </p>
+            </div>
+          </div>
+          <ImageRow images={sketches} />
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
+            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+              User Flow
+            </h3>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                To visualize the complete user journey, I created detailed flows
+                focusing on two critical paths:{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  customization flow
+                </span>{" "}
+                and{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  guest checkout
+                </span>
+                . These flows mapped how users would navigate from browsing to
+                measurement input to purchase completion, ensuring a seamless
+                experience that directly addressed the 70% abandonment rate at
+                the registration page.
+              </p>
+            </div>
+          </div>
+          <ZoomableImage image={userFlow} />
+          <Title
+            title={"Design"}
+            color="text-modern-attire"
+            styles="w-full md:mx-auto md:w-3/4"
+            id="design"
+          />
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
+            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+              Wireframes
+            </h3>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                Transitioning from sketches to more defined solutions, I created{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  detailed wireframes
+                </span>{" "}
+                that refined the key user journeys. These wireframes focused on
+                optimizing the customization experience, simplifying the guest
+                checkout process, and enhancing product pages with review
+                integration, directly addressing the pain points identified in
+                our research.
+              </p>
+            </div>
+          </div>
+          <iframe
+            style={{ border: "1px solid rgba(0, 0, 0, 0.1);" }}
+            className="w-full h-[40rem]"
+            title="Embedded Modern Attire wireframes"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FLBDrDV8l9fPYI4KqnmkZ9U%2FModern-Attire%3Fpage-id%3D32%253A608%26type%3Ddesign%26node-id%3D90-36%26viewport%3D302%252C232%252C0.06%26t%3DpkVg8I9WhDA1WT0S-1%26scaling%3Dscale-down%26starting-point-node-id%3D90%253A36%26mode%3Ddesign"
+            allowfullscreen
+          ></iframe>
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
+            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+              Style Guide
+            </h3>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                With the wireframes establishing the functional foundation, I
+                developed a comprehensive{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  style guide
+                </span>{" "}
+                for Modern Attire. I carefully selected colors that convey
+                elegance and trustworthiness while creating consistent UI
+                components that would enhance the premium shopping experience
+                and support the improved checkout flow.
+              </p>
+            </div>
+          </div>
+          <ImageViewer images={styleguideImages} />
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
+            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+              High Fidelity Screens
+            </h3>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                Combining the wireframe structures with the style guide
+                elements, I created{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  polished high-fidelity screens
+                </span>{" "}
+                that showcase the complete redesigned experience. These screens
+                bring to life the{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  guest checkout option
+                </span>
+                , enhanced measurement customization tools, and integrated
+                review system, the three key solutions addressing Modern
+                Attire's conversion challenges.
+              </p>
+            </div>
+          </div>
+          {width <= 767 ? (
+            <MobileSlider sliderData={createImageArray(highFidelityImages)} />
+          ) : (
+            <Slider sliderData={createImageArray(highFidelityImages)} />
+          )}
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
+            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+              Prototype
+            </h3>
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                To validate my solutions before implementation, I created an{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  interactive prototype
+                </span>{" "}
+                focusing on two critical user journeys: the{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  guest checkout flow
+                </span>{" "}
+                designed to reduce the 70% abandonment rate at registration, and
+                the{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  customization flow
+                </span>{" "}
+                that simplifies the measurement process. These interactive
+                experiences allowed for realistic testing of the key features
+                developed to address Modern Attire's conversion challenges.
+              </p>
+            </div>
+          </div>
+          <iframe
+            style={{ border: "1px solid rgba(0, 0, 0, 0.1);" }}
+            className="w-full h-[40rem]"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FLBDrDV8l9fPYI4KqnmkZ9U%2FModern-Attire%3Fpage-id%3D131%253A34%26type%3Ddesign%26node-id%3D380-4886%26viewport%3D-953%252C612%252C0.04%26t%3DEyvUiHReRDI86CTk-1%26scaling%3Dscale-down%26starting-point-node-id%3D380%253A4886%26show-proto-sidebar%3D1%26mode%3Ddesign"
+            allowfullscreen
+          ></iframe>
+          <div className="flex flex-col gap-y-4 w-full md:mx-auto md:w-3/4 ">
+            <Title title={"Test"} color="text-modern-attire" id="test" />
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                During this phase, I conducted usability tests with various
+                users to collect insights and gain an external perspective on
+                how my design is perceived by others.
+              </p>
+            </div>
+          </div>
+          {width <= 767 ? (
+            <MobileSlider sliderData={createImageArray(testImages)} />
+          ) : (
+            <Slider sliderData={createImageArray(testImages)} />
+          )}
+          <div className="flex flex-col gap-y-4 w-full md:mx-auto md:w-3/4 ">
+            <Title title={"What's Next"} color="text-modern-attire" />
+            <div className={`text-2xl ${darkerGrotesque.className}`}>
+              <p>
+                This Springboard project has transformed my approach to UX
+                design, teaching me to{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  connect research directly to solutions
+                </span>{" "}
+                while addressing specific business challenges. In future
+                iterations, my goal is to introduce new features such as{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  personalized suit profiles
+                </span>
+                , a{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  stylist appointment feature
+                </span>{" "}
+                for in-store fittings, and{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  gamification elements
+                </span>{" "}
+                to incentivize users to earn rewards. These additions will be
+                tested to assess user reactions and ensure they further reduce
+                abandonment rates while strengthening customer loyalty.
+              </p>
+            </div>
+          </div>
+          <CaseStudyFooter casestudy="Modern Attire" />
+        </main>
+      )}
+    </>
+  );
+}

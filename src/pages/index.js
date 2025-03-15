@@ -23,6 +23,7 @@ import gatherly from "../../assets/gatherly.png";
 import illustrations from "../../assets/illustrations.png";
 import portfolio from "../../assets/portfolio.png";
 import tutorial from "../../assets/tutorial.png";
+import moderAttire from "../../assets/modern_attire.png";
 
 export default function Home() {
   const [showContent, setShowContent] = useState(true);
@@ -393,17 +394,21 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="relative flex-1 group">
-                  <Link rel="noopener noreferrer" href={"/illustrations"}>
+                  <Link
+                    rel="noopener noreferrer"
+                    href={"/case-study/modern-attire"}
+                  >
                     <Image
-                      src={illustrations}
-                      alt="Illustrations page"
+                      src={moderAttire}
+                      alt="Moder Attire case study page"
                       className="max-h-full max-w-full"
                     />
                     <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                     <div
                       className={`${myFontBold.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
                     >
-                      Illustrations
+                      Modern Attire
+                      <br /> Elegant suits
                     </div>
                   </Link>
                 </div>

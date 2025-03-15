@@ -10,6 +10,7 @@ import AutoScrollNavigator from "@/components/auto-scoll-navigator";
 import ImageViewer from "@/components/image-viewer";
 import ImageRow from "@/components/image-row";
 import ZoomableImage from "@/components/zoomable-image";
+import MobileSlider from "@/components/mobile-slider";
 import {
   myFont,
   darkerGrotesque,
@@ -142,9 +143,9 @@ export default function ModernAttire() {
                 Problem
               </h2>
               <p className={`text-2xl ${darkerGrotesque.className}`}>
-                Modern Attire's mobile shopping experience was failing to
+                {`Modern Attire's mobile shopping experience was failing to
                 convert browsers into buyers. Analytics revealed a clear pattern
-                of user frustration:
+                of user frustration:`}
               </p>
               <ul className="list-disc pl-8">
                 <li className={`text-2xl ${darkerGrotesque.className}`}>
@@ -328,8 +329,8 @@ export default function ModernAttire() {
                 >
                   detailed persona
                 </span>{" "}
-                that captured the needs and frustrations of Modern Attire's
-                target customers, directly informing our ideation process
+                {` that captured the needs and frustrations of Modern Attire's
+                target customers, directly informing our ideation process`}
               </li>
             </ul>
           </div>
@@ -472,8 +473,8 @@ export default function ModernAttire() {
                   >
                     ability to see customer reviews
                   </span>{" "}
-                  was identified as a critical "deal-sealer" for online
-                  purchases
+                  {`was identified as a critical "deal-sealer" for online
+                  purchases`}
                 </li>
               </ul>
             </div>
@@ -522,8 +523,8 @@ export default function ModernAttire() {
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
-                Guided by our persona's needs and the research insights, I began
-                the ideation process by{" "}
+                {`Guided by our persona's needs and the research insights, I began
+                the ideation process by`}{" "}
                 <span
                   className={`text-modern-attire ${darkerGrotesqueBold.className}`}
                 >
@@ -644,9 +645,9 @@ export default function ModernAttire() {
                 >
                   guest checkout option
                 </span>
-                , enhanced measurement customization tools, and integrated
+                {`, enhanced measurement customization tools, and integrated
                 review system, the three key solutions addressing Modern
-                Attire's conversion challenges.
+                Attire's conversion challenges.`}
               </p>
             </div>
           </div>
@@ -680,9 +681,9 @@ export default function ModernAttire() {
                 >
                   customization flow
                 </span>{" "}
-                that simplifies the measurement process. These interactive
+                {`that simplifies the measurement process. These interactive
                 experiences allowed for realistic testing of the key features
-                developed to address Modern Attire's conversion challenges.
+                developed to address Modern Attire's conversion challenges.`}
               </p>
             </div>
           </div>

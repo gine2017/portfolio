@@ -218,11 +218,11 @@ export default function About() {
               <div className="flex flex-col gap-y-8 md:flex-row gap-x-24">
                 <div className="flex-1">
                   <p>
-                    When I'm not working, you'll often find me testing my
+                    {` When I'm not working, you'll often find me testing my
                     knowledge at trivia night, gearing up for my Muay Thai
                     classes, or immersing myself in video games. Additionally,
                     I'm endeavoring to carve out time once more for my artistic
-                    pursuits like watercolor painting and{" "}
+                    pursuits like watercolor painting and`}{" "}
                     <Link
                       href="/illustrations"
                       className={`${darkerGrotesqueBold.className} text-purple hover:underline`}

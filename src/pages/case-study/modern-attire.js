@@ -16,6 +16,7 @@ import {
   darkerGrotesqueBold,
   createImageArray,
 } from "@/utils";
+import CaseStudyFooter from "@/components/case-study-footer";
 
 //images
 import heroImg from "../../../assets/capstone/modern-attire/modern_attire_hero.svg";
@@ -742,7 +743,7 @@ export default function ModernAttire() {
               </p>
             </div>
           </div>
-          {/* <CaseStudyFooter casestudy="Modern Attire" /> */}
+          <CaseStudyFooter casestudy="Modern Attire" />
         </main>
       )}
     </>

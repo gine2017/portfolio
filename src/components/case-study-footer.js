@@ -7,6 +7,7 @@ import Link from "next/link";
 import myIllustration from "../../assets/illustrations/my_illustration.svg";
 import emerald from "../../assets/illustrations/Emerald.svg";
 import designSystemTools from "../../assets/illustrations/design-system-tools.svg";
+import modernAttire from "../../assets/modern-attire-thumbnail.svg";
 
 export default function CaseStudyFooter({ casestudy = "" }) {
   const caseStudies = [
@@ -36,6 +37,11 @@ export default function CaseStudyFooter({ casestudy = "" }) {
       image: designSystemTools,
       subtitle: "Design System",
       link: "/design-system",
+    },
+    {
+      image: modernAttire,
+      subtitle: "Modern Attire",
+      link: "/case-study/modern-attire",
     },
   ];
   return (

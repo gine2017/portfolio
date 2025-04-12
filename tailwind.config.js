@@ -47,7 +47,7 @@ module.exports = {
         "gatherly-blue": "#0072BB",
         "modern-attire": "#010154",
         "testwise-blue": "#1F3F70",
-        "design-system": "#0084D1",
+        "component-library": "#0084D1",
       },
       keyframes: {
         fadeInUp: {

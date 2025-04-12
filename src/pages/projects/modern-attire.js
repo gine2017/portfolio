@@ -18,6 +18,7 @@ import {
   createImageArray,
 } from "@/utils";
 import CaseStudyFooter from "@/components/case-study-footer";
+import Footer from "@/components/footer";
 
 //images
 import heroImg from "../../../assets/capstone/modern-attire/modern_attire_hero.svg";
@@ -747,6 +748,7 @@ export default function ModernAttire() {
           <CaseStudyFooter casestudy="Modern Attire" />
         </main>
       )}
+      {showContent && <Footer width={width} />}
     </>
   );
 }

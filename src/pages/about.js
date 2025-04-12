@@ -104,7 +104,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <Title title={"My Awesome Skills"} />
+              <Title title={"My Skills"} />
               <div className="flex flex-col gap-8 md:flex-row">
                 <div className="flex-1">
                   <h3

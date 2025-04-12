@@ -24,7 +24,7 @@ export default function Navbar() {
               href={"/"}
               className={`${
                 currentPath === "/"
-                  ? "active: underline underline-offset-8 p-2"
+                  ? "active: underline underline-offset-[12px] p-2"
                   : "text-[#597891] hover:text-purple"
               } hover:animate-bounce`}
             >
@@ -37,11 +37,24 @@ export default function Navbar() {
               href={"/about"}
               className={`${
                 currentPath === "/about"
-                  ? "active: underline underline-offset-8 p-2"
+                  ? "active: underline underline-offset-[12px] p-2"
                   : "text-[#597891] hover:text-purple"
               } `}
             >
               about
+            </Link>
+          </li>
+          <li className="transition-transform hover:-translate-y-1">
+            <Link
+              rel="noopener noreferrer"
+              href={"/projects"}
+              className={`${
+                currentPath === "/projects"
+                  ? "active: underline underline-offset-[12px] p-2"
+                  : "text-[#597891] hover:text-purple"
+              } `}
+            >
+              projects
             </Link>
           </li>
           <li className="transition-transform text-[#597891] hover:-translate-y-1 hover:text-purple">

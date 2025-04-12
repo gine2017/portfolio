@@ -341,7 +341,7 @@ export default function Home() {
                 </div>
               </div>
               <div className=" relative group">
-                <Link rel="noopener noreferrer" href={"/design-system"}>
+                <Link rel="noopener noreferrer" href={"/component-library"}>
                   <Image
                     src={tutorial}
                     alt="UI component tutorial case study"

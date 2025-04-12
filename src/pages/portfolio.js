@@ -150,7 +150,7 @@ export default function Portfolio() {
                     <li>#F9A620 (orange) for optimism and energy</li>
                     <li>#91A6FF (light blue) for clarity and calmness</li>
                     <li>#FBB7C0 (pink) for warmth</li>
-                    <li>#548C2F (red) for growth and harmony</li>
+                    <li>#548C2F (green) for growth and harmony</li>
                   </ul>
                 </li>
                 <li>

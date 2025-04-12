@@ -11,11 +11,6 @@ import modernAttire from "../../assets/modern-attire-thumbnail.svg";
 
 export default function CaseStudyFooter({ casestudy = "" }) {
   const caseStudies = [
-    {
-      image: friendship_illustration,
-      subtitle: "Gatherly",
-      link: "/case-study/gatherly",
-    },
     { image: naturalU, subtitle: "NaturalU", link: "/case-study/natural-u" },
     ,
     {
@@ -24,24 +19,9 @@ export default function CaseStudyFooter({ casestudy = "" }) {
       link: "/case-study/testwise",
     },
     {
-      image: emerald,
-      subtitle: "Illustrations",
-      link: "/illustrations",
-    },
-    {
-      image: myIllustration,
-      subtitle: "Portfolio creation",
-      link: "/portfolio",
-    },
-    {
       image: designSystemTools,
       subtitle: "Design System",
       link: "/design-system",
-    },
-    {
-      image: modernAttire,
-      subtitle: "Modern Attire",
-      link: "/case-study/modern-attire",
     },
   ];
   return (

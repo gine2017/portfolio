@@ -142,7 +142,7 @@ export default function DesignSystem() {
                 {" "}
                 component library
               </span>{" "}
-              that serves as the foundation for
+              that serves as the foundation for{" "}
               <span
                 className={`text-design-system ${darkerGrotesqueBold.className}`}
               >

@@ -20,6 +20,7 @@ import ImageRow from "@/components/image-row";
 import ImageViewer from "@/components/image-viewer";
 import ZoomableImage from "@/components/zoomable-image";
 import Head from "next/head";
+import Image from "next/image";
 
 //images
 import heroImg from "../../../assets/capstone/gatherly/hero-bghero_2.svg";
@@ -172,100 +173,99 @@ export default function Gatherly() {
           className="mx-auto w-80% flex flex-col gap-y-20 mt-4 md:mt-16 mb-48"
           ref={caseStudyRef}
         >
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(highFidelityImages)} />
-          ) : (
-            <Slider sliderData={createImageArray(highFidelityImages)} />
-          )}
           <h1
             className={`flex justify-center text-gatherly-blue  ${myFont.className} text-6xl`}
           >
             Gatherly Case Study
           </h1>
-          <div className="flex flex-col gap-y-8 flex-1 md:mx-auto md:w-3/4">
-            <h2 className={` text-gatherly-blue text-3xl ${myFont.className}`}>
-              Problem Statement
-            </h2>
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
-              <p>
-                This was my{" "}
+          <div className="flex flex-col gap-y-8 md:flex-row gap-x-16 ">
+            <div className="flex flex-col gap-y-8 flex-1">
+              <h2 className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+                Problem
+              </h2>
+              <p
+                className={`text-2xl ${darkerGrotesqueBold.className} text-gatherly-blue `}
+              >
+                Young adults struggle to build meaningful connections, leading
+                to social isolation and deteriorating mental health.
+              </p>
+              <p className={`text-2xl ${darkerGrotesque.className}`}>
+                Post-COVID-19, social isolation has{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
-                  first case study
-                </span>
-                , completed during the{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  Springboard BootCamp
-                </span>
-                , where I{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  focused heavily on research
+                  intensified
                 </span>{" "}
-                to understand a critical issue: Young adults today struggle to{" "}
+                feelings of loneliness and anxiety among young adults. This
+                isolation significantly impacts mental{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
-                  build meaningful connections
-                </span>
-                , especially{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  post-COVID-19
-                </span>
-                .{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  Social isolation
+                  health
                 </span>{" "}
-                has intensified feelings of{" "}
+                and communication{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
-                  loneliness
-                </span>{" "}
-                and{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  anxiety
+                  abilities
                 </span>
-                , significantly impacting{" "}
+                , creating barriers to forming meaningful{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
-                  mental health
+                  connections
                 </span>{" "}
-                and{" "}
+                during this pivotal life stage when social networks are
+                especially{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
-                  communication abilities
-                </span>
-                . This project explored how{" "}
-                <span
-                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
-                >
-                  technology
+                  important
                 </span>{" "}
-                might help young adults overcome these barriers to build
-                meaningful connections during this{" "}
+                for personal and professional development.
+              </p>
+            </div>
+            <div className="flex flex-col gap-y-8 flex-1">
+              <h2 className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+                Solution
+              </h2>
+              <p
+                className={`text-2xl ${darkerGrotesqueBold.className} text-gatherly-blue `}
+              >
+                A community app that facilitates meaningful connections through
+                shared interests and activities.
+              </p>
+              <p className={`text-2xl ${darkerGrotesque.className}`}>
+                Gatherly is a platform where young adults can create and join{" "}
                 <span
                   className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
                 >
-                  pivotal life stage
+                  groups
+                </span>{" "}
+                based on shared interests, organize{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  events
                 </span>
-                .
+                , and build new{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  relationships
+                </span>{" "}
+                in a supportive environment. The app helps users overcome social
+                barriers by connecting them with like-minded individuals for{" "}
+                <span
+                  className={`text-gatherly-blue ${darkerGrotesqueBold.className}`}
+                >
+                  networking
+                </span>
+                , friendship, and community building, ultimately reducing
+                isolation and improving mental well-being.
               </p>
             </div>
           </div>
-
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h2 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
               My Role
@@ -274,6 +274,68 @@ export default function Gatherly() {
               I served as the sole UI/UX designer for this project; therefore, I
               handled the research, design, and testing phases
             </p>
+          </div>
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
+            <h2 className={`text-gatherly-blue text-5xl ${myFont.className}`}>
+              Solution in Action
+            </h2>
+            <div className="flex flex-row items-center border-b-4 ">
+              <Image
+                src={highFidelity12}
+                alt="discovery page with interest filters"
+                className="scale-75"
+              />
+              <div>
+                <h3
+                  className={`text-gatherly-blue text-4xl ${myFont.className} mb-2`}
+                >
+                  Discovery Page with Interest Filters
+                </h3>
+                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                  Combats isolation by helping users find communities that align
+                  with their personal interests, making the initial connection
+                  process less intimidating
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center border-b-4">
+              <div>
+                <h3
+                  className={`text-gatherly-blue text-4xl ${myFont.className} mb-2`}
+                >
+                  Group Home Page
+                </h3>
+                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                  Fosters belonging through shared spaces where members can
+                  interact, share experiences, and develop relationships within
+                  a structured community
+                </p>
+              </div>
+              <Image
+                src={highFidelity17}
+                alt="group home page"
+                className="scale-75"
+              />
+            </div>
+            <div className="flex flex-row items-center">
+              <Image
+                src={highFidelity15}
+                alt="events page"
+                className="scale-75"
+              />
+              <div>
+                <h3
+                  className={`text-gatherly-blue text-4xl ${myFont.className} mb-2`}
+                >
+                  Events Page
+                </h3>
+                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                  Facilitates meaningful connections by offering various events,
+                  allowing users to strengthen bonds with group members and
+                  transform digital relationships into deeper social connections
+                </p>
+              </div>
+            </div>
           </div>
           {width >= 767 && (
             <AutoScrollNavigator sections={steps} fontColor={"gatherly-blue"} />

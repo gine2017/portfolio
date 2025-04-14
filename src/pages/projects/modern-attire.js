@@ -144,8 +144,8 @@ export default function ModernAttire() {
               <p
                 className={`text-2xl ${darkerGrotesqueBold.className} text-modern-attire `}
               >
-                Modern Attire's mobile shopping experience was failing to
-                convert browsers into buyers.
+                {`Modern Attire's mobile shopping experience was failing to
+                convert browsers into buyers.`}
               </p>
               <p className={`text-2xl ${darkerGrotesque.className}`}>
                 Analytics revealed a clear pattern of user frustration

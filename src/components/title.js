@@ -8,7 +8,7 @@ export default function Title({
 }) {
   return (
     <div
-      className={` ${styles} flex justify-start border-b-4 border-black text-4xl`}
+      className={` ${styles} flex justify-start border-b-4 border-black text-5xl`}
       id={id}
     >
       <h2 className={`${color} bg-white pb-8 ${myFont.className}`}>{title}</h2>

@@ -19,6 +19,7 @@ import {
 } from "@/utils";
 import CaseStudyFooter from "@/components/case-study-footer";
 import Footer from "@/components/footer";
+import Image from "next/image";
 
 //images
 import heroImg from "../../../assets/capstone/modern-attire/modern_attire_hero.svg";
@@ -54,6 +55,7 @@ import highFidelity8 from "../../../assets/capstone/modern-attire/high-fidelity/
 import highFidelity9 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity9.png";
 import highFidelity10 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity10.png";
 import highFidelity11 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity11.png";
+import highFidelity12 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity12.png";
 
 const competitiveImages = [
   { img: competitive_1, altText: "Indochino competitive analysis" },
@@ -82,6 +84,7 @@ const highFidelityImages = [
   highFidelity9,
   highFidelity10,
   highFidelity11,
+  highFidelity12,
 ];
 
 export default function ModernAttire() {
@@ -128,11 +131,6 @@ export default function ModernAttire() {
           className="w-4/5 mx-auto flex flex-col gap-y-20 mt-16 mb-48"
           ref={caseStudyRef}
         >
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(highFidelityImages)} />
-          ) : (
-            <Slider sliderData={createImageArray(highFidelityImages)} />
-          )}
           <h1
             className={`flex justify-center text-modern-attire ${myFont.className} text-6xl`}
           >
@@ -140,84 +138,92 @@ export default function ModernAttire() {
           </h1>
           <div className="flex flex-col gap-y-8 md:flex-row gap-x-16 ">
             <div className="flex flex-col gap-y-8 flex-1">
-              <h2 className={`text-modern-attire text-3xl ${myFont.className}`}>
+              <h2 className={`text-modern-attire text-5xl ${myFont.className}`}>
                 Problem
               </h2>
-              <p className={`text-2xl ${darkerGrotesque.className}`}>
-                {`Modern Attire's mobile shopping experience was failing to
-                convert browsers into buyers. Analytics revealed a clear pattern
-                of user frustration:`}
+              <p
+                className={`text-2xl ${darkerGrotesqueBold.className} text-modern-attire `}
+              >
+                Modern Attire's mobile shopping experience was failing to
+                convert browsers into buyers.
               </p>
-              <ul className="list-disc pl-8">
-                <li className={`text-2xl ${darkerGrotesque.className}`}>
-                  <span
-                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
-                  >
-                    50% of users
-                  </span>{" "}
-                  explored multiple products but{" "}
-                  <span
-                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
-                  >
-                    abandoned before adding items to cart
-                  </span>
-                </li>
-                <li className={`text-2xl ${darkerGrotesque.className}`}>
-                  <span
-                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
-                  >
-                    70% of shoppers
-                  </span>{" "}
-                  who did add items{" "}
-                  <span
-                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
-                  >
-                    abandoned at the registration page
-                  </span>
-                </li>
-                <li className={`text-2xl ${darkerGrotesque.className}`}>
-                  As part of my Springboard UI/UX project, I was tasked with
-                  redesigning the experience to improve checkout completion
-                  rates
-                </li>
-              </ul>
-            </div>
-
-            <div className="flex flex-col gap-y-8 flex-1">
-              <h2 className={`text-modern-attire text-3xl ${myFont.className}`}>
-                Solution
-              </h2>
               <p className={`text-2xl ${darkerGrotesque.className}`}>
-                My research-driven redesign{" "}
+                Analytics revealed a clear pattern of user frustration
+                throughout the shopping journey. Approximately{" "}
                 <span
                   className={`text-modern-attire ${darkerGrotesqueBold.className}`}
                 >
-                  targeted the critical drop-off points
+                  50% of users
                 </span>{" "}
-                with three strategic improvements:
+                explored multiple products but abandoned before adding items to
+                cart. Even more concerning,{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  70% of shoppers
+                </span>{" "}
+                who did add items abandoned at the registration page. The
+                complex checkout process and measurement uncertainty created
+                significant{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  barriers
+                </span>{" "}
+                to purchase completion, resulting in lost revenue and customer{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  dissatisfaction
+                </span>{" "}
+                with the mobile experience.
               </p>
-              <ul className="list-disc pl-8">
-                <li className={`text-2xl ${darkerGrotesque.className}`}>
-                  Implementing a streamlined guest checkout option to remove the
-                  registration barrier
-                </li>
-                <li className={`text-2xl ${darkerGrotesque.className}`}>
-                  Developing intuitive measurement tools that simplified the
-                  suit-fitting process
-                </li>
-                <li className={`text-2xl ${darkerGrotesque.className}`}>
-                  Integrating social proof through accessible product reviews
-                </li>
-                <li className={`text-2xl ${darkerGrotesque.className}`}>
-                  These changes{" "}
-                  <span
-                    className={`text-modern-attire ${darkerGrotesqueBold.className}`}
-                  >
-                    resulted in a 35% reduction in cart abandonment
-                  </span>{" "}
-                  and a 28% increase in completed purchases
-                </li>
-              </ul>
+            </div>
+            <div className="flex flex-col gap-y-8 flex-1">
+              <h2 className={`text-modern-attire text-5xl ${myFont.className}`}>
+                Solution
+              </h2>
+              <p
+                className={`text-2xl ${darkerGrotesqueBold.className} text-modern-attire `}
+              >
+                A streamlined e-commerce experience with simplified checkout and
+                intuitive measurement tools.
+              </p>
+              <p className={`text-2xl ${darkerGrotesque.className}`}>
+                My research-driven redesign targeted the critical drop-off
+                points with strategic improvements. The solution implemented a
+                streamlined{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  guest checkout
+                </span>{" "}
+                option to remove the registration barrier, developed{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  intuitive measurement
+                </span>{" "}
+                tools that simplified the suit-fitting process, and integrated{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  social proof
+                </span>{" "}
+                through accessible product reviews. These changes resulted in a{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  35% reduction
+                </span>{" "}
+                in cart abandonment and a{" "}
+                <span
+                  className={`text-modern-attire ${darkerGrotesqueBold.className}`}
+                >
+                  28% increase
+                </span>{" "}
+                in completed purchases.
+              </p>
             </div>
           </div>
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
@@ -270,6 +276,69 @@ export default function ModernAttire() {
                     Figma
                   </li>
                 </ul>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto ">
+            <h2 className={`text-modern-attire text-5xl ${myFont.className}`}>
+              Solution in Action
+            </h2>
+            <div className="flex flex-row items-center border-b-4 ">
+              <Image
+                src={highFidelity11}
+                alt="guest checkout interface"
+                className="scale-75 w-3/5"
+              />
+              <div>
+                <h3
+                  className={`text-modern-attire text-4xl ${myFont.className} mb-2`}
+                >
+                  Guest Checkout Flow
+                </h3>
+                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                  Eliminates the registration barrier that caused 70% of
+                  shoppers to abandon their cart, allowing customers to complete
+                  purchases without creating an account
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center border-b-4">
+              <div>
+                <h3
+                  className={`text-modern-attire text-4xl ${myFont.className} mb-2`}
+                >
+                  Interactive Measurement Interface
+                </h3>
+                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                  Simplifies the complex suit-fitting process with visual
+                  guidance, reducing uncertainty and building customer
+                  confidence in their purchase decisions
+                </p>
+              </div>
+
+              <Image
+                src={highFidelity6}
+                alt="interactive measurement tool"
+                className="scale-75 w-3/5"
+              />
+            </div>
+            <div className="flex flex-row items-center">
+              <Image
+                src={highFidelity12}
+                alt="product page with reviews"
+                className="scale-75 w-3/5"
+              />
+              <div>
+                <h3
+                  className={`text-modern-attire text-4xl ${myFont.className} mb-2`}
+                >
+                  Product Page with Social Proof
+                </h3>
+                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                  Enhances buyer confidence through accessible product reviews
+                  and customer testimonials, addressing hesitation and
+                  increasing conversion rates
+                </p>
               </div>
             </div>
           </div>

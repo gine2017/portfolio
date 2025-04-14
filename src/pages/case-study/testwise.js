@@ -112,113 +112,97 @@ export default function TestWise() {
           className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48"
           ref={caseStudyRef}
         >
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(highFidelity)} />
-          ) : (
-            <Slider sliderData={createImageArray(highFidelity)} />
-          )}
           <h1
             className={`flex justify-center text-testwise-blue ${myFont.className} text-6xl`}
           >
             Test Wise Case Study
           </h1>
-
-          <div className="flex flex-col gap-y-8 flex-1 md:mx-auto md:w-3/4">
-            <h3 className={` text-testwise-blue text-3xl ${myFont.className}`}>
-              Problem Statement
-            </h3>
-            <div className={`text-2xl ${darkerGrotesque.className}`}>
-              <p className="mb-2">
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  {`KDIT Solutions'`}
-                </span>{" "}
-                Test Wise platform, an{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  enterprise cloud system
-                </span>{" "}
-                for managing ERP/CRM workflows, lacked an{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  integrated requirements module
-                </span>
-                . Without this module, users had to{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  switch between systems
-                </span>{" "}
-                to track their work. Test Wise primarily helps organizations
-                manage{" "}
+          <div className="flex flex-col gap-y-8 md:flex-row gap-x-16 ">
+            <div className="flex flex-col gap-y-8 flex-1">
+              <h2 className={`text-testwise-blue text-5xl ${myFont.className}`}>
+                Problem
+              </h2>
+              <p
+                className={`text-2xl ${darkerGrotesqueBold.className} text-testwise-blue `}
+              >
+                KDIT Solutions' Test Wise platform lacked an integrated
+                requirements module for ERP/CRM workflow management.
+              </p>
+              <p className={`text-2xl ${darkerGrotesque.className}`}>
+                Test Wise primarily helps organizations manage{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
                   testing
                 </span>{" "}
-                and{" "}
+                and release processes for business systems like IBM Maximo.
+                Without a requirements module, users had to{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  release processes
+                  switch between systems
                 </span>{" "}
-                for business systems like{" "}
+                to track their work. A previous design attempt for the
+                requirements{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  IBM Maximo
+                  dashboard
+                </span>{" "}
+                didn't align with the president's vision and faced significant{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  delays
                 </span>
-                , but a{" "}
+                , creating frustration for both{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  previous design attempt
+                  clients
                 </span>{" "}
-                {`for the requirements dashboard didn't align with the president's
-                vision and faced delays.`}
+                and the development team.
               </p>
-              <p>
-                Through a partnership between my{" "}
+            </div>
+            <div className="flex flex-col gap-y-8 flex-1">
+              <h2 className={`text-testwise-blue text-5xl ${myFont.className}`}>
+                Solution
+              </h2>
+              <p
+                className={`text-2xl ${darkerGrotesqueBold.className} text-testwise-blue `}
+              >
+                A redesigned requirements dashboard that integrates seamlessly
+                with Test Wise for improved workflow efficiency.
+              </p>
+              <p className={`text-2xl ${darkerGrotesque.className}`}>
+                Through a partnership between my UX Design bootcamp
+                (Springboard) and KDIT Solutions, my team created an{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  UX Design bootcamp
+                  intuitive
                 </span>{" "}
-                (Springboard) and KDIT Solutions, my team was tasked with
-                creating an{" "}
+                dashboard that integrates seamlessly with Test Wise. The
+                solution clarifies{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >
-                  intuitive dashboard
+                  tasks
+                </span>
+                , streamlines{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  workflows
+                </span>
+                , and enhances{" "}
+                <span
+                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                >
+                  collaboration
                 </span>{" "}
-                that would integrate seamlessly with Test Wise,{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  clarify tasks
-                </span>
-                ,{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  streamline workflows
-                </span>
-                , and{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  enhance collaboration
-                </span>{" "}
-                for a more{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
-                  comprehensive solution
-                </span>
-                .
+                for a more comprehensive enterprise solution that eliminates
+                system switching and improves overall productivity.
               </p>
             </div>
           </div>
@@ -232,6 +216,69 @@ export default function TestWise() {
                 In one month, I collaborated with two designers to enhance Test
                 Wise by conducting UX research,wireframes, and creating
                 high-fidelity screens in Figma.
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto ">
+            <h2 className={`text-testwise-blue text-5xl ${myFont.className}`}>
+              Solution in Action
+            </h2>
+            <div className="flex flex-row items-center border-b-4 ">
+              <Image
+                src={dashboard}
+                alt="integrated requirements dashboard"
+                className="scale-75 w-3/5"
+              />
+              <div>
+                <h3
+                  className={`text-testwise-blue text-4xl ${myFont.className} mb-2`}
+                >
+                  Integrated Requirements Dashboard
+                </h3>
+                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                  Eliminates system switching by centralizing requirements
+                  management directly within Test Wise, creating a unified
+                  workflow experience
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center border-b-4">
+              <div>
+                <h3
+                  className={`text-testwise-blue text-4xl ${myFont.className} mb-2`}
+                >
+                  Task Visualization Interface
+                </h3>
+                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                  Clarifies responsibilities and deadlines through intuitive
+                  visual organization, reducing confusion and improving team
+                  coordination
+                </p>
+              </div>
+
+              <Image
+                src={kanban}
+                alt="task visualization interface"
+                className="scale-75 w-3/5"
+              />
+            </div>
+            <div className="flex flex-row items-center">
+              <Image
+                src={requirementDetailsOne}
+                alt="collaboration features"
+                className="scale-75 w-3/5"
+              />
+              <div>
+                <h3
+                  className={`text-testwise-blue text-4xl ${myFont.className} mb-2`}
+                >
+                  Collaboration Features
+                </h3>
+                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                  Enhances team communication with integrated commenting,
+                  notifications, and status updates that keep all stakeholders
+                  informed
+                </p>
               </div>
             </div>
           </div>

@@ -1,10 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "@/components/navbar";
 import MobileNav from "@/components/mobile-nav";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/footer";
-import CaseStudyFooter from "@/components/case-study-footer";
 import Head from "next/head";
 
 import useWindowSize from "@/hooks/useWindowSize";
@@ -20,20 +19,21 @@ import gatherly from "../../assets/gatherly.png";
 import moderAttire from "../../assets/modern_attire.png";
 
 export default function Projects() {
-  const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
-
-  const handleIntersection = (element) => {
-    element.classList.add("fade-in-up");
-  };
-
-  const imagesRef = useIntersectionObserver(handleIntersection, {
-    threshold: 0.75,
-  });
+  const { width } = useWindowSize();
 
   const updateContent = (state) => {
     setShowContent(state);
   };
+
+  useEffect(() => {
+    if (showContent) {
+      document.body.style.overflow = "auto";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+  }, []);
+
   return (
     <>
       <Head>

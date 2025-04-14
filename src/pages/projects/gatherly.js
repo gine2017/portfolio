@@ -279,7 +279,7 @@ export default function Gatherly() {
             <h2 className={`text-gatherly-blue text-5xl ${myFont.className}`}>
               Solution in Action
             </h2>
-            <div className="flex flex-row items-center border-b-4 ">
+            <div className="flex flex-col md:flex-row md:items-center border-b-4 ">
               <Image
                 src={highFidelity12}
                 alt="discovery page with interest filters"
@@ -287,25 +287,25 @@ export default function Gatherly() {
               />
               <div>
                 <h3
-                  className={`text-gatherly-blue text-4xl ${myFont.className} mb-2`}
+                  className={`text-gatherly-blue text-4xl ${myFont.className} mb-4`}
                 >
                   Discovery Page with Interest Filters
                 </h3>
-                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                <p className={`text-2xl ${darkerGrotesque.className} mb-4`}>
                   Combats isolation by helping users find communities that align
                   with their personal interests, making the initial connection
                   process less intimidating
                 </p>
               </div>
             </div>
-            <div className="flex flex-row items-center border-b-4">
+            <div className="flex flex-col md:flex-row md:items-center border-b-4">
               <div>
                 <h3
-                  className={`text-gatherly-blue text-4xl ${myFont.className} mb-2`}
+                  className={`text-gatherly-blue text-4xl ${myFont.className} mb-4`}
                 >
                   Group Home Page
                 </h3>
-                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                <p className={`text-2xl ${darkerGrotesque.className} mb-4`}>
                   Fosters belonging through shared spaces where members can
                   interact, share experiences, and develop relationships within
                   a structured community
@@ -317,7 +317,7 @@ export default function Gatherly() {
                 className="scale-75"
               />
             </div>
-            <div className="flex flex-row items-center">
+            <div className="flex flex-col md:flex-row md:items-center">
               <Image
                 src={highFidelity15}
                 alt="events page"
@@ -325,11 +325,11 @@ export default function Gatherly() {
               />
               <div>
                 <h3
-                  className={`text-gatherly-blue text-4xl ${myFont.className} mb-2`}
+                  className={`text-gatherly-blue text-4xl ${myFont.className} mb-4`}
                 >
                   Events Page
                 </h3>
-                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                <p className={`text-2xl ${darkerGrotesque.className} `}>
                   Facilitates meaningful connections by offering various events,
                   allowing users to strengthen bonds with group members and
                   transform digital relationships into deeper social connections

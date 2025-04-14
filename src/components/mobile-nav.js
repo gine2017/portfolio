@@ -81,6 +81,19 @@ export default function MobileNav({ updateContent = {} }) {
             <li>
               <Link
                 rel="noopener noreferrer"
+                href={"/projects"}
+                className={`${
+                  currentPath === "/projects"
+                    ? "active: underline underline-offset-8"
+                    : ""
+                } `}
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                rel="noopener noreferrer"
                 href={"/files/Regine_Resume_Technologist.pdf"}
               >
                 Resume

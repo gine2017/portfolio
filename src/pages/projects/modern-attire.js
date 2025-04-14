@@ -122,7 +122,7 @@ export default function ModernAttire() {
         <Hero
           image={heroImg}
           width={width}
-          color={"#FFFFFF"}
+          color={width >= 767 && width <= 1024 ? "#010154" : "#FFFFFF"}
           arrowClick={handleArrowClick}
         />
       )}
@@ -283,11 +283,11 @@ export default function ModernAttire() {
             <h2 className={`text-modern-attire text-5xl ${myFont.className}`}>
               Solution in Action
             </h2>
-            <div className="flex flex-row items-center border-b-4 ">
+            <div className="flex flex-col gap-y-8 md:flex-row md:items-center border-b-4 ">
               <Image
                 src={highFidelity11}
                 alt="guest checkout interface"
-                className="scale-75 w-3/5"
+                className="md:scale-75 md:w-3/5"
               />
               <div>
                 <h3
@@ -295,21 +295,21 @@ export default function ModernAttire() {
                 >
                   Guest Checkout Flow
                 </h3>
-                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                <p className={`text-2xl ${darkerGrotesque.className} mb-4`}>
                   Eliminates the registration barrier that caused 70% of
                   shoppers to abandon their cart, allowing customers to complete
                   purchases without creating an account
                 </p>
               </div>
             </div>
-            <div className="flex flex-row items-center border-b-4">
+            <div className="flex flex-col md:flex-row md:items-center border-b-4">
               <div>
                 <h3
-                  className={`text-modern-attire text-4xl ${myFont.className} mb-2`}
+                  className={`text-modern-attire text-4xl ${myFont.className} mb-4`}
                 >
                   Interactive Measurement Interface
                 </h3>
-                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                <p className={`text-2xl ${darkerGrotesque.className} mb-4`}>
                   Simplifies the complex suit-fitting process with visual
                   guidance, reducing uncertainty and building customer
                   confidence in their purchase decisions
@@ -319,18 +319,18 @@ export default function ModernAttire() {
               <Image
                 src={highFidelity6}
                 alt="interactive measurement tool"
-                className="scale-75 w-3/5"
+                className="md:scale-75 md:w-3/5 mb-4"
               />
             </div>
-            <div className="flex flex-row items-center">
+            <div className="flex flex-col md:flex-row md:items-center">
               <Image
                 src={highFidelity12}
                 alt="product page with reviews"
-                className="scale-75 w-3/5"
+                className="md:scale-75 md:w-3/5"
               />
               <div>
                 <h3
-                  className={`text-modern-attire text-4xl ${myFont.className} mb-2`}
+                  className={`text-modern-attire text-4xl ${myFont.className} mb-4`}
                 >
                   Product Page with Social Proof
                 </h3>

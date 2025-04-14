@@ -223,33 +223,33 @@ export default function TestWise() {
             <h2 className={`text-testwise-blue text-5xl ${myFont.className}`}>
               Solution in Action
             </h2>
-            <div className="flex flex-row items-center border-b-4 ">
+            <div className="flex flex-col gap-y-8 md:flex-row md:items-center border-b-4 ">
               <Image
                 src={dashboard}
                 alt="integrated requirements dashboard"
-                className="scale-75 w-3/5"
+                className="md:scale-75 md:w-3/5"
               />
               <div>
                 <h3
-                  className={`text-testwise-blue text-4xl ${myFont.className} mb-2`}
+                  className={`text-testwise-blue text-4xl ${myFont.className} mb-4`}
                 >
                   Integrated Requirements Dashboard
                 </h3>
-                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                <p className={`text-2xl ${darkerGrotesque.className} mb-4`}>
                   Eliminates system switching by centralizing requirements
                   management directly within Test Wise, creating a unified
                   workflow experience
                 </p>
               </div>
             </div>
-            <div className="flex flex-row items-center border-b-4">
+            <div className="flex flex-col gap-y-8 md:flex-row md:items-center border-b-4">
               <div>
                 <h3
-                  className={`text-testwise-blue text-4xl ${myFont.className} mb-2`}
+                  className={`text-testwise-blue text-4xl ${myFont.className}`}
                 >
                   Task Visualization Interface
                 </h3>
-                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                <p className={`text-2xl ${darkerGrotesque.className} mb-4`}>
                   Clarifies responsibilities and deadlines through intuitive
                   visual organization, reducing confusion and improving team
                   coordination
@@ -259,18 +259,18 @@ export default function TestWise() {
               <Image
                 src={kanban}
                 alt="task visualization interface"
-                className="scale-75 w-3/5"
+                className="md:scale-75 md:w-3/5 mb-4"
               />
             </div>
-            <div className="flex flex-row items-center">
+            <div className="flex flex-col gap-y-8 md:flex-row md:items-center">
               <Image
                 src={requirementDetailsOne}
                 alt="collaboration features"
-                className="scale-75 w-3/5"
+                className="md:scale-75 md:w-3/5"
               />
               <div>
                 <h3
-                  className={`text-testwise-blue text-4xl ${myFont.className} mb-2`}
+                  className={`text-testwise-blue text-4xl ${myFont.className} mb-4`}
                 >
                   Collaboration Features
                 </h3>

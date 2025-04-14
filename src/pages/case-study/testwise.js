@@ -125,8 +125,8 @@ export default function TestWise() {
               <p
                 className={`text-2xl ${darkerGrotesqueBold.className} text-testwise-blue `}
               >
-                KDIT Solutions' Test Wise platform lacked an integrated
-                requirements module for ERP/CRM workflow management.
+                {`KDIT Solutions' Test Wise platform lacked an integrated
+                requirements module for ERP/CRM workflow management.`}
               </p>
               <p className={`text-2xl ${darkerGrotesque.className}`}>
                 Test Wise primarily helps organizations manage{" "}
@@ -149,7 +149,7 @@ export default function TestWise() {
                 >
                   dashboard
                 </span>{" "}
-                didn't align with the president's vision and faced significant{" "}
+                {`didn't align with the president's vision and faced significant`}{" "}
                 <span
                   className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
                 >

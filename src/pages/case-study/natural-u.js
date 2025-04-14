@@ -227,7 +227,7 @@ export default function NaturalU() {
                 >
                   videos
                 </span>
-                , ask questions, and learn from each other, whether they're{" "}
+                {`, ask questions, and learn from each other, whether they're`}{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >

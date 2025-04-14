@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import Hero from "@/components/hero";
 import Link from "next/link";
+import Image from "next/image";
 import {
   myFont,
   darkerGrotesque,
@@ -142,11 +143,6 @@ export default function NaturalU() {
           className="w-4/5 mx-auto flex flex-col gap-y-20 mt-16 mb-48"
           ref={caseStudyRef}
         >
-          {width <= 767 ? (
-            <MobileSlider sliderData={createImageArray(highFidelityImages)} />
-          ) : (
-            <Slider sliderData={createImageArray(highFidelityImages)} />
-          )}
           <h1
             className={`flex justify-center text-naturalu-purple  ${myFont.className} text-6xl`}
           >
@@ -155,120 +151,83 @@ export default function NaturalU() {
           <div className="flex flex-col gap-y-8 md:flex-row gap-x-16 ">
             <div className="flex flex-col gap-y-8 flex-1">
               <h2
-                className={`text-naturalu-purple text-3xl ${myFont.className}`}
+                className={`text-naturalu-purple text-5xl ${myFont.className}`}
               >
                 Problem
               </h2>
+              <p
+                className={`text-2xl ${darkerGrotesqueBold.className} text-naturalu-purple `}
+              >
+                Black women lack proper education about natural hair care while
+                facing social pressure to alter their appearance.
+              </p>
               <p className={`text-2xl ${darkerGrotesque.className}`}>
-                My journey with{" "}
+                Natural hair care suffers from inadequate{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >
-                  damaged hair
+                  education
                 </span>{" "}
-                and{" "}
-                <span
-                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
-                >
-                  loss
-                </span>{" "}
-                from{" "}
-                <span
-                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
-                >
-                  chemical straightening
-                </span>{" "}
-                highlighted two critical issues:{" "}
-                <span
-                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
-                >
-                  insufficient education
-                </span>{" "}
-                about{" "}
-                <span
-                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
-                >
-                  natural hair care
-                </span>{" "}
-                and widespread{" "}
+                about proper techniques and persistent{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >
                   societal pressure
                 </span>{" "}
-                {`to alter one's natural appearance. Both`}{" "}
+                to alter natural textures. These forces create cycles of hair{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >
-                  personally
+                  damage
                 </span>{" "}
-                and{" "}
-                <span
-                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
-                >
-                  communally
-                </span>
-                , these challenges create cycles of hair damage and diminished{" "}
+                and diminished{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >
                   self-acceptance
                 </span>
-                . This project creates an{" "}
+                , particularly affecting{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >
-                  informative
-                </span>
-                ,{" "}
-                <span
-                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
-                >
-                  supportive space
+                  Black communities
                 </span>{" "}
-                where people can learn about their natural hair and embrace
-                their{" "}
-                <span
-                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
-                >
-                  authentic selves
-                </span>{" "}
-                without{" "}
-                <span
-                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
-                >
-                  judgment
-                </span>{" "}
-                or{" "}
-                <span
-                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
-                >
-                  shame
-                </span>
-                .
+                where chemical treatments have historically been promoted over
+                natural styles.
               </p>
             </div>
             <div className="flex flex-col gap-y-8 flex-1">
               <h2
-                className={` text-naturalu-purple text-3xl ${myFont.className}`}
+                className={`text-naturalu-purple text-5xl ${myFont.className}`}
               >
                 Solution
               </h2>
+              <p
+                className={`text-2xl ${darkerGrotesqueBold.className} text-naturalu-purple `}
+              >
+                NaturalU creates an educational community platform for Black
+                women to embrace their natural hair.
+              </p>
               <p className={`text-2xl ${darkerGrotesque.className}`}>
+                NaturalU is a platform designed to foster open{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >
-                  NaturalU
+                  education
                 </span>{" "}
-                is a platform designed to foster open conversations about{" "}
+                and{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >
-                  natural hair
+                  conversations
+                </span>{" "}
+                about natural hair. Users can share{" "}
+                <span
+                  className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
+                >
+                  videos
                 </span>
-                .{" "}
-                {`Users can share videos, ask questions, and learn from each
-                other, whether they're`}{" "}
+                , ask questions, and learn from each other, whether they're{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >
@@ -286,26 +245,86 @@ export default function NaturalU() {
                 >
                   inclusivity
                 </span>{" "}
-                and open dialogue. It empowers users to confidently embrace and
-                celebrate their{" "}
+                and open dialogue. It empowers users to confidently{" "}
                 <span
                   className={`text-naturalu-purple ${darkerGrotesqueBold.className}`}
                 >
-                  natural hair
+                  embrace
                 </span>{" "}
-                and normalizes diverse hair types.
+                and celebrate their natural hair and normalizes diverse hair
+                types.
               </p>
             </div>
           </div>
 
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
-            <h2 className={`text-naturalu-purple text-3xl ${myFont.className}`}>
+            <h2 className={`text-naturalu-purple text-5xl ${myFont.className}`}>
               My Role
             </h2>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               I served as the sole UI/UX designer for this project; therefore, I
               handled the research and design
             </p>
+          </div>
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
+            <h2 className={`text-naturalu-purple text-5xl ${myFont.className}`}>
+              Solution in Action
+            </h2>
+            <div className="flex flex-row items-center border-b-4 ">
+              <Image
+                src={screen20}
+                alt="coily hair education page"
+                className="scale-75"
+              />
+              <div>
+                <h3
+                  className={`text-naturalu-purple text-4xl ${myFont.className} mb-2`}
+                >
+                  Hair Type Education Hub
+                </h3>
+                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                  Addresses the education gap by providing detailed, accessible
+                  information about specific hair types
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center border-b-4">
+              <div>
+                <h3
+                  className={`text-naturalu-purple text-4xl ${myFont.className} mb-2`}
+                >
+                  Community Knowledge Exchange
+                </h3>
+                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                  Creates a supportive space where users can ask questions and
+                  receive advice from both professionals and peers
+                </p>
+              </div>
+
+              <Image
+                src={screen17}
+                alt="answered question page"
+                className="scale-75"
+              />
+            </div>
+            <div className="flex flex-row items-center">
+              <Image
+                src={screen14}
+                alt="video discovery page"
+                className="scale-75"
+              />
+              <div>
+                <h3
+                  className={`text-naturalu-purple text-4xl ${myFont.className} mb-2`}
+                >
+                  Visual Learning Discovery
+                </h3>
+                <p className={`text-2xl ${darkerGrotesque.className}`}>
+                  Enables visual learning and representation through diverse
+                  hair examples, normalizing different hair types
+                </p>
+              </div>
+            </div>
           </div>
           {width >= 767 && (
             <AutoScrollNavigator
@@ -393,7 +412,7 @@ export default function NaturalU() {
           </div>
 
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
-            <h3 className={`text-naturalu-purple text-3xl ${myFont.className}`}>
+            <h3 className={`text-naturalu-purple text-4xl ${myFont.className}`}>
               Persona
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
@@ -482,7 +501,7 @@ export default function NaturalU() {
             id="ideate"
           />
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
-            <h3 className={`text-naturalu-purple text-3xl ${myFont.className}`}>
+            <h3 className={`text-naturalu-purple text-4xl ${myFont.className}`}>
               Sketches
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
@@ -588,7 +607,7 @@ export default function NaturalU() {
           </div>
 
           <div className="flex flex-col gap-y-8 w-3/4 mx-auto">
-            <h3 className={`text-naturalu-purple text-3xl ${myFont.className}`}>
+            <h3 className={`text-naturalu-purple text-4xl ${myFont.className}`}>
               User Flow
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
@@ -648,7 +667,7 @@ export default function NaturalU() {
             id="design"
           />
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
-            <h3 className={`text-naturalu-purple text-3xl ${myFont.className}`}>
+            <h3 className={`text-naturalu-purple text-4xl ${myFont.className}`}>
               Style Guide and UI Components
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
@@ -769,7 +788,7 @@ export default function NaturalU() {
           </div>
 
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
-            <h3 className={`text-naturalu-purple text-3xl ${myFont.className}`}>
+            <h3 className={`text-naturalu-purple text-4xl ${myFont.className}`}>
               High Fidelity Screens
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>

@@ -257,7 +257,7 @@ export default function NaturalU() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto">
             <h2 className={`text-naturalu-purple text-5xl ${myFont.className}`}>
               My Role
             </h2>

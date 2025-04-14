@@ -226,7 +226,7 @@ export default function ModernAttire() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
+          <div className="flex flex-col gap-y-8 w-full md:mx-auto ">
             <h2 className={`text-modern-attire text-5xl ${myFont.className}`}>
               My Role
             </h2>

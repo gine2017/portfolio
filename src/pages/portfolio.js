@@ -55,7 +55,7 @@ export default function Portfolio() {
         <Hero
           image={portfolioHero}
           width={width}
-          color={"#FFFFFF"}
+          color={width >= 767 && width <= 1024 ? "#3C0092" : "#FFFFFF"}
           arrowClick={handleArrowClick}
         />
       )}

@@ -136,7 +136,7 @@ export default function Home() {
                   viewBox="0 0 496 446"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="relative flex-1 w-full md:w-1/2 lg:w-2/3 xl:w-3/4"
+                  className="relative flex-1 w-full md:w-1/2 lg:w-2/3 xl:w-11/12"
                 >
                   <g id="my_illustration">
                     <path

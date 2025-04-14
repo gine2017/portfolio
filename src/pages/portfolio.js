@@ -71,7 +71,7 @@ export default function Portfolio() {
           </h1>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h2
-              className={` text-purple text-3xl md:text-3xl ${myFont.className}`}
+              className={` text-purple text-3xl md:text-5xl ${myFont.className}`}
             >
               Bridging Creativity and Code
             </h2>
@@ -128,7 +128,7 @@ export default function Portfolio() {
             </p>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h2 className={` text-purple text-3xl ${myFont.className}`}>
+            <h2 className={` text-purple text-5xl ${myFont.className}`}>
               Laying the foundation
             </h2>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
@@ -201,7 +201,7 @@ export default function Portfolio() {
           <div
             className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
           >
-            <h2 className={`text-purple text-3xl ${myFont.className}`}>
+            <h2 className={`text-purple text-5xl ${myFont.className}`}>
               Improving Through Insights
             </h2>
             <p>
@@ -247,7 +247,7 @@ export default function Portfolio() {
           <div
             className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
           >
-            <h2 className={` text-purple text-3xl ${myFont.className}`}>
+            <h2 className={` text-purple text-5xl ${myFont.className}`}>
               Bringing Designs to Life
             </h2>
             <p>
@@ -294,7 +294,7 @@ export default function Portfolio() {
           <div
             className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
           >
-            <h2 className={` text-purple text-3xl ${myFont.className}`}>
+            <h2 className={` text-purple text-5xl ${myFont.className}`}>
               Being the Ultimate Translator
             </h2>
             <p>

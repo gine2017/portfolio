@@ -105,7 +105,7 @@ export default function DesignSystem() {
           </h1>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h2
-              className={`text-component-library text-3xl md:text-3xl ${myFont.className}`}
+              className={`text-component-library text-5xl md:text-3xl ${myFont.className}`}
             >
               Building Blocks for Digital Experiences
             </h2>
@@ -154,7 +154,7 @@ export default function DesignSystem() {
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h2
-              className={`text-component-library text-3xl ${myFont.className}`}
+              className={`text-component-library text-5xl ${myFont.className}`}
             >
               Educational Purpose & Audience
             </h2>
@@ -191,7 +191,7 @@ export default function DesignSystem() {
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h2
-              className={`text-component-library text-3xl ${myFont.className}`}
+              className={`text-component-library text-5xl ${myFont.className}`}
             >
               Technical Foundation
             </h2>
@@ -236,7 +236,7 @@ export default function DesignSystem() {
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h2
-              className={`text-component-library text-3xl ${myFont.className}`}
+              className={`text-component-library text-5xl ${myFont.className}`}
             >
               Component Development Journey
             </h2>
@@ -289,7 +289,7 @@ export default function DesignSystem() {
             className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
           >
             <h2
-              className={`text-component-library text-3xl ${myFont.className}`}
+              className={`text-component-library text-5xl ${myFont.className}`}
             >
               Documentation with Storybook
             </h2>
@@ -335,7 +335,7 @@ export default function DesignSystem() {
             className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
           >
             <h2
-              className={`text-component-library text-3xl ${myFont.className}`}
+              className={`text-component-library text-5xl ${myFont.className}`}
             >
               From Components to Interfaces
             </h2>
@@ -383,7 +383,7 @@ export default function DesignSystem() {
             className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
           >
             <h2
-              className={`text-component-library text-3xl ${myFont.className}`}
+              className={`text-component-library text-5xl ${myFont.className}`}
             >
               Professional Application
             </h2>

@@ -209,7 +209,7 @@ export default function TestWise() {
 
           <div className="flex flex-col gap-y-10 md:gap-x-40 md:mx-auto md:w-3/4">
             <div className="flex flex-col gap-y-2 md:gap-y-8">
-              <h3 className={`text-testwise-blue text-3xl ${myFont.className}`}>
+              <h3 className={`text-testwise-blue text-4xl ${myFont.className}`}>
                 My Role
               </h3>
               <div className={` text-2xl ${darkerGrotesque.className}`}>
@@ -284,7 +284,7 @@ export default function TestWise() {
           </div>
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h3 className={`text-testwise-blue text-3xl ${myFont.className}`}>
+            <h3 className={`text-testwise-blue text-4xl ${myFont.className}`}>
               Design Process
             </h3>
             <div className="flex flex-col gap-y-4 md:flex-row justify-evenly">
@@ -411,7 +411,7 @@ export default function TestWise() {
             </div>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h3 className={`text-testwise-blue text-3xl ${myFont.className}`}>
+            <h3 className={`text-testwise-blue text-4xl ${myFont.className}`}>
               Competitive Analysis
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
@@ -842,7 +842,7 @@ export default function TestWise() {
               </p>
             </div>
             <div className="flex flex-col gap-y-8 ">
-              <h3 className={`text-testwise-blue text-3xl ${myFont.className}`}>
+              <h3 className={`text-testwise-blue text-4xl ${myFont.className}`}>
                 Low-fidelity Wireframes
               </h3>
               <div className={`text-2xl ${darkerGrotesque.className}`}>
@@ -1017,7 +1017,7 @@ export default function TestWise() {
             </div>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h3 className={`text-testwise-blue text-3xl ${myFont.className}`}>
+            <h3 className={`text-testwise-blue text-4xl ${myFont.className}`}>
               High Fidelity Prototype
             </h3>
             <iframe

@@ -108,7 +108,7 @@ export default function About() {
               <div className="flex flex-col gap-8 md:flex-row">
                 <div className="flex-1">
                   <h3
-                    className={`text-purple text-3xl ${darkerGrotesqueBold.className}`}
+                    className={`text-purple text-4xl ${darkerGrotesqueBold.className}`}
                   >
                     Key Skills
                   </h3>
@@ -146,7 +146,7 @@ export default function About() {
                 </div>
                 <div className="flex-1">
                   <h3
-                    className={`text-purple text-3xl ${darkerGrotesqueBold.className}`}
+                    className={`text-purple text-4xl ${darkerGrotesqueBold.className}`}
                   >
                     Experience
                   </h3>
@@ -175,7 +175,7 @@ export default function About() {
               </div>
               <div className="flex flex-col">
                 <h3
-                  className={`text-purple text-3xl ${darkerGrotesqueBold.className}`}
+                  className={`text-purple text-4xl ${darkerGrotesqueBold.className}`}
                 >
                   Transferrable Skills
                 </h3>

@@ -227,7 +227,7 @@ export default function ModernAttire() {
             </div>
           </div>
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
-            <h2 className={`text-modern-attire text-3xl ${myFont.className}`}>
+            <h2 className={`text-modern-attire text-5xl ${myFont.className}`}>
               My Role
             </h2>
             <p className={`text-2xl ${darkerGrotesque.className}`}>
@@ -237,7 +237,7 @@ export default function ModernAttire() {
             <div className="flex flex-col gap-y-4 md:flex-row md:gap-x-16">
               <div className="flex flex-col gap-y-2">
                 <h3
-                  className={`text-modern-attire text-2xl ${myFont.className}`}
+                  className={`text-modern-attire text-4xl ${myFont.className}`}
                 >
                   Responsibilities
                 </h3>
@@ -252,7 +252,7 @@ export default function ModernAttire() {
               </div>
               <div className="flex flex-col gap-y-2">
                 <h3
-                  className={`text-modern-attire text-2xl ${myFont.className}`}
+                  className={`text-modern-attire text-4xl ${myFont.className}`}
                 >
                   Timeline
                 </h3>
@@ -264,7 +264,7 @@ export default function ModernAttire() {
               </div>
               <div className="flex flex-col gap-y-2">
                 <h3
-                  className={`text-modern-attire text-2xl ${myFont.className}`}
+                  className={`text-modern-attire text-4xl ${myFont.className}`}
                 >
                   Tools
                 </h3>
@@ -405,7 +405,7 @@ export default function ModernAttire() {
             </ul>
           </div>
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
-            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+            <h3 className={`text-modern-attire text-4xl ${myFont.className}`}>
               Competitive Analysis
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
@@ -435,7 +435,7 @@ export default function ModernAttire() {
           </div>
           <ImageViewer images={competitiveImages} />
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
-            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+            <h3 className={`text-modern-attire text-4xl ${myFont.className}`}>
               User Surveys
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
@@ -503,7 +503,7 @@ export default function ModernAttire() {
             />
           )}
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
-            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+            <h3 className={`text-modern-attire text-4xl ${myFont.className}`}>
               User Interviews
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
@@ -550,7 +550,7 @@ export default function ModernAttire() {
             </div>
           </div>
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
-            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+            <h3 className={`text-modern-attire text-4xl ${myFont.className}`}>
               Persona
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
@@ -588,7 +588,7 @@ export default function ModernAttire() {
             id="ideate"
           />
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
-            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+            <h3 className={`text-modern-attire text-4xl ${myFont.className}`}>
               Sketches
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
@@ -615,7 +615,7 @@ export default function ModernAttire() {
           </div>
           <ImageRow images={sketches} />
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
-            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+            <h3 className={`text-modern-attire text-4xl ${myFont.className}`}>
               User Flow
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
@@ -648,7 +648,7 @@ export default function ModernAttire() {
             id="design"
           />
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
-            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+            <h3 className={`text-modern-attire text-4xl ${myFont.className}`}>
               Wireframes
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
@@ -675,7 +675,7 @@ export default function ModernAttire() {
             allowfullscreen
           ></iframe>
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
-            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+            <h3 className={`text-modern-attire text-4xl ${myFont.className}`}>
               Style Guide
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
@@ -696,7 +696,7 @@ export default function ModernAttire() {
           </div>
           <ImageViewer images={styleguideImages} />
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
-            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+            <h3 className={`text-modern-attire text-4xl ${myFont.className}`}>
               High Fidelity Screens
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
@@ -727,7 +727,7 @@ export default function ModernAttire() {
             <Slider sliderData={createImageArray(highFidelityImages)} />
           )}
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">
-            <h3 className={`text-modern-attire text-3xl ${myFont.className}`}>
+            <h3 className={`text-modern-attire text-4xl ${myFont.className}`}>
               Prototype
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>

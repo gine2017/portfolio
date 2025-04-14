@@ -267,7 +267,7 @@ export default function Gatherly() {
             </div>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h2 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
+            <h2 className={`text-gatherly-blue text-5xl ${myFont.className}`}>
               My Role
             </h2>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
@@ -497,7 +497,7 @@ export default function Gatherly() {
           <Stats statsArray={stats} color="text-gatherly-blue" />
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Survey
             </h3>
             <div className={` text-2xl ${darkerGrotesque.className}`}>
@@ -778,7 +778,7 @@ export default function Gatherly() {
             </div>
           </div>
           <h3
-            className={`md:mx-auto md:w-3/4 text-gatherly-blue text-3xl ${myFont.className}`}
+            className={`md:mx-auto md:w-3/4 text-gatherly-blue text-4xl ${myFont.className}`}
           >
             Notable Quotes from the interviews
           </h3>
@@ -799,7 +799,7 @@ export default function Gatherly() {
             </p>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               However
             </h3>
             <p className={`text-2xl ${darkerGrotesque.className}`}>
@@ -826,7 +826,7 @@ export default function Gatherly() {
             </p>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Persona
             </h3>
 
@@ -895,7 +895,7 @@ export default function Gatherly() {
           </div>
           <ImageRow images={personaImages} />
           <div className="flex flex-col gap-y-14 md:mx-auto md:w-3/4">
-            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Empathy Map
             </h3>
 
@@ -1052,7 +1052,7 @@ export default function Gatherly() {
           </div>
           <div className="flex flex-col md:mx-auto md:w-3/4">
             <div className="flex flex-1 gap-y-8 flex-col">
-              <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
+              <h3 className={`text-gatherly-blue text-4xl ${myFont.className}`}>
                 Laddering
               </h3>
               <div className={` text-2xl ${darkerGrotesque.className}`}>
@@ -1134,7 +1134,7 @@ export default function Gatherly() {
             <ZoomableImage image={ladder} />
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Sketches of possible solutions
             </h3>
             <div className={` text-2xl ${darkerGrotesque.className}`}>
@@ -1276,7 +1276,7 @@ export default function Gatherly() {
           </div>
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               User Flows
             </h3>
             <div className={` text-2xl ${darkerGrotesque.className}`}>
@@ -1416,7 +1416,7 @@ export default function Gatherly() {
             </p>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Wireframes
             </h3>
             <div className={` text-2xl ${darkerGrotesque.className}`}>
@@ -1505,7 +1505,7 @@ export default function Gatherly() {
             )}
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               Styleguide and UI elements
             </h3>
             <div className={` text-2xl ${darkerGrotesque.className}`}>
@@ -1591,7 +1591,7 @@ export default function Gatherly() {
             <ImageViewer images={styleguideImages} />
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h3 className={`text-gatherly-blue text-3xl ${myFont.className}`}>
+            <h3 className={`text-gatherly-blue text-4xl ${myFont.className}`}>
               High Fidelity Screens
             </h3>
             <div className={` text-2xl ${darkerGrotesque.className}`}>
@@ -1685,7 +1685,7 @@ export default function Gatherly() {
             )}
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h3 className={`text-3xl text-gatherly-blue ${myFont.className}`}>
+            <h3 className={`text-4xl text-gatherly-blue ${myFont.className}`}>
               Prototype
             </h3>
             <div className={` text-2xl ${darkerGrotesque.className}`}>
@@ -1854,7 +1854,7 @@ export default function Gatherly() {
           </div>
           <ImageViewer images={testImages} />
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h2 className={`text-gatherly-blue text-4xl ${myFont.className}`}>
+            <h2 className={`text-gatherly-blue text-5xl ${myFont.className}`}>
               Whats next .. ?
             </h2>
             <div

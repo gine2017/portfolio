@@ -62,44 +62,89 @@ export default function About() {
                 <div className="flex-1">
                   <div>
                     <p>
-                      {`Hello! I'm Regine Thimothee, a Design Technologist working at the intersection of user experience and front-end development. With a Bachelor of Science in`}{" "}
+                      {`Hello! I’m Regine Thimothee, a UX & Product Designer whose passion for technology began when I earned my`}{" "}
                       <span className={`${darkerGrotesqueBold.className}`}>
-                        Web and Mobile Computing
+                        B.S. in Web & Mobile Computing at Rochester Institute of
+                        Technology
+                      </span>
+                      ,
+                      {` where I honed my problem-solving skills and learned to
+                      think holistically about digital experiences.`}{" "}
+                    </p>
+                  </div>
+                  <br />
+                  <div>
+                    <p>
+                      {`After graduating, I joined`}{" "}
+                      <span className={`${darkerGrotesqueBold.className}`}>
+                        ADP
                       </span>{" "}
-                      {`from Rochester Institute of Technology, I've cultivated
-                      expertise that spans both creative and technical domains.`}
+                      {`as a Software Engineer in where I collobarated with UX
+                      teams to`}{" "}
+                      <span className={`${darkerGrotesqueBold.className}`}>
+                        build accessible React components
+                      </span>{" "}
+                      and{" "}
+                      <span className={`${darkerGrotesqueBold.className}`}>
+                        utilized scalable design systems and component
+                        libraries.
+                      </span>{" "}
+                      {`This experience that taught me the power of blending
+                      technical rigor with user-centered thinking.`}{" "}
                     </p>
                   </div>
                   <br />
                   <div>
                     <p>
-                      {`My professional journey has been shaped by a passion for translating human needs into digital solutions. Whether crafting research-driven UX strategies, building accessible component libraries, or developing`}{" "}
+                      {`Eager to deepen my design expertise, I completed Springboard’s `}{" "}
                       <span className={`${darkerGrotesqueBold.className}`}>
-                        design systems
-                      </span>
-                      {`, I thrive in spaces where design thinking meets technical execution.`}
+                        700+ hour UX program
+                      </span>{" "}
+                      and secured a{" "}
+                      <span className={`${darkerGrotesqueBold.className}`}>
+                        externship contract
+                      </span>{" "}
+                      {`, where I led research phase and refined my skills in
+                      wireframing, high-fidelity mockups, and prototyping. `}{" "}
                     </p>
                   </div>
                   <br />
                   <div>
                     <p>
-                      {`At companies like ADP and through my own venture, NaturalU, I've honed my ability to serve as a`}{" "}
+                      {`Driven by a passion for community and natural hair care, I founded`}{" "}
                       <span className={`${darkerGrotesqueBold.className}`}>
-                        bridge between design vision and technical
-                        implementation
+                        NaturalU
                       </span>
-                      {`. Using my skills in React, JavaScript, and UI/UX methodologies, I create digital experiences that balance aesthetic appeal with technical performance.`}
+                      {`, an educational app ( that I am currently working on )
+                      combining video content and Q&A to foster open discussion,
+                      where I applied my`}{" "}
+                      <span className={`${darkerGrotesqueBold.className}`}>
+                        “ultimate translator”
+                      </span>{" "}
+                      {`role to bridge design vision and code.`}{" "}
                     </p>
                   </div>
                   <br />
                   <div>
                     <p>
-                      {`I'm particularly passionate about`}{" "}
+                      {`Today, I leverage this journey, from `}{" "}
                       <span className={`${darkerGrotesqueBold.className}`}>
-                        design systems, accessible interfaces, and creative
-                        technology
+                        RIT foundations
+                      </span>{" "}
+                      through{" "}
+                      <span className={`${darkerGrotesqueBold.className}`}>
+                        enterprise-scale projects at ADP
                       </span>
-                      {` that pushes boundaries while remaining intuitive for users. My dual perspective allows me to anticipate challenges across the product development lifecycle and create solutions that honor both design intent and technical feasibility.`}
+                      {`, immersive`}{" "}
+                      <span className={`${darkerGrotesqueBold.className}`}>
+                        Springboard training
+                      </span>{" "}
+                      {`, and entrepreneurial innovation with`}{" "}
+                      <span className={`${darkerGrotesqueBold.className}`}>
+                        NaturalU
+                      </span>{" "}
+                      {`, to craft intuitive experiences that honor both design
+                      intent and technical feasibility.`}{" "}
                     </p>
                   </div>
                 </div>

@@ -62,13 +62,15 @@ export default function AutoScrollNavigator({ fontColor, sections }) {
 
   return (
     <div
-      className={`sticky z-[60] bg-white flex flex-row text-4xl border-b-2 pb-16 pt-10 justify-evenly items-center w-full h-10 text-${fontColor} ${darkerGrotesqueReg.className}`}
+      className={`sticky z-[60] bg-white flex flex-row  border-b-2 pb-16 pt-10 justify-evenly items-center w-full h-10 xl:text-4xl md:text-3xl text-${fontColor} ${darkerGrotesqueReg.className}`}
       style={{ top: `${navOffset}px`, transition: "top 0.5s ease-in-out" }}
     >
       {sections.map((elm, index) => (
         <React.Fragment key={elm.id}>
           {index > 0 && (
-            <div className={`border-t-4 border-${fontColor} w-2/12 h-px`}></div>
+            <div
+              className={`border-t-4 border-${fontColor} xl:w-2/12 md:w-1/12 h-px`}
+            ></div>
           )}
           <div
             className={`hover:cursor-pointer ${

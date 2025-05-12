@@ -38,9 +38,9 @@ export default function Navbar() {
       />
 
       <div
-        className={`w-11/12 bg-white fixed -top-4 flex flex-row justify-end gap-88 z-[60] py-8   ${darkerGrotesqueReg.className} ${navClass}`}
+        className={`w-11/12 bg-white fixed -top-4 flex flex-row justify-end  z-[60] py-8    ${darkerGrotesqueReg.className} ${navClass}`}
       >
-        <ul className="nav-list mr-16 flex flex-row gap-88 text-4xl">
+        <ul className="nav-list mr-16 flex flex-row md:gap-12 md:text-3xl xl:gap-88 xl:text-4xl">
           <li className=" transition-transform hover:-translate-y-1 ">
             <Link
               rel="noopener noreferrer"

@@ -270,7 +270,7 @@ export default function NaturalU() {
             <h2 className={`text-naturalu-purple text-5xl ${myFont.className}`}>
               Solution in Action
             </h2>
-            <div className="flex flex flex-col md:flex-row md:items-center border-b-4 ">
+            <div className="flex flex flex-col xl:flex-row md:items-center border-b-4 ">
               <Image
                 src={screen20}
                 alt="coily hair education page"
@@ -282,13 +282,13 @@ export default function NaturalU() {
                 >
                   Hair Type Education Hub
                 </h3>
-                <p className={`text-2xl ${darkerGrotesque.className} mb-2`}>
+                <p className={`text-2xl ${darkerGrotesque.className} mb-8`}>
                   Addresses the education gap by providing detailed, accessible
                   information about specific hair types
                 </p>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row md:items-center border-b-4">
+            <div className="flex flex-col xl:flex-row md:items-center border-b-4">
               <div>
                 <h3
                   className={`text-naturalu-purple text-4xl ${myFont.className} mb-4`}
@@ -307,7 +307,7 @@ export default function NaturalU() {
                 className="scale-75"
               />
             </div>
-            <div className="flex flex-col md:flex-row md:items-center">
+            <div className="flex flex-col xl:flex-row md:items-center">
               <Image
                 src={screen14}
                 alt="video discovery page"

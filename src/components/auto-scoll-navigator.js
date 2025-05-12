@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 export default function AutoScrollNavigator({ fontColor, sections }) {
   const [active, setActive] = useState(null);
+  const [navOffset, setNavOffset] = useState(0);
 
   // Function for smooth scrolling when clicking on a section
   const handleScroll = (sectionId, offset = 200) => {
@@ -50,9 +51,19 @@ export default function AutoScrollNavigator({ fontColor, sections }) {
     };
   }, [sections]);
 
+  useEffect(() => {
+    const handleNavToggle = (e) => {
+      setNavOffset(e.detail.open ? 90 : 0); // Adjust based on your nav height
+    };
+
+    window.addEventListener("navbarToggle", handleNavToggle);
+    return () => window.removeEventListener("navbarToggle", handleNavToggle);
+  }, []);
+
   return (
     <div
-      className={`sticky top-[4.25rem] z-[60] bg-white flex flex-row text-4xl border-b-2 pb-16 pt-10 justify-evenly items-center w-full h-10 text-${fontColor} ${darkerGrotesqueReg.className}`}
+      className={`sticky z-[60] bg-white flex flex-row text-4xl border-b-2 pb-16 pt-10 justify-evenly items-center w-full h-10 text-${fontColor} ${darkerGrotesqueReg.className}`}
+      style={{ top: `${navOffset}px`, transition: "top 0.5s ease-in-out" }}
     >
       {sections.map((elm, index) => (
         <React.Fragment key={elm.id}>

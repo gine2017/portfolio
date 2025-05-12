@@ -92,7 +92,7 @@ module.exports = {
           "100%": { transform: "translate(-100%)" },
         },
         navSlideDown: {
-          "100%": { transform: "translateY(10px)", display: "flex" },
+          "100%": { transform: "translateY(10px)", height: "auto" },
         },
         navSlideUp: {
           "0%": {
@@ -101,7 +101,7 @@ module.exports = {
           "100%": {
             opacity: 0,
             transform: "translateY(-10px)",
-            display: "none",
+            height: "0%",
           },
         },
       },

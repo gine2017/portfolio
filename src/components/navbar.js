@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import logo from "../../assets/logo-v1.svg";
 import { darkerGrotesqueReg } from "@/utils";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -15,8 +13,14 @@ export default function Navbar() {
   const toggleNavBar = () => {
     if (open) {
       setNavClass("animate-navSlideDown");
+      window.dispatchEvent(
+        new CustomEvent("navbarToggle", { detail: { open: true } })
+      );
     } else {
       setNavClass("animate-navSlideUp");
+      window.dispatchEvent(
+        new CustomEvent("navbarToggle", { detail: { open: false } })
+      );
     }
     setIsOpen((prev) => !prev);
   };
@@ -34,7 +38,7 @@ export default function Navbar() {
       />
 
       <div
-        className={`w-11/12 bg-white fixed -top-4 flex flex-row justify-end gap-88 z-[89] py-8   ${darkerGrotesqueReg.className} ${navClass}`}
+        className={`w-11/12 bg-white fixed -top-4 flex flex-row justify-end gap-88 z-[60] py-8   ${darkerGrotesqueReg.className} ${navClass}`}
       >
         <ul className="nav-list mr-16 flex flex-row gap-88 text-4xl">
           <li className=" transition-transform hover:-translate-y-1 ">

@@ -91,12 +91,27 @@ module.exports = {
           "0%": { transform: "translate(0, 0)" },
           "100%": { transform: "translate(-100%)" },
         },
+        navSlideDown: {
+          "100%": { transform: "translateY(10px)", display: "flex" },
+        },
+        navSlideUp: {
+          "0%": {
+            opacity: 1,
+          },
+          "100%": {
+            opacity: 0,
+            transform: "translateY(-10px)",
+            display: "none",
+          },
+        },
       },
       animation: {
         fadeInUp: "fadeInUp 1s ease-in-out",
         rotateBy45deg: "rotateBy45deg 0.25s linear forwards",
         rotateByNeg45deg: "rotateByNeg45deg 0.25s linear forwards",
         moveAcrossScreen: "moveAcrossScreen 10s linear infinite",
+        navSlideDown: "navSlideDown 0.25s linear forwards",
+        navSlideUp: "navSlideUp 0.25s linear forwards",
       },
       fontSize: {
         h4Size: "1.7rem",

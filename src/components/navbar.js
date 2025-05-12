@@ -1,23 +1,46 @@
-import Image from "next/image";
 import Link from "next/link";
-import logo from "../../assets/logo-v1.svg";
 import { darkerGrotesqueReg } from "@/utils";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const currentPath = usePathname();
+  const [open, setIsOpen] = useState(true);
+  const [navClass, setNavClass] = useState("hidden top-0");
 
+  const toggleNavBar = () => {
+    if (open) {
+      setNavClass("animate-navSlideDown");
+      window.dispatchEvent(
+        new CustomEvent("navbarToggle", { detail: { open: true } })
+      );
+    } else {
+      setNavClass("animate-navSlideUp");
+      window.dispatchEvent(
+        new CustomEvent("navbarToggle", { detail: { open: false } })
+      );
+    }
+    setIsOpen((prev) => !prev);
+  };
   return (
     <nav className="z-[80]">
-      <Link rel="noopener noreferrer" className="fixed top-4 " href={"/"}>
-        <div className="w-14 h-10 relative ml-16 ">
-          <Image src={logo} alt="logo" fill={true} />
-        </div>
-      </Link>
+      <FontAwesomeIcon
+        icon={faBars}
+        size="2x"
+        color="#3C0092"
+        className="fixed top-4 right-8 z-[90]"
+        onClick={toggleNavBar}
+        aria-label="menu"
+        role="button"
+        aria-expanded={open}
+      />
+
       <div
-        className={`w-full bg-white fixed top-0 flex flex-row justify-end  gap-88 z-50 pr-24 py-4 ${darkerGrotesqueReg.className}`}
+        className={`w-11/12 bg-white fixed -top-4 flex flex-row justify-end  z-[60] py-8    ${darkerGrotesqueReg.className} ${navClass}`}
       >
-        <ul className="nav-list ml-8 flex flex-row gap-88 text-4xl">
+        <ul className="nav-list mr-16 flex flex-row md:gap-12 md:text-3xl xl:gap-88 xl:text-4xl">
           <li className=" transition-transform hover:-translate-y-1 ">
             <Link
               rel="noopener noreferrer"
@@ -55,6 +78,19 @@ export default function Navbar() {
               } `}
             >
               projects
+            </Link>
+          </li>
+          <li className="transition-transform hover:-translate-y-1">
+            <Link
+              rel="noopener noreferrer"
+              href={"/illustrations"}
+              className={`${
+                currentPath === "/illustrations"
+                  ? "active: underline underline-offset-[12px] p-2"
+                  : "text-[#597891] hover:text-purple"
+              } `}
+            >
+              illustrations
             </Link>
           </li>
           <li className="transition-transform text-[#597891] hover:-translate-y-1 hover:text-purple">

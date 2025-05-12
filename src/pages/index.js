@@ -311,47 +311,23 @@ export default function Home() {
               id="case-studies"
               ref={caseStudiesRef}
             >
-              <div className="flex flex-col md:flex-row ">
-                <div className="relative flex-1 group hover:cursor-pointer">
-                  <Link rel="noopener noreferrer" href={"/case-study/testwise"}>
-                    <Image src={testwise} alt="Test wise case study" />
-                    <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
-                    <div
-                      className={`${myFontBold.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
-                    >
-                      Test Wise
-                      <br /> Requirements Dashboard
-                    </div>
-                  </Link>
-                </div>
-                <div className="relative flex-1 group">
-                  <Link
-                    rel="noopener noreferrer"
-                    href={"/case-study/natural-u"}
-                  >
-                    <Image src={naturalU} alt="Natural U case study" />
-                    <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
-                    <div
-                      className={`${myFontBold.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
-                    >
-                      NaturalU
-                      <br /> Hair Education
-                    </div>
-                  </Link>
-                </div>
+              <div className="hover:scale-105">
+                <Link rel="noopener noreferrer" href={"/case-study/testwise"}>
+                  <Image src={testwise} alt="Test wise case study" />
+                </Link>
               </div>
-              <div className=" relative group">
+              <div className="hover:scale-105">
+                <Link rel="noopener noreferrer" href={"/case-study/natural-u"}>
+                  <Image src={naturalU} alt="Natural U case study" />
+                </Link>
+              </div>
+
+              <div className="hover:scale-105">
                 <Link rel="noopener noreferrer" href={"/component-library"}>
                   <Image
                     src={tutorial}
                     alt="UI component tutorial case study"
                   />
-                  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
-                  <div
-                    className={`${myFontBold.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
-                  >
-                    Component Library Tutorial
-                  </div>
                 </Link>
               </div>
             </div>

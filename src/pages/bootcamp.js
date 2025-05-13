@@ -7,7 +7,6 @@ import Footer from "@/components/footer";
 import Head from "next/head";
 
 import useWindowSize from "@/hooks/useWindowSize";
-import useIntersectionObserver from "@/hooks/userIntersectionObserver";
 import {
   myFont,
   darkerGrotesque,
@@ -37,7 +36,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects Page</title>
+        <title>Bootcamp Page</title>
       </Head>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && (
@@ -47,7 +46,7 @@ export default function Projects() {
               <h1
                 className={` text-purple text-3xl md:text-5xl ${myFont.className}`}
               >
-                Projects
+                Bootcamp
               </h1>
             </div>
 
@@ -104,7 +103,7 @@ export default function Projects() {
           </div>
           <div className="flex flex-col md:flex-row">
             <div className="relative flex-1 group">
-              <Link rel="noopener noreferrer" href={"/projects/gatherly"}>
+              <Link rel="noopener noreferrer" href={"/bootcamp/gatherly"}>
                 <Image src={gatherly} alt="Gatherly case study" />
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                 <div
@@ -115,7 +114,7 @@ export default function Projects() {
               </Link>
             </div>
             <div className="relative flex-1 group">
-              <Link rel="noopener noreferrer" href={"/projects/modern-attire"}>
+              <Link rel="noopener noreferrer" href={"/bootcamp/modern-attire"}>
                 <Image
                   src={moderAttire}
                   alt="Moder Attire case study page"

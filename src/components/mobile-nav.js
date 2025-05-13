@@ -62,7 +62,7 @@ export default function MobileNav({ updateContent = {} }) {
                     : ""
                 }`}
               >
-                Home
+                home
               </Link>
             </li>
             <li>
@@ -75,20 +75,20 @@ export default function MobileNav({ updateContent = {} }) {
                     : ""
                 } `}
               >
-                About
+                about
               </Link>
             </li>
             <li>
               <Link
                 rel="noopener noreferrer"
-                href={"/projects"}
+                href={"/bootcamp"}
                 className={`${
-                  currentPath === "/projects"
+                  currentPath === "/bootcamp"
                     ? "active: underline underline-offset-8"
                     : ""
                 } `}
               >
-                Projects
+                bootcamp
               </Link>
             </li>
             <li>
@@ -96,7 +96,12 @@ export default function MobileNav({ updateContent = {} }) {
                 rel="noopener noreferrer"
                 href={"/files/Regine-Thimothee-Resume.pdf"}
               >
-                Resume
+                resume
+              </Link>
+            </li>
+            <li>
+              <Link rel="noopener noreferrer" href={"/illustrations"}>
+                illustrations
               </Link>
             </li>
           </ul>

@@ -3,7 +3,7 @@ import { darkerGrotesqueReg } from "@/utils";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const currentPath = usePathname();
@@ -26,16 +26,37 @@ export default function Navbar() {
   };
   return (
     <nav className="z-[80]">
-      <FontAwesomeIcon
-        icon={faBars}
-        size="2x"
-        color="#3C0092"
-        className="fixed top-4 right-8 z-[90]"
-        onClick={toggleNavBar}
-        aria-label="menu"
-        role="button"
-        aria-expanded={open}
-      />
+      <div className="fixed top-4 right-8 z-[90] w-8 h-8 flex items-center justify-center">
+        <FontAwesomeIcon
+          icon={open ? faBars : faXmark}
+          size="2x"
+          color="#3C0092"
+          className="absolute transition-all duration-300 transform"
+          style={{
+            opacity: open ? 1 : 0,
+            transform: open
+              ? "rotate(0deg) scale(1)"
+              : "rotate(90deg) scale(0.5)",
+          }}
+          aria-hidden={!open}
+        />
+        <FontAwesomeIcon
+          icon={faXmark}
+          size="2x"
+          color="#3C0092"
+          className="absolute transition-all duration-300 transform"
+          style={{
+            opacity: open ? 0 : 1,
+            transform: open
+              ? "rotate(-90deg) scale(0.5)"
+              : "rotate(0deg) scale(1)",
+          }}
+          onClick={toggleNavBar}
+          aria-label={open ? "menu" : "close menu"}
+          role="button"
+          aria-expanded={!open}
+        />
+      </div>
 
       <div
         className={`w-11/12 bg-white fixed -top-4 flex flex-row justify-end  z-[60] py-8    ${darkerGrotesqueReg.className} ${navClass}`}

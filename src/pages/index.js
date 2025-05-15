@@ -5,12 +5,7 @@ import Link from "next/link";
 import Footer from "@/components/footer";
 import Head from "next/head";
 
-import {
-  myFont,
-  myFontBold,
-  darkerGrotesque,
-  darkerGrotesqueBold,
-} from "@/utils";
+import { myFont, darkerGrotesque, darkerGrotesqueBold } from "@/utils";
 import MobileNav from "@/components/mobile-nav";
 import useWindowSize from "@/hooks/useWindowSize";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";

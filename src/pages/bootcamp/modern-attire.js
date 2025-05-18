@@ -53,7 +53,6 @@ import highFidelity6 from "../../../assets/capstone/modern-attire/high-fidelity/
 import highFidelity7 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity7.png";
 import highFidelity8 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity8.png";
 import highFidelity9 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity9.png";
-import highFidelity10 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity10.png";
 import highFidelity11 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity11.png";
 import highFidelity12 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity12.png";
 
@@ -82,7 +81,6 @@ const highFidelityImages = [
   highFidelity7,
   highFidelity8,
   highFidelity9,
-  highFidelity10,
   highFidelity11,
   highFidelity12,
 ];
@@ -671,7 +669,7 @@ export default function ModernAttire() {
             style={{ border: "1px solid rgba(0, 0, 0, 0.1);" }}
             className="w-full h-[40rem]"
             title="Embedded Modern Attire wireframes"
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FLBDrDV8l9fPYI4KqnmkZ9U%2FModern-Attire%3Fpage-id%3D32%253A608%26type%3Ddesign%26node-id%3D90-36%26viewport%3D302%252C232%252C0.06%26t%3DpkVg8I9WhDA1WT0S-1%26scaling%3Dscale-down%26starting-point-node-id%3D90%253A36%26mode%3Ddesign"
+            src="https://embed.figma.com/proto/LBDrDV8l9fPYI4KqnmkZ9U/Modern-Attire?page-id=32%3A608&node-id=90-36&viewport=293%2C364%2C0.09&scaling=scale-down&content-scaling=fixed&starting-point-node-id=90%3A36&embed-host=share"
             allowfullscreen
           ></iframe>
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">

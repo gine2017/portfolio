@@ -24,14 +24,21 @@ export default function Navbar() {
     }
     setIsOpen((prev) => !prev);
   };
+  {
+    console.log(open, "BIG OPEN");
+  }
   return (
     <nav className="z-[80]">
-      <div className="fixed top-4 right-8 z-[90] w-8 h-8 flex items-center justify-center">
+      <div
+        className={`fixed top-0 right-8 z-[90] w-8 h-8 flex items-center justify-center bg-white p-12 ${
+          open ? "bg-transparent" : "bg-white"
+        }`}
+      >
         <FontAwesomeIcon
           icon={open ? faBars : faXmark}
           size="2x"
-          color="#3C0092"
-          className="absolute transition-all duration-300 transform"
+          color="#000000"
+          className="absolute transition-all duration-300 transform "
           style={{
             opacity: open ? 1 : 0,
             transform: open
@@ -43,7 +50,7 @@ export default function Navbar() {
         <FontAwesomeIcon
           icon={faXmark}
           size="2x"
-          color="#3C0092"
+          color="#000000"
           className="absolute transition-all duration-300 transform"
           style={{
             opacity: open ? 0 : 1,
@@ -59,9 +66,9 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`w-11/12 bg-white fixed -top-4 flex flex-row justify-end  z-[60] py-8    ${darkerGrotesqueReg.className} ${navClass}`}
+        className={`w-full bg-white fixed -top-4 flex flex-row justify-around  z-[60] py-8    ${darkerGrotesqueReg.className} ${navClass}`}
       >
-        <ul className="nav-list mr-16 flex flex-row md:gap-9 md:text-3xl xl:gap-88 xl:text-4xl">
+        <ul className="nav-list mr-24 flex flex-row md:gap-9 md:text-3xl xl:gap-88 xl:text-4xl">
           <li className=" transition-transform hover:-translate-y-1 ">
             <Link
               rel="noopener noreferrer"

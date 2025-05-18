@@ -758,7 +758,7 @@ export default function ModernAttire() {
           <iframe
             style={{ border: "1px solid rgba(0, 0, 0, 0.1);" }}
             className="w-full h-[40rem]"
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FLBDrDV8l9fPYI4KqnmkZ9U%2FModern-Attire%3Fpage-id%3D131%253A34%26type%3Ddesign%26node-id%3D380-4886%26viewport%3D-953%252C612%252C0.04%26t%3DEyvUiHReRDI86CTk-1%26scaling%3Dscale-down%26starting-point-node-id%3D380%253A4886%26show-proto-sidebar%3D1%26mode%3Ddesign"
+            src="https://embed.figma.com/proto/LBDrDV8l9fPYI4KqnmkZ9U/Modern-Attire?node-id=1263-3113&p=f&scaling=scale-down&content-scaling=fixed&page-id=131%3A34&starting-point-node-id=1263%3A3113&show-proto-sidebar=1&embed-host=share"
             allowfullscreen
           ></iframe>
           <div className="flex flex-col gap-y-4 w-full md:mx-auto md:w-3/4 ">

@@ -669,7 +669,7 @@ export default function ModernAttire() {
             style={{ border: "1px solid rgba(0, 0, 0, 0.1);" }}
             className="w-full h-[40rem]"
             title="Embedded Modern Attire wireframes"
-            src="https://embed.figma.com/design/LBDrDV8l9fPYI4KqnmkZ9U/Modern-Attire?node-id=1263-3113&embed-host=share"
+            src="https://embed.figma.com/proto/LBDrDV8l9fPYI4KqnmkZ9U/Modern-Attire?page-id=32%3A608&node-id=90-36&viewport=293%2C364%2C0.09&scaling=scale-down&content-scaling=fixed&starting-point-node-id=90%3A36&embed-host=share"
             allowfullscreen
           ></iframe>
           <div className="flex flex-col gap-y-8 w-full md:mx-auto md:w-3/4 ">

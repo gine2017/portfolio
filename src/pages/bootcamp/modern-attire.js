@@ -53,7 +53,6 @@ import highFidelity6 from "../../../assets/capstone/modern-attire/high-fidelity/
 import highFidelity7 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity7.png";
 import highFidelity8 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity8.png";
 import highFidelity9 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity9.png";
-import highFidelity10 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity10.png";
 import highFidelity11 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity11.png";
 import highFidelity12 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity12.png";
 
@@ -82,7 +81,6 @@ const highFidelityImages = [
   highFidelity7,
   highFidelity8,
   highFidelity9,
-  highFidelity10,
   highFidelity11,
   highFidelity12,
 ];

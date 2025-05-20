@@ -30,8 +30,8 @@ export default function Navbar() {
   return (
     <nav className="z-[80]">
       <div
-        className={`fixed top-0 right-8 z-[90] w-8 h-8 flex items-center justify-center bg-white p-12 ${
-          open ? "bg-transparent" : "bg-white"
+        className={`fixed top-0 right-8 z-[90] w-8 h-8 flex items-center justify-center bg-white md:p-[2.75rem] xl:p-12 ${
+          open ? "bg-opacity-0" : "bg-opacity-1"
         }`}
       >
         <FontAwesomeIcon

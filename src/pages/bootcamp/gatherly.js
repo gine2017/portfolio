@@ -6,6 +6,8 @@ import {
   darkerGrotesque,
   createImageArray,
   darkerGrotesqueBold,
+  darkerGrotesqueMed,
+  solutionInActionStyles,
 } from "@/utils";
 import Stats from "@/components/stats";
 import Title from "@/components/title";
@@ -140,6 +142,10 @@ export default function Gatherly() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
   const caseStudyRef = useRef(null);
+  const [solutionInActionZoomOne, setsolutionInActionZoomOne] = useState(false);
+  const [solutionInActionZoomTwo, setsolutionInActionZoomTwo] = useState(false);
+  const [solutionInActionZoomThree, setsolutionInActionZoomThree] =
+    useState(false);
 
   const updateContent = (state) => {
     setShowContent(state);
@@ -152,6 +158,16 @@ export default function Gatherly() {
     const targetPosition = elementPosition + offset;
 
     window.scrollTo({ top: targetPosition, behavior: "smooth" });
+  };
+
+  const handleZoom = (index) => {
+    if (index === 1) {
+      setsolutionInActionZoomOne((prev) => !prev);
+    } else if (index === 2) {
+      setsolutionInActionZoomTwo((prev) => !prev);
+    } else {
+      setsolutionInActionZoomThree((prev) => !prev);
+    }
   };
 
   return (
@@ -279,63 +295,127 @@ export default function Gatherly() {
             <h2 className={`text-gatherly-blue text-5xl ${myFont.className}`}>
               Solution in Action
             </h2>
-            <div className="flex flex-col xl:flex-row md:items-center border-b-4 ">
-              <Image
-                src={highFidelity12}
-                alt="discovery page with interest filters"
-                className="scale-75"
-              />
-              <div>
-                <h3
-                  className={`text-gatherly-blue text-4xl ${myFont.className} mb-4`}
+            <>
+              <div className="flex flex-col gap-y-16 xl:flex-row xl:gap-x-16 md:items-center border-b-4 ">
+                <div
+                  className="flex flex-col"
+                  onClick={() => {
+                    handleZoom(1);
+                  }}
                 >
-                  Discovery Page with Interest Filters
-                </h3>
-                <p className={`text-2xl ${darkerGrotesque.className} mb-8`}>
-                  Combats isolation by helping users find communities that align
-                  with their personal interests, making the initial connection
-                  process less intimidating
-                </p>
+                  <Image
+                    src={highFidelity12}
+                    alt="discovery page with interest filters"
+                    className="w-full h-auto transition-all duration-300"
+                    style={
+                      solutionInActionZoomOne ? solutionInActionStyles : {}
+                    }
+                  />
+                  <p
+                    className={`${darkerGrotesqueMed.className} italic text-xl  text-center`}
+                  >
+                    Click on the image to enlarge
+                  </p>
+                </div>
+
+                <div>
+                  <h3
+                    className={`text-gatherly-blue text-4xl ${myFont.className} mb-4`}
+                  >
+                    Discovery Page with Interest Filters
+                  </h3>
+                  <p className={`text-2xl ${darkerGrotesque.className} mb-8`}>
+                    Combats isolation by helping users find communities that
+                    align with their personal interests, making the initial
+                    connection process less intimidating
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col xl:flex-row md:items-center border-b-4">
-              <div>
-                <h3
-                  className={`text-gatherly-blue text-4xl ${myFont.className} mb-4`}
+              {solutionInActionZoomOne && (
+                <div className="fixed top-0 left-0 w-screen h-dvh bg-white bg-opacity-50 z-[9998]" />
+              )}
+            </>
+            <>
+              <div className="flex flex-col gap-y-16 xl:flex-row xl:gap-x-16 md:items-center border-b-4">
+                <div>
+                  <h3
+                    className={`text-gatherly-blue text-4xl ${myFont.className} mb-4`}
+                  >
+                    Group Home Page
+                  </h3>
+                  <p className={`text-2xl ${darkerGrotesque.className} mb-4`}>
+                    Fosters belonging through shared spaces where members can
+                    interact, share experiences, and develop relationships
+                    within a structured community
+                  </p>
+                </div>
+                <div
+                  className="flex flex-col"
+                  onClick={() => {
+                    handleZoom(2);
+                  }}
                 >
-                  Group Home Page
-                </h3>
-                <p className={`text-2xl ${darkerGrotesque.className} mb-4`}>
-                  Fosters belonging through shared spaces where members can
-                  interact, share experiences, and develop relationships within
-                  a structured community
-                </p>
+                  <Image
+                    src={highFidelity17}
+                    alt="group home page"
+                    className="w-full h-auto transition-all duration-300"
+                    style={
+                      solutionInActionZoomTwo ? solutionInActionStyles : {}
+                    }
+                  />
+                  <p
+                    className={`${darkerGrotesqueMed.className} italic text-xl text-center`}
+                  >
+                    Click on the image to enlarge
+                  </p>
+                </div>
               </div>
-              <Image
-                src={highFidelity17}
-                alt="group home page"
-                className="scale-75"
-              />
-            </div>
-            <div className="flex flex-col xl:flex-row md:items-center">
-              <Image
-                src={highFidelity15}
-                alt="events page"
-                className="scale-75"
-              />
-              <div>
-                <h3
-                  className={`text-gatherly-blue text-4xl ${myFont.className} mb-4`}
+              {solutionInActionZoomTwo && (
+                <div className="fixed top-0 left-0 w-screen h-dvh bg-white bg-opacity-50 z-[9998]" />
+              )}
+            </>
+
+            <>
+              <div className="flex flex-col gap-y-16 xl:flex-row xl:gap-x-16 md:items-center">
+                <div
+                  className="flex flex-col"
+                  onClick={() => {
+                    handleZoom(3);
+                  }}
                 >
-                  Events Page
-                </h3>
-                <p className={`text-2xl ${darkerGrotesque.className} `}>
-                  Facilitates meaningful connections by offering various events,
-                  allowing users to strengthen bonds with group members and
-                  transform digital relationships into deeper social connections
-                </p>
+                  <Image
+                    src={highFidelity15}
+                    alt="events page"
+                    className="w-full h-auto transition-all duration-300"
+                    style={
+                      solutionInActionZoomThree ? solutionInActionStyles : {}
+                    }
+                  />
+                  <p
+                    className={`${darkerGrotesqueMed.className} italic text-xl  text-center`}
+                  >
+                    Click on the image to enlarge
+                  </p>
+                </div>
+
+                <div>
+                  <h3
+                    className={`text-gatherly-blue text-4xl ${myFont.className} mb-4`}
+                  >
+                    Events Page
+                  </h3>
+                  <p className={`text-2xl ${darkerGrotesque.className} `}>
+                    Facilitates meaningful connections by offering various
+                    events, allowing users to strengthen bonds with group
+                    members and transform digital relationships into deeper
+                    social connections
+                  </p>
+                </div>
               </div>
-            </div>
+              {solutionInActionZoomThree && (
+                <div className="fixed top-0 left-0 w-screen h-dvh bg-white bg-opacity-50 z-[9998]" />
+              )}
+            </>
           </div>
           {width >= 767 && (
             <AutoScrollNavigator sections={steps} fontColor={"gatherly-blue"} />

@@ -299,7 +299,7 @@ export default function ModernAttire() {
               Solution in Action
             </h2>
             <>
-              <div className="flex flex-col gap-y-8 md:flex-row md:items-center border-b-4 ">
+              <div className="flex flex-col gap-y-16 xl:flex-row xl:gap-x-16 md:items-center border-b-4">
                 <div
                   className="flex flex-col w-3/4"
                   onClick={() => {
@@ -339,7 +339,7 @@ export default function ModernAttire() {
               )}
             </>
             <>
-              <div className="flex flex-col md:flex-row md:items-center border-b-4">
+              <div className="flex flex-col gap-y-16 xl:flex-row xl:gap-x-16 md:items-center border-b-4">
                 <div>
                   <h3
                     className={`text-modern-attire text-4xl ${myFont.className} mb-4`}
@@ -378,7 +378,7 @@ export default function ModernAttire() {
               )}
             </>
             <>
-              <div className="flex flex-col md:flex-row md:items-center">
+              <div className="flex flex-col gap-y-16 xl:flex-row xl:gap-x-16 md:items-center">
                 <div
                   className="flex flex-col w-3/4"
                   onClick={() => {

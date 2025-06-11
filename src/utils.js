@@ -54,6 +54,26 @@ const zoomImage = (shouldZoom, largeImage) => {
     transition: "transform 0.25s ease",
   };
 };
+
+const solutionInActionStyles = {
+  transform: "scale(1.25)",
+  transition: "transform 0.3s ease",
+  position: "fixed",
+  top: "50%",
+  left: "50%",
+  translateX: "-50%",
+  translateY: "-50%",
+  transform: "translate(-50%, -50%) scale(1.25)",
+  backgroundColor: "rgba(255, 255, 255, 0.9)",
+  padding: "20px",
+  borderRadius: "8px",
+  boxShadow: "0 25px 50px -12px rgba(255, 255, 255, 0.9)",
+  zIndex: 9999,
+  maxWidth: "80vw",
+  maxHeight: "80vh",
+  objectFit: "contain",
+};
+
 export {
   myFont,
   myFontBold,
@@ -63,4 +83,5 @@ export {
   darkerGrotesqueMed,
   createImageArray,
   zoomImage,
+  solutionInActionStyles,
 };

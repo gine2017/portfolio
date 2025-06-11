@@ -15,7 +15,9 @@ import {
   myFont,
   darkerGrotesque,
   darkerGrotesqueBold,
+  darkerGrotesqueMed,
   createImageArray,
+  solutionInActionStyles,
 } from "@/utils";
 import CaseStudyFooter from "@/components/case-study-footer";
 import Footer from "@/components/footer";
@@ -88,6 +90,11 @@ const highFidelityImages = [
 export default function ModernAttire() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
+  const [solutionInActionZoomOne, setsolutionInActionZoomOne] = useState(false);
+  const [solutionInActionZoomTwo, setsolutionInActionZoomTwo] = useState(false);
+  const [solutionInActionZoomThree, setsolutionInActionZoomThree] =
+    useState(false);
+
   const caseStudyRef = useRef(null);
 
   const updateContent = (state) => {
@@ -101,6 +108,16 @@ export default function ModernAttire() {
     const targetPosition = elementPosition + offset;
 
     window.scrollTo({ top: targetPosition, behavior: "smooth" });
+  };
+
+  const handleZoom = (index) => {
+    if (index === 1) {
+      setsolutionInActionZoomOne((prev) => !prev);
+    } else if (index === 2) {
+      setsolutionInActionZoomTwo((prev) => !prev);
+    } else {
+      setsolutionInActionZoomThree((prev) => !prev);
+    }
   };
 
   const steps = [
@@ -282,11 +299,25 @@ export default function ModernAttire() {
               Solution in Action
             </h2>
             <div className="flex flex-col gap-y-8 md:flex-row md:items-center border-b-4 ">
-              <Image
-                src={highFidelity11}
-                alt="guest checkout interface"
-                className="md:scale-75 md:w-3/5"
-              />
+              <div
+                className="flex flex-col w-full"
+                onClick={() => {
+                  handleZoom(1);
+                }}
+              >
+                <Image
+                  src={highFidelity11}
+                  alt="guest checkout interface"
+                  className="scale-75 transition-all duration-300"
+                  style={solutionInActionZoomOne ? solutionInActionStyles : {}}
+                />
+                <p
+                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+                >
+                  Click on the image to enlarge
+                </p>
+              </div>
+
               <div>
                 <h3
                   className={`text-modern-attire text-4xl ${myFont.className} mb-2`}
@@ -313,19 +344,47 @@ export default function ModernAttire() {
                   confidence in their purchase decisions
                 </p>
               </div>
-
-              <Image
-                src={highFidelity6}
-                alt="interactive measurement tool"
-                className="md:scale-75 md:w-3/5 mb-4"
-              />
+              <div
+                className="flex flex-col w-full"
+                onClick={() => {
+                  handleZoom(2);
+                }}
+              >
+                <Image
+                  src={highFidelity6}
+                  alt="interactive measurement tool"
+                  className="scale-75 transition-all duration-300"
+                  style={solutionInActionZoomTwo ? solutionInActionStyles : {}}
+                />
+                <p
+                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+                >
+                  Click on the image to enlarge
+                </p>
+              </div>
             </div>
             <div className="flex flex-col md:flex-row md:items-center">
-              <Image
-                src={highFidelity12}
-                alt="product page with reviews"
-                className="md:scale-75 md:w-3/5"
-              />
+              <div
+                className="flex flex-col w-full"
+                onClick={() => {
+                  handleZoom(3);
+                }}
+              >
+                <Image
+                  src={highFidelity12}
+                  alt="product page with reviews"
+                  className="scale-75 transition-all duration-300"
+                  style={
+                    solutionInActionZoomThree ? solutionInActionStyles : {}
+                  }
+                />
+                <p
+                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+                >
+                  Click on the image to enlarge
+                </p>
+              </div>
+
               <div>
                 <h3
                   className={`text-modern-attire text-4xl ${myFont.className} mb-4`}

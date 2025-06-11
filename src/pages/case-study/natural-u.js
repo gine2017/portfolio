@@ -7,6 +7,8 @@ import {
   darkerGrotesque,
   darkerGrotesqueBold,
   createImageArray,
+  darkerGrotesqueMed,
+  solutionInActionStyles,
 } from "@/utils";
 import Title from "@/components/title";
 import Stats from "@/components/stats";
@@ -109,6 +111,10 @@ const steps = [
 export default function NaturalU() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
+  const [solutionInActionZoomOne, setsolutionInActionZoomOne] = useState(false);
+  const [solutionInActionZoomTwo, setsolutionInActionZoomTwo] = useState(false);
+  const [solutionInActionZoomThree, setsolutionInActionZoomThree] =
+    useState(false);
   const caseStudyRef = useRef(null);
 
   const updateContent = (state) => {
@@ -122,6 +128,15 @@ export default function NaturalU() {
     const targetPosition = elementPosition + offset;
 
     window.scrollTo({ top: targetPosition, behavior: "smooth" });
+  };
+  const handleZoom = (index) => {
+    if (index === 1) {
+      setsolutionInActionZoomOne((prev) => !prev);
+    } else if (index === 2) {
+      setsolutionInActionZoomTwo((prev) => !prev);
+    } else {
+      setsolutionInActionZoomThree((prev) => !prev);
+    }
   };
 
   return (
@@ -271,11 +286,25 @@ export default function NaturalU() {
               Solution in Action
             </h2>
             <div className="flex flex flex-col xl:flex-row md:items-center border-b-4 ">
-              <Image
-                src={screen20}
-                alt="coily hair education page"
-                className="scale-75"
-              />
+              <div
+                className="flex flex-col w-full"
+                onClick={() => {
+                  handleZoom(1);
+                }}
+              >
+                <Image
+                  src={screen20}
+                  alt="coily hair education page"
+                  className="scale-75 transition-all duration-300"
+                  style={solutionInActionZoomOne ? solutionInActionStyles : {}}
+                />
+                <p
+                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+                >
+                  Click on the image to enlarge
+                </p>
+              </div>
+
               <div>
                 <h3
                   className={`text-naturalu-purple text-4xl ${myFont.className} mb-4`}
@@ -300,19 +329,47 @@ export default function NaturalU() {
                   receive advice from both professionals and peers
                 </p>
               </div>
-
-              <Image
-                src={screen17}
-                alt="answered question page"
-                className="scale-75"
-              />
+              <div
+                className="flex flex-col w-full"
+                onClick={() => {
+                  handleZoom(2);
+                }}
+              >
+                <Image
+                  src={screen17}
+                  alt="answered question page"
+                  className="scale-75 transition-all duration-300"
+                  style={solutionInActionZoomTwo ? solutionInActionStyles : {}}
+                />
+                <p
+                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+                >
+                  Click on the image to enlarge
+                </p>
+              </div>
             </div>
             <div className="flex flex-col xl:flex-row md:items-center">
-              <Image
-                src={screen14}
-                alt="video discovery page"
-                className="scale-75"
-              />
+              <div
+                className="flex flex-col w-full"
+                onClick={() => {
+                  handleZoom(3);
+                }}
+              >
+                <Image
+                  src={screen14}
+                  alt="video discovery page"
+                  className="scale-75 transition-all duration-300"
+                  style={
+                    solutionInActionZoomThree ? solutionInActionStyles : {}
+                  }
+                />
+                <p
+                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+                >
+                  Click on the image to enlarge
+                </p>
+              </div>
+
               <div>
                 <h3
                   className={`text-naturalu-purple text-4xl ${myFont.className} mb-4`}

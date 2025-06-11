@@ -22,7 +22,8 @@ import {
   darkerGrotesque,
   createImageArray,
   darkerGrotesqueBold,
-  darkerGrotesqueReg,
+  darkerGrotesqueMed,
+  solutionInActionStyles,
 } from "@/utils";
 import useWindowSize from "@/hooks/useWindowSize";
 
@@ -51,10 +52,25 @@ import airtableLogo from "../../../assets/capstone/testwise/research/airtable.sv
 export default function TestWise() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
+  const [solutionInActionZoomOne, setsolutionInActionZoomOne] = useState(false);
+  const [solutionInActionZoomTwo, setsolutionInActionZoomTwo] = useState(false);
+  const [solutionInActionZoomThree, setsolutionInActionZoomThree] =
+    useState(false);
+
   const caseStudyRef = useRef(null);
 
   const updateContent = (state) => {
     setShowContent(state);
+  };
+
+  const handleZoom = (index) => {
+    if (index === 1) {
+      setsolutionInActionZoomOne((prev) => !prev);
+    } else if (index === 2) {
+      setsolutionInActionZoomTwo((prev) => !prev);
+    } else {
+      setsolutionInActionZoomThree((prev) => !prev);
+    }
   };
 
   const wireframes = [
@@ -223,12 +239,27 @@ export default function TestWise() {
             <h2 className={`text-testwise-blue text-5xl ${myFont.className}`}>
               Solution in Action
             </h2>
-            <div className="flex flex-col gap-y-8 md:flex-row md:items-center border-b-4 ">
-              <Image
-                src={dashboard}
-                alt="integrated requirements dashboard"
-                className="md:scale-75 md:w-3/5"
-              />
+            <div className="flex flex-col gap-y-4 md:flex-row md:items-center border-b-4 ">
+              <div
+                className="flex flex-col w-full"
+                onClick={() => {
+                  handleZoom(1);
+                }}
+              >
+                <Image
+                  src={dashboard}
+                  alt="integrated requirements dashboard"
+                  className="scale-75 transition-all duration-300"
+                  style={solutionInActionZoomOne ? solutionInActionStyles : {}}
+                />
+
+                <p
+                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+                >
+                  Click on the image to enlarge
+                </p>
+              </div>
+
               <div>
                 <h3
                   className={`text-testwise-blue text-4xl ${myFont.className} mb-4`}
@@ -255,19 +286,47 @@ export default function TestWise() {
                   coordination
                 </p>
               </div>
-
-              <Image
-                src={kanban}
-                alt="task visualization interface"
-                className="md:scale-75 md:w-3/5 mb-4"
-              />
+              <div
+                className="flex flex-col w-full"
+                onClick={() => {
+                  handleZoom(2);
+                }}
+              >
+                <Image
+                  src={kanban}
+                  alt="task visualization interface"
+                  className="scale-75 transition-all duration-300"
+                  style={solutionInActionZoomTwo ? solutionInActionStyles : {}}
+                />
+                <p
+                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+                >
+                  Click on the image to enlarge
+                </p>
+              </div>
             </div>
             <div className="flex flex-col gap-y-8 md:flex-row md:items-center">
-              <Image
-                src={requirementDetailsOne}
-                alt="collaboration features"
-                className="md:scale-75 md:w-3/5"
-              />
+              <div
+                className="flex flex-col w-full"
+                onClick={() => {
+                  handleZoom(3);
+                }}
+              >
+                <Image
+                  src={requirementDetailsOne}
+                  alt="collaboration features"
+                  className="scale-75 transition-all duration-300"
+                  style={
+                    solutionInActionZoomThree ? solutionInActionStyles : {}
+                  }
+                />
+                <p
+                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+                >
+                  Click on the image to enlarge
+                </p>
+              </div>
+
               <div>
                 <h3
                   className={`text-testwise-blue text-4xl ${myFont.className} mb-4`}
@@ -1021,7 +1080,7 @@ export default function TestWise() {
               High Fidelity Prototype
             </h3>
             <iframe
-              style={{ border: "1px solid rgba(0, 0, 0, 0.1);" }}
+              style={{ border: "1px solid rgba(255, 255, 255, 0.9);" }}
               className="w-full h-[40rem]"
               title="Embedded Test Wise Requirement Dashboard Figma Prototype"
               src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FpODnwNo9vwRSEJSnxqJhdk%2Frequirement-dash-(case-study)%3Fpage-id%3D0%253A1%26node-id%3D42-1567%26viewport%3D-1206%252C-796%252C0.34%26t%3Di3WmacbvZgTFEXac-1%26scaling%3Dscale-down%26starting-point-node-id%3D42%253A1567"

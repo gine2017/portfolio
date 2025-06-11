@@ -6,6 +6,8 @@ import {
   darkerGrotesque,
   createImageArray,
   darkerGrotesqueBold,
+  darkerGrotesqueMed,
+  solutionInActionStyles,
 } from "@/utils";
 import Stats from "@/components/stats";
 import Title from "@/components/title";
@@ -140,6 +142,10 @@ export default function Gatherly() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
   const caseStudyRef = useRef(null);
+  const [solutionInActionZoomOne, setsolutionInActionZoomOne] = useState(false);
+  const [solutionInActionZoomTwo, setsolutionInActionZoomTwo] = useState(false);
+  const [solutionInActionZoomThree, setsolutionInActionZoomThree] =
+    useState(false);
 
   const updateContent = (state) => {
     setShowContent(state);
@@ -152,6 +158,16 @@ export default function Gatherly() {
     const targetPosition = elementPosition + offset;
 
     window.scrollTo({ top: targetPosition, behavior: "smooth" });
+  };
+
+  const handleZoom = (index) => {
+    if (index === 1) {
+      setsolutionInActionZoomOne((prev) => !prev);
+    } else if (index === 2) {
+      setsolutionInActionZoomTwo((prev) => !prev);
+    } else {
+      setsolutionInActionZoomThree((prev) => !prev);
+    }
   };
 
   return (
@@ -280,11 +296,25 @@ export default function Gatherly() {
               Solution in Action
             </h2>
             <div className="flex flex-col xl:flex-row md:items-center border-b-4 ">
-              <Image
-                src={highFidelity12}
-                alt="discovery page with interest filters"
-                className="scale-75"
-              />
+              <div
+                className="flex flex-col w-full"
+                onClick={() => {
+                  handleZoom(1);
+                }}
+              >
+                <Image
+                  src={highFidelity12}
+                  alt="discovery page with interest filters"
+                  className="scale-75 transition-all duration-300"
+                  style={solutionInActionZoomOne ? solutionInActionStyles : {}}
+                />
+                <p
+                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+                >
+                  Click on the image to enlarge
+                </p>
+              </div>
+
               <div>
                 <h3
                   className={`text-gatherly-blue text-4xl ${myFont.className} mb-4`}
@@ -311,18 +341,47 @@ export default function Gatherly() {
                   a structured community
                 </p>
               </div>
-              <Image
-                src={highFidelity17}
-                alt="group home page"
-                className="scale-75"
-              />
+              <div
+                className="flex flex-col w-full"
+                onClick={() => {
+                  handleZoom(2);
+                }}
+              >
+                <Image
+                  src={highFidelity17}
+                  alt="group home page"
+                  className="scale-75 transition-all duration-300"
+                  style={solutionInActionZoomTwo ? solutionInActionStyles : {}}
+                />
+                <p
+                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+                >
+                  Click on the image to enlarge
+                </p>
+              </div>
             </div>
             <div className="flex flex-col xl:flex-row md:items-center">
-              <Image
-                src={highFidelity15}
-                alt="events page"
-                className="scale-75"
-              />
+              <div
+                className="flex flex-col w-full"
+                onClick={() => {
+                  handleZoom(3);
+                }}
+              >
+                <Image
+                  src={highFidelity15}
+                  alt="events page"
+                  className="scale-75 transition-all duration-300"
+                  style={
+                    solutionInActionZoomThree ? solutionInActionStyles : {}
+                  }
+                />
+                <p
+                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+                >
+                  Click on the image to enlarge
+                </p>
+              </div>
+
               <div>
                 <h3
                   className={`text-gatherly-blue text-4xl ${myFont.className} mb-4`}

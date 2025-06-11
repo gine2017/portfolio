@@ -298,106 +298,125 @@ export default function ModernAttire() {
             <h2 className={`text-modern-attire text-5xl ${myFont.className}`}>
               Solution in Action
             </h2>
-            <div className="flex flex-col gap-y-8 md:flex-row md:items-center border-b-4 ">
-              <div
-                className="flex flex-col w-full"
-                onClick={() => {
-                  handleZoom(1);
-                }}
-              >
-                <Image
-                  src={highFidelity11}
-                  alt="guest checkout interface"
-                  className="scale-75 transition-all duration-300"
-                  style={solutionInActionZoomOne ? solutionInActionStyles : {}}
-                />
-                <p
-                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+            <>
+              <div className="flex flex-col gap-y-8 md:flex-row md:items-center border-b-4 ">
+                <div
+                  className="flex flex-col w-3/4"
+                  onClick={() => {
+                    handleZoom(1);
+                  }}
                 >
-                  Click on the image to enlarge
-                </p>
-              </div>
+                  <Image
+                    src={highFidelity11}
+                    alt="guest checkout interface"
+                    className="w-full h-auto transition-all duration-300"
+                    style={
+                      solutionInActionZoomOne ? solutionInActionStyles : {}
+                    }
+                  />
+                  <p
+                    className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+                  >
+                    Click on the image to enlarge
+                  </p>
+                </div>
 
-              <div>
-                <h3
-                  className={`text-modern-attire text-4xl ${myFont.className} mb-2`}
-                >
-                  Guest Checkout Flow
-                </h3>
-                <p className={`text-2xl ${darkerGrotesque.className} mb-4`}>
-                  Eliminates the registration barrier that caused 70% of
-                  shoppers to abandon their cart, allowing customers to complete
-                  purchases without creating an account
-                </p>
+                <div>
+                  <h3
+                    className={`text-modern-attire text-4xl ${myFont.className} mb-2`}
+                  >
+                    Guest Checkout Flow
+                  </h3>
+                  <p className={`text-2xl ${darkerGrotesque.className} mb-4`}>
+                    Eliminates the registration barrier that caused 70% of
+                    shoppers to abandon their cart, allowing customers to
+                    complete purchases without creating an account
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col md:flex-row md:items-center border-b-4">
-              <div>
-                <h3
-                  className={`text-modern-attire text-4xl ${myFont.className} mb-4`}
+              {solutionInActionZoomOne && (
+                <div className="fixed top-0 left-0 w-screen h-dvh bg-white bg-opacity-50 z-[9998]" />
+              )}
+            </>
+            <>
+              <div className="flex flex-col md:flex-row md:items-center border-b-4">
+                <div>
+                  <h3
+                    className={`text-modern-attire text-4xl ${myFont.className} mb-4`}
+                  >
+                    Interactive Measurement Interface
+                  </h3>
+                  <p className={`text-2xl ${darkerGrotesque.className} mb-4`}>
+                    Simplifies the complex suit-fitting process with visual
+                    guidance, reducing uncertainty and building customer
+                    confidence in their purchase decisions
+                  </p>
+                </div>
+                <div
+                  className="flex flex-col w-3/4"
+                  onClick={() => {
+                    handleZoom(2);
+                  }}
                 >
-                  Interactive Measurement Interface
-                </h3>
-                <p className={`text-2xl ${darkerGrotesque.className} mb-4`}>
-                  Simplifies the complex suit-fitting process with visual
-                  guidance, reducing uncertainty and building customer
-                  confidence in their purchase decisions
-                </p>
+                  <Image
+                    src={highFidelity6}
+                    alt="interactive measurement tool"
+                    className="w-full h-auto transition-all duration-300"
+                    style={
+                      solutionInActionZoomTwo ? solutionInActionStyles : {}
+                    }
+                  />
+                  <p
+                    className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+                  >
+                    Click on the image to enlarge
+                  </p>
+                </div>
               </div>
-              <div
-                className="flex flex-col w-full"
-                onClick={() => {
-                  handleZoom(2);
-                }}
-              >
-                <Image
-                  src={highFidelity6}
-                  alt="interactive measurement tool"
-                  className="scale-75 transition-all duration-300"
-                  style={solutionInActionZoomTwo ? solutionInActionStyles : {}}
-                />
-                <p
-                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+              {solutionInActionZoomTwo && (
+                <div className="fixed top-0 left-0 w-screen h-dvh bg-white bg-opacity-50 z-[9998]" />
+              )}
+            </>
+            <>
+              <div className="flex flex-col md:flex-row md:items-center">
+                <div
+                  className="flex flex-col w-3/4"
+                  onClick={() => {
+                    handleZoom(3);
+                  }}
                 >
-                  Click on the image to enlarge
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row md:items-center">
-              <div
-                className="flex flex-col w-full"
-                onClick={() => {
-                  handleZoom(3);
-                }}
-              >
-                <Image
-                  src={highFidelity12}
-                  alt="product page with reviews"
-                  className="scale-75 transition-all duration-300"
-                  style={
-                    solutionInActionZoomThree ? solutionInActionStyles : {}
-                  }
-                />
-                <p
-                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
-                >
-                  Click on the image to enlarge
-                </p>
-              </div>
+                  <Image
+                    src={highFidelity12}
+                    alt="product page with reviews"
+                    className="w-full h-auto transition-all duration-300"
+                    style={
+                      solutionInActionZoomThree ? solutionInActionStyles : {}
+                    }
+                  />
+                  <p
+                    className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+                  >
+                    Click on the image to enlarge
+                  </p>
+                </div>
 
-              <div>
-                <h3
-                  className={`text-modern-attire text-4xl ${myFont.className} mb-4`}
-                >
-                  Product Page with Social Proof
-                </h3>
-                <p className={`text-2xl ${darkerGrotesque.className}`}>
-                  Enhances buyer confidence through accessible product reviews
-                  and customer testimonials, addressing hesitation and
-                  increasing conversion rates
-                </p>
+                <div>
+                  <h3
+                    className={`text-modern-attire text-4xl ${myFont.className} mb-4`}
+                  >
+                    Product Page with Social Proof
+                  </h3>
+                  <p className={`text-2xl ${darkerGrotesque.className}`}>
+                    Enhances buyer confidence through accessible product reviews
+                    and customer testimonials, addressing hesitation and
+                    increasing conversion rates
+                  </p>
+                </div>
               </div>
-            </div>
+              {solutionInActionZoomThree && (
+                <div className="fixed top-0 left-0 w-screen h-dvh bg-white bg-opacity-50 z-[9998]" />
+              )}
+            </>
           </div>
           {width >= 767 && (
             <AutoScrollNavigator sections={steps} fontColor={"modern-attire"} />

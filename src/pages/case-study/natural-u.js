@@ -285,103 +285,122 @@ export default function NaturalU() {
             <h2 className={`text-naturalu-purple text-5xl ${myFont.className}`}>
               Solution in Action
             </h2>
-            <div className="flex flex flex-col xl:flex-row md:items-center border-b-4 ">
-              <div
-                className="flex flex-col w-full"
-                onClick={() => {
-                  handleZoom(1);
-                }}
-              >
-                <Image
-                  src={screen20}
-                  alt="coily hair education page"
-                  className="scale-75 transition-all duration-300"
-                  style={solutionInActionZoomOne ? solutionInActionStyles : {}}
-                />
-                <p
-                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+            <>
+              <div className="flex flex-col gap-y-16 xl:flex-row xl:gap-x-16 md:items-center border-b-4 ">
+                <div
+                  className="flex flex-col"
+                  onClick={() => {
+                    handleZoom(1);
+                  }}
                 >
-                  Click on the image to enlarge
-                </p>
-              </div>
+                  <Image
+                    src={screen20}
+                    alt="coily hair education page"
+                    className="w-full h-auto transition-all duration-300"
+                    style={
+                      solutionInActionZoomOne ? solutionInActionStyles : {}
+                    }
+                  />
+                  <p
+                    className={`${darkerGrotesqueMed.className} italic text-xl mb-4 text-center`}
+                  >
+                    Click on the image to enlarge
+                  </p>
+                </div>
 
-              <div>
-                <h3
-                  className={`text-naturalu-purple text-4xl ${myFont.className} mb-4`}
-                >
-                  Hair Type Education Hub
-                </h3>
-                <p className={`text-2xl ${darkerGrotesque.className} mb-8`}>
-                  Addresses the education gap by providing detailed, accessible
-                  information about specific hair types
-                </p>
+                <div>
+                  <h3
+                    className={`text-naturalu-purple text-4xl ${myFont.className} mb-4`}
+                  >
+                    Hair Type Education Hub
+                  </h3>
+                  <p className={`text-2xl ${darkerGrotesque.className} mb-8`}>
+                    Addresses the education gap by providing detailed,
+                    accessible information about specific hair types
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col xl:flex-row md:items-center border-b-4">
-              <div>
-                <h3
-                  className={`text-naturalu-purple text-4xl ${myFont.className} mb-4`}
+              {solutionInActionZoomOne && (
+                <div className="fixed top-0 left-0 w-screen h-dvh bg-white bg-opacity-50 z-[9998]" />
+              )}
+            </>
+            <>
+              <div className="flex flex-col gap-y-16 xl:flex-row xl:gap-x-16 md:items-center border-b-4">
+                <div>
+                  <h3
+                    className={`text-naturalu-purple text-4xl ${myFont.className} mb-4`}
+                  >
+                    Community Knowledge Exchange
+                  </h3>
+                  <p className={`text-2xl ${darkerGrotesque.className}`}>
+                    Creates a supportive space where users can ask questions and
+                    receive advice from both professionals and peers
+                  </p>
+                </div>
+                <div
+                  className="flex flex-col"
+                  onClick={() => {
+                    handleZoom(2);
+                  }}
                 >
-                  Community Knowledge Exchange
-                </h3>
-                <p className={`text-2xl ${darkerGrotesque.className}`}>
-                  Creates a supportive space where users can ask questions and
-                  receive advice from both professionals and peers
-                </p>
+                  <Image
+                    src={screen17}
+                    alt="answered question page"
+                    className="w-full h-auto transition-all duration-300"
+                    style={
+                      solutionInActionZoomTwo ? solutionInActionStyles : {}
+                    }
+                  />
+                  <p
+                    className={`${darkerGrotesqueMed.className} italic text-xl mb-4 text-center`}
+                  >
+                    Click on the image to enlarge
+                  </p>
+                </div>
               </div>
-              <div
-                className="flex flex-col w-full"
-                onClick={() => {
-                  handleZoom(2);
-                }}
-              >
-                <Image
-                  src={screen17}
-                  alt="answered question page"
-                  className="scale-75 transition-all duration-300"
-                  style={solutionInActionZoomTwo ? solutionInActionStyles : {}}
-                />
-                <p
-                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
+              {solutionInActionZoomTwo && (
+                <div className="fixed top-0 left-0 w-screen h-dvh bg-white bg-opacity-50 z-[9998]" />
+              )}
+            </>
+            <>
+              <div className="flex flex-col gap-y-16 xl:flex-row xl:gap-x-16 md:items-center">
+                <div
+                  className="flex flex-col"
+                  onClick={() => {
+                    handleZoom(3);
+                  }}
                 >
-                  Click on the image to enlarge
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col xl:flex-row md:items-center">
-              <div
-                className="flex flex-col w-full"
-                onClick={() => {
-                  handleZoom(3);
-                }}
-              >
-                <Image
-                  src={screen14}
-                  alt="video discovery page"
-                  className="scale-75 transition-all duration-300"
-                  style={
-                    solutionInActionZoomThree ? solutionInActionStyles : {}
-                  }
-                />
-                <p
-                  className={`${darkerGrotesqueMed.className} italic text-xl ml-6 mb-4 text-center`}
-                >
-                  Click on the image to enlarge
-                </p>
-              </div>
+                  <Image
+                    src={screen14}
+                    alt="video discovery page"
+                    className="w-full h-auto transition-all duration-300"
+                    style={
+                      solutionInActionZoomThree ? solutionInActionStyles : {}
+                    }
+                  />
+                  <p
+                    className={`${darkerGrotesqueMed.className} italic text-xl text-center`}
+                  >
+                    Click on the image to enlarge
+                  </p>
+                </div>
 
-              <div>
-                <h3
-                  className={`text-naturalu-purple text-4xl ${myFont.className} mb-4`}
-                >
-                  Visual Learning Discovery
-                </h3>
-                <p className={`text-2xl ${darkerGrotesque.className}`}>
-                  Enables visual learning and representation through diverse
-                  hair examples, normalizing different hair types
-                </p>
+                <div>
+                  <h3
+                    className={`text-naturalu-purple text-4xl ${myFont.className} mb-4`}
+                  >
+                    Visual Learning Discovery
+                  </h3>
+                  <p className={`text-2xl ${darkerGrotesque.className}`}>
+                    Enables visual learning and representation through diverse
+                    hair examples, normalizing different hair types
+                  </p>
+                </div>
               </div>
-            </div>
+              {solutionInActionZoomThree && (
+                <div className="fixed top-0 left-0 w-screen h-dvh bg-white bg-opacity-50 z-[9998]" />
+              )}
+            </>
           </div>
           {width >= 767 && (
             <AutoScrollNavigator

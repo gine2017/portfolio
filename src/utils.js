@@ -56,7 +56,6 @@ const zoomImage = (shouldZoom, largeImage) => {
 };
 
 const solutionInActionStyles = {
-  transform: "scale(1.25)",
   transition: "transform 0.3s ease",
   position: "fixed",
   top: "50%",
@@ -67,7 +66,6 @@ const solutionInActionStyles = {
   backgroundColor: "rgba(255, 255, 255, 0.9)",
   padding: "20px",
   borderRadius: "8px",
-  boxShadow: "0 25px 50px -12px rgba(255, 255, 255, 0.9)",
   zIndex: 9999,
   maxWidth: "80vw",
   maxHeight: "80vh",

@@ -8,9 +8,9 @@ import Head from "next/head";
 
 import useWindowSize from "@/hooks/useWindowSize";
 import {
-  myFont,
+  darkerGrotesqueTitle,
   darkerGrotesque,
-  darkerGrotesqueBold,
+  interBold,
   myFontBold,
 } from "@/utils";
 
@@ -44,7 +44,7 @@ export default function Projects() {
           <div className="flex flex-col gap-y-8 flex-1">
             <div className="mt-12 flex flex-row gap-x-4 items-center">
               <h1
-                className={` text-purple text-3xl md:text-5xl ${myFont.className}`}
+                className={` text-purple text-3xl md:text-5xl ${darkerGrotesqueTitle.className}`}
               >
                 Bootcamp
               </h1>
@@ -52,21 +52,21 @@ export default function Projects() {
 
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               My{" "}
-              <span className={`text-black ${darkerGrotesqueBold.className}`}>
+              <span className={`text-black ${interBold.className}`}>
                 Springboard UX bootcamp
               </span>{" "}
               reinforced critical design fundamentals through two key projects.
               For{" "}
-              <span className={`text-black ${darkerGrotesqueBold.className}`}>
+              <span className={`text-black ${interBold.className}`}>
                 Gatherly
               </span>
               , I addressed{" "}
-              <span className={`text-black ${darkerGrotesqueBold.className}`}>
+              <span className={`text-black ${interBold.className}`}>
                 mental health challenges
               </span>{" "}
               by creating a community app targeting psychological stress in
               young adults. This project honed my{" "}
-              <span className={`text-black ${darkerGrotesqueBold.className}`}>
+              <span className={`text-black ${interBold.className}`}>
                 research skills
               </span>{" "}
               through user interviews that directly shaped design decisions,
@@ -74,16 +74,16 @@ export default function Projects() {
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               With{" "}
-              <span className={`text-black ${darkerGrotesqueBold.className}`}>
+              <span className={`text-black ${interBold.className}`}>
                 Modern Attire
               </span>
               , I designed an{" "}
-              <span className={`text-black ${darkerGrotesqueBold.className}`}>
+              <span className={`text-black ${interBold.className}`}>
                 e-commerce experience
               </span>{" "}
               for custom suits, focusing on conversion optimization. The project
               strengthened my{" "}
-              <span className={`text-black ${darkerGrotesqueBold.className}`}>
+              <span className={`text-black ${interBold.className}`}>
                 UI principles
               </span>{" "}
               by developing intuitive checkout flows and creating an innovative
@@ -92,7 +92,7 @@ export default function Projects() {
             </p>
             <p className={` text-2xl ${darkerGrotesque.className}`}>
               These projects transformed my approach to UX by connecting{" "}
-              <span className={`text-black ${darkerGrotesqueBold.className}`}>
+              <span className={`text-black ${interBold.className}`}>
                 research insights
               </span>{" "}
               directly to interface solutions that address real user needs. The

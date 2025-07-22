@@ -6,9 +6,9 @@ import MobileNav from "@/components/mobile-nav";
 import CaseStudyFooter from "@/components/case-study-footer";
 import Footer from "@/components/footer";
 import {
-  myFont,
+  darkerGrotesqueTitle,
   darkerGrotesque,
-  darkerGrotesqueBold,
+  interBold,
   createImageArray,
 } from "@/utils";
 import Hero from "@/components/hero";
@@ -99,53 +99,41 @@ export default function DesignSystem() {
           ref={caseStudyRef}
         >
           <h1
-            className={`flex justify-center text-center text-component-library ${myFont.className} text-6xl`}
+            className={`flex justify-center text-center text-component-library ${darkerGrotesqueTitle.className} text-6xl`}
           >
             Bridging Design & Code: React, Storybook & TailwindCSS
           </h1>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h2
-              className={`text-component-library text-5xl md:text-3xl ${myFont.className}`}
+              className={`text-component-library text-5xl md:text-3xl ${darkerGrotesqueTitle.className}`}
             >
               Building Blocks for Digital Experiences
             </h2>
             <p className={`text-2xl ${darkerGrotesque.className}`}>
               In college, I created this tutorial to demonstrate how modern
               frontend architecture enables{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 scalable UI development
               </span>{" "}
               . By combining{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 React
               </span>
               ,
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 TailwindCSS
               </span>
               , and{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 Storybook
               </span>
               , I showed how to build a
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 {" "}
                 component library
               </span>{" "}
               that serves as the foundation for{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 consistent user interfaces
               </span>{" "}
               and ultimately a functional profile page.
@@ -154,29 +142,23 @@ export default function DesignSystem() {
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h2
-              className={`text-component-library text-5xl ${myFont.className}`}
+              className={`text-component-library text-5xl ${darkerGrotesqueTitle.className}`}
             >
               Educational Purpose & Audience
             </h2>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               This tutorial guided fellow computer science students through{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 component-based architecture
               </span>{" "}
               principles. Starting with fundamental concepts, I aimed to show
               how{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 isolated UI elements
               </span>{" "}
               could be systematically developed, documented, and later assembled
               into a
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 {" "}
                 cohesive profile page
               </span>{" "}
@@ -191,41 +173,31 @@ export default function DesignSystem() {
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h2
-              className={`text-component-library text-5xl ${myFont.className}`}
+              className={`text-component-library text-5xl ${darkerGrotesqueTitle.className}`}
             >
               Technical Foundation
             </h2>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               The first step in our journey was establishing a solid{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 technical foundation
               </span>
               . I set up a project integrating{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 React
               </span>{" "}
               for component architecture,
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 TailwindCSS
               </span>{" "}
               for efficient styling, and
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 {" "}
                 Storybook
               </span>{" "}
               for isolated development and documentation, creating an
               environment where we could
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 {" "}
                 build and test components
               </span>{" "}
@@ -236,42 +208,32 @@ export default function DesignSystem() {
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h2
-              className={`text-component-library text-5xl ${myFont.className}`}
+              className={`text-component-library text-5xl ${darkerGrotesqueTitle.className}`}
             >
               Component Development Journey
             </h2>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               With our foundation in place, we began creating the essential
               building blocks:{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 buttons
               </span>{" "}
               for user actions,
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 {" "}
                 cards
               </span>{" "}
               for content containers,{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 avatars
               </span>{" "}
               for user identification, and
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 {" "}
                 hero sections
               </span>{" "}
               for visual impact. Each component was designed with
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 {" "}
                 reusability
               </span>{" "}
@@ -289,34 +251,26 @@ export default function DesignSystem() {
             className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
           >
             <h2
-              className={`text-component-library text-5xl ${myFont.className}`}
+              className={`text-component-library text-5xl ${darkerGrotesqueTitle.className}`}
             >
               Documentation with Storybook
             </h2>
             <p>
               As each component was built, we documented its variants and use
               cases in{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 Storybook
               </span>
               . This step was crucial, creating{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 living documentation
               </span>{" "}
               that served as both a{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 development environment
               </span>{" "}
               and{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 reference guide
               </span>
               {`, ensuring each component's purpose and capabilities were clear
@@ -335,27 +289,21 @@ export default function DesignSystem() {
             className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
           >
             <h2
-              className={`text-component-library text-5xl ${myFont.className}`}
+              className={`text-component-library text-5xl ${darkerGrotesqueTitle.className}`}
             >
               From Components to Interfaces
             </h2>
             <p>
               The final step demonstrated how our{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 isolated components
               </span>{" "}
               could be assembled into a functional{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 profile page
               </span>
               . By leveraging our{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 component library
               </span>{" "}
               and adding an{" "}
@@ -363,14 +311,12 @@ export default function DesignSystem() {
                 href="https://api.npoint.io/b7869167c6757876a385"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`text-component-library ${darkerGrotesqueBold.className} underline`}
+                className={`text-component-library ${interBold.className} underline`}
               >
                 API call
               </a>{" "}
               to fetch user data, we transformed individual UI elements into a{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 cohesive interface
               </span>
               , showing the power of component-driven development in creating
@@ -383,40 +329,30 @@ export default function DesignSystem() {
             className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
           >
             <h2
-              className={`text-component-library text-5xl ${myFont.className}`}
+              className={`text-component-library text-5xl ${darkerGrotesqueTitle.className}`}
             >
               Professional Application
             </h2>
             <p>
               What began as an{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 educational project
               </span>{" "}
               {`reflects professional principles I've since applied in my career.`}
               This{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 component-driven approach
               </span>{" "}
               is fundamental to{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 UX Engineering
               </span>
               , where bridging{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 design
               </span>{" "}
               and{" "}
-              <span
-                className={`text-component-library ${darkerGrotesqueBold.className}`}
-              >
+              <span className={`text-component-library ${interBold.className}`}>
                 implementation
               </span>{" "}
               is crucial for creating cohesive user experiences that scale

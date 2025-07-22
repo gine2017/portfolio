@@ -18,10 +18,10 @@ import {
   faPenToSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import {
-  myFont,
+  darkerGrotesqueTitle,
   darkerGrotesque,
   createImageArray,
-  darkerGrotesqueBold,
+  interBold,
   darkerGrotesqueMed,
   solutionInActionStyles,
 } from "@/utils";
@@ -129,63 +129,57 @@ export default function TestWise() {
           ref={caseStudyRef}
         >
           <h1
-            className={`flex justify-center text-testwise-blue ${myFont.className} text-6xl`}
+            className={`flex justify-center text-testwise-blue ${darkerGrotesqueTitle.className} text-6xl`}
           >
             Test Wise Case Study
           </h1>
           <div className="flex flex-col gap-y-8 md:flex-row gap-x-16 ">
             <div className="flex flex-col gap-y-8 flex-1">
-              <h2 className={`text-testwise-blue text-5xl ${myFont.className}`}>
+              <h2
+                className={`text-testwise-blue text-5xl ${darkerGrotesqueTitle.className}`}
+              >
                 Problem
               </h2>
               <p
-                className={`text-2xl ${darkerGrotesqueBold.className} text-testwise-blue `}
+                className={`text-2xl ${interBold.className} text-testwise-blue `}
               >
                 {`KDIT Solutions' Test Wise platform lacked an integrated
                 requirements module for ERP/CRM workflow management.`}
               </p>
               <p className={`text-2xl ${darkerGrotesque.className}`}>
                 Test Wise primarily helps organizations manage{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   testing
                 </span>{" "}
                 and release processes for business systems like IBM Maximo.
                 Without a requirements module, users had to{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   switch between systems
                 </span>{" "}
                 to track their work. A previous design attempt for the
                 requirements{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   dashboard
                 </span>{" "}
                 {`didn't align with the president's vision and faced significant`}{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   delays
                 </span>
                 , creating frustration for both{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   clients
                 </span>{" "}
                 and the development team.
               </p>
             </div>
             <div className="flex flex-col gap-y-8 flex-1">
-              <h2 className={`text-testwise-blue text-5xl ${myFont.className}`}>
+              <h2
+                className={`text-testwise-blue text-5xl ${darkerGrotesqueTitle.className}`}
+              >
                 Solution
               </h2>
               <p
-                className={`text-2xl ${darkerGrotesqueBold.className} text-testwise-blue `}
+                className={`text-2xl ${interBold.className} text-testwise-blue `}
               >
                 A redesigned requirements dashboard that integrates seamlessly
                 with Test Wise for improved workflow efficiency.
@@ -193,28 +187,20 @@ export default function TestWise() {
               <p className={`text-2xl ${darkerGrotesque.className}`}>
                 Through a partnership between my UX Design bootcamp
                 (Springboard) and KDIT Solutions, my team created an{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   intuitive
                 </span>{" "}
                 dashboard that integrates seamlessly with Test Wise. The
                 solution clarifies{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   tasks
                 </span>
                 , streamlines{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   workflows
                 </span>
                 , and enhances{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   collaboration
                 </span>{" "}
                 for a more comprehensive enterprise solution that eliminates
@@ -225,7 +211,9 @@ export default function TestWise() {
 
           <div className="flex flex-col gap-y-10 md:gap-x-40 md:mx-auto ">
             <div className="flex flex-col gap-y-2 md:gap-y-8">
-              <h3 className={`text-testwise-blue text-4xl ${myFont.className}`}>
+              <h3
+                className={`text-testwise-blue text-4xl ${darkerGrotesqueTitle.className}`}
+              >
                 My Role
               </h3>
               <div className={` text-2xl ${darkerGrotesque.className}`}>
@@ -236,7 +224,9 @@ export default function TestWise() {
             </div>
           </div>
           <div className="flex flex-col gap-y-8 w-full md:mx-auto ">
-            <h2 className={`text-testwise-blue text-5xl ${myFont.className}`}>
+            <h2
+              className={`text-testwise-blue text-5xl ${darkerGrotesqueTitle.className}`}
+            >
               Solution in Action
             </h2>
             <>
@@ -265,7 +255,7 @@ export default function TestWise() {
 
                 <div>
                   <h3
-                    className={`text-testwise-blue text-4xl ${myFont.className} mb-4`}
+                    className={`text-testwise-blue text-4xl ${darkerGrotesqueTitle.className} mb-4`}
                   >
                     Integrated Requirements Dashboard
                   </h3>
@@ -277,14 +267,14 @@ export default function TestWise() {
                 </div>
               </div>
               {solutionInActionZoomOne && (
-                <div className="fixed top-0 left-0 w-screen h-dvh bg-white bg-opacity-50 z-[9998]" />
+                <div className="fixed top-0 left-0 w-screen h-dvh bg-bgWhite bg-opacity-50 z-[9998]" />
               )}
             </>
             <>
               <div className="flex flex-col gap-y-16 xl:flex-row xl:gap-x-16 md:items-center border-b-4">
                 <div>
                   <h3
-                    className={`text-testwise-blue text-4xl ${myFont.className}`}
+                    className={`text-testwise-blue text-4xl ${darkerGrotesqueTitle.className}`}
                   >
                     Task Visualization Interface
                   </h3>
@@ -316,7 +306,7 @@ export default function TestWise() {
                 </div>
               </div>
               {solutionInActionZoomTwo && (
-                <div className="fixed top-0 left-0 w-screen h-dvh bg-white bg-opacity-50 z-[9998]" />
+                <div className="fixed top-0 left-0 w-screen h-dvh bg-bgWhite bg-opacity-50 z-[9998]" />
               )}
             </>
             <>
@@ -344,7 +334,7 @@ export default function TestWise() {
 
                 <div>
                   <h3
-                    className={`text-testwise-blue text-4xl ${myFont.className} mb-4`}
+                    className={`text-testwise-blue text-4xl ${darkerGrotesqueTitle.className} mb-4`}
                   >
                     Collaboration Features
                   </h3>
@@ -356,13 +346,15 @@ export default function TestWise() {
                 </div>
               </div>
               {solutionInActionZoomThree && (
-                <div className="fixed top-0 left-0 w-screen h-dvh bg-white bg-opacity-50 z-[9998]" />
+                <div className="fixed top-0 left-0 w-screen h-dvh bg-bgWhite bg-opacity-50 z-[9998]" />
               )}
             </>
           </div>
 
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h3 className={`text-testwise-blue text-4xl ${myFont.className}`}>
+            <h3
+              className={`text-testwise-blue text-4xl ${darkerGrotesqueTitle.className}`}
+            >
               Design Process
             </h3>
             <div className="flex flex-col gap-y-4 md:flex-row justify-evenly">
@@ -374,7 +366,7 @@ export default function TestWise() {
                 />
                 <div>
                   <p
-                    className={` text-3xl text-testwise-blue mt-4 text-center  ${darkerGrotesqueBold.className}`}
+                    className={` text-3xl text-testwise-blue mt-4 text-center  ${interBold.className}`}
                   >
                     Research
                   </p>
@@ -385,7 +377,7 @@ export default function TestWise() {
                 <FontAwesomeIcon icon={faLightbulb} size="4x" color="#1F3F70" />
                 <div>
                   <p
-                    className={` text-3xl text-testwise-blue mt-4 text-center  ${darkerGrotesqueBold.className}`}
+                    className={` text-3xl text-testwise-blue mt-4 text-center  ${interBold.className}`}
                   >
                     Ideate
                   </p>
@@ -400,7 +392,7 @@ export default function TestWise() {
                 />
                 <div>
                   <p
-                    className={` text-3xl text-testwise-blue mt-4 text-center ${darkerGrotesqueBold.className}`}
+                    className={` text-3xl text-testwise-blue mt-4 text-center ${interBold.className}`}
                   >
                     Design
                   </p>
@@ -427,61 +419,43 @@ export default function TestWise() {
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
                 Our team met with{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   Pranjal
                 </span>
                 , the President of KDIT Solutions, to understand his vision for
                 the{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   requirements dashboard
                 </span>
                 . We focused on necessary{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   functionality
                 </span>
                 ,{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   agile standards
                 </span>
                 , and{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   differentiation
                 </span>{" "}
                 from tools like Jira. After researching the company and their
                 clients, we held a{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   second meeting
                 </span>{" "}
                 to explore specific use cases. My experience with{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   Azure DevOps
                 </span>{" "}
                 and{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   Jira
                 </span>{" "}
                 allowed me to contribute valuable insights to these discussions.
                 Throughout our meetings, Pranjal emphasized the importance of
                 creating a{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   simple, customizable solution
                 </span>
                 .
@@ -489,41 +463,33 @@ export default function TestWise() {
             </div>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h3 className={`text-testwise-blue text-4xl ${myFont.className}`}>
+            <h3
+              className={`text-testwise-blue text-4xl ${darkerGrotesqueTitle.className}`}
+            >
               Competitive Analysis
             </h3>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
                 Based on our discussions with{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   Pranjal
                 </span>{" "}
                 and our understanding of the requirements dashboard needs, our
                 team conducted{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   competitive analysis
                 </span>{" "}
                 of prominent requirement management platforms. This research
                 became essential to identify{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   industry standards
                 </span>
                 , discover{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   pain points
                 </span>{" "}
                 in existing solutions, and uncover opportunities to{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   differentiate
                 </span>{" "}
                 {`Test Wise's dashboard.`}
@@ -531,34 +497,24 @@ export default function TestWise() {
 
               <p className="mt-4">
                 Our team focused specifically on examining{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   Azure DevOps
                 </span>
                 ,{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   Airtable
                 </span>
                 ,{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   Jira
                 </span>
                 , and{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   Asana
                 </span>{" "}
                 {`, tools that potential users might already be familiar with. By
                 analyzing these leading platforms'`}{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   strengths and weaknesses
                 </span>
                 , we gathered critical insights to inform our design decisions
@@ -575,7 +531,7 @@ export default function TestWise() {
                 <div className="w-1/4 h-40 relative mb-4">
                   <Image src={devopsLogo} alt="azure devops logo" fill={true} />
                 </div>
-                <h4 className={`text-h4Size ${myFont.className}`}>
+                <h4 className={`text-h4Size ${darkerGrotesqueTitle.className}`}>
                   Azure Devops
                 </h4>
               </div>
@@ -583,9 +539,7 @@ export default function TestWise() {
               <div>
                 <div className="flex flex-row gap-8 ">
                   <div className="flex flex-col gap-y-4">
-                    <h5
-                      className={`text-h5Size ${darkerGrotesqueBold.className}`}
-                    >
+                    <h5 className={`text-h5Size ${interBold.className}`}>
                       Strengths
                     </h5>
                     <ul className="list-disc ">
@@ -604,9 +558,7 @@ export default function TestWise() {
                     </ul>
                   </div>
                   <div className="flex flex-col gap-y-4">
-                    <h5
-                      className={`text-h5Size ${darkerGrotesqueBold.className}`}
-                    >
+                    <h5 className={`text-h5Size ${interBold.className}`}>
                       Weakness
                     </h5>
                     <ul className="list-disc ">
@@ -632,15 +584,15 @@ export default function TestWise() {
                 <div className="w-1/4 h-40 relative mb-4">
                   <Image src={asanaLogo} alt="asana logo" fill={true} />
                 </div>
-                <h4 className={`text-h4Size ${myFont.className}`}>Asana</h4>
+                <h4 className={`text-h4Size ${darkerGrotesqueTitle.className}`}>
+                  Asana
+                </h4>
               </div>
 
               <div>
                 <div className="flex flex-row gap-8 ">
                   <div className="flex flex-col gap-y-4">
-                    <h5
-                      className={`text-h5Size ${darkerGrotesqueBold.className}`}
-                    >
+                    <h5 className={`text-h5Size ${interBold.className}`}>
                       Strengths
                     </h5>
                     <ul className="list-disc ">
@@ -659,9 +611,7 @@ export default function TestWise() {
                     </ul>
                   </div>
                   <div className="flex flex-col gap-y-4">
-                    <h5
-                      className={`text-h5Size ${darkerGrotesqueBold.className}`}
-                    >
+                    <h5 className={`text-h5Size ${interBold.className}`}>
                       Weakness
                     </h5>
                     <ul className="list-disc ">
@@ -687,15 +637,15 @@ export default function TestWise() {
                 <div className="w-1/4 h-40 relative mb-4">
                   <Image src={airtableLogo} alt="Airtable logo" fill={true} />
                 </div>
-                <h4 className={`text-h4Size ${myFont.className}`}>Airtable</h4>
+                <h4 className={`text-h4Size ${darkerGrotesqueTitle.className}`}>
+                  Airtable
+                </h4>
               </div>
 
               <div>
                 <div className="flex flex-row gap-8 ">
                   <div className="flex flex-col gap-y-4">
-                    <h5
-                      className={`text-h5Size ${darkerGrotesqueBold.className}`}
-                    >
+                    <h5 className={`text-h5Size ${interBold.className}`}>
                       Strengths
                     </h5>
                     <ul className="list-disc ">
@@ -714,9 +664,7 @@ export default function TestWise() {
                     </ul>
                   </div>
                   <div className="flex flex-col gap-y-4">
-                    <h5
-                      className={`text-h5Size ${darkerGrotesqueBold.className}`}
-                    >
+                    <h5 className={`text-h5Size ${interBold.className}`}>
                       Weakness
                     </h5>
                     <ul className="list-disc ">
@@ -742,15 +690,15 @@ export default function TestWise() {
                 <div className="w-1/4 h-24 relative mb-4">
                   <Image src={jiraLogo} alt="Jira logo" fill={true} />
                 </div>
-                <h4 className={`text-h4Size ${myFont.className}`}>Jira</h4>
+                <h4 className={`text-h4Size ${darkerGrotesqueTitle.className}`}>
+                  Jira
+                </h4>
               </div>
 
               <div>
                 <div className="flex flex-row gap-8 ">
                   <div className="flex flex-col gap-y-4">
-                    <h5
-                      className={`text-h5Size ${darkerGrotesqueBold.className}`}
-                    >
+                    <h5 className={`text-h5Size ${interBold.className}`}>
                       Strengths
                     </h5>
                     <ul className="list-disc ">
@@ -771,9 +719,7 @@ export default function TestWise() {
                     </ul>
                   </div>
                   <div className="flex flex-col gap-y-4">
-                    <h5
-                      className={`text-h5Size ${darkerGrotesqueBold.className}`}
-                    >
+                    <h5 className={`text-h5Size ${interBold.className}`}>
                       Weakness
                     </h5>
                     <ul className="list-disc ">
@@ -801,66 +747,48 @@ export default function TestWise() {
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
                 After presenting our{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   competitive analysis
                 </span>{" "}
                 to{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   Pranjal
                 </span>
                 , his feedback shaped our design direction:
               </p>
               <ul className="list-disc ml-12">
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     UI Simplicity:
                   </span>{" "}
                   He agreed with our assessment that{" "}
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Jira
                   </span>{" "}
                   and{" "}
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Azure DevOps
                   </span>{" "}
                   were too complex, confirming our direction to prioritize
                   user-friendly interfaces
                 </li>
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Positive References:
                   </span>{" "}
                   He specifically highlighted{" "}
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     {`Asana's`}
                   </span>{" "}
                   clean design and customization features as elements he wanted
                   to incorporate
                 </li>
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Core Functionality:
                   </span>{" "}
                   Despite preferring simplicity, he emphasized that{" "}
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     robust issue tracking
                   </span>{" "}
                   capabilities must remain central to our solution
@@ -869,74 +797,56 @@ export default function TestWise() {
               <br />
               <p>
                 This feedback helped establish our{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   design direction
                 </span>
                 : creating an{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   intuitive interface
                 </span>{" "}
                 that balanced{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   customization
                 </span>{" "}
                 with{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   robust task management
                 </span>
                 . We began{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   wireframing
                 </span>{" "}
                 with focus on{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   clear visual hierarchy
                 </span>{" "}
                 and{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   simplified navigation
                 </span>{" "}
                 while preserving essential{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   requirements management functionality
                 </span>
                 .
               </p>
             </div>
             <div className="flex flex-col gap-y-8 ">
-              <h3 className={`text-testwise-blue text-4xl ${myFont.className}`}>
+              <h3
+                className={`text-testwise-blue text-4xl ${darkerGrotesqueTitle.className}`}
+              >
                 Low-fidelity Wireframes
               </h3>
               <div className={`text-2xl ${darkerGrotesque.className}`}>
                 <p className="mb-2">
                   Building on{" "}
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     {`Pranjal's feedback`}
                   </span>{" "}
                   about balancing simplicity with functionality, we identified
                   five key features for our solution, each addressing specific
                   needs from our{" "}
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     competitive analysis
                   </span>
                   :
@@ -945,7 +855,7 @@ export default function TestWise() {
                 <ul className="list-disc ml-12">
                   <li>
                     <span
-                      className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                      className={`text-testwise-blue ${interBold.className}`}
                     >
                       Kanban boards:
                     </span>{" "}
@@ -954,7 +864,7 @@ export default function TestWise() {
                   </li>
                   <li>
                     <span
-                      className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                      className={`text-testwise-blue ${interBold.className}`}
                     >
                       Customizable Dashboard:
                     </span>{" "}
@@ -962,7 +872,7 @@ export default function TestWise() {
                   </li>
                   <li>
                     <span
-                      className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                      className={`text-testwise-blue ${interBold.className}`}
                     >
                       Task status table:
                     </span>{" "}
@@ -971,7 +881,7 @@ export default function TestWise() {
                   </li>
                   <li>
                     <span
-                      className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                      className={`text-testwise-blue ${interBold.className}`}
                     >
                       Task detail pages:
                     </span>{" "}
@@ -980,7 +890,7 @@ export default function TestWise() {
                   </li>
                   <li>
                     <span
-                      className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
+                      className={`text-testwise-blue ${interBold.className}`}
                     >
                       New task creation:
                     </span>{" "}
@@ -991,15 +901,11 @@ export default function TestWise() {
                 <br />
                 <p>
                   We translated these priorities into{" "}
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     low-fidelity wireframes
                   </span>{" "}
                   with{" "}
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     clear visual hierarchy
                   </span>{" "}
                   to address the usability challenges identified in our
@@ -1018,24 +924,18 @@ export default function TestWise() {
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
                 After validating our{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   wireframes
                 </span>{" "}
                 with Pranjal, we moved to{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   high-fidelity design
                 </span>{" "}
                 with a refined direction:
               </p>
               <ul className="list-disc ml-12">
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Balance of approaches:
                   </span>{" "}
                   {`While our wireframes successfully addressed the complexity
@@ -1044,18 +944,14 @@ export default function TestWise() {
                   module`}
                 </li>
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Brand integration:
                   </span>{" "}
                   {`We incorporated KDIT Solutions' brand colors into our designs
                   for consistency with the existing Test Wise platform`}
                 </li>
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Multiple solutions:
                   </span>{" "}
                   Our team developed three distinct design approaches, each
@@ -1067,26 +963,20 @@ export default function TestWise() {
               <p>Based on these considerations, our designs featured:</p>
               <ul className="list-disc ml-12">
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Table list view
                   </span>{" "}
                   for structured task tracking, directly inspired by
                   industry-standard requirements tools
                 </li>
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Customizable dashboard
                   </span>{" "}
                   allowing users to tailor their information display
                 </li>
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Intuitive navigation
                   </span>{" "}
                   that maintained simplicity while offering robust functionality
@@ -1095,7 +985,9 @@ export default function TestWise() {
             </div>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h3 className={`text-testwise-blue text-4xl ${myFont.className}`}>
+            <h3
+              className={`text-testwise-blue text-4xl ${darkerGrotesqueTitle.className}`}
+            >
               High Fidelity Prototype
             </h3>
             <iframe
@@ -1108,15 +1000,11 @@ export default function TestWise() {
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
                 {`Due to the project's`}{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   timeline constraints
                 </span>
                 , we validated our designs directly with{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   Pranjal
                 </span>{" "}
                 rather than conducting user testing. He selected the solution
@@ -1124,41 +1012,31 @@ export default function TestWise() {
               </p>
               <ul className="list-disc ml-12">
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Accordion-style sub-task navigation
                   </span>{" "}
                   for efficient information hierarchy
                 </li>
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Integrated live chat
                   </span>{" "}
                   for streamlined team communication
                 </li>
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Flexible project views
                   </span>{" "}
                   offering both board and list formats
                 </li>
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Comprehensive task details page
                   </span>{" "}
                   with all relevant information
                 </li>
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Widget-based dashboard customization
                   </span>{" "}
                   for personalized workflows
@@ -1175,9 +1053,7 @@ export default function TestWise() {
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               <p>
                 Our designs will serve as the foundation for{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   {`KDIT Solutions'`}
                 </span>{" "}
                 Test Wise requirements dashboard. Working with a client across
@@ -1186,27 +1062,21 @@ export default function TestWise() {
 
               <ul className="list-disc ml-12">
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Simplicity with functionality
                   </span>{" "}
                   through an intuitive interface that maintained robust tracking
                   capabilities
                 </li>
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Industry standards with accessibility
                   </span>{" "}
                   by integrating familiar elements while ensuring an
                   approachable learning curve
                 </li>
                 <li>
-                  <span
-                    className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-testwise-blue ${interBold.className}`}>
                     Customization with consistency
                   </span>{" "}
                   via widget-based personalization aligned with the existing
@@ -1215,9 +1085,7 @@ export default function TestWise() {
               </ul>
 
               <p className="mt-4">
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   Pranjal
                 </span>{" "}
                 particularly valued our innovative task display solutions, which
@@ -1229,9 +1097,7 @@ export default function TestWise() {
 
               <p className="mt-4">
                 This experience strengthened my ability to apply my{" "}
-                <span
-                  className={`text-testwise-blue ${darkerGrotesqueBold.className}`}
-                >
+                <span className={`text-testwise-blue ${interBold.className}`}>
                   technical background
                 </span>{" "}
                 {`to UX challenges, communicate across diverse teams, and

@@ -8,7 +8,7 @@ import Head from "next/head";
 
 import useWindowSize from "@/hooks/useWindowSize";
 import useIntersectionObserver from "@/hooks/userIntersectionObserver";
-import { myFont, darkerGrotesque } from "@/utils";
+import { darkerGrotesqueTitle, darkerGrotesque } from "@/utils";
 
 // images
 import amelia from "../../assets/illustrations/Amelia.svg";
@@ -77,7 +77,7 @@ export default function Illustrations() {
             <div className="mt-12 flex flex-row gap-x-4 items-center">
               <span className=" text-3xl md:text-4xl write">🖋️</span>
               <h1
-                className={` text-purple text-3xl md:text-5xl ${myFont.className}`}
+                className={` text-purple text-3xl md:text-5xl ${darkerGrotesqueTitle.className}`}
               >
                 Illustrations
               </h1>

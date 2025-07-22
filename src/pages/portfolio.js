@@ -7,7 +7,7 @@ import CaseStudyFooter from "@/components/case-study-footer";
 import ZoomableImage from "@/components/zoomable-image";
 import ImageRow from "@/components/image-row";
 import Hero from "@/components/hero";
-import { myFont, darkerGrotesque, darkerGrotesqueBold } from "@/utils";
+import { darkerGrotesqueTitle, darkerGrotesque, interBold } from "@/utils";
 import Head from "next/head";
 
 //images
@@ -65,83 +65,83 @@ export default function Portfolio() {
           ref={caseStudyRef}
         >
           <h1
-            className={`flex justify-center text-purple ${myFont.className} text-6xl`}
+            className={`flex justify-center text-purple ${darkerGrotesqueTitle.className} text-6xl`}
           >
             Creating my Portfolio
           </h1>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h2
-              className={` text-purple text-3xl md:text-5xl ${myFont.className}`}
+              className={` text-purple text-3xl md:text-5xl ${darkerGrotesqueTitle.className}`}
             >
               Bridging Creativity and Code
             </h2>
             <p className={`text-2xl ${darkerGrotesque.className}`}>
               I built my portfolio from scratch to showcase my{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 unique ability
               </span>{" "}
               to{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 turn design ideas
               </span>{" "}
               into{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 development-ready solutions
               </span>
               . This project reflects how I{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 think, solve problems
               </span>
               , and act as the{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 bridge
               </span>{" "}
               between{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 design
               </span>{" "}
               and{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 front-end development
               </span>
               . By blending{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 technical skills
               </span>{" "}
               with{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 design precision
               </span>
               , I created an{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 interactive experience
               </span>{" "}
               that brings ideas to life—bridging{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 creativity
               </span>{" "}
               and{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 functionality
               </span>
               .
             </p>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-            <h2 className={` text-purple text-5xl ${myFont.className}`}>
+            <h2
+              className={` text-purple text-5xl ${darkerGrotesqueTitle.className}`}
+            >
               Laying the foundation
             </h2>
             <div className={`text-2xl ${darkerGrotesque.className}`}>
               I started by establishing a solid{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 brand foundation
               </span>{" "}
               to ensure my portfolio reflects my identity. I carefully chose:
               <ul className="list-decimal ml-12">
                 <li>
-                  <span
-                    className={`text-purple ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-purple ${interBold.className}`}>
                     Colors
                   </span>
                   :
@@ -154,31 +154,23 @@ export default function Portfolio() {
                   </ul>
                 </li>
                 <li>
-                  <span
-                    className={`text-purple ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-purple ${interBold.className}`}>
                     Typography
                   </span>
                   :
-                  <span
-                    className={`text-purple ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-purple ${interBold.className}`}>
                     {" "}
                     Black Mango
                   </span>{" "}
                   and{" "}
-                  <span
-                    className={`text-purple ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-purple ${interBold.className}`}>
                     Darker Grotesque
                   </span>{" "}
                   for modernity and readability
                 </li>
 
                 <li>
-                  <span
-                    className={`text-purple ${darkerGrotesqueBold.className}`}
-                  >
+                  <span className={`text-purple ${interBold.className}`}>
                     Logo
                   </span>{" "}
                   that complements these elements and reflects my core values
@@ -187,11 +179,11 @@ export default function Portfolio() {
               <br />
               This foundation set the visual tone for my portfolio, showcasing
               my work while expressing my{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 design thinking
               </span>{" "}
               and{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 personal identity
               </span>
               .
@@ -201,38 +193,40 @@ export default function Portfolio() {
           <div
             className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
           >
-            <h2 className={`text-purple text-5xl ${myFont.className}`}>
+            <h2
+              className={`text-purple text-5xl ${darkerGrotesqueTitle.className}`}
+            >
               Improving Through Insights
             </h2>
             <p>
               Design is an iterative process, and my portfolio evolved
               significantly from its initial concept. I took time to gather{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 insights
               </span>{" "}
               from other{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 designers
               </span>{" "}
               in the industry to refine the design in the next iteration. By
               comparing the{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 older version
               </span>{" "}
               with the{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 new design
               </span>
               , you can see how I improved{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 clarity
               </span>
               ,{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 focus
               </span>
               , and{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 visual appeal
               </span>
               , ensuring that every element serves a clear purpose.
@@ -247,43 +241,45 @@ export default function Portfolio() {
           <div
             className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
           >
-            <h2 className={` text-purple text-5xl ${myFont.className}`}>
+            <h2
+              className={` text-purple text-5xl ${darkerGrotesqueTitle.className}`}
+            >
               Bringing Designs to Life
             </h2>
             <p>
               Translating the design into a fully functional website was where
               my
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 {" "}
                 development skills{" "}
               </span>{" "}
               shined. Working in
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 {" "}
                 VSCode{" "}
               </span>
               , I built custom
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 {" "}
                 components{" "}
               </span>{" "}
               and wrote clean, maintainable code to create a
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 {" "}
                 responsive{" "}
               </span>
               , interactive portfolio. Challenges like ensuring
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 {" "}
                 cross-browser compatibility{" "}
               </span>{" "}
               and seamless
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 {" "}
                 responsiveness{" "}
               </span>{" "}
               helped me further hone my
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 {" "}
                 technical expertise{" "}
               </span>
@@ -294,60 +290,62 @@ export default function Portfolio() {
           <div
             className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
           >
-            <h2 className={` text-purple text-5xl ${myFont.className}`}>
+            <h2
+              className={` text-purple text-5xl ${darkerGrotesqueTitle.className}`}
+            >
               Being the Ultimate Translator
             </h2>
             <p>
               Building this portfolio reinforced my role as the{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 ultimate translator
               </span>{" "}
               between{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 design
               </span>{" "}
               and{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 development
               </span>
               , aligning{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 creative vision
               </span>{" "}
               with{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 technical execution
               </span>
               . The result is a portfolio that blends{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 creativity
               </span>{" "}
               and{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 functionality
               </span>
               , showcasing{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 responsive layouts
               </span>{" "}
               and my{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 design thinking process
               </span>
               , with every detail crafted to reflect my{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 skills
               </span>
               . Moving forward, I’ll continue{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 refining
               </span>{" "}
               the portfolio, incorporating{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 feedback
               </span>
               , and adding{" "}
-              <span className={`text-purple ${darkerGrotesqueBold.className}`}>
+              <span className={`text-purple ${interBold.className}`}>
                 new projects
               </span>{" "}
               to further bridge the gap between creativity and technology.

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "@/components/navbar";
 import Title from "@/components/title";
 import Image from "next/image";
-import { darkerGrotesqueReg, darkerGrotesqueBold, myFont } from "@/utils";
+import { interBody, interBold, darkerGrotesqueTitle } from "@/utils";
 import Footer from "@/components/footer";
 import MobileNav from "@/components/mobile-nav";
 import useWindowSize from "@/hooks/useWindowSize";
@@ -42,11 +42,11 @@ export default function About() {
         )}
         {showContent && (
           <main
-            className={` ${`text-2xl ${darkerGrotesqueReg.className}`} w-4/5 mx-auto flex flex-col mt-16 md:gap-32 md:mt-36 `}
+            className={` ${`text-2xl ${interBody.className}`} w-4/5 mx-auto flex flex-col mt-16 md:gap-32 md:mt-36 `}
           >
             <div className="flex flex-col gap-8 md:gap-16">
               <h1
-                className={`flex justify-center text-purple ${myFont.className} text-6xl`}
+                className={`flex justify-center text-purple ${darkerGrotesqueTitle.className} text-6xl`}
               >
                 About Me
               </h1>
@@ -63,7 +63,7 @@ export default function About() {
                   <div>
                     <p>
                       {`Hello! I’m Regine Thimothee, a UX & Product Designer whose passion for technology began when I earned my`}{" "}
-                      <span className={`${darkerGrotesqueBold.className}`}>
+                      <span className={`${interBold.className}`}>
                         B.S. in Web & Mobile Computing at Rochester Institute of
                         Technology
                       </span>
@@ -76,16 +76,14 @@ export default function About() {
                   <div>
                     <p>
                       {`After graduating, I joined`}{" "}
-                      <span className={`${darkerGrotesqueBold.className}`}>
-                        ADP
-                      </span>{" "}
+                      <span className={`${interBold.className}`}>ADP</span>{" "}
                       {`as a Software Engineer in where I collobarated with UX
                       teams to`}{" "}
-                      <span className={`${darkerGrotesqueBold.className}`}>
+                      <span className={`${interBold.className}`}>
                         build accessible React components
                       </span>{" "}
                       and{" "}
-                      <span className={`${darkerGrotesqueBold.className}`}>
+                      <span className={`${interBold.className}`}>
                         utilized scalable design systems and component
                         libraries.
                       </span>{" "}
@@ -97,11 +95,11 @@ export default function About() {
                   <div>
                     <p>
                       {`Eager to deepen my design expertise, I completed Springboard’s `}{" "}
-                      <span className={`${darkerGrotesqueBold.className}`}>
+                      <span className={`${interBold.className}`}>
                         700+ hour UX program
                       </span>{" "}
                       and secured a{" "}
-                      <span className={`${darkerGrotesqueBold.className}`}>
+                      <span className={`${interBold.className}`}>
                         externship contract
                       </span>{" "}
                       {`, where I led research phase and refined my skills in
@@ -112,13 +110,11 @@ export default function About() {
                   <div>
                     <p>
                       {`Driven by a passion for community and natural hair care, I founded`}{" "}
-                      <span className={`${darkerGrotesqueBold.className}`}>
-                        NaturalU
-                      </span>
+                      <span className={`${interBold.className}`}>NaturalU</span>
                       {`, an educational app ( that I am currently working on )
                       combining video content and Q&A to foster open discussion,
                       where I applied my`}{" "}
-                      <span className={`${darkerGrotesqueBold.className}`}>
+                      <span className={`${interBold.className}`}>
                         “ultimate translator”
                       </span>{" "}
                       {`role to bridge design vision and code.`}{" "}
@@ -128,21 +124,19 @@ export default function About() {
                   <div>
                     <p>
                       {`Today, I leverage this journey, from `}{" "}
-                      <span className={`${darkerGrotesqueBold.className}`}>
+                      <span className={`${interBold.className}`}>
                         RIT foundations
                       </span>{" "}
                       through{" "}
-                      <span className={`${darkerGrotesqueBold.className}`}>
+                      <span className={`${interBold.className}`}>
                         enterprise-scale projects at ADP
                       </span>
                       {`, immersive`}{" "}
-                      <span className={`${darkerGrotesqueBold.className}`}>
+                      <span className={`${interBold.className}`}>
                         Springboard training
                       </span>{" "}
                       {`, and entrepreneurial innovation with`}{" "}
-                      <span className={`${darkerGrotesqueBold.className}`}>
-                        NaturalU
-                      </span>{" "}
+                      <span className={`${interBold.className}`}>NaturalU</span>{" "}
                       {`, to craft intuitive experiences that honor both design
                       intent and technical feasibility.`}{" "}
                     </p>
@@ -152,21 +146,19 @@ export default function About() {
               <Title title={"My Skills"} />
               <div className="flex flex-col gap-8 md:flex-row">
                 <div className="flex-1">
-                  <h3
-                    className={`text-purple text-4xl ${darkerGrotesqueBold.className}`}
-                  >
+                  <h3 className={`text-purple text-4xl ${interBold.className}`}>
                     Key Skills
                   </h3>
                   <ul className="list-none ">
                     <li className="mb-4">
-                      <span className={` ${darkerGrotesqueBold.className}`}>
+                      <span className={` ${interBold.className}`}>
                         User Research & Testing:
                       </span>{" "}
                       Personas, User Interviews, Usability Testing, Competitor
                       Analysis
                     </li>
                     <li className="mb-4">
-                      <span className={` ${darkerGrotesqueBold.className}`}>
+                      <span className={` ${interBold.className}`}>
                         Visual & Interaction Design:
                       </span>{" "}
                       User Interface Design, Information Architecture,
@@ -174,42 +166,38 @@ export default function About() {
                       Boards, Wireframes, Prototyping, User Flows, Mockups
                     </li>
                     <li className="mb-4">
-                      <span className={` ${darkerGrotesqueBold.className}`}>
+                      <span className={` ${interBold.className}`}>
                         Development Skills:
                       </span>{" "}
                       HTML,CSS, TailwindCSS, React, JavaScript, Node, Express,
                       C#
                     </li>
                     <li className="mb-4">
-                      <span className={` ${darkerGrotesqueBold.className}`}>
-                        Tools:
-                      </span>{" "}
+                      <span className={` ${interBold.className}`}>Tools:</span>{" "}
                       Figma, Miro, Trello, Jira, Google Suite
                     </li>
                   </ul>
                   <br />
                 </div>
                 <div className="flex-1">
-                  <h3
-                    className={`text-purple text-4xl ${darkerGrotesqueBold.className}`}
-                  >
+                  <h3 className={`text-purple text-4xl ${interBold.className}`}>
                     Experience
                   </h3>
                   <ul className="list-none ">
                     <li className="mb-4">
-                      <span className={` ${darkerGrotesqueBold.className}`}>
+                      <span className={` ${interBold.className}`}>
                         Lead User Experience Designer and Developer:
                       </span>{" "}
                       Founder: NaturalU, November 2020 - Present
                     </li>
                     <li className="mb-4">
-                      <span className={` ${darkerGrotesqueBold.className}`}>
+                      <span className={` ${interBold.className}`}>
                         Product Designer:
                       </span>{" "}
                        Contract: KDIT Solutions, April 2024 - May 2024
                     </li>
                     <li className="mb-4">
-                      <span className={` ${darkerGrotesqueBold.className}`}>
+                      <span className={` ${interBold.className}`}>
                         Software Engineer:
                       </span>{" "}
                       Full-time: ADP July 2022 - December 2024
@@ -219,14 +207,12 @@ export default function About() {
                 </div>
               </div>
               <div className="flex flex-col">
-                <h3
-                  className={`text-purple text-4xl ${darkerGrotesqueBold.className}`}
-                >
+                <h3 className={`text-purple text-4xl ${interBold.className}`}>
                   Transferrable Skills
                 </h3>
                 <ul>
                   <li className="mb-2">
-                    <span className={` ${darkerGrotesqueBold.className}`}>
+                    <span className={` ${interBold.className}`}>
                       User-Centric Thinking:{" "}
                     </span>
                     Understanding the end user’s needs and creating solutions
@@ -234,14 +220,14 @@ export default function About() {
                     fields.
                   </li>
                   <li className="mb-2">
-                    <span className={` ${darkerGrotesqueBold.className}`}>
+                    <span className={` ${interBold.className}`}>
                       Collaboration:{" "}
                     </span>
                     Working effectively with cross-functional teams, including
                     developers, designers, and stakeholders, is essential.
                   </li>
                   <li className="mb-2">
-                    <span className={` ${darkerGrotesqueBold.className}`}>
+                    <span className={` ${interBold.className}`}>
                       Technical Knowledge:{" "}
                     </span>
                     Knowledge of coding and technical constraints can help in
@@ -249,7 +235,7 @@ export default function About() {
                     development teams.
                   </li>
                   <li>
-                    <span className={` ${darkerGrotesqueBold.className}`}>
+                    <span className={` ${interBold.className}`}>
                       Communication Skills:{" "}
                     </span>
                     Clearly conveying ideas, requirements, and feedback through
@@ -270,7 +256,7 @@ export default function About() {
                     pursuits like watercolor painting and`}{" "}
                     <Link
                       href="/illustrations"
-                      className={`${darkerGrotesqueBold.className} text-purple hover:underline`}
+                      className={`${interBold.className} text-purple hover:underline`}
                     >
                       digital illustrations
                     </Link>

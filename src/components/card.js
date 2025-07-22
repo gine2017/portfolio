@@ -1,7 +1,11 @@
 import Image from "next/image";
 import wave from "../../assets/custom_shapes/wave.svg";
 import Link from "next/link";
-import { myFont, darkerGrotesque, darkerGrotesqueMed } from "@/utils";
+import {
+  darkerGrotesqueTitle,
+  darkerGrotesque,
+  darkerGrotesqueMed,
+} from "@/utils";
 
 export default function Card({
   title,
@@ -29,7 +33,9 @@ export default function Card({
       </div>
       <div className="flex flex-col flex-1 gap-y-10 mt-8 md:relative">
         <div className="ml-6 lg:pr-4 flex flex-col gap-y-4">
-          <div className={`text-3xl ${myFont.className}`}>{title}</div>
+          <div className={`text-3xl ${darkerGrotesqueTitle.className}`}>
+            {title}
+          </div>
           <div
             className={`text-lg whitespace-pre-wrap ${darkerGrotesque.className} md:text-2xl md:whitespace-normal`}
           >

@@ -1,4 +1,4 @@
-import { myFont, darkerGrotesque } from "@/utils";
+import { darkerGrotesqueTitle, darkerGrotesque } from "@/utils";
 import naturalU from "../../assets/natualU_logo.svg";
 import friendship_illustration from "../../assets/friendship_illustration.svg";
 import kdit from "../../assets/capstone/testwise/kdit-logo.svg";
@@ -47,7 +47,9 @@ export default function CaseStudyFooter({ casestudy = "" }) {
   return (
     <div className=" w-full flex flex-col gap-y-8">
       <div className=" w-full flex justify-start border-b-4 border-black text-4xl md:text-5xl">
-        <span className={`text-purple bg-white pb-4 ${myFont.className}`}>
+        <span
+          className={`text-purple bg-bgWhite pb-4 ${darkerGrotesqueTitle.className}`}
+        >
           Check out more of my work
         </span>
       </div>

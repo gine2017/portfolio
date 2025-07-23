@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { zoomImage } from "@/utils";
-import { darkerGrotesqueMed } from "@/utils";
+import { interBody } from "@/utils";
 import Image from "next/image";
 
 export default function ImageViewer({ images = [] }) {
@@ -37,7 +37,7 @@ export default function ImageViewer({ images = [] }) {
           ))}
         </div>
         <p
-          className={`${darkerGrotesqueMed.className} italic text-xl text-center  pt-4`}
+          className={`${interBody.className} italic text-xl text-center  pt-4`}
         >
           Click on each image to enlarge
         </p>

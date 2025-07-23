@@ -1,6 +1,6 @@
 import { zoomImage } from "@/utils";
 import { useState } from "react";
-import { darkerGrotesqueMed } from "@/utils";
+import { interBody } from "@/utils";
 import Image from "next/image";
 
 export default function ZoomableImage({ image }) {
@@ -21,9 +21,7 @@ export default function ZoomableImage({ image }) {
           style={zoomable ? zoomImage(true, true) : {}}
         />
       </div>
-      <p
-        className={`${darkerGrotesqueMed.className} italic text-xl text-center  pt-4`}
-      >
+      <p className={`${interBody.className} italic text-xl text-center  pt-4`}>
         Click on the image to enlarge
       </p>
     </div>

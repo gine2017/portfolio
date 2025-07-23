@@ -196,6 +196,7 @@ export default function NaturalU() {
                   <div
                     className={`relative w-[45%]  group cursor-pointer`}
                     onClick={() => handleClick(index)}
+                    key={index}
                   >
                     <Image
                       src={img}

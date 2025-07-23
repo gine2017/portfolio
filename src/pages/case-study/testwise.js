@@ -88,14 +88,14 @@ export default function TestWise() {
             </h3>
             <div className={`text-2xl leading-relaxed ${interBody.className}`}>
               <p>
-                Users of KDIT's Test Wise platform were constantly juggling
+                {`Users of KDIT's Test Wise platform were constantly juggling
                 multiple systems to track their work. A previous design had
                 failed, leaving both clients and developers frustrated. I
                 partnered with KDIT to redesign their requirements dashboard
                 from scratch, focusing on understanding how people actually
                 work. The result: a single, integrated dashboard that eliminated
                 system-switching and turned a fragmented experience into
-                something people actually want to use.
+                something people actually want to use.`}
               </p>
             </div>
           </div>
@@ -172,6 +172,7 @@ export default function TestWise() {
                   <div
                     className={`relative w-[45%]  group cursor-pointer`}
                     onClick={() => handleClick(index)}
+                    key={index}
                   >
                     <Image
                       src={img}

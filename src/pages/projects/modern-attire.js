@@ -25,7 +25,7 @@ import highFidelity9 from "../../../assets/capstone/modern-attire/high-fidelity/
 import highFidelity11 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity11.png";
 import highFidelity12 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity12.png";
 
-export default function modern_attire_hero() {
+export default function ModernAttire() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
   const [zoomedOutcomeIndex, setZoomedOutcomeIndex] = useState(null);
@@ -89,7 +89,7 @@ export default function modern_attire_hero() {
             </h3>
             <div className={`text-2xl leading-relaxed ${interBody.className}`}>
               <p>
-                Modern Attire's mobile shoppers were struggling with a complex
+                {`Modern Attire's mobile shoppers were struggling with a complex
                 purchasing process, leading to widespread cart abandonment and
                 lost revenue. Analytics revealed that 50% of users abandoned
                 before adding items to cart, while 70% of those who did add
@@ -101,7 +101,7 @@ export default function modern_attire_hero() {
                 intuitive measurement tools that removed purchase anxiety. The
                 result: a mobile experience that transforms browsing frustration
                 into confident purchases, achieving a 35% reduction in cart
-                abandonment and 28% increase in completed sales.
+                abandonment and 28% increase in completed sales.`}
               </p>
             </div>
           </div>
@@ -201,6 +201,7 @@ export default function modern_attire_hero() {
                   <div
                     className={`relative w-[45%]  group cursor-pointer`}
                     onClick={() => handleClick(index)}
+                    key={index}
                   >
                     <Image
                       src={img}

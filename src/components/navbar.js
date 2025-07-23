@@ -26,7 +26,7 @@ export default function Navbar() {
       <div className="flex-1 ml-24">{/* Optional logo here */}</div>
 
       {/* FontAwesome toggle */}
-      <div className="flex justify-end mr-24 relative z-[90] w-10 h-10">
+      <div className="flex justify-end mr-10 relative z-[90] w-10 h-10">
         <FontAwesomeIcon
           icon={open ? faXmark : faBars}
           size="2x"

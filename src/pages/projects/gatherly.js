@@ -169,8 +169,9 @@ export default function NaturalU() {
                     >
                       Design
                     </p>
+                    <p>Wireframes</p>
                     <p>Styleguide</p>
-                    <p>UI Components</p>
+                    <p>Components</p>
                     <p>High Fidelity Screens</p>
                     <p>Prototype</p>
                   </div>

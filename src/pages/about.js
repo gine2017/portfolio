@@ -42,7 +42,7 @@ export default function About() {
         )}
         {showContent && (
           <main
-            className={` ${`text-2xl ${interBody.className}`} w-4/5 mx-auto flex flex-col mt-16 md:gap-32 md:mt-36 `}
+            className={` ${`text-2xl leading-relaxed ${interBody.className}`} w-4/5 mx-auto flex flex-col mt-16 md:gap-32 md:mt-36 `}
           >
             <div className="flex flex-col gap-8 md:gap-16">
               <h1

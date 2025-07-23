@@ -7,7 +7,7 @@ import CaseStudyFooter from "@/components/case-study-footer";
 import ZoomableImage from "@/components/zoomable-image";
 import ImageRow from "@/components/image-row";
 import Hero from "@/components/hero";
-import { darkerGrotesqueTitle, darkerGrotesque, interBold } from "@/utils";
+import { darkerGrotesqueTitle, interBody, interBold } from "@/utils";
 import Head from "next/head";
 
 //images
@@ -75,7 +75,7 @@ export default function Portfolio() {
             >
               Bridging Creativity and Code
             </h2>
-            <p className={`text-2xl ${darkerGrotesque.className}`}>
+            <p className={`text-2xl leading-relaxed ${interBody.className}`}>
               I built my portfolio from scratch to showcase my{" "}
               <span className={`text-purple ${interBold.className}`}>
                 unique ability
@@ -133,7 +133,7 @@ export default function Portfolio() {
             >
               Laying the foundation
             </h2>
-            <div className={`text-2xl ${darkerGrotesque.className}`}>
+            <div className={`text-2xl leading-relaxed ${interBody.className}`}>
               I started by establishing a solid{" "}
               <span className={`text-purple ${interBold.className}`}>
                 brand foundation
@@ -160,7 +160,7 @@ export default function Portfolio() {
                   :
                   <span className={`text-purple ${interBold.className}`}>
                     {" "}
-                    Black Mango
+                    Inter
                   </span>{" "}
                   and{" "}
                   <span className={`text-purple ${interBold.className}`}>
@@ -191,7 +191,7 @@ export default function Portfolio() {
             <ZoomableImage image={brand} />
           </div>
           <div
-            className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
+            className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl leading-relaxed ${interBody.className}`}
           >
             <h2
               className={`text-purple text-5xl ${darkerGrotesqueTitle.className}`}
@@ -239,7 +239,7 @@ export default function Portfolio() {
           </div>
 
           <div
-            className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
+            className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl leading-relaxed ${interBody.className}`}
           >
             <h2
               className={` text-purple text-5xl ${darkerGrotesqueTitle.className}`}
@@ -288,7 +288,7 @@ export default function Portfolio() {
             <ZoomableImage image={vscode} />
           </div>
           <div
-            className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
+            className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl leading-relaxed ${interBody.className}`}
           >
             <h2
               className={` text-purple text-5xl ${darkerGrotesqueTitle.className}`}

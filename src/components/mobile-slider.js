@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import { darkerGrotesque } from "@/utils";
+import { interBody } from "@/utils";
 
 export default function MobileSlider({ sliderData = [] }) {
   const [sliderIndex, setSliderIndex] = useState(0);
@@ -19,7 +19,7 @@ export default function MobileSlider({ sliderData = [] }) {
         />
       </div>
       <div>
-        <p className={`text-center text-base ${darkerGrotesque.className}`}>
+        <p className={`text-center text-base ${interBody.className}`}>
           {sliderData[sliderIndex]?.subtitle}
         </p>
         <a

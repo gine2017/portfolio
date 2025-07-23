@@ -3,10 +3,9 @@ import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import {
   darkerGrotesqueTitle,
-  darkerGrotesque,
   createImageArray,
   interBold,
-  darkerGrotesqueMed,
+  interBody,
   solutionInActionStyles,
 } from "@/utils";
 import Stats from "@/components/stats";
@@ -207,7 +206,7 @@ export default function Gatherly() {
                 Young adults struggle to build meaningful connections, leading
                 to social isolation and deteriorating mental health.
               </p>
-              <p className={`text-2xl ${darkerGrotesque.className}`}>
+              <p className={`text-2xl leading-relaxed ${interBody.className}`}>
                 Post-COVID-19, social isolation has{" "}
                 <span className={`text-gatherly-blue ${interBold.className}`}>
                   intensified
@@ -245,7 +244,7 @@ export default function Gatherly() {
                 A community app that facilitates meaningful connections through
                 shared interests and activities.
               </p>
-              <p className={`text-2xl ${darkerGrotesque.className}`}>
+              <p className={`text-2xl leading-relaxed ${interBody.className}`}>
                 Gatherly is a platform where young adults can create and join{" "}
                 <span className={`text-gatherly-blue ${interBold.className}`}>
                   groups
@@ -274,7 +273,7 @@ export default function Gatherly() {
             >
               My Role
             </h2>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
+            <p className={` text-2xl leading-relaxed ${interBody.className}`}>
               I served as the sole UI/UX designer for this project; therefore, I
               handled the research, design, and testing phases
             </p>
@@ -302,7 +301,7 @@ export default function Gatherly() {
                     }
                   />
                   <p
-                    className={`${darkerGrotesqueMed.className} italic text-xl  text-center`}
+                    className={`${interBody.className} italic text-xl  text-center`}
                   >
                     Click on the image to enlarge
                   </p>
@@ -314,7 +313,9 @@ export default function Gatherly() {
                   >
                     Discovery Page with Interest Filters
                   </h3>
-                  <p className={`text-2xl ${darkerGrotesque.className} mb-8`}>
+                  <p
+                    className={`text-2xl leading-relaxed ${interBody.className} mb-8`}
+                  >
                     Combats isolation by helping users find communities that
                     align with their personal interests, making the initial
                     connection process less intimidating
@@ -333,7 +334,9 @@ export default function Gatherly() {
                   >
                     Group Home Page
                   </h3>
-                  <p className={`text-2xl ${darkerGrotesque.className} mb-4`}>
+                  <p
+                    className={`text-2xl leading-relaxed ${interBody.className} mb-4`}
+                  >
                     Fosters belonging through shared spaces where members can
                     interact, share experiences, and develop relationships
                     within a structured community
@@ -354,7 +357,7 @@ export default function Gatherly() {
                     }
                   />
                   <p
-                    className={`${darkerGrotesqueMed.className} italic text-xl text-center`}
+                    className={`${interBody.className} italic text-xl text-center`}
                   >
                     Click on the image to enlarge
                   </p>
@@ -382,7 +385,7 @@ export default function Gatherly() {
                     }
                   />
                   <p
-                    className={`${darkerGrotesqueMed.className} italic text-xl  text-center`}
+                    className={`${interBody.className} italic text-xl  text-center`}
                   >
                     Click on the image to enlarge
                   </p>
@@ -394,7 +397,9 @@ export default function Gatherly() {
                   >
                     Events Page
                   </h3>
-                  <p className={`text-2xl ${darkerGrotesque.className} `}>
+                  <p
+                    className={`text-2xl leading-relaxed ${interBody.className} `}
+                  >
                     Facilitates meaningful connections by offering various
                     events, allowing users to strengthen bonds with group
                     members and transform digital relationships into deeper
@@ -417,7 +422,7 @@ export default function Gatherly() {
               id="research"
             />
             <div
-              className={`flex flex-col gap-8 text-2xl ${darkerGrotesque.className}`}
+              className={`flex flex-col gap-8 text-2xl leading-relaxed ${interBody.className}`}
             >
               <p>
                 To explore the{" "}
@@ -534,7 +539,7 @@ export default function Gatherly() {
             >
               Survey
             </h3>
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={` text-2xl leading-relaxed ${interBody.className}`}>
               <div className="flex flex-col gap-8">
                 <p>
                   To gain firsthand insights and validate my{" "}
@@ -690,7 +695,7 @@ export default function Gatherly() {
               User Interview
             </h3>
 
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={` text-2xl leading-relaxed ${interBody.className}`}>
               <div className="flex flex-col gap-8">
                 <p>
                   To better understand the challenges of{" "}
@@ -810,7 +815,7 @@ export default function Gatherly() {
             >
               However
             </h3>
-            <p className={`text-2xl ${darkerGrotesque.className}`}>
+            <p className={`text-2xl leading-relaxed ${interBody.className}`}>
               There was a consistent quotes about how the participants felt that
               the use online communities would be very helpful to them
             </p>
@@ -840,7 +845,7 @@ export default function Gatherly() {
               Persona
             </h3>
 
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={` text-2xl leading-relaxed ${interBody.className}`}>
               <div className="flex flex-col ">
                 <p>
                   {`To better understand young adults' challenges, I created a
@@ -905,7 +910,7 @@ export default function Gatherly() {
               Empathy Map
             </h3>
 
-            <div className={`text-2xl ${darkerGrotesque.className}`}>
+            <div className={`text-2xl leading-relaxed ${interBody.className}`}>
               <div className="flex flex-col">
                 <p>
                   To deepen my understanding of user needs, I created an{" "}
@@ -954,7 +959,7 @@ export default function Gatherly() {
           </div>
           <div className="flex flex-col gap-y-4 md:mx-auto md:w-3/4">
             <Title title={"Ideate"} color="text-gatherly-blue" id="ideate" />
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={` text-2xl leading-relaxed ${interBody.className}`}>
               <div className="flex flex-col">
                 <p>
                   After conducting thorough research, I uncovered a{" "}
@@ -1043,7 +1048,9 @@ export default function Gatherly() {
               >
                 Laddering
               </h3>
-              <div className={` text-2xl ${darkerGrotesque.className}`}>
+              <div
+                className={` text-2xl leading-relaxed ${interBody.className}`}
+              >
                 <div className="flex flex-col gap-8">
                   <p>
                     To design a solution that connects{" "}
@@ -1127,7 +1134,7 @@ export default function Gatherly() {
             >
               Sketches of possible solutions
             </h3>
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={` text-2xl leading-relaxed ${interBody.className}`}>
               <div className="flex flex-col gap-8">
                 <p>
                   Building on insights from my{" "}
@@ -1259,7 +1266,7 @@ export default function Gatherly() {
             >
               User Flows
             </h3>
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={` text-2xl leading-relaxed ${interBody.className}`}>
               <div className="flex flex-col gap-8">
                 <p>
                   After evaluating both concepts, the{" "}
@@ -1337,7 +1344,7 @@ export default function Gatherly() {
           </div>
           <div className="flex flex-col gap-y-4 md:mx-auto md:w-3/4">
             <Title title={"Design"} color="text-gatherly-blue" id="design" />
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
+            <p className={` text-2xl leading-relaxed ${interBody.className}`}>
               <span className={`text-gatherly-blue ${interBold.className}`}>
                 Translating research insights
               </span>{" "}
@@ -1375,7 +1382,7 @@ export default function Gatherly() {
             >
               Wireframes
             </h3>
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={` text-2xl leading-relaxed ${interBody.className}`}>
               <div>
                 <p>
                   With a clear understanding of{" "}
@@ -1458,7 +1465,7 @@ export default function Gatherly() {
             >
               Styleguide and UI elements
             </h3>
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={` text-2xl leading-relaxed ${interBody.className}`}>
               <div className="flex flex-col gap-8">
                 <p>
                   After defining the key screens for Gatherly, I developed a{" "}
@@ -1538,7 +1545,7 @@ export default function Gatherly() {
             >
               High Fidelity Screens
             </h3>
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={` text-2xl leading-relaxed ${interBody.className}`}>
               <div className="flex flex-col ">
                 <p>
                   The final{" "}
@@ -1626,7 +1633,7 @@ export default function Gatherly() {
             >
               Prototype
             </h3>
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={` text-2xl leading-relaxed ${interBody.className}`}>
               <p>
                 With{" "}
                 <span className={`text-gatherly-blue ${interBold.className}`}>
@@ -1699,7 +1706,7 @@ export default function Gatherly() {
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <Title title={"Test"} color="text-gatherly-blue" id="test" />
-            <div className={` text-2xl ${darkerGrotesque.className}`}>
+            <div className={` text-2xl leading-relaxed ${interBody.className}`}>
               <div className="flex flex-col gap-6">
                 <p>
                   To validate my design decisions, I conducted{" "}
@@ -1772,7 +1779,7 @@ export default function Gatherly() {
               Whats next .. ?
             </h2>
             <div
-              className={`flex flex-col gap-6 text-2xl ${darkerGrotesque.className}`}
+              className={`flex flex-col gap-6 text-2xl leading-relaxed ${interBody.className}`}
             >
               <p>
                 As my{" "}

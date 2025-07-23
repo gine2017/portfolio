@@ -59,14 +59,14 @@ export default function Navbar() {
         <li className="transition-transform hover:-translate-y-1">
           <Link
             rel="noopener noreferrer"
-            href={"/bootcamp"}
+            href={"/projects"}
             className={`${
-              currentPath === "/bootcamp"
+              currentPath === "/projects"
                 ? "active: underline underline-offset-[12px] p-2"
                 : "text-[#597891] hover:text-purple"
             } `}
           >
-            bootcamp
+            projects
           </Link>
         </li>
         <li className="transition-transform hover:-translate-y-1">

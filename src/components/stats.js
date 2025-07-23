@@ -1,4 +1,4 @@
-import { darkerGrotesqueTitle, darkerGrotesque } from "@/utils";
+import { darkerGrotesqueTitle, interBody } from "@/utils";
 export default function Stats({ statsArray = [], color = "text-purple" }) {
   return (
     <div className="flex gap-y-8 justify-center mx-auto flex-wrap md:gap-x-20">
@@ -11,9 +11,7 @@ export default function Stats({ statsArray = [], color = "text-purple" }) {
               >
                 {item.number}%
               </p>
-              <p
-                className={` text-center text-xl ${darkerGrotesque.className}`}
-              >
+              <p className={` text-center text-xl ${interBody.className}`}>
                 {item.text}
               </p>
             </div>

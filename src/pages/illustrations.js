@@ -8,7 +8,7 @@ import Head from "next/head";
 
 import useWindowSize from "@/hooks/useWindowSize";
 import useIntersectionObserver from "@/hooks/userIntersectionObserver";
-import { darkerGrotesqueTitle, darkerGrotesque } from "@/utils";
+import { darkerGrotesqueTitle, interBody } from "@/utils";
 
 // images
 import amelia from "../../assets/illustrations/Amelia.svg";
@@ -83,7 +83,7 @@ export default function Illustrations() {
               </h1>
             </div>
 
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
+            <p className={` text-2xl ${interBody.className}`}>
               One of the most important skills I have acquired during my journey
               in the UI/UX design industry is my passion for creating
               illustrations. Here are some illustrations I have created for my

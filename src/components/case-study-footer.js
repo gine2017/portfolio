@@ -1,4 +1,4 @@
-import { darkerGrotesqueTitle, darkerGrotesque } from "@/utils";
+import { darkerGrotesqueTitle, interBody } from "@/utils";
 import naturalU from "../../assets/natualU_logo.svg";
 import friendship_illustration from "../../assets/friendship_illustration.svg";
 import kdit from "../../assets/capstone/testwise/kdit-logo.svg";
@@ -68,7 +68,7 @@ export default function CaseStudyFooter({ casestudy = "" }) {
                   className="w-36 h-36 object-contain"
                   alt="case study image"
                 />
-                <p className={`text-center ${darkerGrotesque.className}`}>
+                <p className={`text-center ${interBody.className}`}>
                   {elm.subtitle}
                 </p>
               </Link>

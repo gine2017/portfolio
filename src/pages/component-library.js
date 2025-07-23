@@ -7,7 +7,7 @@ import CaseStudyFooter from "@/components/case-study-footer";
 import Footer from "@/components/footer";
 import {
   darkerGrotesqueTitle,
-  darkerGrotesque,
+  interBody,
   interBold,
   createImageArray,
 } from "@/utils";
@@ -105,11 +105,11 @@ export default function DesignSystem() {
           </h1>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h2
-              className={`text-component-library text-5xl md:text-3xl ${darkerGrotesqueTitle.className}`}
+              className={`text-component-library text-5xl  ${darkerGrotesqueTitle.className}`}
             >
               Building Blocks for Digital Experiences
             </h2>
-            <p className={`text-2xl ${darkerGrotesque.className}`}>
+            <p className={`text-2xl leading-relaxed ${interBody.className}`}>
               In college, I created this tutorial to demonstrate how modern
               frontend architecture enables{" "}
               <span className={`text-component-library ${interBold.className}`}>
@@ -146,7 +146,7 @@ export default function DesignSystem() {
             >
               Educational Purpose & Audience
             </h2>
-            <div className={`text-2xl ${darkerGrotesque.className}`}>
+            <div className={`text-2xl leading-relaxed ${interBody.className}`}>
               This tutorial guided fellow computer science students through{" "}
               <span className={`text-component-library ${interBold.className}`}>
                 component-based architecture
@@ -177,7 +177,7 @@ export default function DesignSystem() {
             >
               Technical Foundation
             </h2>
-            <div className={`text-2xl ${darkerGrotesque.className}`}>
+            <div className={`text-2xl leading-relaxed ${interBody.className}`}>
               The first step in our journey was establishing a solid{" "}
               <span className={`text-component-library ${interBold.className}`}>
                 technical foundation
@@ -212,7 +212,7 @@ export default function DesignSystem() {
             >
               Component Development Journey
             </h2>
-            <div className={`text-2xl ${darkerGrotesque.className}`}>
+            <div className={`text-2xl leading-relaxed ${interBody.className}`}>
               With our foundation in place, we began creating the essential
               building blocks:{" "}
               <span className={`text-component-library ${interBold.className}`}>
@@ -248,7 +248,7 @@ export default function DesignSystem() {
           </div>
 
           <div
-            className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
+            className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl leading-relaxed ${interBody.className}`}
           >
             <h2
               className={`text-component-library text-5xl ${darkerGrotesqueTitle.className}`}
@@ -286,7 +286,7 @@ export default function DesignSystem() {
           </div>
 
           <div
-            className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
+            className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl leading-relaxed ${interBody.className}`}
           >
             <h2
               className={`text-component-library text-5xl ${darkerGrotesqueTitle.className}`}
@@ -326,7 +326,7 @@ export default function DesignSystem() {
           </div>
 
           <div
-            className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl ${darkerGrotesque.className}`}
+            className={`flex flex-col gap-y-8 md:mx-auto md:w-3/4 text-2xl leading-relaxed ${interBody.className}`}
           >
             <h2
               className={`text-component-library text-5xl ${darkerGrotesqueTitle.className}`}

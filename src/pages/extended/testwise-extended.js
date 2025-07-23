@@ -19,10 +19,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {
   darkerGrotesqueTitle,
-  interBody,
   createImageArray,
   interBold,
-  darkerGrotesqueMed,
+  interBody,
   solutionInActionStyles,
 } from "@/utils";
 import useWindowSize from "@/hooks/useWindowSize";
@@ -249,7 +248,7 @@ export default function TestWiseExtended() {
                   />
 
                   <p
-                    className={`${darkerGrotesqueMed.className} italic text-xl mb-4 text-center`}
+                    className={`${interBody.className} italic text-xl mb-4 text-center`}
                   >
                     Click on the image to enlarge
                   </p>
@@ -305,7 +304,7 @@ export default function TestWiseExtended() {
                     }
                   />
                   <p
-                    className={`${darkerGrotesqueMed.className} italic text-xl  mb-4 text-center`}
+                    className={`${interBody.className} italic text-xl  mb-4 text-center`}
                   >
                     Click on the image to enlarge
                   </p>
@@ -332,7 +331,7 @@ export default function TestWiseExtended() {
                     }
                   />
                   <p
-                    className={`${darkerGrotesqueMed.className} italic text-xl mb-4 text-center`}
+                    className={`${interBody.className} italic text-xl mb-4 text-center`}
                   >
                     Click on the image to enlarge
                   </p>

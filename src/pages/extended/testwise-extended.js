@@ -84,14 +84,6 @@ export default function TestWiseExtended() {
     wireframe_9,
     wireframe_10,
   ];
-  const highFidelity = [
-    dashboard,
-    kanban,
-    newRequirement,
-    requirementDetails,
-    requirementDetailsOne,
-    requirementOne,
-  ];
 
   const steps = [
     { name: "Research", id: "research" },
@@ -111,7 +103,7 @@ export default function TestWiseExtended() {
   return (
     <>
       <Head>
-        <title>Test Wise Case Study Extended</title>
+        <title>Test Wise Full Case Study Page </title>
       </Head>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && (
@@ -130,7 +122,7 @@ export default function TestWiseExtended() {
           <h1
             className={`flex justify-center text-testwise-blue ${darkerGrotesqueTitle.className} text-6xl`}
           >
-            Test Wise Case Study
+            Test Wise Full Case Study
           </h1>
           <div className="flex flex-col gap-y-8 md:flex-row gap-x-16 ">
             <div className="flex flex-col gap-y-8 flex-1">

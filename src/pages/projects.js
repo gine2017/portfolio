@@ -103,7 +103,7 @@ export default function Projects() {
               </Link>
             </div>
             <div className="relative flex-1 group">
-              <Link rel="noopener noreferrer" href={"/bootcamp/modern-attire"}>
+              <Link rel="noopener noreferrer" href={"/projects/modern-attire"}>
                 <Image
                   src={moderAttire}
                   alt="Moder Attire case study page"

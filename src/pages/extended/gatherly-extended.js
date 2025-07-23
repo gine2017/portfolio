@@ -137,7 +137,7 @@ const steps = [
   { name: "Design", id: "design" },
   { name: "Test", id: "test" },
 ];
-export default function Gatherly() {
+export default function GatherlExtended() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
   const caseStudyRef = useRef(null);
@@ -172,7 +172,7 @@ export default function Gatherly() {
   return (
     <>
       <Head>
-        <title> Gatherly Case Study Page</title>
+        <title> Gatherly Full Case Study Page</title>
       </Head>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && (
@@ -191,7 +191,7 @@ export default function Gatherly() {
           <h1
             className={`flex justify-center text-gatherly-blue  ${darkerGrotesqueTitle.className} text-6xl`}
           >
-            Gatherly Case Study
+            Gatherly Full Case Study
           </h1>
           <div className="flex flex-col gap-y-8 md:flex-row gap-x-16 ">
             <div className="flex flex-col gap-y-8 flex-1">

@@ -107,7 +107,7 @@ const steps = [
   { name: "Design", id: "design" },
 ];
 
-export default function NaturalU() {
+export default function NaturalUExtended() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
   const [solutionInActionZoomOne, setsolutionInActionZoomOne] = useState(false);
@@ -141,7 +141,7 @@ export default function NaturalU() {
   return (
     <>
       <Head>
-        <title> NaturalU Case Study Page</title>
+        <title> NaturalU Full Case Study Page</title>
       </Head>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && (
@@ -160,7 +160,7 @@ export default function NaturalU() {
           <h1
             className={`flex justify-center text-naturalu-purple  ${darkerGrotesqueTitle.className} text-6xl`}
           >
-            NaturalU Case Study
+            NaturalU Full Case Study
           </h1>
           <div className="flex flex-col gap-y-8 md:flex-row gap-x-16 ">
             <div className="flex flex-col gap-y-8 flex-1">

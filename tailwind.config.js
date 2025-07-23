@@ -93,16 +93,24 @@ module.exports = {
           "100%": { transform: "translate(-100%)" },
         },
         navSlideDown: {
-          "100%": { transform: "translateY(10px)", height: "auto" },
+          "0%": {
+            opacity: 0,
+            transform: "translateY(-10px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0)",
+          },
         },
+
         navSlideUp: {
           "0%": {
             opacity: 1,
+            transform: "translateY(0)",
           },
           "100%": {
             opacity: 0,
             transform: "translateY(-10px)",
-            height: "0%",
           },
         },
       },
@@ -111,8 +119,8 @@ module.exports = {
         rotateBy45deg: "rotateBy45deg 0.25s linear forwards",
         rotateByNeg45deg: "rotateByNeg45deg 0.25s linear forwards",
         moveAcrossScreen: "moveAcrossScreen 10s linear infinite",
-        navSlideDown: "navSlideDown 0.25s linear forwards",
-        navSlideUp: "navSlideUp 0.25s linear forwards",
+        navSlideDown: "navSlideDown 0.3s ease-out forwards",
+        navSlideUp: "navSlideUp 0.3s ease-in forwards",
       },
       fontSize: {
         h4Size: "1.7rem",

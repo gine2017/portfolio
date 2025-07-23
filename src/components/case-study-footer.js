@@ -14,7 +14,7 @@ export default function CaseStudyFooter({ casestudy = "" }) {
     {
       image: friendship_illustration,
       subtitle: "Gatherly",
-      link: "/bootcamp/gatherly",
+      link: "/projects/gatherly",
     },
     { image: naturalU, subtitle: "NaturalU", link: "/case-study/natural-u" },
     ,
@@ -41,7 +41,7 @@ export default function CaseStudyFooter({ casestudy = "" }) {
     {
       image: modernAttire,
       subtitle: "Modern Attire",
-      link: "/bootcamp/modern-attire",
+      link: "/projects/modern-attire",
     },
   ];
   return (

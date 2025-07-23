@@ -11,20 +11,21 @@ import {
   faBookBookmark,
   faLightbulb,
   faPenToSquare,
+  faComputer,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import Footer from "@/components/footer";
 import CaseStudyFooter from "@/components/case-study-footer";
 
 //images
-import dashboard from "../../../assets/capstone/testwise/high-fidelity/Dashboard.png";
-import kanban from "../../../assets/capstone/testwise/high-fidelity/Kanban board.png";
-import newRequirement from "../../../assets/capstone/testwise/high-fidelity/New Requirement.png";
-import requirementDetails from "../../../assets/capstone/testwise/high-fidelity/Requirement Details.png";
-import requirementDetailsOne from "../../../assets/capstone/testwise/high-fidelity/Requirement Details-1.png";
-import requirementOne from "../../../assets/capstone/testwise/high-fidelity/Requirements-1.png";
+import highFidelity1 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity1.png";
+import highFidelity2 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity2.png";
+import highFidelity3 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity3.png";
+import highFidelity9 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity9.png";
+import highFidelity11 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity11.png";
+import highFidelity12 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity12.png";
 
-export default function TestWise() {
+export default function modern_attire_hero() {
   const { width } = useWindowSize();
   const [showContent, setShowContent] = useState(true);
   const [zoomedOutcomeIndex, setZoomedOutcomeIndex] = useState(null);
@@ -38,37 +39,37 @@ export default function TestWise() {
   };
 
   const highFidelity = [
-    dashboard,
-    kanban,
-    newRequirement,
-    requirementDetails,
-    requirementDetailsOne,
-    requirementOne,
+    highFidelity1,
+    highFidelity2,
+    highFidelity3,
+    highFidelity9,
+    highFidelity11,
+    highFidelity12,
   ];
 
   return (
     <>
       <Head>
-        <title>Test Wise Case Study </title>
+        <title>Modern Attire Case Study</title>
       </Head>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
 
       {showContent && (
         <main className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48">
-          <div className=" h-[35rem] w-full relative  bg-testwise-blue">
+          <div className=" h-[35rem] w-full relative  bg-modern-attire">
             <div className="flex justify-center items-center h-full gap-x-6">
               <div className="w-[30rem] h-[30rem] relative">
                 <Image
-                  src={dashboard}
-                  alt="Testwise Dashboard Image"
+                  src={highFidelity1}
+                  alt="Gatherly splash screen Image"
                   fill
                   style={{ objectFit: "contain" }}
                 />
               </div>
               <div className="w-[30rem] h-[30rem] relative">
                 <Image
-                  src={kanban}
-                  alt="Testwise Kanban Image"
+                  src={highFidelity2}
+                  alt="Gatherly Explore Page Image"
                   fill
                   style={{ objectFit: "contain" }}
                 />
@@ -76,80 +77,108 @@ export default function TestWise() {
             </div>
           </div>
           <h1
-            className={`flex justify-center text-testwise-blue ${darkerGrotesqueTitle.className} text-6xl`}
+            className={`flex justify-center text-modern-attire ${darkerGrotesqueTitle.className} text-6xl`}
           >
-            Test Wise Case Study
+            Modern Attire Case Study
           </h1>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h3
-              className={`text-testwise-blue text-5xl ${darkerGrotesqueTitle.className}`}
+              className={`text-modern-attire text-5xl ${darkerGrotesqueTitle.className}`}
             >
               Overview
             </h3>
             <div className={`text-2xl leading-relaxed ${interBody.className}`}>
               <p>
-                Users of KDIT's Test Wise platform were constantly juggling
-                multiple systems to track their work. A previous design had
-                failed, leaving both clients and developers frustrated. I
-                partnered with KDIT to redesign their requirements dashboard
-                from scratch, focusing on understanding how people actually
-                work. The result: a single, integrated dashboard that eliminated
-                system-switching and turned a fragmented experience into
-                something people actually want to use.
+                Modern Attire's mobile shoppers were struggling with a complex
+                purchasing process, leading to widespread cart abandonment and
+                lost revenue. Analytics revealed that 50% of users abandoned
+                before adding items to cart, while 70% of those who did add
+                items left at registration. The cumbersome checkout flow and
+                measurement uncertainty had created significant barriers during
+                the critical conversion moments when customers were ready to
+                buy. I designed a streamlined e-commerce experience to eliminate
+                these friction points, focusing on simplified checkout flows and
+                intuitive measurement tools that removed purchase anxiety. The
+                result: a mobile experience that transforms browsing frustration
+                into confident purchases, achieving a 35% reduction in cart
+                abandonment and 28% increase in completed sales.
               </p>
             </div>
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h3
-              className={`text-testwise-blue text-5xl ${darkerGrotesqueTitle.className}`}
+              className={`text-modern-attire text-5xl ${darkerGrotesqueTitle.className}`}
             >
               Design Process
             </h3>
             <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
-              <div className="flex flex-col gap-y-4 md:flex-row justify-evenly">
+              <div className="flex flex-col gap-y-4 md:flex-row gap-24">
                 <div className="flex flex-col items-center">
                   <FontAwesomeIcon
                     icon={faBookBookmark}
                     size="4x"
-                    color="#1F3F70"
+                    color="#010154"
                   />
                   <div>
                     <p
-                      className={` text-3xl text-testwise-blue mt-4 text-center  ${interBold.className}`}
+                      className={` text-3xl text-modern-attire mt-4 text-center  ${interBold.className}`}
                     >
                       Research
                     </p>
                     <p>Competitive Analysis</p>
+                    <p>Survey</p>
+                    <p>User Interviews</p>
+                    <p>Persona</p>
                   </div>
                 </div>
                 <div className="flex flex-col  items-center">
                   <FontAwesomeIcon
                     icon={faLightbulb}
                     size="4x"
-                    color="#1F3F70"
+                    color="#010154"
                   />
                   <div>
                     <p
-                      className={` text-3xl text-testwise-blue mt-4 text-center  ${interBold.className}`}
+                      className={` text-3xl text-modern-attire mt-4 text-center  ${interBold.className}`}
                     >
                       Ideate
                     </p>
-                    <p>Wireframes</p>
+                    <p>Sketeches</p>
+                    <p>User flow</p>
                   </div>
                 </div>
                 <div className="flex flex-col  items-center">
                   <FontAwesomeIcon
                     icon={faPenToSquare}
                     size="4x"
-                    color="#1F3F70"
+                    color="#010154"
                   />
                   <div>
                     <p
-                      className={` text-3xl text-testwise-blue mt-4 text-center ${interBold.className}`}
+                      className={` text-3xl text-modern-attire mt-4 text-center ${interBold.className}`}
                     >
                       Design
                     </p>
+                    <p>Wireframes</p>
+                    <p>Styleguide</p>
+                    <p> Components</p>
                     <p>High Fidelity Screens</p>
+                    <p>Prototype</p>
+                  </div>
+                </div>
+                <div className="flex flex-col  items-center">
+                  <FontAwesomeIcon
+                    icon={faComputer}
+                    size="4x"
+                    color="#010154"
+                  />
+                  <div>
+                    <p
+                      className={` text-3xl text-modern-attire mt-4 text-center ${interBold.className}`}
+                    >
+                      Test
+                    </p>
+                    <p>Usability Test</p>
                   </div>
                 </div>
               </div>
@@ -157,7 +186,7 @@ export default function TestWise() {
           </div>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h3
-              className={`text-testwise-blue text-5xl ${darkerGrotesqueTitle.className}`}
+              className={`text-modern-attire text-5xl ${darkerGrotesqueTitle.className}`}
             >
               Outcome
             </h3>
@@ -176,7 +205,7 @@ export default function TestWise() {
                     <Image
                       src={img}
                       alt="Test Wise final screen"
-                      className="object-contain w-full border-2 rounded-xl border-slate-200 "
+                      className="object-contain w-full  "
                       style={
                         zoomedOutcomeIndex === index
                           ? zoomImage(true, true)
@@ -190,12 +219,12 @@ export default function TestWise() {
             </div>
           </div>
           <Link
-            href="/extended/testwise-extended"
-            className={`text-2xl text-testwise-blue flex animate ${interBold.className} hover:underline cursor-pointer`}
+            href="/extended/modernAttire-extended"
+            className={`text-2xl text-modern-attire flex animate ${interBold.className} hover:underline cursor-pointer`}
           >
             View the full case study here →
           </Link>
-          <CaseStudyFooter casestudy="Test Wise" />
+          <CaseStudyFooter casestudy="Modern Attire" />
         </main>
       )}
       {showContent && <Footer width={width} />}

@@ -8,9 +8,9 @@ import Head from "next/head";
 
 import useWindowSize from "@/hooks/useWindowSize";
 import {
-  myFont,
-  darkerGrotesque,
-  darkerGrotesqueBold,
+  darkerGrotesqueTitle,
+  interBody,
+  interBold,
   myFontBold,
 } from "@/utils";
 
@@ -44,66 +44,55 @@ export default function Projects() {
           <div className="flex flex-col gap-y-8 flex-1">
             <div className="mt-12 flex flex-row gap-x-4 items-center">
               <h1
-                className={` text-purple text-3xl md:text-5xl ${myFont.className}`}
+                className={` text-purple text-3xl md:text-5xl ${darkerGrotesqueTitle.className}`}
               >
-                Bootcamp
+                Projects
               </h1>
             </div>
 
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              My{" "}
-              <span className={`text-black ${darkerGrotesqueBold.className}`}>
-                Springboard UX bootcamp
-              </span>{" "}
-              reinforced critical design fundamentals through two key projects.
-              For{" "}
-              <span className={`text-black ${darkerGrotesqueBold.className}`}>
+            <p className={`text-2xl leading-relaxed ${interBody.className}`}>
+              <span className={`text-black ${interBold.className}`}>
                 Gatherly
-              </span>
-              , I addressed{" "}
-              <span className={`text-black ${darkerGrotesqueBold.className}`}>
-                mental health challenges
               </span>{" "}
-              by creating a community app targeting psychological stress in
-              young adults. This project honed my{" "}
-              <span className={`text-black ${darkerGrotesqueBold.className}`}>
-                research skills
-              </span>{" "}
-              through user interviews that directly shaped design decisions,
-              resulting in data-driven wireframes, prototypes, and user flows.
+              - Mental Health Community App
             </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              With{" "}
-              <span className={`text-black ${darkerGrotesqueBold.className}`}>
-                Modern Attire
+            <p className={`text-2xl leading-relaxed ${interBody.className}`}>
+              Designed a community platform targeting{" "}
+              <span className={`text-black ${interBold.className}`}>
+                psychological stress in young adults
               </span>
-              , I designed an{" "}
-              <span className={`text-black ${darkerGrotesqueBold.className}`}>
+              . Conducted{" "}
+              <span className={`text-black ${interBold.className}`}>
+                user interviews
+              </span>{" "}
+              that directly shaped design decisions, creating data-driven
+              wireframes and user flows for improved mental health support.
+            </p>
+
+            <p
+              className={`text-2xl leading-relaxed ${interBody.className} mt-6`}
+            >
+              <span className={`text-black ${interBold.className}`}>
+                Modern Attire
+              </span>{" "}
+              - Custom Suit E-commerce
+            </p>
+            <p className={`text-2xl leading-relaxed ${interBody.className}`}>
+              Created an intuitive{" "}
+              <span className={`text-black ${interBold.className}`}>
                 e-commerce experience
               </span>{" "}
-              for custom suits, focusing on conversion optimization. The project
-              strengthened my{" "}
-              <span className={`text-black ${darkerGrotesqueBold.className}`}>
-                UI principles
+              focused on conversion optimization. Developed{" "}
+              <span className={`text-black ${interBold.className}`}>
+                innovative measurement interface
               </span>{" "}
-              by developing intuitive checkout flows and creating an innovative
-              measurement interface with video guidance to overcome a major
-              barrier in online apparel shopping.
-            </p>
-            <p className={` text-2xl ${darkerGrotesque.className}`}>
-              These projects transformed my approach to UX by connecting{" "}
-              <span className={`text-black ${darkerGrotesqueBold.className}`}>
-                research insights
-              </span>{" "}
-              directly to interface solutions that address real user needs. The
-              hands-on experience of moving from research to wireframes to
-              interactive prototypes grounded my design process in solid
-              fundamentals that I apply to every project.
+              with video guidance to overcome the major barrier of sizing in
+              online apparel shopping.
             </p>
           </div>
           <div className="flex flex-col md:flex-row">
             <div className="relative flex-1 group">
-              <Link rel="noopener noreferrer" href={"/bootcamp/gatherly"}>
+              <Link rel="noopener noreferrer" href={"/projects/gatherly"}>
                 <Image src={gatherly} alt="Gatherly case study" />
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                 <div
@@ -114,7 +103,7 @@ export default function Projects() {
               </Link>
             </div>
             <div className="relative flex-1 group">
-              <Link rel="noopener noreferrer" href={"/bootcamp/modern-attire"}>
+              <Link rel="noopener noreferrer" href={"/projects/modern-attire"}>
                 <Image
                   src={moderAttire}
                   alt="Moder Attire case study page"

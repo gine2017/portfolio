@@ -1,4 +1,4 @@
-import { myFont } from "@/utils";
+import { darkerGrotesqueTitle } from "@/utils";
 
 export default function Title({
   title,
@@ -11,7 +11,11 @@ export default function Title({
       className={` ${styles} flex justify-start border-b-4 border-black text-5xl`}
       id={id}
     >
-      <h2 className={`${color} bg-white pb-8 ${myFont.className}`}>{title}</h2>
+      <h2
+        className={`${color} bg-bgWhite pb-8 ${darkerGrotesqueTitle.className}`}
+      >
+        {title}
+      </h2>
     </div>
   );
 }

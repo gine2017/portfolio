@@ -1,23 +1,15 @@
 import localFont from "next/font/local";
-import { Darker_Grotesque } from "next/font/google";
+import { Darker_Grotesque, Inter } from "next/font/google";
 
-const myFont = localFont({
-  src: "../fonts/black_mango/TTF/BlackMango-Medium.ttf",
-});
 const myFontBold = localFont({
   src: "../fonts/black_mango/TTF/BlackMango-Bold.ttf",
 });
-const darkerGrotesque = Darker_Grotesque({ weight: "500", subsets: ["latin"] });
-const darkerGrotesqueReg = Darker_Grotesque({
-  weight: "400",
-  subsets: ["latin"],
-});
-const darkerGrotesqueMed = Darker_Grotesque({
-  weight: "500",
-  subsets: ["latin"],
-});
-const darkerGrotesqueBold = Darker_Grotesque({
-  weight: "700",
+
+const interBody = Inter({ weight: "300", subsets: ["latin"] });
+const interBold = Inter({ weight: "600", subsets: ["latin"] });
+
+const darkerGrotesqueTitle = Darker_Grotesque({
+  weight: "900",
   subsets: ["latin"],
 });
 
@@ -73,12 +65,10 @@ const solutionInActionStyles = {
 };
 
 export {
-  myFont,
+  darkerGrotesqueTitle,
   myFontBold,
-  darkerGrotesque,
-  darkerGrotesqueReg,
-  darkerGrotesqueBold,
-  darkerGrotesqueMed,
+  interBody,
+  interBold,
   createImageArray,
   zoomImage,
   solutionInActionStyles,

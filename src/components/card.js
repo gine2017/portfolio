@@ -1,7 +1,7 @@
 import Image from "next/image";
 import wave from "../../assets/custom_shapes/wave.svg";
 import Link from "next/link";
-import { myFont, darkerGrotesque, darkerGrotesqueMed } from "@/utils";
+import { darkerGrotesqueTitle, interBody } from "@/utils";
 
 export default function Card({
   title,
@@ -29,15 +29,17 @@ export default function Card({
       </div>
       <div className="flex flex-col flex-1 gap-y-10 mt-8 md:relative">
         <div className="ml-6 lg:pr-4 flex flex-col gap-y-4">
-          <div className={`text-3xl ${myFont.className}`}>{title}</div>
+          <div className={`text-3xl ${darkerGrotesqueTitle.className}`}>
+            {title}
+          </div>
           <div
-            className={`text-lg whitespace-pre-wrap ${darkerGrotesque.className} md:text-2xl md:whitespace-normal`}
+            className={`text-lg whitespace-pre-wrap ${interBody.className} md:text-2xl md:whitespace-normal`}
           >
             {content}
           </div>
         </div>
         <div
-          className={`mx-auto ${darkerGrotesqueMed.className} bg-orange hover:bg-[#DA8600] w-52 h-11 rounded-[1.5rem] text-4xl text-white md:absolute md:bottom-6 md:right-6`}
+          className={`mx-auto ${interBody.className} bg-orange hover:bg-[#DA8600] w-52 h-11 rounded-[1.5rem] text-4xl text-white md:absolute md:bottom-6 md:right-6`}
         >
           <Link
             href={link}

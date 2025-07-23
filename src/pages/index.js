@@ -5,7 +5,7 @@ import Link from "next/link";
 import Footer from "@/components/footer";
 import Head from "next/head";
 
-import { myFont, darkerGrotesque, darkerGrotesqueBold } from "@/utils";
+import { darkerGrotesqueTitle, interBody, interBold } from "@/utils";
 import MobileNav from "@/components/mobile-nav";
 import useWindowSize from "@/hooks/useWindowSize";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
@@ -78,32 +78,27 @@ export default function Home() {
         {showContent && (
           <main className="w-4/5 mx-auto flex flex-col mt-16 gap-10 md:gap-32 md:mt-36">
             <header className="flex flex-col gap-8  md:gap-32 xl:flex-row">
-              <div className="flex flex-col gap-6 flex-1">
+              <div className="flex flex-col gap-6 flex-2">
                 <div
-                  className={`text-purple text-5xl md:text-7xl ${myFont.className}`}
+                  className={`text-purple text-5xl md:text-7xl ${darkerGrotesqueTitle.className}`}
                 >
                   <h1 className="flex animate">{`Hi, I'm Regine`}</h1>
                 </div>
                 <div
-                  className={`text-2xl md:text-4xl whitespace-pre-wrap ${darkerGrotesque.className}`}
+                  className={`text-2xl md:text-3xl whitespace-pre-wrap ${interBody.className}`}
                 >
-                  <span className="flex animate">{`UX/Product Designer  | `}</span>
-
+                  <span className="flex animate">{`UX/Product Designer`}</span>
+                  <br />
                   <span
-                    className={`text-purple  dynamic-text overflow-hidden inline-block whitespace-nowrap align-baseline ${darkerGrotesqueBold.className}`}
+                    className={`text-purple  dynamic-text overflow-hidden inline-block whitespace-nowrap align-baseline ${interBold.className}`}
                     ref={textRef}
                     lang={`${translatedText[textIndex].inital}`}
                   >
                     {translatedText[textIndex].language}
                   </span>
-                  <span className="flex animate">
-                    between design and code crafting intuitive experiences
-                    across UX Design, Design Systems, and Creative Technology
-                  </span>
-                  <p className={`flex animate  `}>
-                    <span
-                      className={`text-purple ${darkerGrotesqueBold.className}`}
-                    >
+                  <span className="flex animate">between design and code</span>
+                  <p className={`flex animate text-3xl `}>
+                    <span className={`text-purple ${interBold.className}`}>
                       Previously{" "}
                     </span>{" "}
                     @ ADP
@@ -111,7 +106,7 @@ export default function Home() {
                 </div>
                 <Link
                   href="/portfolio"
-                  className={`text-2xl text-purple flex animate ${darkerGrotesqueBold.className} hover:underline cursor-pointer`}
+                  className={`text-2xl text-purple flex animate ${interBold.className} hover:underline cursor-pointer`}
                 >
                   View how I designed and coded this portfolio →
                 </Link>
@@ -123,14 +118,12 @@ export default function Home() {
                   onClick={handleArrowClick}
                 />
               </div>
-              <div>
+              <div className="flex-1 flex items-center justify-center">
                 <svg
-                  width="496"
-                  height="446"
                   viewBox="0 0 496 446"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="relative flex-1 w-full md:w-1/2 lg:w-2/3 xl:w-11/12"
+                  className="w-full h-auto max-w-md"
                 >
                   <g id="my_illustration">
                     <path

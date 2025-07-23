@@ -3,7 +3,7 @@ import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
 import { zoomImage } from "@/utils";
 import { useState } from "react";
-import { darkerGrotesqueMed } from "@/utils";
+import { interBody } from "@/utils";
 
 export default function Slider({ sliderData = [] }) {
   const [zoomStyles, setZoomStyles] = useState({});
@@ -66,9 +66,7 @@ export default function Slider({ sliderData = [] }) {
           );
         })}
       </Carousel>
-      <p
-        className={`${darkerGrotesqueMed.className} italic text-xl text-center  mt-4`}
-      >
+      <p className={`${interBody.className} italic text-xl text-center  mt-4`}>
         Click on each image to enlarge
       </p>
 

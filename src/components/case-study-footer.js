@@ -1,4 +1,4 @@
-import { myFont, darkerGrotesque } from "@/utils";
+import { darkerGrotesqueTitle, interBody } from "@/utils";
 import naturalU from "../../assets/natualU_logo.svg";
 import friendship_illustration from "../../assets/friendship_illustration.svg";
 import kdit from "../../assets/capstone/testwise/kdit-logo.svg";
@@ -14,7 +14,7 @@ export default function CaseStudyFooter({ casestudy = "" }) {
     {
       image: friendship_illustration,
       subtitle: "Gatherly",
-      link: "/bootcamp/gatherly",
+      link: "/projects/gatherly",
     },
     { image: naturalU, subtitle: "NaturalU", link: "/case-study/natural-u" },
     ,
@@ -41,13 +41,15 @@ export default function CaseStudyFooter({ casestudy = "" }) {
     {
       image: modernAttire,
       subtitle: "Modern Attire",
-      link: "/bootcamp/modern-attire",
+      link: "/projects/modern-attire",
     },
   ];
   return (
     <div className=" w-full flex flex-col gap-y-8">
       <div className=" w-full flex justify-start border-b-4 border-black text-4xl md:text-5xl">
-        <span className={`text-purple bg-white pb-4 ${myFont.className}`}>
+        <span
+          className={`text-purple bg-bgWhite pb-4 ${darkerGrotesqueTitle.className}`}
+        >
           Check out more of my work
         </span>
       </div>
@@ -66,7 +68,7 @@ export default function CaseStudyFooter({ casestudy = "" }) {
                   className="w-36 h-36 object-contain"
                   alt="case study image"
                 />
-                <p className={`text-center ${darkerGrotesque.className}`}>
+                <p className={`text-center ${interBody.className}`}>
                   {elm.subtitle}
                 </p>
               </Link>

@@ -1,4 +1,4 @@
-import { darkerGrotesqueReg, myFont } from "@/utils";
+import { interBody, darkerGrotesqueTitle } from "@/utils";
 import Link from "next/link";
 import linkedInLogo from "../../assets/icons/linkedin.svg";
 import emailLogo from "../../assets/icons/envelope.svg";
@@ -8,7 +8,9 @@ export default function Footer({ width }) {
   return (
     <footer className="w-full bg-purple flex flex-col gap-8 mt-40 px-16 py-5 md:px-36 md:py-10 ">
       <div>
-        <p className={`text-white text-2xl md:text-4xl ${myFont.className}`}>
+        <p
+          className={`text-white text-2xl md:text-4xl ${darkerGrotesqueTitle.className}`}
+        >
           {"Let's Connect"}
         </p>
       </div>
@@ -19,7 +21,7 @@ export default function Footer({ width }) {
             passHref={true}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full w-16 h-16 bg-white flex justify-center items-center"
+            className="rounded-full w-16 h-16 bg-bgWhite flex justify-center items-center"
           >
             <div className="w-8 h-8 relative">
               <Image src={linkedInLogo} alt="LinkedIn logo" fill={true} />
@@ -29,7 +31,7 @@ export default function Footer({ width }) {
             href="mailto:reginethimothee@gmail.com"
             passHref={true}
             rel="noopener noreferrer"
-            className="rounded-full w-16 h-16 bg-white  flex justify-center items-center"
+            className="rounded-full w-16 h-16 bg-bgWhite  flex justify-center items-center"
           >
             <div className="w-8 h-8 relative">
               <Image src={emailLogo} alt="envelope icon" fill={true} />
@@ -38,7 +40,7 @@ export default function Footer({ width }) {
         </div>
         {width >= 767 && (
           <p
-            className={`text-white text-right relative bottom-0  text-xl md:text-2xl ${darkerGrotesqueReg.className}`}
+            className={`text-white text-right relative bottom-0  text-xl md:text-2xl ${interBody.className}`}
           >
             Design and coded by Regine
           </p>

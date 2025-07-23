@@ -107,7 +107,7 @@ export default function MobileNav({ updateContent = {} }) {
           </ul>
         </div>
       ) : (
-        <div className="w-full bg-white fixed top-0 left-0 flex justify-between z-50 ">
+        <div className="w-full bg-bgWhite fixed top-0 left-0 flex justify-between z-50 ">
           <Link
             rel="noopener noreferrer"
             className="w-12 h-12 relative ml-4 mt-2"

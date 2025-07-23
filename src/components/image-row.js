@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { zoomImage } from "@/utils";
-import { darkerGrotesqueMed } from "@/utils";
+import { interBody } from "@/utils";
 import Image from "next/image";
 
 export default function ImageRow({ images = [] }) {
@@ -28,9 +28,7 @@ export default function ImageRow({ images = [] }) {
           </div>
         ))}
       </div>
-      <p
-        className={`${darkerGrotesqueMed.className} italic text-xl text-center  mt-8`}
-      >
+      <p className={`${interBody.className} italic text-xl text-center  mt-8`}>
         Click on each image to enlarge
       </p>
     </div>

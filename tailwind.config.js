@@ -48,7 +48,7 @@ module.exports = {
         "modern-attire": "#010154",
         "testwise-blue": "#1F3F70",
         "component-library": "#0084D1",
-        bgWhite: "#FAFAFA",
+        bgWhite: "#fcfcfc",
       },
       keyframes: {
         fadeInUp: {

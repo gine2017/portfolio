@@ -81,14 +81,14 @@ export default function MobileNav({ updateContent = {} }) {
             <li>
               <Link
                 rel="noopener noreferrer"
-                href={"/bootcamp"}
+                href={"/projects"}
                 className={`${
-                  currentPath === "/bootcamp"
+                  currentPath === "/projects"
                     ? "active: underline underline-offset-8"
                     : ""
                 } `}
               >
-                bootcamp
+                projects
               </Link>
             </li>
             <li>

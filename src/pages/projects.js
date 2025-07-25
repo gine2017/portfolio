@@ -7,12 +7,7 @@ import Footer from "@/components/footer";
 import Head from "next/head";
 
 import useWindowSize from "@/hooks/useWindowSize";
-import {
-  darkerGrotesqueTitle,
-  interBody,
-  interBold,
-  myFontBold,
-} from "@/utils";
+import { darkerGrotesqueTitle, interBody, interBold } from "@/utils";
 
 import gatherly from "../../assets/gatherly.png";
 import moderAttire from "../../assets/modern_attire.png";
@@ -96,7 +91,7 @@ export default function Projects() {
                 <Image src={gatherly} alt="Gatherly case study" />
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                 <div
-                  className={`${myFontBold.className} text-center text-2xl md:text-4xl absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
+                  className={`${darkerGrotesqueTitle.className} text-center text-2xl md:text-4xl absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
                 >
                   Gatherly <br /> Build community
                 </div>
@@ -111,7 +106,7 @@ export default function Projects() {
                 />
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                 <div
-                  className={`${myFontBold.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
+                  className={`${darkerGrotesqueTitle.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
                 >
                   Modern Attire
                   <br /> Elegant suits

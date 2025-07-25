@@ -1,10 +1,6 @@
 import localFont from "next/font/local";
 import { Darker_Grotesque, Inter } from "next/font/google";
 
-const myFontBold = localFont({
-  src: "../fonts/black_mango/TTF/BlackMango-Bold.ttf",
-});
-
 const interBody = Inter({ weight: "300", subsets: ["latin"] });
 const interBold = Inter({ weight: "600", subsets: ["latin"] });
 
@@ -66,7 +62,6 @@ const solutionInActionStyles = {
 
 export {
   darkerGrotesqueTitle,
-  myFontBold,
   interBody,
   interBold,
   createImageArray,

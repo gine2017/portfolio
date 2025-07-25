@@ -56,8 +56,8 @@ export default function TestWise() {
       {showContent && (
         <main className="mx-auto w-80% flex flex-col gap-y-20 mt-16 mb-48">
           <div className=" h-[35rem] w-full relative  bg-testwise-blue">
-            <div className="flex justify-center items-center h-full gap-x-6">
-              <div className="w-[30rem] h-[30rem] relative">
+            <div className="px-4 flex flex-col md:flex-row justify-center items-center h-full gap-x-6">
+              <div className=" w-[15rem] h-[15rem] md:w-[30rem] md:h-[30rem] relative">
                 <Image
                   src={dashboard}
                   alt="Testwise Dashboard Image"
@@ -65,7 +65,7 @@ export default function TestWise() {
                   style={{ objectFit: "contain" }}
                 />
               </div>
-              <div className="w-[30rem] h-[30rem] relative">
+              <div className="w-[15rem] h-[15rem] md:w-[30rem] md:h-[30rem] relative">
                 <Image
                   src={kanban}
                   alt="Testwise Kanban Image"

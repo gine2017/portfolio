@@ -22,7 +22,7 @@ import highFidelity1 from "../../../assets/capstone/modern-attire/high-fidelity/
 import highFidelity2 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity2.png";
 import highFidelity3 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity3.png";
 import highFidelity4 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity4.png";
-import highFidelity9 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity9.png";
+import highFidelity6 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity6.png";
 import highFidelity11 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity11.png";
 
 export default function ModernAttire() {
@@ -42,7 +42,7 @@ export default function ModernAttire() {
     highFidelity1,
     highFidelity2,
     highFidelity3,
-    highFidelity9,
+    highFidelity6,
     highFidelity11,
     highFidelity4,
   ];

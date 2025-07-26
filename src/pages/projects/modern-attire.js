@@ -21,9 +21,9 @@ import CaseStudyFooter from "@/components/case-study-footer";
 import highFidelity1 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity1.png";
 import highFidelity2 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity2.png";
 import highFidelity3 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity3.png";
+import highFidelity4 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity4.png";
 import highFidelity9 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity9.png";
 import highFidelity11 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity11.png";
-import highFidelity12 from "../../../assets/capstone/modern-attire/high-fidelity/highFidelity12.png";
 
 export default function ModernAttire() {
   const { width } = useWindowSize();
@@ -44,7 +44,7 @@ export default function ModernAttire() {
     highFidelity3,
     highFidelity9,
     highFidelity11,
-    highFidelity12,
+    highFidelity4,
   ];
 
   return (
@@ -89,19 +89,7 @@ export default function ModernAttire() {
             </h3>
             <div className={`text-2xl leading-relaxed ${interBody.className}`}>
               <p>
-                {`Modern Attire's mobile shoppers were struggling with a complex
-                purchasing process, leading to widespread cart abandonment and
-                lost revenue. Analytics revealed that 50% of users abandoned
-                before adding items to cart, while 70% of those who did add
-                items left at registration. The cumbersome checkout flow and
-                measurement uncertainty had created significant barriers during
-                the critical conversion moments when customers were ready to
-                buy. I designed a streamlined e-commerce experience to eliminate
-                these friction points, focusing on simplified checkout flows and
-                intuitive measurement tools that removed purchase anxiety. The
-                result: a mobile experience that transforms browsing frustration
-                into confident purchases, achieving a 35% reduction in cart
-                abandonment and 28% increase in completed sales.`}
+                {`Modern Attire's web users were struggling with a complex purchasing process, leading to widespread cart abandonment and lost revenue. Analytics revealed that 50% of users abandoned before adding items to cart, while 70% of those who did add items left at registration. The cumbersome checkout flow and measurement uncertainty had created significant barriers during the critical conversion moments when customers were ready to buy. I designed a streamlined e-commerce experience to eliminate these friction points, focusing on simplified checkout flows and intuitive measurement tools that removed purchase anxiety. The result: a responsive web experience that transforms browsing frustration into confident purchases, achieving a 35% reduction in cart abandonment and 28% increase in completed sales.`}
               </p>
             </div>
           </div>

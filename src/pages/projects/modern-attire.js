@@ -207,12 +207,29 @@ export default function ModernAttire() {
               })}
             </div>
           </div>
-          <Link
-            href="/extended/modernAttire-extended"
-            className={`text-2xl text-modern-attire flex animate ${interBold.className} hover:underline cursor-pointer`}
-          >
-            View the full case study here →
-          </Link>
+          <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
+            <h3
+              className={`text-modern-attire text-5xl ${darkerGrotesqueTitle.className}`}
+            >
+              Want the full story?
+            </h3>
+            <div className={`text-2xl leading-relaxed ${interBody.className}`}>
+              <p>
+                Dive deeper into my complete design process, from initial
+                research and user insights to design decisions and
+                implementation details. See the methodology behind the results,
+                the challenges I navigated, and the strategic thinking that
+                drove each design choice
+              </p>
+              <Link
+                href="/extended/modernAttire-extended"
+                className={`text-2xl text-modern-attire flex animate ${interBold.className} hover:underline cursor-pointer`}
+              >
+                View the full case study here →
+              </Link>
+            </div>
+          </div>
+
           <CaseStudyFooter casestudy="Modern Attire" />
         </main>
       )}

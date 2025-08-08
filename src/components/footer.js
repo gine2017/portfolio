@@ -42,7 +42,7 @@ export default function Footer({ width }) {
           <p
             className={`text-white text-right relative bottom-0  text-xl md:text-2xl ${interBody.className}`}
           >
-            Design and coded by Regine
+            Designed and coded by Regine
           </p>
         )}
       </div>

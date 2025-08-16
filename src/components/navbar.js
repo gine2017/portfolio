@@ -26,17 +26,17 @@ export default function Navbar() {
       <div className="flex-1 ml-24">{/* Optional logo here */}</div>
 
       {/* FontAwesome toggle */}
-      <div className="flex justify-end mr-10 relative z-[90] w-10 h-10">
-        <FontAwesomeIcon
-          icon={open ? faXmark : faBars}
-          size="2x"
-          color="#000000"
-          className="transition-all duration-300 transform cursor-pointer"
+      <div className="flex justify-end mr-10 relative z-[90]">
+        <button
           onClick={toggleNavBar}
+          className={`flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-50 transition-all duration-200`}
           aria-label={open ? "close menu" : "menu"}
-          role="button"
           aria-expanded={open}
-        />
+        >
+          <span className="text-[1.75rem] font-medium text-gray-700 hidden sm:block">
+            {open ? "Close" : "Menu"}
+          </span>
+        </button>
       </div>
 
       {/* Nav Menu */}

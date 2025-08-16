@@ -192,7 +192,7 @@ export default function NaturalU() {
           <h1
             className={`flex justify-center text-naturalu-purple ${darkerGrotesqueTitle.className} text-6xl`}
           >
-            NaturalU Case Study
+            NaturalU
           </h1>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h3

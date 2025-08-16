@@ -170,7 +170,7 @@ export default function ModernAttire() {
           <h1
             className={`flex justify-center text-modern-attire ${darkerGrotesqueTitle.className} text-6xl`}
           >
-            Modern Attire Case Study
+            Modern Attire
           </h1>
           <div className="flex flex-col gap-y-8 md:mx-auto md:w-3/4">
             <h3

@@ -22,7 +22,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="z-[80] fixed top-0 w-full bg-bgWhite py-6 px-6 flex items-center justify-between">
+    <nav className="z-[80]  top-0 w-full bg-bgWhite py-6 px-6 flex items-center justify-between">
       <div className="flex-1 ml-24">{/* Optional logo here */}</div>
 
       {/* FontAwesome toggle */}

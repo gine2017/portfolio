@@ -76,7 +76,7 @@ export default function Home() {
           <Navbar />
         )}
         {showContent && (
-          <main className="w-4/5 mx-auto flex flex-col mt-16 gap-10 md:gap-32 md:mt-36">
+          <main className="w-4/5 mx-auto flex flex-col mt-16 gap-10 md:gap-32 ">
             <header className="flex flex-col gap-8  md:gap-32 xl:flex-row">
               <div className="flex flex-col gap-6 flex-2">
                 <div

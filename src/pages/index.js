@@ -89,6 +89,8 @@ export default function Home() {
                 >
                   <span className="flex animate">{`UX/Product Designer`}</span>
                   <br />
+                  <span className="flex animate">{`Fluent in Figma and React `}</span>
+                  <br />
                   <span
                     className={`text-purple  dynamic-text overflow-hidden inline-block whitespace-nowrap align-baseline ${interBold.className}`}
                     ref={textRef}
@@ -96,7 +98,9 @@ export default function Home() {
                   >
                     {translatedText[textIndex].language}
                   </span>
-                  <span className="flex animate">between design and code</span>
+                  <span className="flex animate">
+                    eliminating design and dev friction
+                  </span>
                   <p className={`flex animate text-3xl `}>
                     <span className={`text-purple ${interBold.className}`}>
                       Previously{" "}

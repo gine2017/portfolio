@@ -75,7 +75,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="p-2"
           >
-            resume
+            Resume
           </a>
         </li>
       </ul>

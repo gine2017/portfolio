@@ -62,7 +62,7 @@ export default function MobileNav({ updateContent = {} }) {
                     : ""
                 }`}
               >
-                home
+                Home
               </Link>
             </li>
             <li>
@@ -75,7 +75,7 @@ export default function MobileNav({ updateContent = {} }) {
                     : ""
                 } `}
               >
-                about
+                About
               </Link>
             </li>
             <li>
@@ -88,7 +88,7 @@ export default function MobileNav({ updateContent = {} }) {
                     : ""
                 } `}
               >
-                projects
+                Projects
               </Link>
             </li>
             <li>
@@ -96,12 +96,12 @@ export default function MobileNav({ updateContent = {} }) {
                 rel="noopener noreferrer"
                 href={"/files/Regine-Thimothee-Resume.pdf"}
               >
-                resume
+                Resume
               </Link>
             </li>
             <li>
               <Link rel="noopener noreferrer" href={"/illustrations"}>
-                illustrations
+                Illustrations
               </Link>
             </li>
           </ul>

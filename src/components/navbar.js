@@ -2,8 +2,6 @@ import Link from "next/link";
 import { interBody } from "@/utils";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const currentPath = usePathname();
@@ -23,9 +21,8 @@ export default function Navbar() {
 
   return (
     <nav className="z-[80]  top-0 w-full bg-bgWhite  flex items-center justify-between">
-      <div className="flex-1 ml-24">{/* Optional logo here */}</div>
+      <div className="flex-1 ml-24"></div>
 
-      {/* FontAwesome toggle */}
       <div className="flex justify-end mr-10 relative z-[90]">
         <button
           onClick={toggleNavBar}
@@ -41,7 +38,7 @@ export default function Navbar() {
 
       {/* Nav Menu */}
       <ul
-        className={`absolute left-0 top-4 w-full bg-bgWhite px-24 py-6 flex flex-col gap-y-6 transition-all z-50 ${
+        className={`absolute left-0 top-2 w-full bg-bgWhite px-24 py-6 flex flex-col gap-y-6 transition-all z-50 ${
           interBody.className
         } ${
           !hasInteracted
@@ -52,10 +49,10 @@ export default function Navbar() {
         }`}
       >
         {[
-          { href: "/", label: "home" },
-          { href: "/about", label: "about" },
-          { href: "/projects", label: "projects" },
-          { href: "/illustrations", label: "illustrations" },
+          { href: "/", label: "Home" },
+          { href: "/about", label: "About" },
+          { href: "/projects", label: "Projects" },
+          { href: "/illustrations", label: "Illustrations" },
         ].map(({ href, label }) => (
           <li key={href} className="transition-transform hover:-translate-y-1">
             <Link

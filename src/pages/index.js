@@ -66,7 +66,8 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Regine Thimothee - UX/Product Designer & Front-End Developer Portfolio
+          Regine Thimothee - Designer and Developer & Front-End Developer
+          Portfolio
         </title>
       </Head>
       <div>
@@ -87,7 +88,7 @@ export default function Home() {
                 <div
                   className={`text-2xl md:text-3xl whitespace-pre-wrap ${interBody.className}`}
                 >
-                  <span className="flex animate">{`UX/Product Designer`}</span>
+                  <span className="flex animate">{`Designer and Developer`}</span>
                   <br />
                   <span className="flex animate">{`Fluent in Figma and React `}</span>
                   <br />

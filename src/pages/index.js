@@ -88,9 +88,7 @@ export default function Home() {
                 <div
                   className={`text-2xl md:text-3xl whitespace-pre-wrap ${interBody.className}`}
                 >
-                  <span className="flex animate">{`Designer and Developer`}</span>
-                  <br />
-                  <span className="flex animate">{`Fluent in Figma and React `}</span>
+                  <span className="flex animate">{`Designer & Engineer`}</span>
                   <br />
                   <span
                     className={`text-purple  dynamic-text overflow-hidden inline-block whitespace-nowrap align-baseline ${interBold.className}`}
@@ -99,9 +97,9 @@ export default function Home() {
                   >
                     {translatedText[textIndex].language}
                   </span>
-                  <span className="flex animate">
-                    eliminating design and dev friction
-                  </span>
+                  <br />
+                  <span className="flex animate">{`Fluent in Figma and React `}</span>
+
                   <p className={`flex animate text-3xl `}>
                     <span className={`text-purple ${interBold.className}`}>
                       Previously{" "}

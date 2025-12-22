@@ -49,6 +49,7 @@ module.exports = {
         "testwise-blue": "#1F3F70",
         "component-library": "#0084D1",
         bgWhite: "#fcfcfc",
+        "adp-blue": "#010036",
       },
       keyframes: {
         fadeInUp: {

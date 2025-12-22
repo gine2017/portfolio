@@ -8,6 +8,7 @@ import myIllustration from "../../assets/illustrations/my_illustration.svg";
 import emerald from "../../assets/illustrations/Emerald.svg";
 import designSystemTools from "../../assets/illustrations/design-system-tools.svg";
 import modernAttire from "../../assets/modern-attire-thumbnail.svg";
+import adp from "../../assets/adp-logo.png";
 
 export default function CaseStudyFooter({ casestudy = "" }) {
   const caseStudies = [
@@ -42,6 +43,11 @@ export default function CaseStudyFooter({ casestudy = "" }) {
       image: modernAttire,
       subtitle: "Modern Attire",
       link: "/projects/modern-attire",
+    },
+    {
+      image: adp,
+      subtitle: "ADP",
+      link: "/case-study/adp",
     },
   ];
   return (

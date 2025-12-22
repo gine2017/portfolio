@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Navbar from "@/components/navbar";
 import MobileSlider from "@/components/mobile-slider";
 import Slider from "@/components/slider";

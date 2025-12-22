@@ -15,6 +15,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import testwise from "../../assets/test wise.png";
 import naturalU from "../../assets/naturalU.png";
 import tutorial from "../../assets/tutorial.png";
+import adp from "../../assets/ADP.png";
 
 export default function Home() {
   const [showContent, setShowContent] = useState(true);
@@ -303,6 +304,11 @@ export default function Home() {
               ref={caseStudiesRef}
             >
               <div className="hover:scale-105">
+                <Link rel="noopener noreferrer" href={"/case-study/adp"}>
+                  <Image src={adp} alt="ADP case study" />
+                </Link>
+              </div>
+              <div className="hover:scale-105">
                 <Link rel="noopener noreferrer" href={"/case-study/testwise"}>
                   <Image src={testwise} alt="Test wise case study" />
                 </Link>
@@ -310,15 +316,6 @@ export default function Home() {
               <div className="hover:scale-105">
                 <Link rel="noopener noreferrer" href={"/case-study/natural-u"}>
                   <Image src={naturalU} alt="Natural U case study" />
-                </Link>
-              </div>
-
-              <div className="hover:scale-105">
-                <Link rel="noopener noreferrer" href={"/component-library"}>
-                  <Image
-                    src={tutorial}
-                    alt="UI component tutorial case study"
-                  />
                 </Link>
               </div>
             </div>

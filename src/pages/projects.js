@@ -11,6 +11,7 @@ import { darkerGrotesqueTitle, interBody, interBold } from "@/utils";
 
 import gatherly from "../../assets/gatherly.png";
 import moderAttire from "../../assets/modern_attire.png";
+import tutorial from "../../assets/tutorial.png";
 
 export default function Projects() {
   const [showContent, setShowContent] = useState(true);
@@ -84,32 +85,77 @@ export default function Projects() {
               with video guidance to overcome the major barrier of sizing in
               online apparel shopping.
             </p>
+            <p
+              className={`text-2xl leading-relaxed ${interBody.className} mt-6`}
+            >
+              <span className={`text-black ${interBold.className}`}>
+                Component Library Tutorial
+              </span>{" "}
+              - Educational Frontend Architecture
+            </p>
+            <p className={`text-2xl leading-relaxed ${interBody.className}`}>
+              Created an educational tutorial{" "}
+              <span className={`text-black ${interBold.className}`}>
+                component-based architecture
+              </span>{" "}
+              using{" "}
+              <span className={`text-black ${interBold.className}`}>
+                React, TailwindCSS, and Storybook.{" "}
+              </span>{" "}
+              Guided computer science students through building isolated,
+              reusable UI components that systematically assembled into a
+              functional profile page.
+            </p>
           </div>
-          <div className="flex flex-col md:flex-row">
-            <div className="relative flex-1 group">
-              <Link rel="noopener noreferrer" href={"/projects/gatherly"}>
-                <Image src={gatherly} alt="Gatherly case study" />
-                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
-                <div
-                  className={`${darkerGrotesqueTitle.className} text-center text-2xl md:text-4xl absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
+          <div className="flex flex-col">
+            <div className="flex flex-col md:flex-row">
+              <div className="relative flex-1 group">
+                <Link rel="noopener noreferrer" href={"/projects/gatherly"}>
+                  <Image src={gatherly} alt="Gatherly case study" />
+                  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
+                  <div
+                    className={`${darkerGrotesqueTitle.className} text-center text-2xl md:text-4xl absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
+                  >
+                    Gatherly <br /> Build community
+                  </div>
+                </Link>
+              </div>
+              <div className="relative flex-1 group">
+                <Link
+                  rel="noopener noreferrer"
+                  href={"/projects/modern-attire"}
                 >
-                  Gatherly <br /> Build community
-                </div>
-              </Link>
+                  <Image
+                    src={moderAttire}
+                    alt="Moder Attire case study page"
+                    className="max-h-full max-w-full"
+                  />
+                  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
+                  <div
+                    className={`${darkerGrotesqueTitle.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
+                  >
+                    Modern Attire
+                    <br /> Elegant suits
+                  </div>
+                </Link>
+              </div>
             </div>
             <div className="relative flex-1 group">
-              <Link rel="noopener noreferrer" href={"/projects/modern-attire"}>
+              <Link
+                rel="noopener noreferrer"
+                href={"/projects/component-library"}
+              >
                 <Image
-                  src={moderAttire}
-                  alt="Moder Attire case study page"
+                  src={tutorial}
+                  alt="Component Library tutorial project page"
                   className="max-h-full max-w-full"
                 />
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity"></div>
                 <div
                   className={`${darkerGrotesqueTitle.className} text-center text-2xl md:text-4xl  absolute inset-0 flex justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity`}
                 >
-                  Modern Attire
-                  <br /> Elegant suits
+                  Component Library
+                  <br /> Educational Frontend Tutorial
                 </div>
               </Link>
             </div>

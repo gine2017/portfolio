@@ -141,10 +141,7 @@ export default function Projects() {
               </div>
             </div>
             <div className="relative flex-1 group">
-              <Link
-                rel="noopener noreferrer"
-                href={"/projects/component-library"}
-              >
+              <Link rel="noopener noreferrer" href={"/component-library"}>
                 <Image
                   src={tutorial}
                   alt="Component Library tutorial project page"

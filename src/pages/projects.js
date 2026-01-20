@@ -32,7 +32,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Bootcamp Page</title>
+        <title>Projects Page</title>
       </Head>
       {width <= 767 ? <MobileNav updateContent={updateContent} /> : <Navbar />}
       {showContent && (

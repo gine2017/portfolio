@@ -188,7 +188,7 @@ export default function About() {
                       <span className={` ${interBold.className}`}>
                         Lead User Experience Designer and Developer:
                       </span>{" "}
-                      Founder: NaturalU, November 2020 - Present
+                      Founder: NaturalU, November 2023 - Present
                     </li>
                     <li className="mb-4">
                       <span className={` ${interBold.className}`}>

@@ -202,6 +202,12 @@ export default function About() {
                       </span>{" "}
                       Full-time: ADP July 2022 - December 2024
                     </li>
+                    <li className="mb-4">
+                      <span className={` ${interBold.className}`}>
+                        Design Engineer:
+                      </span>{" "}
+                      Full-time: Giftogram May 2026 - Present
+                    </li>
                   </ul>
                   <br />
                 </div>

@@ -94,7 +94,7 @@ export default function MobileNav({ updateContent = {} }) {
             <li>
               <Link
                 rel="noopener noreferrer"
-                href={"/files/Regine-Thimothee-Resume.pdf"}
+                href={"/files/Regine_Thimothee_Resume_Design_Portfolio.pdf"}
               >
                 Resume
               </Link>

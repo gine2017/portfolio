@@ -13,7 +13,7 @@ export default function Navbar() {
     setIsOpen((prev) => {
       const newState = !prev;
       window.dispatchEvent(
-        new CustomEvent("navbarToggle", { detail: { open: newState } })
+        new CustomEvent("navbarToggle", { detail: { open: newState } }),
       );
       return newState;
     });
@@ -44,8 +44,8 @@ export default function Navbar() {
           !hasInteracted
             ? "opacity-0 pointer-events-none" // Hidden quietly before user interaction
             : open
-            ? "animate-navSlideDown opacity-100 pointer-events-auto"
-            : "animate-navSlideUp opacity-0 pointer-events-none"
+              ? "animate-navSlideDown opacity-100 pointer-events-auto"
+              : "animate-navSlideUp opacity-0 pointer-events-none"
         }`}
       >
         {[
@@ -70,7 +70,7 @@ export default function Navbar() {
         ))}
         <li className="transition-transform text-[#597891] hover:-translate-y-1 hover:text-purple">
           <a
-            href="/files/Regine-Thimothee-Resume.pdf"
+            href="/files/Regine_Thimothee_Resume_Design_Portfolio.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2"

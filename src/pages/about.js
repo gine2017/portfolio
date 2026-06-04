@@ -62,83 +62,64 @@ export default function About() {
                 <div className="flex-1">
                   <div>
                     <p>
-                      {`Hello! I’m Regine Thimothee, a UX & Product Designer whose passion for technology began when I earned my`}{" "}
+                      {`Hello! I'm Regine Thimothee, a Design Engineer on an intentional journey into experience design. My path began with a`}{" "}
                       <span className={`${interBold.className}`}>
                         B.S. in Web & Mobile Computing at Rochester Institute of
                         Technology
                       </span>
-                      ,
-                      {` where I honed my problem-solving skills and learned to
-                      think holistically about digital experiences.`}{" "}
+                      {`, where I built a strong foundation in problem-solving and learned to think holistically about digital experiences.`}
                     </p>
                   </div>
                   <br />
                   <div>
                     <p>
-                      {`After graduating, I joined`}{" "}
+                      {`From there, I joined`}{" "}
                       <span className={`${interBold.className}`}>ADP</span>{" "}
-                      {`as a Software Engineer in where I collobarated with UX
-                      teams to`}{" "}
+                      {`as a Software Engineer, collaborating with UX teams to`}{" "}
                       <span className={`${interBold.className}`}>
                         build accessible React components
                       </span>{" "}
-                      and{" "}
+                      {`and`}{" "}
                       <span className={`${interBold.className}`}>
-                        utilized scalable design systems and component
-                        libraries.
+                        implement design tokens and component libraries
                       </span>{" "}
-                      {`This experience that taught me the power of blending
-                      technical rigor with user-centered thinking.`}{" "}
+                      {`serving 800,000+ clients. It was here I discovered the power of blending technical rigor with user-centered thinking.`}
                     </p>
                   </div>
                   <br />
                   <div>
                     <p>
-                      {`Eager to deepen my design expertise, I completed Springboard’s `}{" "}
+                      {`Eager to go deeper into design, I completed Springboard's`}{" "}
                       <span className={`${interBold.className}`}>
-                        700+ hour UX program
+                        700+ hour UX certification
                       </span>{" "}
-                      and secured a{" "}
+                      {`and took on a`}{" "}
                       <span className={`${interBold.className}`}>
-                        externship contract
-                      </span>{" "}
-                      {`, where I led research phase and refined my skills in
-                      wireframing, high-fidelity mockups, and prototyping. `}{" "}
-                    </p>
-                  </div>
-                  <br />
-                  <div>
-                    <p>
-                      {`Driven by a passion for community and natural hair care, I founded`}{" "}
-                      <span className={`${interBold.className}`}>NaturalU</span>
-                      {`, an educational app ( that I am currently working on )
-                      combining video content and Q&A to foster open discussion,
-                      where I applied my`}{" "}
-                      <span className={`${interBold.className}`}>
-                        “ultimate translator”
-                      </span>{" "}
-                      {`role to bridge design vision and code.`}{" "}
-                    </p>
-                  </div>
-                  <br />
-                  <div>
-                    <p>
-                      {`Today, I leverage this journey, from `}{" "}
-                      <span className={`${interBold.className}`}>
-                        RIT foundations
-                      </span>{" "}
-                      through{" "}
-                      <span className={`${interBold.className}`}>
-                        enterprise-scale projects at ADP
+                        Product Designer contract at KDIT Solutions
                       </span>
-                      {`, immersive`}{" "}
+                      {`, where I led the research phase and refined my skills in wireframing, high-fidelity prototyping, and interaction design.`}
+                    </p>
+                  </div>
+                  <br />
+                  <div>
+                    <p>
+                      {`Driven by a passion for community and natural hair care, I was inspired to work on`}{" "}
+                      <span className={`${interBold.className}`}>NaturalU</span>
+                      {`, a hair education design project where I applied my full design process — from secondary research and scientific study insights through interaction design, prototyping, and Figma specifications — to create something genuinely meaningful.`}
+                    </p>
+                  </div>
+                  <br />
+                  <div>
+                    <p>
+                      {`Today I work as a`}{" "}
                       <span className={`${interBold.className}`}>
-                        Springboard training
-                      </span>{" "}
-                      {`, and entrepreneurial innovation with`}{" "}
-                      <span className={`${interBold.className}`}>NaturalU</span>{" "}
-                      {`, to craft intuitive experiences that honor both design
-                      intent and technical feasibility.`}{" "}
+                        Design Engineer at Giftogram
+                      </span>
+                      {`, sitting at the intersection of design and frontend implementation daily. This August I'll be starting my`}{" "}
+                      <span className={`${interBold.className}`}>
+                        MS in Information Experience Design at Pratt Institute
+                      </span>
+                      {` — a deliberate next step as I transition fully into experience design. My goal is to bring both design thinking and engineering depth to every product I touch.`}
                     </p>
                   </div>
                 </div>

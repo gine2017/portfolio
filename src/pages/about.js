@@ -103,23 +103,15 @@ export default function About() {
                   <br />
                   <div>
                     <p>
-                      {`Driven by a passion for community and natural hair care, I was inspired to work on`}{" "}
-                      <span className={`${interBold.className}`}>NaturalU</span>
-                      {`, a hair education design project where I applied my full design process — from secondary research and scientific study insights through interaction design, prototyping, and Figma specifications — to create something genuinely meaningful.`}
-                    </p>
-                  </div>
-                  <br />
-                  <div>
-                    <p>
                       {`Today I work as a`}{" "}
                       <span className={`${interBold.className}`}>
                         Design Engineer at Giftogram
                       </span>
-                      {`, sitting at the intersection of design and frontend implementation daily. This August I'll be starting my`}{" "}
+                      {`, sitting at the intersection of design and frontend implementation daily. I'm currently pursuing my`}{" "}
                       <span className={`${interBold.className}`}>
                         MS in Information Experience Design at Pratt Institute
                       </span>
-                      {` — a deliberate next step as I transition fully into experience design. My goal is to bring both design thinking and engineering depth to every product I touch.`}
+                      {` (expected 2028) — a deliberate next step as I transition fully into experience design. My goal is to bring both design thinking and engineering depth to every product I touch.`}
                     </p>
                   </div>
                 </div>
@@ -167,21 +159,15 @@ export default function About() {
                   <ul className="list-none ">
                     <li className="mb-4">
                       <span className={` ${interBold.className}`}>
-                        Lead User Experience Designer and Developer:
-                      </span>{" "}
-                      Founder: NaturalU, November 2023 - Present
-                    </li>
-                    <li className="mb-4">
-                      <span className={` ${interBold.className}`}>
                         Product Designer:
                       </span>{" "}
-                       Contract: KDIT Solutions, April 2024 - May 2024
+                      Contract: KDIT Solutions, April 2024 - May 2024
                     </li>
                     <li className="mb-4">
                       <span className={` ${interBold.className}`}>
                         Software Engineer:
                       </span>{" "}
-                      Full-time: ADP July 2022 - December 2024
+                      Full-time: ADP July 2022 - December 2024
                     </li>
                     <li className="mb-4">
                       <span className={` ${interBold.className}`}>
@@ -202,7 +188,7 @@ export default function About() {
                     <span className={` ${interBold.className}`}>
                       User-Centric Thinking:{" "}
                     </span>
-                    Understanding the end user’s needs and creating solutions
+                    Understanding the end user's needs and creating solutions
                     that provide a positive user experience is crucial in both
                     fields.
                   </li>

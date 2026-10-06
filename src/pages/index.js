@@ -20,8 +20,8 @@ import adp from "../../assets/ADP.png";
 export default function Home() {
   const [showContent, setShowContent] = useState(true);
   const { width } = useWindowSize();
-  const [textIndex, setTextIndex] = useState(0);
-  const textRef = useRef(null);
+  // const [textIndex, setTextIndex] = useState(0);
+  // const textRef = useRef(null);
   const caseStudiesRef = useRef(null);
   const translatedText = [
     { language: "the ultimate translator", inital: "en" },
@@ -38,17 +38,17 @@ export default function Home() {
     }
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTextIndex((prevIndex) => (prevIndex + 1) % translatedText.length);
-      textRef.current.style.animation = "none"; // Reset animation
-      textRef.current.offsetHeight; // Trigger reflow
-      textRef.current.style.animation =
-        "typing 2s steps(30, end), blink .75s step-end infinite"; // Restart animation
-    }, 3000); // Change text every 3 seconds
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setTextIndex((prevIndex) => (prevIndex + 1) % translatedText.length);
+  //     textRef.current.style.animation = "none"; // Reset animation
+  //     textRef.current.offsetHeight; // Trigger reflow
+  //     textRef.current.style.animation =
+  //       "typing 2s steps(30, end), blink .75s step-end infinite"; // Restart animation
+  //   }, 3000); // Change text every 3 seconds
 
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, []);
+  //   return () => clearInterval(interval); // Cleanup on unmount
+  // }, []);
 
   const updateContent = (state) => {
     setShowContent(state);
@@ -89,23 +89,19 @@ export default function Home() {
                 <div
                   className={`text-2xl md:text-3xl whitespace-pre-wrap ${interBody.className}`}
                 >
-                  <span className="flex animate">{`Designer & Engineer`}</span>
+                  <span className="flex animate">{`Designer who codes`}</span>
                   <br />
-                  <span
-                    className={`text-purple  dynamic-text overflow-hidden inline-block whitespace-nowrap align-baseline ${interBold.className}`}
-                    ref={textRef}
-                    lang={`${translatedText[textIndex].inital}`}
-                  >
-                    {translatedText[textIndex].language}
+
+                  <span className="flex animate">
+                    {`Passionate about experience design\nand design systems`}
                   </span>
                   <br />
-                  <span className="flex animate">{`Fluent in Figma and React `}</span>
 
                   <p className={`flex animate text-3xl `}>
                     <span className={`text-purple ${interBold.className}`}>
-                      Previously{" "}
-                    </span>{" "}
-                    @ ADP
+                      Currently{" "}
+                    </span>
+                    @Giftogram · Pratt MS IXD
                   </p>
                 </div>
                 <Link
